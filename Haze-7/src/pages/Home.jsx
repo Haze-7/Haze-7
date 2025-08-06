@@ -1,10 +1,12 @@
+import Navbar from "../components/Navbar.jsx"
 
 function Home() {
     return (
       <>
-        <div className="bg-gold text-white w-screen flex flex-col justify-between">
+        <div className=" text-white w-screen flex flex-col justify-between">
             {/* Primary  */}
-          <section className="">
+            
+          <section className="bg-black-sand">
 
           </section>
           <section className="bg-cream">

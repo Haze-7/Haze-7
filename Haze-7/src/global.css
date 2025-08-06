@@ -1,14 +1,17 @@
 @import "tailwindcss";
 
 /* Add Font Example */
-/* @font-face {
-  font-family: 'Tungsten';
-  src: url('../fonts/Tungsten-Thin.ttf') format('truetype');
+@font-face {
+  font-family: 'Protokoll';
+  src: url('../fonts/Protokoll.otf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 } 
-*/
+
+
+
+
 /* Import Custom Colors */
 @theme {
   --color-ivory: #F3F0E8;
@@ -24,15 +27,139 @@
   
 }
 
+@layer utilities {
+    .font-protokoll {
+        font-family: 'Protokoll', sans-serif;
+    }
+}
+
 section {
     scroll-snap-align: start;
-    height: 100vh;
+    height: 80rem;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.bg-black-sand {
+  background-image: url("/dark-sand.svg");
+  background-repeat: no-repeat;
+  background-size: 120rem auto;
+  background-attachment: fixed;
+  background-position: top center;
+  z-index: -1;
+}
+
+.navbar-main {
+  z-index: 1000;
+  left: 1rem;
+  right: 1rem;
+  top: 1rem;
+  flex-flow: row;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 83rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .75rem 1.5rem;
+  position: fixed;
+  font-size: 0.85rem;
+}
+
+.navbar-background-main {
+    z-index: -1;
+    /* background-color: ; */
+    /* -webkit-backdrop-filter: blur(2rem); */
+    backdrop-filter: blur(2rem);
+    border-radius: 1.5rem;
+    position: absolute;
+    inset: 0%;
+}
+
+.navbar-background {
+  z-index: -1;
+  backdrop-filter: blur(2rem);
+  border-radius: 1.5rem;
+  inset: 0%;
+background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
+backdrop-filter: blur(15px);
+  position: absolute;
+}
+ /* Dark Navbar */
+/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
+  backdrop-filter: blur(15px); */
+
+  /* Gold Navbar */
+/* background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
+backdrop-filter: blur(15px); */
+
+.navbar-content-container {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.navbar-menu {
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform .3s;
+  display: flex;
+}
+
+.navbar-menu-left{
+  display: flex;
+}
+
+.navbar-menu-right{
+  display: flex;
+}
+
+.navbar-entry {
+    grid-column-gap: .25rem;
+    /* color: ; */
+    border-radius: 1rem;
+    align-items: center;
+    padding: .75rem .5rem .75rem .75rem;
+    transition: all .35s;
+    display: flex;
+}
+
+.navbar-entry-outside {
+    align-items: center;
+    height: 100%;
+    display: flex;
+    position: static;
+}
+
+.nav-entry-setup {
+    grid-column-gap: .25rem;
+    color: white;
+    border-radius: 1rem;
+    align-items: center;
+    /* padding: .75rem .5rem .75rem .75rem; */
+    transition: all .35s;
+    display: flex;
+}
+
+.nav-figma {
+  box-sizing: border-box;
+  position: absolute;
+  width: 2695px;
+  height: 147px;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 4px 25px #2D2D2D;
+  
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 50px;
+}
 /* F5ECD8
    EDE2D0
  */
