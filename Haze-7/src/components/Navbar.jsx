@@ -1,60 +1,80 @@
-import {Link, useLocation} from "react-router-dom";
 import HLogo from "/H-logo.svg";
 
+import { useState } from 'react';
+import {Link, useLocation} from "react-router-dom";
+
 function Navbar() {
+
+    const location = useLocation();
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
       <>
         <div className="navbar-main text-gold font-protokoll">
           <div className="navbar-background-main"></div>
           <div className="navbar-background"></div>
-            <div className="navbar-content-container">
+            <div className={` ${!menuOpen ? "hidden" : "flex"} navbar-content-container`}>
               <Link to="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
               </Link>
               <div className="navbar-menu">
-                <div className="navbar-menu-left">
+                {/* Navbar Menu Left */}
+                <div className="flex">
                   <div className="nav-entry-outside">
                     <div className="nav-entry-setup">
                       <div className="navbar-entry">
-                        <div>
-                          Products
+                        <Link to="/">
+                          About Me
+                        </Link>
+                        <div className="navbar-chevron" >
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
                       </div>
                       <div className="navbar-entry">
-                        <div>
-                          Sports & Users
+                        <Link to="/">
+                          Experience
+                        </Link>
+                        <div className="navbar-chevron">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
                       </div>
                       <div className="navbar-entry">
-                        <div>
-                          Explore
+                        <Link to="/">
+                          Projects
+                        </Link>
+                        <div className="navbar-chevron">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
                       </div>
                       <div className="navbar-entry">
-                        <div>
-                          Pricing
-                        </div>
+                        <Link to="/">
+                          Contact Me
+                        </Link>
+                        <div className="navbar-chevron">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
+                        </div>                        
                       </div>                                            
                     </div>
                   </div>
                 </div>
-                <div className="navbar-menu-right">
+                {/* Nav Menu Right */}
+                <div className="flex">
                   <div className="nav-entry-outside">
                     <div className="nav-entry-setup">
                       <div className="navbar-entry">
-                        <div className="">
-                          Products
-                        </div>
+                        <Link to="/">
+                          Contact
+                        </Link>
                       </div>
                       <div className="navbar-entry">
-                        <div>
-                          Another
-                        </div>
+                        <Link to="/" className="w-[6rem] h-[2rem] bg-gold rounded-3xl flex items-center justify-center">
+                          Learn More
+                        </Link>
                       </div>
                       <div className="navbar-entry">
-                        <div className="w-8 h-8 bg-gold rounded-full">
+                        <Link to="" className="w-[2rem] h-[2rem] bg-gold rounded-full">
                           
-                        </div>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -68,3 +88,7 @@ function Navbar() {
 export default Navbar;
 
 // sticky w-full h-[5vh] flex z-40 shadow-md bg-gold shadow-slate top-[1rem] 
+
+{/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="100%" height="100%" stroke-width="2">
+  <path d="M6 9l6 6l6 -6"></path>
+</svg> */}

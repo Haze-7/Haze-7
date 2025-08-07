@@ -24,7 +24,10 @@
   --color-dark: #2E2927;
   --color-slate:  #2B2E35;
   --color-carbon: #272727;
-  
+  --color-mineshaft: #2D2D2D;
+  --color-akaroa: #D7C9AE;
+  --color-barley: #A78763;
+  --color-whiterock: #EAE0D2
 }
 
 @layer utilities {
@@ -35,7 +38,7 @@
 
 section {
     scroll-snap-align: start;
-    height: 80rem;
+    /* height: 80rem; */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -64,7 +67,7 @@ section {
   margin-right: auto;
   padding: .75rem 1.5rem;
   position: fixed;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .navbar-background-main {
@@ -82,8 +85,8 @@ section {
   backdrop-filter: blur(2rem);
   border-radius: 1.5rem;
   inset: 0%;
-background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
-backdrop-filter: blur(15px);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
+  backdrop-filter: blur(15px);
   position: absolute;
 }
  /* Dark Navbar */
@@ -94,6 +97,7 @@ backdrop-filter: blur(15px);
 /* background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
 backdrop-filter: blur(15px); */
 
+/* .float-nav_dropdown-toggle */
 .navbar-content-container {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
@@ -104,19 +108,25 @@ backdrop-filter: blur(15px); */
   display: flex;
 }
 
+.navbar-content-container::before {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 1rem;
+  z-index: -1;
+  opacity: 0;
+  inset: 0.5rem;
+  inset: 0rem;
+  transform: scale(0.95);
+  transition: all 600ms ease;
+}
+
+/* .float-nav_menu */
 .navbar-menu {
   flex: 1;
   justify-content: space-between;
   align-items: center;
   transition: transform .3s;
-  display: flex;
-}
-
-.navbar-menu-left{
-  display: flex;
-}
-
-.navbar-menu-right{
   display: flex;
 }
 
@@ -130,6 +140,33 @@ backdrop-filter: blur(15px); */
     display: flex;
 }
 
+.navbar-chevron {
+flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    transition: transform .4s;
+    display: flex;
+}
+
+/* .navbar-entry::before {
+  content: "abd";
+
+} 
+
+.navbar-entry:hover::before {
+  content: "abd";
+
+} 
+
+.navbar-entry::after {
+  content: "abd";
+
+}  */
+
+
+/* .float-nav_menu-dropdown */
 .navbar-entry-outside {
     align-items: center;
     height: 100%;
