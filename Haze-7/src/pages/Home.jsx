@@ -3,27 +3,26 @@ import Navbar from "../components/Navbar.jsx"
 function Home() {
     return (
       <>
-        <div className=" text-white w-screen flex flex-col justify-between">
+        <div className="text-white w-full">
             {/* Primary  */}
-            
-          <section className="bg-black-sand h-[80rem]">
+          <section className="bg-black-sand h-[80rem] flex justify-center gap-[5rem]">
             {/* Hero Section */}
-            <div className="flex flex-col xl:flex-row pt-[10rem] h-[80vh] w-[80vw] mx-auto">
+            <div className="flex lg:flex-row flex-col justify-center items-center gap-[3rem] lg:gap-28 h-auto lg:h-[90vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}
-              <div className="text-center my-auto w-[50vw]">
-                <p className="text-[1.7rem] text-whiterock">
-                  Hello, I'm
-                </p>
-                <h1 className="text-[4rem]">
-                  Hayes Chiasson
-                </h1>
-                <p className="text-[2rem] text-akaroa">
-                  Fullstack Developer
-                </p>
-                </div>
+                <div className="hero-text">
+                  <p className="text-[1.7rem] text-whiterock">
+                    Hello, I'm
+                  </p>
+                  <h1 className="text-[4rem]">
+                    Hayes Chiasson
+                  </h1>
+                  <p className="text-[2rem] text-akaroa">
+                    Fullstack Developer
+                  </p>
+                </div>              
                 {/* Professional Photo */}
-                <div className="flex mt-[3rem] ">
-                  <img src="./src/assets/haze-profile-pic.png" className="absolute h-[550px] w-[550px]"></img>
+                <div className="hero-picture">
+                  <img src="./src/assets/haze-profile-pic.png" className=""></img>
                 </div>
             </div>
           </section>

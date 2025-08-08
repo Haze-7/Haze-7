@@ -47,10 +47,10 @@ section {
 
 .bg-black-sand {
   background-image: url("/dark-sand.svg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 120rem auto;
   background-attachment: fixed;
-  background-position: top center;
   z-index: -1;
 }
 
@@ -197,6 +197,20 @@ flex-direction: column;
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 50px;
 }
+
+.hero-picture {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.hero-text {
+  align-self: center;
+  text-align: center;
+}
+
+
+
 /* F5ECD8
    EDE2D0
  */
