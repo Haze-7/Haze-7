@@ -9,9 +9,6 @@
   font-display: swap;
 } 
 
-
-
-
 /* Import Custom Colors */
 @theme {
   --color-ivory: #F3F0E8;
@@ -30,6 +27,27 @@
   --color-whiterock: #EAE0D2
 }
 
+/* Toggle / default when light mode_)  (may need to use :root)*/
+.lightmode {
+  --color-mineshaft: #2D2D2D;
+  --color-akaroa: #D7C9AE;
+  --color-barley: #A78763;
+  --color-whiterock: #EAE0D2;
+  --color-cream: #F5ECD8;
+  --color-gold: #D4AA7D;
+}
+
+/* dark mode colors (make opposite colors of light mode (white text,etc) */
+/* Change colors to be specific for certain items (ex, text-white) etc */
+/* .darkmode {
+  --color-mineshaft: #2D2D2D;
+  --color-akaroa: #D7C9AE;
+  --color-barley: #A78763;
+  --color-whiterock: #EAE0D2;
+  --color-cream: #F5ECD8;
+  --color-gold: #D4AA7D;
+} */
+
 @layer utilities {
     .font-protokoll {
         font-family: 'Protokoll', sans-serif;
@@ -43,6 +61,10 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+body {
+  color: var(--color-white);
 }
 
 .bg-black-sand {
@@ -150,22 +172,6 @@ flex-direction: column;
     display: flex;
 }
 
-/* .navbar-entry::before {
-  content: "abd";
-
-} 
-
-.navbar-entry:hover::before {
-  content: "abd";
-
-} 
-
-.navbar-entry::after {
-  content: "abd";
-
-}  */
-
-
 /* .float-nav_menu-dropdown */
 .navbar-entry-outside {
     align-items: center;
@@ -189,12 +195,9 @@ flex-direction: column;
   position: absolute;
   width: 2695px;
   height: 147px;
-
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
   backdrop-filter: blur(15px);
   box-shadow: 0px 4px 25px #2D2D2D;
-  
-  /* Note: backdrop-filter has minimal browser support */
   border-radius: 50px;
 }
 
