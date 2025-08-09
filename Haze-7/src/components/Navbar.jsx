@@ -22,38 +22,31 @@ function Navbar() {
                 <div className="flex">
                   <div className="nav-entry-outside">
                     <div className="nav-entry-setup">
-                      <div className="navbar-entry">
-                        <Link to="/">
-                          About Me
-                        </Link>
-                        <div className="navbar-chevron" >
+                      <Link to="/" className="navbar-entry">
+                          About Me    
+                        <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
-                      </div>
-                      <div className="navbar-entry">
-                        <Link to="/">
+                      </Link>
+                      <Link to="/" className="navbar-entry">
                           Experience
-                        </Link>
                         <div className="navbar-chevron">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
-                      </div>
-                      <div className="navbar-entry">
-                        <Link to="/">
+                      </Link>
+                      <Link to="/" className="navbar-entry">
                           Projects
-                        </Link>
+
                         <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
-                      </div>
-                      <div className="navbar-entry">
-                        <Link to="/">
+                      </Link>
+                      <Link to="/" className="navbar-entry">
                           Contact Me
-                        </Link>
                         <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>                        
-                      </div>                                            
+                      </Link>                                            
                     </div>
                   </div>
                 </div>

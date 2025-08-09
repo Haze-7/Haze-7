@@ -158,19 +158,39 @@ backdrop-filter: blur(15px); */
     border-radius: 1rem;
     align-items: center;
     padding: .75rem .5rem .75rem .75rem;
-    transition: all .35s;
     display: flex;
 }
 
-.navbar-chevron {
-flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 1rem;
-    height: 1rem;
-    transition: transform .4s;
-    display: flex;
+.navbar-entry:hover {
+  background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
 }
+
+.navbar-chevron {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  transition: transform .4s;
+  display: flex;
+}
+
+/* On navbar entry hover, only navbar-chevron flips */
+.navbar-entry:hover .navbar-chevron {
+  transform: rotate(180deg);
+}
+
+
+
+/* .navbar-chevron::before {
+
+} */
+
+/* .navbar-chevron:hover::before {
+
+} */
+
+
 
 /* .float-nav_menu-dropdown */
 .navbar-entry-outside {
@@ -188,17 +208,6 @@ flex-direction: column;
     /* padding: .75rem .5rem .75rem .75rem; */
     transition: all .35s;
     display: flex;
-}
-
-.nav-figma {
-  box-sizing: border-box;
-  position: absolute;
-  width: 2695px;
-  height: 147px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
-  backdrop-filter: blur(15px);
-  box-shadow: 0px 4px 25px #2D2D2D;
-  border-radius: 50px;
 }
 
 .hero-picture {
