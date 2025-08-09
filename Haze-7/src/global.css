@@ -24,7 +24,7 @@
   --color-mineshaft: #2D2D2D;
   --color-akaroa: #D7C9AE;
   --color-barley: #A78763;
-  --color-whiterock: #EAE0D2
+  --color-whiterock: #EAE0D2;
 }
 
 /* Toggle / default when light mode_)  (may need to use :root)*/
@@ -210,6 +210,10 @@ flex-direction: column;
 .hero-text {
   align-self: center;
   text-align: center;
+}
+
+.about-bg {
+  background: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%);
 }
 
 

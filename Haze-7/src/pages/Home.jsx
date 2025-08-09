@@ -7,7 +7,7 @@ function Home() {
             {/* Primary  */}
           <section className="bg-black-sand h-[80rem] flex justify-center gap-[5rem]">
             {/* Hero Section */}
-            <div className="flex lg:flex-row flex-col justify-center items-center gap-[3rem] lg:gap-28 h-auto lg:h-[90vh] pt-[10rem] lg:pt-0">
+            <div className="flex lg:flex-row flex-col justify-center items-center gap-[3rem] lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}
                 <div className="hero-text">
                   <p className="text-[1.7rem] text-whiterock">
@@ -26,7 +26,7 @@ function Home() {
                 </div>
             </div>
           </section>
-          <section className="bg-akaroa bg-black-a h-[35rem] shadow-lg/50 shadow-gray">
+          <section className="about-bg h-[40rem] shadow-lg/50 shadow-gray">
             
           </section>
           <section className="bg-black-sand h-[80rem]">
