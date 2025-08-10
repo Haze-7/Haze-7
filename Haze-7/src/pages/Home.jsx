@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar.jsx"
 function Home() {
     return (
       <>
-        <div className=" w-full">
+        <div className="w-full">
             {/* Primary  */}
           <section className="bg-black-sand h-[80rem] flex justify-center gap-[5rem]">
             {/* Hero Section */}
