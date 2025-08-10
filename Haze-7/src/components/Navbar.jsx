@@ -3,10 +3,15 @@ import HLogo from "/H-logo.svg";
 import { useState } from 'react';
 import {Link, useLocation} from "react-router-dom";
 
+import DarkLightSwitch from "./DarkLightSwitch.jsx";
+
 function Navbar() {
 
     const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const [mode, setMode] = useState(false);
+
 
     return (
       <>
@@ -81,10 +86,14 @@ function Navbar() {
                 <div className="flex">
                   <div className="nav-entry-outside">
                     <div className="nav-entry-setup">
-                      <div className="navbar-entry">
-                        <Link to="/" className="w-[6rem] h-[2rem] bg-gold rounded-3xl flex items-center justify-center">
-                          
-                        </Link>
+                      {/* Dark / Light mode Switch */}
+                      <div className="navbar-dl-switch">
+                        <DarkLightSwitch
+                          isOn={mode}
+                          onBgColor="var(--color-light-gradient)"
+                          onCircleColor="var(--color-mineshaft)" 
+                          handleToggle={() => setMode(!mode)}
+                        />
                       </div>
                       {/* Linkedin Logo*/}
                       <div className="navbar-linkedin-logo">

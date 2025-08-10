@@ -25,6 +25,28 @@
   --color-akaroa: #D7C9AE;
   --color-barley: #A78763;
   --color-whiterock: #EAE0D2;
+
+  --color-dark-gradient: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  linear-gradient(
+    90.1deg,
+    rgba(45, 45, 45, 0.6) 9.34%,
+    rgba(45, 45, 45, 0.1) 95.96%
+  );
+
+  --color-light-gradient: linear-gradient(
+    0deg,
+    rgba(234, 186, 140, 0.2),
+    rgba(234, 186, 140, 0.2)
+  ),
+  linear-gradient(
+    90.1deg,
+    rgba(215, 201, 174, 0.6) 9.34%,
+    rgba(215, 201, 174, 0.1) 95.96%
+  );
 }
 
 /* Toggle / default when light mode_)  (may need to use :root)*/
@@ -179,7 +201,7 @@ backdrop-filter: blur(15px); */
 }
 
 .navbar-entry:hover {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
+  background: var(--color-dark-gradient)
 }
 
 .navbar-github-logo {
@@ -223,7 +245,7 @@ backdrop-filter: blur(15px); */
 
 /* Style links inside dropdown */
 .navbar-dropdown-content {
-  background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);  
+  background: var(--color-light-gradient);
   float: none;
   border-radius: 1rem;
   text-decoration: none;
@@ -231,7 +253,7 @@ backdrop-filter: blur(15px); */
   position: absolute;
   right: 0rem;
   left: 0rem;
-  top: 5.5rem;
+  top: 5.9rem;
   flex-flow: row;
   justify-content: center;
   align-items: stretch;
@@ -254,19 +276,67 @@ backdrop-filter: blur(15px); */
   pointer-events: auto;
 }
 
-/* Actual inner Dropdown  */
-
-/* .dropdown-content {
-
-} */
-
 .dropdown-title {
   font-size: 1.5rem;
   border-bottom: 4px;
   border-color: var(--color-mineshaft)
 }
 
+/* Dark/Light Mode Slider */
 
+.navbar-dl-switch {
+  grid-column-gap: .25rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: .75rem .5rem .75rem .75rem;
+  display: flex;
+}
+
+.dl-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+/* Slider background / box */
+.dl-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 4.5rem;
+  height: 2.3rem;
+  background: var(--color-dark-gradient);
+  border-radius: 100px;
+  position: relative;
+  transition: background-color .2s;
+}
+
+/* circle at rest */
+.dl-switch-label .dl-switch-button {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 45px;
+  transition: 0.2s;
+  /* background: var(--color-akaroa); */
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.dl-switch-checkbox:checked + .dl-switch-label .dl-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+/* circle size when shifting/moving */
+.dl-switch-label:active .dl-switch-button {
+  width: 3rem;
+}
+
+/* Webpage Content */
 .hero-picture {
   height: 400px;
   width: 400px;
