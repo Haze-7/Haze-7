@@ -49,27 +49,6 @@
   );
 }
 
-/* Toggle / default when light mode_)  (may need to use :root)*/
-.lightmode {
-  --color-mineshaft: #2D2D2D;
-  --color-akaroa: #D7C9AE;
-  --color-barley: #A78763;
-  --color-whiterock: #EAE0D2;
-  --color-cream: #F5ECD8;
-  --color-gold: #D4AA7D;
-}
-
-/* dark mode colors (make opposite colors of light mode (white text,etc) */
-/* Change colors to be specific for certain items (ex, text-white) etc */
-/* .darkmode {
-  --color-mineshaft: #2D2D2D;
-  --color-akaroa: #D7C9AE;
-  --color-barley: #A78763;
-  --color-whiterock: #EAE0D2;
-  --color-cream: #F5ECD8;
-  --color-gold: #D4AA7D;
-} */
-
 @layer utilities {
     .font-protokoll {
         font-family: 'Protokoll', sans-serif;
@@ -89,12 +68,51 @@ body {
   color: var(--color-white);
 }
 
+/* To Do Light / Dark Switch
+in data theme 1:
+  --color-item-being-covered: var(--color-actual-from-@theme-1 )
+
+in data ttheme 2:
+  --color-item-being-covered: var(--color-actual-from-@theme-2)
+
+^^ effects in actual component
+
+background: var(--color-item-being-covered);
+^^ will flip based on light tor dark being selected in data theme ( 1 or 2)
+*/
+
 [data-theme="dark"] {
-  background: var(--color-light-gradient);
+  --color-navbar-gradient: var(--color-light-gradient);
+  --bg-image: url("/dark-sand.svg");
+  --logo-fill-color: var(--color-black);
+  /* --primary-text-color: var(--color-akaroa)*/
+  /* --secondary-text-color: var(--color-whiterock)*/
+  /* To DO:
+    1. Add text classes to hero section text
+    2. add var(--primary-text-color) to the color of them in css
+   */
 }
 
-.bg-black-sand {
-  background-image: url("/dark-sand.svg");
+  /* --color-mineshaft: #2D2D2D;
+  --color-akaroa: #D7C9AE;
+  --color-barley: #A78763;
+  --color-whiterock: #EAE0D2;
+  --color-cream: #F5ECD8;
+  --color-gold: #D4AA7D; */
+
+[data-theme="light"] {
+  /* Need to be backwords ( navbar opposite of page bg) */
+  --color-navbar-gradient: var(--color-dark-gradient); 
+  --bg-image: url("/light-sand.svg");
+  --logo-fill-color: var(--color-whiterock);
+  /* --primary-text-color: var(--color-mineshaft)*/
+  /* --secondary-text-color: var(--color-barley)*/
+
+
+}
+
+.bg-sand {
+  background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,8 +151,7 @@ body {
   backdrop-filter: blur(2rem);
   border-radius: 1.5rem;
   inset: 0%;
-  /* background: var(--color-light-gradient); */
-  backdrop-filter: blur(15px);
+  background: var(--color-navbar-gradient);
   position: absolute;
 }
  /* Dark Navbar */
@@ -205,7 +222,7 @@ backdrop-filter: blur(15px); */
 }
 
 .navbar-entry:hover {
-  background: var(--color-dark-gradient);
+  background: var(--color-navbar-gradient);
 }
 
 .navbar-github-logo {
@@ -283,7 +300,7 @@ backdrop-filter: blur(15px); */
 .dropdown-title {
   font-size: 1.5rem;
   border-bottom: 4px;
-  border-color: var(--color-mineshaft)
+  border-color: var(--color-mineshaft);
 }
 
 /* Dark/Light Mode Slider */
@@ -326,7 +343,6 @@ backdrop-filter: blur(15px); */
   height: 2rem;
   border-radius: 45px;
   transition: 0.2s;
-  /* background: var(--color-akaroa); */
   box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
 }
 
