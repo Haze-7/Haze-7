@@ -89,6 +89,10 @@ body {
   color: var(--color-white);
 }
 
+[data-theme="dark"] {
+  background: var(--color-light-gradient);
+}
+
 .bg-black-sand {
   background-image: url("/dark-sand.svg");
   background-size: cover;
@@ -129,7 +133,7 @@ body {
   backdrop-filter: blur(2rem);
   border-radius: 1.5rem;
   inset: 0%;
-  background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
+  /* background: var(--color-light-gradient); */
   backdrop-filter: blur(15px);
   position: absolute;
 }
@@ -201,7 +205,7 @@ backdrop-filter: blur(15px); */
 }
 
 .navbar-entry:hover {
-  background: var(--color-dark-gradient)
+  background: var(--color-dark-gradient);
 }
 
 .navbar-github-logo {
