@@ -9,9 +9,6 @@
   font-display: swap;
 } 
 
-
-
-
 /* Import Custom Colors */
 @theme {
   --color-ivory: #F3F0E8;
@@ -24,7 +21,33 @@
   --color-dark: #2E2927;
   --color-slate:  #2B2E35;
   --color-carbon: #272727;
-  
+  --color-mineshaft: #2D2D2D;
+  /* --color-mineshaft: hsl(0, 0%, 18%); */
+  --color-akaroa: #D7C9AE;
+  --color-barley: #A78763;
+  --color-whiterock: #EAE0D2;
+
+  --color-dark-gradient: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  linear-gradient(
+    90.1deg,
+    rgba(45, 45, 45, 0.6) 9.34%,
+    rgba(45, 45, 45, 0.1) 95.96%
+  );
+
+  --color-light-gradient: linear-gradient(
+    0deg,
+    rgba(234, 186, 140, 0.2),
+    rgba(234, 186, 140, 0.2)
+  ),
+  linear-gradient(
+    90.1deg,
+    rgba(215, 201, 174, 0.6) 9.34%,
+    rgba(215, 201, 174, 0.1) 95.96%
+  );
 }
 
 @layer utilities {
@@ -35,19 +58,66 @@
 
 section {
     scroll-snap-align: start;
-    height: 80rem;
+    /* height: 80rem; */
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.bg-black-sand {
-  background-image: url("/dark-sand.svg");
+body {
+  color: var(--color-white);
+}
+
+/* To Do Light / Dark Switch
+in data theme 1:
+  --color-item-being-covered: var(--color-actual-from-@theme-1 )
+
+in data ttheme 2:
+  --color-item-being-covered: var(--color-actual-from-@theme-2)
+
+^^ effects in actual component
+
+background: var(--color-item-being-covered);
+^^ will flip based on light tor dark being selected in data theme ( 1 or 2)
+*/
+
+[data-theme="dark"] {
+  --navbar-gradient: var(--color-light-gradient);
+  --navbar-dropdown-gradient: var(--color-light-gradient);
+  --bg-image: url("/dark-sand.svg");
+  --logo-fill-color: var(--color-black);
+  --primary-button-color: var(--color-barley);
+  --primary-button-text-color: var(--color-mineshaft);
+  --secondary-button-color: var(--color-whiterock);
+  --secondary-button-color: var(--color-mineshaft);
+  --primary-text-color: var(--color-whiterock);
+  --secondary-text-color: var(--color-barley);
+}
+
+[data-theme="light"] {
+  /* Need to be backwords ( navbar opposite of page bg) */
+  --navbar-gradient: var(--color-dark-gradient); 
+  --navbar-dropdown-gradient: var(--color-dark-gradient);
+
+  --bg-image: url("/light-sand.svg");
+  --logo-fill-color: var(--color-whiterock);
+  --primary-button-color: var(--color-mineshaft);
+  --primary-button-text-color: var(--color-whiterock);
+  --secondary-button-color: var(--color-barley);
+  --secondary-button-color: var(--color-barley);
+  --primary-text-color: black;
+  --secondary-text-color: var(--color-mineshaft);
+  /* --tertiary-text-color: var(hsl(0, 0%, 18%)); */
+}
+
+
+.bg-sand {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 120rem auto;
   background-attachment: fixed;
-  background-position: top center;
   z-index: -1;
 }
 
@@ -64,7 +134,7 @@ section {
   margin-right: auto;
   padding: .75rem 1.5rem;
   position: fixed;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .navbar-background-main {
@@ -82,17 +152,9 @@ section {
   backdrop-filter: blur(2rem);
   border-radius: 1.5rem;
   inset: 0%;
-background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
-backdrop-filter: blur(15px);
+  background: var(--navbar-gradient);
   position: absolute;
 }
- /* Dark Navbar */
-/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
-  backdrop-filter: blur(15px); */
-
-  /* Gold Navbar */
-/* background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
-backdrop-filter: blur(15px); */
 
 .navbar-content-container {
   grid-column-gap: 1rem;
@@ -104,30 +166,17 @@ backdrop-filter: blur(15px); */
   display: flex;
 }
 
-.navbar-menu {
-  flex: 1;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform .3s;
-  display: flex;
-}
-
-.navbar-menu-left{
-  display: flex;
-}
-
-.navbar-menu-right{
-  display: flex;
-}
-
-.navbar-entry {
-    grid-column-gap: .25rem;
-    /* color: ; */
-    border-radius: 1rem;
-    align-items: center;
-    padding: .75rem .5rem .75rem .75rem;
-    transition: all .35s;
-    display: flex;
+.navbar-content-container::before {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 1rem;
+  z-index: -1;
+  opacity: 0;
+  inset: 0.5rem;
+  inset: 0rem;
+  transform: scale(0.95);
+  transition: all 600ms ease;
 }
 
 .navbar-entry-outside {
@@ -142,24 +191,212 @@ backdrop-filter: blur(15px); */
     color: white;
     border-radius: 1rem;
     align-items: center;
-    /* padding: .75rem .5rem .75rem .75rem; */
     transition: all .35s;
     display: flex;
 }
 
-.nav-figma {
-  box-sizing: border-box;
-  position: absolute;
-  width: 2695px;
-  height: 147px;
-
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
-  backdrop-filter: blur(15px);
-  box-shadow: 0px 4px 25px #2D2D2D;
-  
-  /* Note: backdrop-filter has minimal browser support */
-  border-radius: 50px;
+.navbar-menu {
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform .3s;
+  display: flex;
 }
+
+.navbar-entry {
+  grid-column-gap: .25rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: .75rem .5rem .75rem .75rem;
+  display: flex;
+}
+
+.navbar-entry:hover {
+  background: var(--navbar-gradient);
+}
+
+.navbar-github-logo {
+  grid-column-gap: .25rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: .5rem .5rem .5rem .75rem;
+  display: flex;
+}
+
+.navbar-linkedin-logo {
+  grid-column-gap: .25rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: .5rem .5rem .5rem .75rem;
+  display: flex;
+}
+
+.navbar-chevron {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  transition: transform .4s;
+  display: flex;
+}
+
+/* On navbar entry hover, only navbar-chevron flips */
+.navbar-entry:hover .navbar-chevron {
+  transform: rotate(180deg);
+}
+
+/* Navbar Dropdown handling */
+
+/* Dropdown container */
+.navbar-dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style links inside dropdown */
+.navbar-dropdown-content {
+  background: var(--navbar-dropdown-gradient);
+  float: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: left;
+  position: absolute;
+  right: 0rem;
+  left: 0rem;
+  top: 5.9rem;
+  flex-flow: row;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 83rem;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+.navbar-dropdown:hover .navbar-dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdown-title {
+  font-size: 1.5rem;
+  border-bottom: 4px;
+  border-color: var(--color-mineshaft);
+}
+
+/* Dark/Light Mode Slider */
+
+.navbar-dl-switch {
+  grid-column-gap: .25rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: .75rem .5rem .75rem .75rem;
+  display: flex;
+}
+
+.dl-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+/* Slider background / box */
+.dl-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 4.5rem;
+  height: 2.3rem;
+  background: var(--color-dark-gradient);
+  border-radius: 100px;
+  position: relative;
+  transition: background-color .2s;
+}
+
+/* circle at rest */
+.dl-switch-label .dl-switch-button {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 45px;
+  transition: 0.2s;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.dl-switch-checkbox:checked + .dl-switch-label .dl-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+/* circle size when shifting/moving */
+.dl-switch-label:active .dl-switch-button {
+  width: 3rem;
+}
+
+/* Webpage Content */
+.hero-picture {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.hero-primary-text {
+  align-self: center;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.hero-secondary-text {
+  align-self: center;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.hero-tertiary-text {
+  align-self: center;
+  text-align: center;
+  color: var(--tertiary-text-color);
+}
+
+.hero-primary-button {
+  background: var(--primary-button-color);
+  height: 3.8rem;
+  width: 10rem;
+  color: var(--primary-button-text-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.hero-secondary-button {
+  background: var(--secondary-button-color);
+  height: 3.8rem;
+  width: 10rem;
+  font-size: 1.1rem;
+  color: var(--secondary-button-text-color);
+  cursor: pointer;
+
+}
+
+
+.about-bg {
+  background: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%);
+}
+
+
+
 /* F5ECD8
    EDE2D0
  */
