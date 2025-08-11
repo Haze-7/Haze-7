@@ -10,8 +10,6 @@ function Navbar({ mode, setMode }) {
     const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
 
-    // const [mode, setMode] = useState(false);
-
 
     return (
       <>

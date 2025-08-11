@@ -22,6 +22,7 @@
   --color-slate:  #2B2E35;
   --color-carbon: #272727;
   --color-mineshaft: #2D2D2D;
+  /* --color-mineshaft: hsl(0, 0%, 18%); */
   --color-akaroa: #D7C9AE;
   --color-barley: #A78763;
   --color-whiterock: #EAE0D2;
@@ -82,34 +83,34 @@ background: var(--color-item-being-covered);
 */
 
 [data-theme="dark"] {
-  --color-navbar-gradient: var(--color-light-gradient);
+  --navbar-gradient: var(--color-light-gradient);
+  --navbar-dropdown-gradient: var(--color-light-gradient);
   --bg-image: url("/dark-sand.svg");
   --logo-fill-color: var(--color-black);
-  /* --primary-text-color: var(--color-akaroa)*/
-  /* --secondary-text-color: var(--color-whiterock)*/
-  /* To DO:
-    1. Add text classes to hero section text
-    2. add var(--primary-text-color) to the color of them in css
-   */
+  --primary-button-color: var(--color-barley);
+  --primary-button-text-color: var(--color-mineshaft);
+  --secondary-button-color: var(--color-whiterock);
+  --secondary-button-color: var(--color-mineshaft);
+  --primary-text-color: var(--color-whiterock);
+  --secondary-text-color: var(--color-barley);
 }
-
-  /* --color-mineshaft: #2D2D2D;
-  --color-akaroa: #D7C9AE;
-  --color-barley: #A78763;
-  --color-whiterock: #EAE0D2;
-  --color-cream: #F5ECD8;
-  --color-gold: #D4AA7D; */
 
 [data-theme="light"] {
   /* Need to be backwords ( navbar opposite of page bg) */
-  --color-navbar-gradient: var(--color-dark-gradient); 
+  --navbar-gradient: var(--color-dark-gradient); 
+  --navbar-dropdown-gradient: var(--color-dark-gradient);
+
   --bg-image: url("/light-sand.svg");
   --logo-fill-color: var(--color-whiterock);
-  /* --primary-text-color: var(--color-mineshaft)*/
-  /* --secondary-text-color: var(--color-barley)*/
-
-
+  --primary-button-color: var(--color-mineshaft);
+  --primary-button-text-color: var(--color-whiterock);
+  --secondary-button-color: var(--color-barley);
+  --secondary-button-color: var(--color-barley);
+  --primary-text-color: black;
+  --secondary-text-color: var(--color-mineshaft);
+  /* --tertiary-text-color: var(hsl(0, 0%, 18%)); */
 }
+
 
 .bg-sand {
   background-image: var(--bg-image);
@@ -151,18 +152,10 @@ background: var(--color-item-being-covered);
   backdrop-filter: blur(2rem);
   border-radius: 1.5rem;
   inset: 0%;
-  background: var(--color-navbar-gradient);
+  background: var(--navbar-gradient);
   position: absolute;
 }
- /* Dark Navbar */
-/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.1) 95.96%);
-  backdrop-filter: blur(15px); */
 
-  /* Gold Navbar */
-/* background: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(90.1deg, rgba(215, 201, 174, 0.6) 9.34%, rgba(215, 201, 174, 0.1) 95.96%);
-backdrop-filter: blur(15px); */
-
-/* .float-nav_dropdown-toggle */
 .navbar-content-container {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
@@ -186,7 +179,6 @@ backdrop-filter: blur(15px); */
   transition: all 600ms ease;
 }
 
-/* .float-nav_menu-dropdown */
 .navbar-entry-outside {
     align-items: center;
     height: 100%;
@@ -199,12 +191,10 @@ backdrop-filter: blur(15px); */
     color: white;
     border-radius: 1rem;
     align-items: center;
-    /* padding: .75rem .5rem .75rem .75rem; */
     transition: all .35s;
     display: flex;
 }
 
-/* .float-nav_menu */
 .navbar-menu {
   flex: 1;
   justify-content: space-between;
@@ -222,7 +212,7 @@ backdrop-filter: blur(15px); */
 }
 
 .navbar-entry:hover {
-  background: var(--color-navbar-gradient);
+  background: var(--navbar-gradient);
 }
 
 .navbar-github-logo {
@@ -266,7 +256,7 @@ backdrop-filter: blur(15px); */
 
 /* Style links inside dropdown */
 .navbar-dropdown-content {
-  background: var(--color-light-gradient);
+  background: var(--navbar-dropdown-gradient);
   float: none;
   border-radius: 1rem;
   text-decoration: none;
@@ -363,10 +353,43 @@ backdrop-filter: blur(15px); */
   margin: auto 0;
 }
 
-.hero-text {
+.hero-primary-text {
   align-self: center;
   text-align: center;
+  color: var(--primary-text-color);
 }
+
+.hero-secondary-text {
+  align-self: center;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.hero-tertiary-text {
+  align-self: center;
+  text-align: center;
+  color: var(--tertiary-text-color);
+}
+
+.hero-primary-button {
+  background: var(--primary-button-color);
+  height: 3.8rem;
+  width: 10rem;
+  color: var(--primary-button-text-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.hero-secondary-button {
+  background: var(--secondary-button-color);
+  height: 3.8rem;
+  width: 10rem;
+  font-size: 1.1rem;
+  color: var(--secondary-button-text-color);
+  cursor: pointer;
+
+}
+
 
 .about-bg {
   background: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%);
