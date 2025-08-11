@@ -35,10 +35,10 @@
   linear-gradient(
     90.1deg,
     rgba(45, 45, 45, 0.6) 9.34%,
-    rgba(45, 45, 45, 0.1) 95.96%
+    rgba(45, 45, 45, 0.70) 95.96%
   );
 
-  --color-light-gradient: linear-gradient(
+  /* --color-light-gradient: linear-gradient(
     0deg,
     rgba(234, 186, 140, 0.2),
     rgba(234, 186, 140, 0.2)
@@ -47,7 +47,10 @@
     90.1deg,
     rgba(215, 201, 174, 0.6) 9.34%,
     rgba(215, 201, 174, 0.1) 95.96%
-  );
+  ); */
+
+  --color-light-gradient: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(165.99deg, rgba(215, 201, 174, 0.6) 9.89%, rgba(215, 201, 174, 0.1) 89.94%);
+
 }
 
 @layer utilities {
@@ -203,6 +206,30 @@ background: var(--color-item-being-covered);
   display: flex;
 }
 
+.mini-navbar-menu {
+  background: var(--navbar-dropdown-gradient);
+  float: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: left;
+  position: absolute;
+  right: 0rem;
+  left: 0rem;
+  top: 6.4rem;
+  /* flex-flow: row; */
+  justify-content: center;
+  align-items: stretch;
+  max-width: 83rem;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  /* opacity: 0;
+  visibility: hidden;
+  overflow: hidden; */
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .navbar-entry {
   grid-column-gap: .25rem;
   border-radius: 1rem;
@@ -219,8 +246,7 @@ background: var(--color-item-being-covered);
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
-  padding: .5rem .5rem .5rem .75rem;
-  display: flex;
+  padding: .5rem .5rem .5rem .1rem;
 }
 
 .navbar-linkedin-logo {
@@ -228,7 +254,15 @@ background: var(--color-item-being-covered);
   border-radius: 1rem;
   align-items: center;
   padding: .5rem .5rem .5rem .75rem;
-  display: flex;
+}
+
+.navbar-hamburger-icon {
+  color: var(--logo-fill-color);
+  cursor: pointer;
+  grid-column-gap: .25rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: .5rem .5rem .3rem .75rem;
 }
 
 .navbar-chevron {
@@ -245,6 +279,7 @@ background: var(--color-item-being-covered);
 .navbar-entry:hover .navbar-chevron {
   transform: rotate(180deg);
 }
+
 
 /* Navbar Dropdown handling */
 
@@ -277,7 +312,6 @@ background: var(--color-item-being-covered);
   transform: translateY(-8px);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
-
 }
 
 .navbar-dropdown:hover .navbar-dropdown-content {
@@ -300,7 +334,6 @@ background: var(--color-item-being-covered);
   border-radius: 1rem;
   align-items: center;
   padding: .75rem .5rem .75rem .75rem;
-  display: flex;
 }
 
 .dl-switch-checkbox {
@@ -389,7 +422,6 @@ background: var(--color-item-being-covered);
   cursor: pointer;
 
 }
-
 
 .about-bg {
   background: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%);

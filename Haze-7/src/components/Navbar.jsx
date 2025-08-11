@@ -7,24 +7,31 @@ import DarkLightSwitch from "./DarkLightSwitch.jsx";
 
 function Navbar({ mode, setMode }) {
 
-    const location = useLocation();
+    // const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
 
+    // Handles button (hamburger) toggling small menu in or out
+    const toggleNavbarCollapse = () => {
+      setMenuOpen((prev) => !prev);
+    };
 
     return (
       <>
         <div className="navbar-main font-protokoll">
           <div className="navbar-background-main"></div>
           <div className="navbar-background" ></div>
-            <div className={` ${!menuOpen ? "hidden" : "flex"} navbar-content-container`}>
+            <div className="navbar-content-container">
               <Link to="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
               </Link>
               <div className="navbar-menu">
                 {/* Navbar Menu Left */}
-                <div className="flex">
-                  <div className="nav-entry-outside">
-                    <div className="nav-entry-setup">
+                {/* Needs to hide below lg, toggled dropdown / visual on hamburger press */}
+                {/* mini-navbar-menu */}
+                <div className={` ${!menuOpen ? "hidden" : "flex"} lg:flex justify-start  lg:justify-between`}>
+                  <div className="lg:nav-entry-outside">
+                    <div className="lg:nav-entry-setup">
+                      {/* About Me */}
                       <Link to="/" className="navbar-entry navbar-dropdown">
                           About Me    
                         <div className="navbar-chevron">
@@ -40,6 +47,7 @@ function Navbar({ mode, setMode }) {
                           </div>
                         </div>
                       </Link>
+                      {/* Experience */}
                       <Link to="/" className="navbar-entry navbar-dropdown">
                           Experience
                         <div className="navbar-chevron">
@@ -53,6 +61,7 @@ function Navbar({ mode, setMode }) {
                           </div>
                         </div>
                       </Link>
+                      {/* Projects */}
                       <Link to="/" className="navbar-entry navbar-dropdown">
                           Projects
                         <div className="navbar-chevron">
@@ -65,6 +74,7 @@ function Navbar({ mode, setMode }) {
                           </div>
                         </div>
                       </Link>
+                      {/* Contact Me */}
                       <Link to="/" className="navbar-entry navbar-dropdown">
                           Contact Me
                         <div className="navbar-chevron">
@@ -85,7 +95,7 @@ function Navbar({ mode, setMode }) {
                   <div className="nav-entry-outside">
                     <div className="nav-entry-setup">
                       {/* Dark / Light mode Switch */}
-                      <div className="navbar-dl-switch">
+                      <div className={`flex ml-auto lg:ml-0 navbar-dl-switch absolute right-[4.3rem] lg:static`}>
                         <DarkLightSwitch
                           isOn={mode}
                           onBgColor="var(--color-light-gradient)"
@@ -94,7 +104,7 @@ function Navbar({ mode, setMode }) {
                         />
                       </div>
                       {/* Linkedin Logo*/}
-                      <div className="navbar-linkedin-logo" >
+                      <div className={` ${!menuOpen ? "hidden" : "flex"} navbar-linkedin-logo lg:flex`} >
                       <Link to="https://www.linkedin.com/in/hayes-chiasson-413955249/" className="w-[3rem] h-[3rem]">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" className="linkedin-logo">
                           <path
@@ -105,7 +115,7 @@ function Navbar({ mode, setMode }) {
                       </Link>
                       </div>
                       {/* Github Logo */}
-                      <div className="navbar-github-logo">
+                      <div className={` ${!menuOpen ? "hidden" : "flex"} navbar-github-logo lg:flex`}>
                         <Link to="https://github.com/Haze-7" className="w-[3rem] h-[3rem] rounded-full">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                             <path
@@ -117,7 +127,17 @@ function Navbar({ mode, setMode }) {
                       </div>
                     </div>
                   </div>
+
                 </div>
+                  {/* Hamburger Icon/ Menu First Attempt */}
+                  {/* May need to make custom breakpoint for it (between lg and medium) */}
+                    <button
+                      type="button"
+                      className="navbar-hamburger-icon flex lg:hidden text-[1.97rem]"
+                      onClick={toggleNavbarCollapse}
+                    >
+                    &#9776;
+                  </button>
               </div>
             </div>
         </div>
