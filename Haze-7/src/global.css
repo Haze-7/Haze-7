@@ -105,7 +105,7 @@ background: var(--color-item-being-covered);
   --primary-button-color: var(--color-mineshaft);
   --primary-button-text-color: var(--color-whiterock);
   --secondary-button-color: var(--color-barley);
-  --secondary-button-color: var(--color-barley);
+  --secondary-button-text-color: var(--color-mineshaft);
   --primary-text-color: black;
   --secondary-text-color: var(--color-mineshaft);
   /* --tertiary-text-color: var(hsl(0, 0%, 18%)); */
