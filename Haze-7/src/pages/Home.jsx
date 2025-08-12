@@ -10,7 +10,7 @@ function Home({ mode, setMode }) {
       <>
       {/* var(--primary- text-color) */}
 
-        <div className="w-full ">
+        <div className="w-full">
             {/* Primary  */}
           <section className="bg-sand h-[80rem] flex justify-center gap-[5rem] ">
             {/* Hero Section */}
@@ -36,7 +36,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>              
                 {/* Professional Photo */}
-                <div className="hero-picture">
+                <div className="hero-picture pt-[2.5rem]">
                   <img src={ProfilePic} alt="Haze Profile Picture" className=""></img>
                 </div>
             </div>
