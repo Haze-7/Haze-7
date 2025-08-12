@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar.jsx"
 import {Link, useLocation} from "react-router-dom";
 
+import ProfilePic from "/haze-profile-pic.png" 
+
 import {onClick} from 'react';
 
 function Home({ mode, setMode }) {
@@ -35,7 +37,7 @@ function Home({ mode, setMode }) {
                 </div>              
                 {/* Professional Photo */}
                 <div className="hero-picture">
-                  <img src="./src/assets/haze-profile-pic.png" className=""></img>
+                  <img src={ProfilePic} alt="Haze Profile Picture" className=""></img>
                 </div>
             </div>
           </section>

@@ -4,7 +4,7 @@
 /* Add Font Example */
 @font-face {
   font-family: 'Protokoll';
-  src: url('../fonts/Protokoll.otf') format('truetype');
+  src: url('/fonts/Protokoll.otf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -74,6 +74,7 @@ section {
     justify-content: space-between;
 }
 
+/* Sets text default to white, need to change so each has to set */
 body {
   color: var(--color-white);
 }
@@ -94,7 +95,7 @@ background: var(--color-item-being-covered);
 [data-theme="dark"] {
   --navbar-gradient: var(--color-light-gradient);
   --navbar-dropdown-gradient: var(--color-light-gradient);
-  --bg-image: url("/dark-sand.svg");
+  --bg-image: url("/backgrounds/dark-sand.svg");
   --logo-fill-color: var(--color-black);
   --primary-button-color: var(--color-barley);
   --primary-button-text-color: var(--color-mineshaft);
@@ -109,7 +110,7 @@ background: var(--color-item-being-covered);
   --navbar-gradient: var(--color-dark-gradient); 
   --navbar-dropdown-gradient: var(--color-dark-gradient);
 
-  --bg-image: url("/light-sand.svg");
+  --bg-image: url("/backgrounds/light-sand.svg");
   --logo-fill-color: var(--color-whiterock);
   --primary-button-color: var(--color-mineshaft);
   --primary-button-text-color: var(--color-whiterock);
