@@ -343,7 +343,7 @@ background: var(--color-item-being-covered);
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
-  padding: .75rem .5rem .75rem .75rem;
+  padding: .75rem .5rem .75rem .1rem;
 }
 
 .dl-switch-checkbox {

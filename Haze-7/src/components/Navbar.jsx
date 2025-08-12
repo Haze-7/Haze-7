@@ -211,16 +211,8 @@ function Navbar({ mode, setMode }) {
                         </Link>                                           
                   {/* Nav Menu Right */}
                     <div className={`flex`}>
-                        {/* flex-col nav:flex-row */}
                         {/* Dark / Light mode Switch ml-auto lg:ml-0 navbar-dl-switch absolute right-[4.3rem] md:static*/}
-                        <div className={`flex navbar-dl-switch`}>
-                          <DarkLightSwitch
-                            isOn={mode}
-                            onBgColor="var(--color-light-gradient)"
-                            onCircleColor="var(--color-mineshaft)" 
-                            handleToggle={() => setMode(!mode)}
-                          />
-                        </div>
+
                         {/* Linkedin Logo*/}
                         <div className={` navbar-linkedin-logo flex`} >
                         <Link to="https://www.linkedin.com/in/hayes-chiasson-413955249/" className="w-[3rem] h-[3rem]">
@@ -232,8 +224,16 @@ function Navbar({ mode, setMode }) {
                           </svg>
                         </Link>
                         </div>
+                          <div className={`flex navbar-dl-switch`}>
+                            <DarkLightSwitch
+                              isOn={mode}
+                              onBgColor="var(--color-light-gradient)"
+                              onCircleColor="var(--color-mineshaft)" 
+                              handleToggle={() => setMode(!mode)}
+                            />
+                          </div>
                         {/* Github Logo */}
-                        <div className={` navbar-github-logo flex`}>
+                        <div className={` navbar-github-logo flex `}>
                           <Link to="https://github.com/Haze-7" className="w-[3rem] h-[3rem] rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                               <path
