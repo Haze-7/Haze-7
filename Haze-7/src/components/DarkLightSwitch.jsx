@@ -1,4 +1,3 @@
-import React from 'react';
  
 const DarkLightSwitch = ({ isOn, handleToggle, onBgColor, onCircleColor }) => {
   return (
