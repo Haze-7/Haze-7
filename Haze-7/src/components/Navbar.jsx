@@ -31,12 +31,14 @@ function Navbar({ mode, setMode }) {
                 {/* <div className={` ${!menuOpen ? "hidden" : "flex"} nav:flex `}></div> 
                 The idea is to make all (navbar-menu) hidden below nav, show / handle menuOpne within mini-menu instead 
                 */}
-                <div className={`flex `}>
+                <div className={`flex`}>
                   <div className="md:nav-entry-outside">
                     <div className="md:nav-entry-setup">
                       {/* About Me */}
-                      <Link to="/" className="navbar-entry navbar-dropdown">
-                          About Me    
+                      <div className="navbar-entry">
+                        <Link to="/">
+                          About Me  
+                        </Link>  
                         <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
@@ -49,10 +51,12 @@ function Navbar({ mode, setMode }) {
                               </div>
                           </div>
                         </div>
-                      </Link>
+                      </div>
                       {/* Experience */}
-                      <Link to="/" className="navbar-entry navbar-dropdown">
+                      <div className="navbar-entry">
+                        <Link to="/">
                           Experience
+                        </Link>
                         <div className="navbar-chevron">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
@@ -63,33 +67,47 @@ function Navbar({ mode, setMode }) {
                             Experience 2
                           </div>
                         </div>
-                      </Link>
+                      </div>
                       {/* Projects */}
-                      <Link to="/" className="navbar-entry navbar-dropdown">
+                      <div className="navbar-entry ">
+                      <Link to="/">
                           Projects
-                        <div className="navbar-chevron">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
-                        </div>
-                        {/* Dropdown Content */}
-                        <div className="navbar-dropdown-content">
-                          <div className="dropdown-title">
-                            Projects 22
-                          </div>
-                        </div>
                       </Link>
-                      {/* Contact Me */}
-                      <Link to="/" className="navbar-entry navbar-dropdown">
-                          Contact Me
                         <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
                         {/* Dropdown Content */}
                         <div className="navbar-dropdown-content">
-                          <div className="dropdown-title">
-                            Contact Me 2
+                         {/* Left side Text Options */}
+                          <div className="">
+                            <div className="dropdown-projects-menu-entry">
+                              Projects
+                            </div>
+                            <div className="dropdown-projects-menu-entry">
+                              a
+                            </div>
+                            <div className="dropdown-projects-menu-entry">
+                              b
+                            </div>
                           </div>
+                        </div>
+                      </div>
+                      {/* Contact Me */}
+                      <div className="navbar-entry">
+                        <Link to="/">
+                          Contact Me
+                        </Link>
+                        <div className="navbar-chevron">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
+                        </div>
+                        {/* Dropdown Content */}
+                        <div className="navbar-dropdown-content">
+                          {/* Left side Text Options */}
+                            <div className="dropdown-title">
+                              Contact Me 2
+                            </div>
                         </div>                   
-                      </Link>                                           
+                      </div>                                           
                     </div>
                   </div>
                 </div>
@@ -132,9 +150,8 @@ function Navbar({ mode, setMode }) {
                     </div>
                   </div>
                 </div>
-                  {/* Hamburger Icon/ Menu First Attempt */}
-                  {/* May need to make custom breakpoint for it (between lg and medium) */}
               </div>
+              {/* Hamburger Icon/ Menu First Attempt */}
                  <div className=" nav:hidden absolute right-[0.8rem]">
                     <button
                       type="button"
@@ -147,6 +164,8 @@ function Navbar({ mode, setMode }) {
 
             </div>
               {/* Mini Nav Menu / only visible below :nav, when toggled by  */}
+              {/* Need to do custom dropdowns for this  */}
+              {/* Content Changes not shared, styles are shared between (may need own classes) */}
               <div className="nav:hidden">
                 <div className={`${!menuOpen ? "hidden" : "flex"} mini-nav-menu`}>
                   {/* Navbar Menu Left */}
@@ -156,8 +175,10 @@ function Navbar({ mode, setMode }) {
                   */}
                   <div className={`flex flex-col items-center mx-auto gap-[.8rem] pt-[.5rem]`}>
                         {/* About Me */}
-                        <Link to="/" className="navbar-entry navbar-dropdown">
-                            About Me    
+                        <div className="navbar-entry">
+                          <Link to="/">
+                            About Me 
+                          </Link>   
                           <div className="navbar-chevron">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                           </div>
@@ -169,10 +190,12 @@ function Navbar({ mode, setMode }) {
                                 </div>
                             </div>
                           </div>
-                        </Link>
+                        </div>
                         {/* Experience */}
-                        <Link to="/" className="navbar-entry navbar-dropdown">
+                        <div className="navbar-entry">
+                          <Link to="/">
                             Experience
+                          </Link>
                           <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                           </div>
@@ -182,10 +205,12 @@ function Navbar({ mode, setMode }) {
                               Experience 2
                             </div>
                           </div>
-                        </Link>
+                        </div>
                         {/* Projects */}
-                        <Link to="/" className="navbar-entry navbar-dropdown">
+                        <div className="navbar-entry">
+                          <Link to="/">
                             Projects
+                          </Link>
                           <div className="navbar-chevron">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                           </div>
@@ -195,10 +220,12 @@ function Navbar({ mode, setMode }) {
                               Projects 22
                             </div>
                           </div>
-                        </Link>
+                        </div>
                         {/* Contact Me */}
-                        <Link to="/" className="navbar-entry navbar-dropdown">
+                        <div className="navbar-entry">
+                          <Link to="/">
                             Contact Me
+                          </Link>
                           <div className="navbar-chevron">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                           </div>
@@ -208,7 +235,7 @@ function Navbar({ mode, setMode }) {
                               Contact Me 2
                             </div>
                           </div>                   
-                        </Link>                                           
+                        </div>                                           
                   {/* Nav Menu Right */}
                     <div className={`flex`}>
                         {/* Dark / Light mode Switch ml-auto lg:ml-0 navbar-dl-switch absolute right-[4.3rem] md:static*/}
@@ -224,14 +251,15 @@ function Navbar({ mode, setMode }) {
                           </svg>
                         </Link>
                         </div>
-                          <div className={`flex navbar-dl-switch`}>
+                        {/* Day / Light Switch */}
+                        <div className={`flex navbar-dl-switch`}>
                             <DarkLightSwitch
                               isOn={mode}
                               onBgColor="var(--color-light-gradient)"
                               onCircleColor="var(--color-mineshaft)" 
                               handleToggle={() => setMode(!mode)}
                             />
-                          </div>
+                        </div>
                         {/* Github Logo */}
                         <div className={` navbar-github-logo flex `}>
                           <Link to="https://github.com/Haze-7" className="w-[3rem] h-[3rem] rounded-full">
