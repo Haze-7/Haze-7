@@ -231,14 +231,6 @@ background: var(--color-item-being-covered);
   transform: translateY(-8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-/* 
-.navbar-dropdown:hover .navbar-dropdown-content {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  pointer-events: auto;
-} */
-
 
 .navbar-entry {
   grid-column-gap: .25rem;
@@ -295,7 +287,23 @@ background: var(--color-item-being-covered);
 /* Navbar Dropdown handling */
 
 
+
 /* Style links inside dropdown */
+.navbar-dropdown-container {
+  background-color: transparent;
+  top: 3rem;
+  float: none;
+  position: absolute;
+  right: 0rem;
+  left: 0rem;
+  top: 4.25rem;
+  height: 1.6rem;
+  max-width: 83rem;
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
 .navbar-dropdown-content {
   background: var(--navbar-dropdown-gradient);
   float: none;
@@ -305,7 +313,8 @@ background: var(--color-item-being-covered);
   position: absolute;
   right: 0rem;
   left: 0rem;
-  top: 5.9rem;
+  /* top: 5.9rem; */
+  top: 1.6rem;
   height: 20rem;
   flex-flow: row;
   justify-content: center;
@@ -318,24 +327,24 @@ background: var(--color-item-being-covered);
   overflow: hidden;
   transform: translateY(-8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-}
+} 
 
-
-.navbar-entry:hover .navbar-dropdown-content {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  pointer-events: auto;
-}
-
+/* Dropdown show / hide hover handling */
+/* Show dropdown & bridge when entry, bridge, or dropdown is hovered */
 .navbar-entry:hover .navbar-dropdown-content,
+.navbar-entry:hover .navbar-dropdown-container,
+.navbar-dropdown-container:hover,
 .navbar-dropdown-content:hover {
   opacity: 1;
-  transform: translateY(0);
   visibility: visible;
   pointer-events: auto;
 }
 
+/* Dropdown-specific extra transform for open animation */
+.navbar-entry:hover .navbar-dropdown-content,
+.navbar-dropdown-content:hover {
+  transform: translateY(0);
+}
 
 .dropdown-title {
   font-size: 1.5rem;

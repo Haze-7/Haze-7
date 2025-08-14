@@ -44,8 +44,8 @@ function Navbar({ mode, setMode }) {
                         </div>
 
                         {/* Dropdown Content */}
-                        <div className="navbar-dropdown-content">
-                          <div className="dropdown-content">
+                        <div className="navbar-dropdown-container">
+                          <div className="navbar-dropdown-content">
                               <div className="dropdown-title">
                                 About Me 2
                               </div>
@@ -62,9 +62,11 @@ function Navbar({ mode, setMode }) {
                         </div>
 
                         {/* Dropdown Content */}
-                        <div className="navbar-dropdown-content">
-                          <div className="dropdown-title">
-                            Experience 2
+                        <div className="navbar-dropdown-container">
+                          <div className="navbar-dropdown-content">
+                            <div className="dropdown-title">
+                              Experience 2
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -77,17 +79,19 @@ function Navbar({ mode, setMode }) {
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
                         {/* Dropdown Content */}
+                        <div className="navbar-dropdown-container">
                         <div className="navbar-dropdown-content">
-                         {/* Left side Text Options */}
-                          <div className="">
-                            <div className="dropdown-projects-menu-entry">
-                              Projects
-                            </div>
-                            <div className="dropdown-projects-menu-entry">
-                              a
-                            </div>
-                            <div className="dropdown-projects-menu-entry">
-                              b
+                          {/* Left side Text Options */}
+                            <div className="dropdown-content">
+                              <div className="dropdown-projects-menu-entry">
+                                Projects
+                              </div>
+                              <div className="dropdown-projects-menu-entry">
+                                a
+                              </div>
+                              <div className="dropdown-projects-menu-entry">
+                                b
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -101,11 +105,13 @@ function Navbar({ mode, setMode }) {
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
                         {/* Dropdown Content */}
-                        <div className="navbar-dropdown-content">
+                        <div className="navbar-dropdown-container">
+                          <div className="navbar-dropdown-content">
                           {/* Left side Text Options */}
                             <div className="dropdown-title">
                               Contact Me 2
                             </div>
+                          </div>
                         </div>                   
                       </div>                                           
                     </div>
