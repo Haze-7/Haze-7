@@ -350,14 +350,62 @@ background: var(--color-item-being-covered);
   font-size: 1.5rem;
 }
 
+/* Projects Dropdown Handling */
+
+.dropdown-projects-content {
+  display: flex;
+  flex-direction: row;
+  padding: 0.3rem;
+  height: 100%;
+  width: 100%;
+}
+
 /* Left side menu projects dropdown */
+
+.dropdown-projects-menu {
+  gap: .5rem;
+  padding: 1rem;
+  padding-left: 0rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
 .dropdown-projects-menu-entry {
   font-size: 1.5rem;
+  border-radius: 0.7rem;
+  padding: 0.3rem;
+  width: 19rem;
+  cursor: pointer;
+
 }
 
 .dropdown-projects-menu-entry:hover {
   background: var(--navbar-gradient);
 }
+
+.dropdown-projects-display {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  height: 100%;
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.dropdown-projects-display-entry {
+  border-radius: 0.5rem;
+  height: 18rem;
+  width: 15rem;
+  background: var(--navbar-gradient)
+}
+
+/* .dropdown-projects-display-entry:hover {
+
+} */
+
+
+
 /* Dark/Light Mode Slider */
 
 .navbar-dl-switch {

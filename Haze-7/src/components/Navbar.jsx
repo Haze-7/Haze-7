@@ -80,20 +80,42 @@ function Navbar({ mode, setMode }) {
                         </div>
                         {/* Dropdown Content */}
                         <div className="navbar-dropdown-container">
-                        <div className="navbar-dropdown-content">
-                          {/* Left side Text Options */}
-                            <div className="dropdown-content">
-                              <div className="dropdown-projects-menu-entry">
-                                Projects
+                          <div className="navbar-dropdown-content ">
+                            <div className="dropdown-projects-content">
+                              {/* Left side Project Menu */}
+                              <div className="dropdown-projects-menu">
+                                <div className="dropdown-projects-menu-entry">
+                                  Projects
+                                </div>
+                                <div className="dropdown-projects-menu-entry">
+                                  School
+                                  </div>
+                                  <div className="dropdown-projects-menu-entry">
+                                    Frontend
+                                  </div>
+                                  <div className="dropdown-projects-menu-entry">
+                                    Backend
+                                  </div>
+                                  <div className="dropdown-projects-menu-entry">
+                                  Projects 2
+                                  </div>
                               </div>
-                              <div className="dropdown-projects-menu-entry">
-                                a
+                            
+                              {/* Right Side Project Images */}
+                              {/* Should I add the option to navigate left to right to add more options */}
+                              <div className="dropdown-projects-display">
+                                <div className="dropdown-projects-display-entry">
+                                  A
+                                </div>
+                                <div className="dropdown-projects-display-entry">
+                                  B
+                                </div>
+                                <div className="dropdown-projects-display-entry">
+                                  C
+                                </div>
                               </div>
-                              <div className="dropdown-projects-menu-entry">
-                                b
-                              </div>
-                            </div>
                           </div>
+                         </div>
                         </div>
                       </div>
                       {/* Contact Me */}
