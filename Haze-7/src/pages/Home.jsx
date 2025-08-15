@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar.jsx"
 import {Link, useLocation} from "react-router-dom";
 
-import ProfilePic from "/haze-profile-pic.png" 
+import ProfilePic from "/images/haze-profile-pic.png" 
 
 import {onClick} from 'react';
 

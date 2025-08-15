@@ -363,12 +363,12 @@ background: var(--color-item-being-covered);
 
 .dropdown-projects-menu {
   gap: .5rem;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   padding-left: 0rem;
   padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
-  
+  /* width: 40%; */
 }
 
 .dropdown-projects-menu-entry {
@@ -376,7 +376,7 @@ background: var(--color-item-being-covered);
   border-radius: 0.7rem;
   padding: 0.3rem;
   padding-left: 0.7rem;
-  min-width: 18rem;
+  /* min-width: 10.5rem; */
   cursor: pointer;
 }
 
@@ -391,18 +391,22 @@ background: var(--color-item-being-covered);
   height: 100%;
   width: 100%;
   padding-left: 1rem;
+  /* max-width: 50rem; */
+  width: 70%;
 }
 
 .dropdown-projects-display-entry {
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   height: 100%;
   width: 33%;
   /* margin: auto; */
   margin-left: auto;
   margin-right: auto;
   /* width: 15rem; */
-  /* background: var(--navbar-gradient) */
-  background: black;
+  background: var(--navbar-gradient);
+  /* background: black; */
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.03) 9.34%, rgba(45, 45, 45, 0.005) 95.96%); */
+  box-shadow: 0px 4px 25px var(--navbar-gradient), inset 0px -108px 37px 11px var(--navbar-gradient);
 }
 
 /* .dropdown-projects-display-entry:hover {

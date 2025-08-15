@@ -1,9 +1,14 @@
-import HLogo from "/H-logo.svg";
 
 import { useState } from 'react';
 import {Link, useLocation} from "react-router-dom";
 
 import DarkLightSwitch from "./DarkLightSwitch.jsx";
+
+import HLogo from "/H-logo.svg";
+import SuniProject from "/images/suni.svg" 
+import DeadmanProject from "/images/deadman.svg" 
+import CSGProject from "/images/CSG.svg" 
+
 
 function Navbar({ mode, setMode }) {
 
@@ -83,11 +88,12 @@ function Navbar({ mode, setMode }) {
                           <div className="navbar-dropdown-content ">
                             <div className="dropdown-projects-content">
                               {/* Left side Project Menu */}
-                              <div className="dropdown-projects-menu">
+                              {/* w-[30%] lg:w-[50%] xl:[60%] */}
+                              <div className="dropdown-projects-menu w-[30%] lg:w-[40%] xl:[60%] transition-all duration-700 ease-in-out">
                                 <div className="dropdown-projects-menu-entry">
                                   Projects
                                 </div>
-                                <div className="dropdown-projects-menu-entry">
+                                <div className="dropdown-projects-menu-entry ">
                                   School
                                 </div>
                                 <div className="dropdown-projects-menu-entry">
@@ -105,14 +111,14 @@ function Navbar({ mode, setMode }) {
                               {/* Should I add the option to navigate left to right to add more options */}
                               <div className="dropdown-projects-display">
                                 <div className="dropdown-projects-display-entry">
-                                  {/* <img src="" alt=""></img> */}
-                                  {/* Add inner shadow, text on top and bottom, images / scaling (svg) */}
+                                  {/* <img src={DeadmanProject} className="" alt=""></img> */}
+                                  {/* Add inner shadow, text on top and bottom, images / scaling (svg)    a */}
                                 </div>
                                 <div className="dropdown-projects-display-entry">
-                                  {/* <img src="" alt=""></img> */}
+                                  {/* <img src={DeadmanProject} className="" alt=""></img> */}
                                 </div>
                                 <div className="dropdown-projects-display-entry">
-                                  {/* <img src="" alt=""></img> */}
+                                  {/* <img src={DeadmanProject} className="" alt=""></img> */}
                                 </div>
                               </div>
                           </div>
