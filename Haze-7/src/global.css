@@ -244,6 +244,7 @@ background: var(--color-item-being-covered);
 
 .navbar-entry:hover {
   background: var(--navbar-gradient);
+  cursor: pointer;
 }
 
 .navbar-github-logo {
@@ -286,9 +287,7 @@ background: var(--color-item-being-covered);
 
 /* Navbar Dropdown handling */
 
-
-
-/* Style links inside dropdown */
+/* NAME IS MISLEADING/ Actually acts as the hidden bridge between navbar entry and dropdown */
 .navbar-dropdown-container {
   background-color: transparent;
   top: 3rem;
@@ -313,7 +312,6 @@ background: var(--color-item-being-covered);
   position: absolute;
   right: 0rem;
   left: 0rem;
-  /* top: 5.9rem; */
   top: 1.6rem;
   height: 20rem;
   flex-flow: row;
@@ -327,6 +325,7 @@ background: var(--color-item-being-covered);
   overflow: hidden;
   transform: translateY(-8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 0.80rem;
 } 
 
 /* Dropdown show / hide hover handling */
@@ -364,20 +363,21 @@ background: var(--color-item-being-covered);
 
 .dropdown-projects-menu {
   gap: .5rem;
-  padding: 1rem;
+  padding: 1.5rem;
   padding-left: 0rem;
+  padding-top: 0.5rem;
   display: flex;
   flex-direction: column;
   
 }
 
 .dropdown-projects-menu-entry {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   border-radius: 0.7rem;
   padding: 0.3rem;
-  width: 19rem;
+  padding-left: 0.7rem;
+  min-width: 18rem;
   cursor: pointer;
-
 }
 
 .dropdown-projects-menu-entry:hover {
@@ -387,17 +387,22 @@ background: var(--color-item-being-covered);
 .dropdown-projects-display {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1rem;
   height: 100%;
   width: 100%;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .dropdown-projects-display-entry {
   border-radius: 0.5rem;
-  height: 18rem;
-  width: 15rem;
-  background: var(--navbar-gradient)
+  height: 100%;
+  width: 33%;
+  /* margin: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 15rem; */
+  /* background: var(--navbar-gradient) */
+  background: black;
 }
 
 /* .dropdown-projects-display-entry:hover {

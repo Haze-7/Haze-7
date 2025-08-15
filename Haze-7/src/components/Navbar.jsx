@@ -89,29 +89,30 @@ function Navbar({ mode, setMode }) {
                                 </div>
                                 <div className="dropdown-projects-menu-entry">
                                   School
-                                  </div>
-                                  <div className="dropdown-projects-menu-entry">
-                                    Frontend
-                                  </div>
-                                  <div className="dropdown-projects-menu-entry">
-                                    Backend
-                                  </div>
-                                  <div className="dropdown-projects-menu-entry">
+                                </div>
+                                <div className="dropdown-projects-menu-entry">
+                                  Frontend
+                                </div>
+                                <div className="dropdown-projects-menu-entry">
+                                  Backend
+                                </div>
+                                <div className="dropdown-projects-menu-entry">
                                   Projects 2
-                                  </div>
+                                </div>
                               </div>
                             
                               {/* Right Side Project Images */}
                               {/* Should I add the option to navigate left to right to add more options */}
                               <div className="dropdown-projects-display">
                                 <div className="dropdown-projects-display-entry">
-                                  A
+                                  {/* <img src="" alt=""></img> */}
+                                  {/* Add inner shadow, text on top and bottom, images / scaling (svg) */}
                                 </div>
                                 <div className="dropdown-projects-display-entry">
-                                  B
+                                  {/* <img src="" alt=""></img> */}
                                 </div>
                                 <div className="dropdown-projects-display-entry">
-                                  C
+                                  {/* <img src="" alt=""></img> */}
                                 </div>
                               </div>
                           </div>
