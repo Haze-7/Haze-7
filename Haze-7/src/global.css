@@ -251,14 +251,17 @@ background: var(--color-item-being-covered);
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
-  padding: .5rem .5rem .5rem .1rem;
+  /* padding: .5rem .5rem .5rem .1rem; */
+  padding: 0 .5rem 0 .5rem;
+
 }
 
 .navbar-linkedin-logo {
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
-  padding: .5rem .5rem .5rem .5rem;
+  /* padding: .5rem .5rem .5rem .5rem; */
+  padding: 0 .5rem 0 .5rem;
 }
 
 .navbar-hamburger-icon {
@@ -421,7 +424,9 @@ background: var(--color-item-being-covered);
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
-  padding: .75rem .5rem .75rem .1rem;
+  /* padding: .75rem .5rem .75rem .1rem; */
+  padding: 0 .5rem 0 .1rem;
+  /* padding: .75rem; */
 }
 
 .dl-switch-checkbox {

@@ -111,6 +111,10 @@ function Navbar({ mode, setMode }) {
                               {/* Should I add the option to navigate left to right to add more options */}
                               <div className="dropdown-projects-display">
                                 <div className="dropdown-projects-display-entry">
+                                  {/* <Link to="" className="">
+                                        Content
+                                      </Link>
+                                  */}
                                   {/* <img src={DeadmanProject} className="" alt=""></img> */}
                                   {/* Add inner shadow, text on top and bottom, images / scaling (svg)    a */}
                                 </div>
