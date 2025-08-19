@@ -12,7 +12,7 @@ function Home({ mode, setMode }) {
 
         <div className="w-full">
             {/* Primary  */}
-          <section className="bg-sand h-[80rem] flex justify-center gap-[5rem] ">
+          <section className="bg-sand h-[80rem] flex justify-center gap-[5rem]">
             {/* Hero Section */}
             <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}

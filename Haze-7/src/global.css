@@ -131,6 +131,13 @@ background: var(--color-item-being-covered);
   z-index: -1;
 }
 
+/* @media (max-width: 380px) {
+  .bg-sand {
+    background-size: full full; 
+    background-position: center;  
+  }
+} */
+
 .navbar-main {
   z-index: 1000;
   left: 1rem;
@@ -477,6 +484,21 @@ background: var(--color-item-being-covered);
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+@media (max-width: 1020px) {
+  .hero-picture {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-picture {
+    height: 46vw;
+    justify-content: center;
+  }
 }
 
 .hero-primary-text {
