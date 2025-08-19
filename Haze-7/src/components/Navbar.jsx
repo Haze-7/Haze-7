@@ -7,7 +7,7 @@ import DarkLightSwitch from "./DarkLightSwitch.jsx";
 import HLogo from "/H-logo.svg";
 import SuniProject from "/images/suni.svg" 
 import DeadmanProject from "/images/deadman.svg" 
-import CSGProject from "/images/CSG.svg" 
+import CSGProject from "/images/csg.svg" 
 
 
 function Navbar({ mode, setMode }) {
@@ -105,24 +105,26 @@ function Navbar({ mode, setMode }) {
                                 <div className="dropdown-projects-menu-entry">
                                   Projects 2
                                 </div>
+                                <div className="dropdown-projects-menu-entry">
+                                  Projects 3
+                                </div>
                               </div>
                             
                               {/* Right Side Project Images */}
                               {/* Should I add the option to navigate left to right to add more options */}
                               <div className="dropdown-projects-display">
                                 <div className="dropdown-projects-display-entry">
-                                  {/* <Link to="" className="">
-                                        Content
-                                      </Link>
-                                  */}
-                                  {/* <img src={DeadmanProject} className="" alt=""></img> */}
-                                  {/* Add inner shadow, text on top and bottom, images / scaling (svg)    a */}
+                                  <img src={DeadmanProject} className="inset-0 w-full h-full object-cover rounded-xl" alt=""></img>
+                                    {/* Overlay gradient + inset shadow */}
+                                    <div className="">
+                                    </div>
+                                  {/* Add inner shadow, text on top and bottom, images / scaling (svg) */}
                                 </div>
                                 <div className="dropdown-projects-display-entry">
-                                  {/* <img src={DeadmanProject} className="" alt=""></img> */}
+                                  <img src={CSGProject} className="inset-0 w-full h-full object-cover rounded-xl" alt=""></img>
                                 </div>
                                 <div className="dropdown-projects-display-entry">
-                                  {/* <img src={DeadmanProject} className="" alt=""></img> */}
+                                  <img src={SuniProject} className="inset-0 w-full h-full object-cover rounded-xl" alt=""></img>
                                 </div>
                               </div>
                           </div>
