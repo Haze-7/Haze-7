@@ -300,13 +300,12 @@ background: var(--color-item-being-covered);
 /* NAME IS MISLEADING/ Actually acts as the hidden bridge between navbar entry and dropdown */
 .navbar-dropdown-container {
   background-color: transparent;
-  top: 3rem;
   float: none;
   position: absolute;
   right: 0rem;
   left: 0rem;
-  top: 4.25rem;
-  height: 1.6rem;
+  top: 3.75rem;
+  height: 1.25rem;
   max-width: 83rem;
   opacity: 0;
   visibility: hidden;
@@ -322,7 +321,7 @@ background: var(--color-item-being-covered);
   position: absolute;
   right: 0rem;
   left: 0rem;
-  top: 1.6rem;
+  top: 1.25rem;
   height: 20rem;
   flex-flow: row;
   justify-content: center;
