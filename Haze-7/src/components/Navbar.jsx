@@ -29,7 +29,6 @@ function Navbar({ mode, setMode }) {
               <Link to="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
               </Link>
-              {/* nav:flex hidden */}
               <div className={`navbar-menu hidden nav:flex`}>
                 {/* Navbar Menu Left */}
                 {/* Needs to hide below lg, toggled dropdown / visual on hamburger press */}
@@ -89,7 +88,7 @@ function Navbar({ mode, setMode }) {
                             <div className="dropdown-projects-content">
                               {/* Left side Project Menu */}
                               {/* w-[30%] lg:w-[50%] xl:[60%] */}
-                              <div className="dropdown-projects-menu w-[30%] lg:w-[40%] xl:[60%] transition-all duration-700 ease-in-out">
+                              <div className="dropdown-projects-menu w-[50%] min-w-[7rem] transition-all duration-700 ease-in-out">
                                 <div className="dropdown-projects-menu-entry">
                                   Projects
                                 </div>
@@ -113,19 +112,46 @@ function Navbar({ mode, setMode }) {
                               {/* Right Side Project Images */}
                               {/* Should I add the option to navigate left to right to add more options */}
                               <div className="dropdown-projects-display">
-                                <div className="dropdown-projects-display-entry">
-                                  <img src={DeadmanProject} className="inset-0 w-full h-full object-cover rounded-xl" alt=""></img>
-                                    {/* Overlay gradient + inset shadow */}
-                                    <div className="">
-                                    </div>
-                                  {/* Add inner shadow, text on top and bottom, images / scaling (svg) */}
-                                </div>
-                                <div className="dropdown-projects-display-entry">
-                                  <img src={CSGProject} className="inset-0 w-full h-full object-cover rounded-xl" alt=""></img>
-                                </div>
-                                <div className="dropdown-projects-display-entry">
-                                  <img src={SuniProject} className="inset-0 w-full h-full object-cover rounded-xl" alt=""></img>
-                                </div>
+                                <Link to="/" className="flex">
+                                  <div className="dropdown-projects-display-entry"> {/* wrapper */}
+                                    <img src={DeadmanProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img> {/* Img  inset-0 w-full h-full object-cover rounded-xl*/}
+                                      {/*Blur overlay */}
+                                    <div className="dropdown-projects-display-entry-blur"></div> 
+                                  </div>
+                                  {/*Top Text Title*/}
+                                  <p className="text-lg absolute p-[1rem]">Deadman's Hand</p>                                     
+                                  {/*Bottom Text Description  */}
+                                  <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
+                                    Online Gambling / Gatcha Game for Education
+                                    Online Gambling / Gatcha Game for Education
+                                  </p>                               
+                                </Link>
+                                <Link to="/" className="flex">                         
+                                  <div className="dropdown-projects-display-entry">
+                                    <img src={CSGProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img>
+                                    <div className="dropdown-projects-display-entry-blur"></div> 
+                                  </div>
+                                  {/*Top Text Title*/}
+                                  <p className="text-lg absolute p-[1rem]">CSS Style Guide</p>                                     
+                                  {/*Bottom Text Description  */}
+                                  <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
+                                    CSS Style Guide for storing Components
+                                    Measurement Rulers for scaling elements
+                                  </p> 
+                                </Link> 
+                                <Link to="/" className="flex"> 
+                                  <div className="dropdown-projects-display-entry">
+                                    <img src={SuniProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img>
+                                    <div className="dropdown-projects-display-entry-blur"></div> 
+                                  </div>
+                                  {/*Top Text Title*/}
+                                  <p className="text-lg absolute p-[1rem]">Suni: The Travel Companion</p>                                     
+                                  {/*Bottom Text Description  */}
+                                  <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
+                                    Suni Algorithm for planning travel and iteneraries
+                                    Plan your next vacation today!
+                                  </p>
+                                </Link> 
                               </div>
                           </div>
                          </div>
