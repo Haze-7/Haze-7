@@ -39,19 +39,21 @@
     rgba(45, 45, 45, 0.70) 95.96%
   );
 
-  /* --color-light-gradient: linear-gradient(
-    0deg,
-    rgba(234, 186, 140, 0.2),
-    rgba(234, 186, 140, 0.2)
-  ),
-  linear-gradient(
-    90.1deg,
-    rgba(215, 201, 174, 0.6) 9.34%,
-    rgba(215, 201, 174, 0.1) 95.96%
-  ); */
-
   --color-light-gradient: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(165.99deg, rgba(215, 201, 174, 0.6) 9.89%, rgba(215, 201, 174, 0.1) 89.94%);
 
+}
+
+/* Scrollbar hidden in elements utlity classes */
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
 }
 
 @theme {
@@ -353,26 +355,21 @@ background: var(--color-item-being-covered);
 
 /* Left side menu projects dropdown */
 
-.dropdown-projects-menu {
-  /* gap: .5rem; */
-  /* padding: 1.5rem; */
+.dropdown-menu {
   padding-left: 0rem;
-  /* padding-top: 0.1rem; */
   display: flex;
   flex-direction: column;
-  /* width: 40%; */
 }
 
-.dropdown-projects-menu-entry {
+.dropdown-menu-entry {
   font-size: 1.1rem;
   border-radius: 0.7rem;
   padding: 0.75rem;
   padding-left: 0.7rem;
-  /* min-width: 10.5rem; */
   cursor: pointer;
 }
 
-.dropdown-projects-menu-entry:hover {
+.dropdown-menu-entry:hover {
   background: var(--navbar-gradient);
 }
 

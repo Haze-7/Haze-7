@@ -84,23 +84,23 @@ function Navbar({ mode, setMode }) {
                             <div className="dropdown-projects-content">
                               {/* Left side Project Menu */}
                               {/* w-[30%] lg:w-[50%] xl:[60%] */}
-                              <div className="dropdown-projects-menu w-[50%] min-w-[7rem] transition-all duration-700 ease-in-out">
-                                <div className="dropdown-projects-menu-entry">
+                              <div className="dropdown-menu w-[50%] min-w-[7rem] transition-all duration-700 ease-in-out">
+                                <div className="dropdown-menu-entry">
                                   Projects
                                 </div>
-                                <div className="dropdown-projects-menu-entry ">
+                                <div className="dropdown-menu-entry ">
                                   School
                                 </div>
-                                <div className="dropdown-projects-menu-entry">
+                                <div className="dropdown-menu-entry">
                                   Frontend
                                 </div>
-                                <div className="dropdown-projects-menu-entry">
+                                <div className="dropdown-menu-entry">
                                   Backend
                                 </div>
-                                <div className="dropdown-projects-menu-entry">
+                                <div className="dropdown-menu-entry">
                                   Projects 2
                                 </div>
-                                <div className="dropdown-projects-menu-entry">
+                                <div className="dropdown-menu-entry">
                                   Projects 3
                                 </div>
                               </div>
@@ -285,8 +285,29 @@ function Navbar({ mode, setMode }) {
                           {/*Mini Dropdown Content */}
                           <div className="mini-navbar-dropdown-container top-[14.9rem]">
                             <div className="mini-navbar-dropdown-content">
-                              <div className="dropdown-title">
-                                Projects 22
+                              <div className="dropdown-projects-content">
+                                {/* Left side Project Menu */}
+                                {/* w-[30%] lg:w-[50%] xl:[60%] */}
+                                <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
+                                  <div className="dropdown-menu-entry">
+                                    Projects
+                                  </div>
+                                  <div className="dropdown-menu-entry ">
+                                    School
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Frontend
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Backend
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Projects 2
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Projects 3
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
