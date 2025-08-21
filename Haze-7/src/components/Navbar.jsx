@@ -60,12 +60,81 @@ function Navbar({ mode, setMode }) {
                         <div className="navbar-chevron">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
-
                         {/* Dropdown Content */}
                         <div className="navbar-dropdown-container">
                           <div className="navbar-dropdown-content">
-                            <div className="dropdown-title">
-                              Experience 2
+                            {/* Dropdown-list */}
+                            <div className="dropdown-list-container">
+                              {/* Column 1: Experience */}
+                              <div className="dropdown-list">
+                                <div className="dropdown-list-header">
+                                  Experience
+                                </div>
+                                <div className="dropdown-menu w-full">
+                                  <div className="dropdown-menu-entry">
+                                    Experiences
+                                  </div>
+                                  <div className="dropdown-menu-entry ">
+                                    School
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Frontend
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Backend
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Experience 1
+                                  </div>
+                                </div>
+                              </div>
+                              {/* Column 2: */}
+                              <div className="dropdown-list">
+                                <div className="dropdown-list-header">
+                                  Experience
+                                </div>
+                                <div className="dropdown-menu w-full">
+                                  <div className="dropdown-menu-entry">
+                                    Experiences
+                                  </div>
+                                  <div className="dropdown-menu-entry ">
+                                    School
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Frontend
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Backend
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Experience 1
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Column 3: ? */}
+                              <div className="dropdown-list">
+                                <div className="dropdown-list-header">
+                                  Experience 3
+                                </div>
+                                <div className="dropdown-menu w-full">
+                                  <div className="dropdown-menu-entry">
+                                    Experiences
+                                  </div>
+                                  <div className="dropdown-menu-entry ">
+                                    School
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Frontend
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Backend
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Experience 1
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -83,8 +152,7 @@ function Navbar({ mode, setMode }) {
                           <div className="navbar-dropdown-content ">
                             <div className="dropdown-projects-content">
                               {/* Left side Project Menu */}
-                              {/* w-[30%] lg:w-[50%] xl:[60%] */}
-                              <div className="dropdown-menu w-[50%] min-w-[7rem] transition-all duration-700 ease-in-out">
+                              <div className="dropdown-menu w-[50%]">
                                 <div className="dropdown-menu-entry">
                                   Projects
                                 </div>
