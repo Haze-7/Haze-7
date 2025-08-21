@@ -245,7 +245,6 @@ background: var(--color-item-being-covered);
   align-items: center;
   /* padding: .5rem .5rem .5rem .1rem; */
   padding: 0 .5rem 0 .5rem;
-
 }
 
 .navbar-linkedin-logo {
@@ -406,6 +405,36 @@ background: var(--color-item-being-covered);
   font-weight: 500;
 }
 /* No entries( uses dropdown menu entries instead) */
+
+/* List Social Media Logos: */
+
+/* .dropdown-list-logo {
+  padding-right: 0.5rem;
+} */
+
+.dropdown-menu-logo-entry {
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
+  /* padding: 0.3rem;  Set manually for each logo in tailwind (logo sizes differ)*/
+  padding-left: 0.7rem;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  
+}
+
+.dropdown-menu-logo-entry:hover {
+  background: var(--navbar-gradient);
+} 
+
+/* .dropdown-menu-entry {
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
+  padding: 0.75rem;
+  padding-left: 0.7rem;
+  cursor: pointer;
+}
+*/
 
 .dropdown-projects-display {
   display: flex;
