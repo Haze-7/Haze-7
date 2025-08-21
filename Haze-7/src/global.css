@@ -184,6 +184,7 @@ background: var(--color-item-being-covered);
   display: flex;
 }
 
+/* What is this doing? */
 .navbar-content-container::before {
   content: "";
   position: absolute;
@@ -219,25 +220,6 @@ background: var(--color-item-being-covered);
   align-items: center;
   transition: transform .3s;
   /* display: flex; */
-}
-
-.mini-navbar-menu {
-  background: var(--navbar-dropdown-gradient);
-  float: none;
-  border-radius: 1rem;
-  text-decoration: none;
-  text-align: left;
-  position: absolute;
-  right: 0rem;
-  left: 0rem;
-  top: 5.9rem;
-  justify-content: center;
-  align-items: stretch;
-  max-width: 83rem;
-  padding: .75rem 1.5rem;
-  font-size: 1rem;
-  transform: translateY(-8px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-entry {
@@ -310,7 +292,6 @@ background: var(--color-item-being-covered);
   max-width: 83rem;
   opacity: 0;
   visibility: hidden;
-  
 }
 
 .navbar-dropdown-content {
@@ -329,6 +310,7 @@ background: var(--color-item-being-covered);
   align-items: stretch;
   max-width: 83rem;
   /* padding: .75rem 1.5rem; */
+  padding: 1.5rem;
   font-size: 1rem;
   opacity: 0;
   visibility: hidden;
@@ -341,8 +323,10 @@ background: var(--color-item-being-covered);
 /* Show dropdown & bridge when entry, bridge, or dropdown is hovered */
 .navbar-entry:hover .navbar-dropdown-content,
 .navbar-entry:hover .navbar-dropdown-container,
+.navbar-entry:hover .mini-navbar-dropdown-content,
 .navbar-dropdown-container:hover,
-.navbar-dropdown-content:hover {
+.navbar-dropdown-content:hover,
+.mini-navbar-dropdown-convent:hover {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -363,8 +347,6 @@ background: var(--color-item-being-covered);
 .dropdown-projects-content {
   display: flex;
   flex-direction: row;
-  /* padding: 0.3rem; */
-  padding: 1.5rem;
   height: 100%;
   width: 100%;
 }
@@ -458,25 +440,6 @@ background: var(--color-item-being-covered);
   line-height: 1.3;
 }
 
-
-/* Another version of above */
-/* .float_nav_card {
-    z-index: 1;
-    grid-column-gap: 4rem;
-    grid-row-gap: 4rem;
-    aspect-ratio: 4 / 5;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-between;
-    max-width: 20rem;
-    padding: 1rem;
-    text-decoration: none;
-    display: flex
-;
-    position: relative;
-    overflow: hidden;
-} */
-
 .dropdown-projects-display-entry-blur {
   z-index: -1;
   backdrop-filter: blur(1rem);
@@ -489,6 +452,113 @@ background: var(--color-item-being-covered);
   mask-image: linear gradient(#000 40%, #000 80%);
 
 
+}
+
+/* Mini-Navbar (below 1020px) Handling */
+
+.mini-navbar-menu {
+  background: var(--navbar-dropdown-gradient);
+  float: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: left;
+  position: absolute;
+  right: 0rem;
+  left: 0rem;
+  top: 5.9rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 83rem;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mini-navbar-entry {
+  grid-column-gap: .25rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: .75rem .5rem .75rem .75rem;
+  display: flex;
+  /* float: left; */
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.mini-navbar-entry:hover {
+  background: var(--navbar-gradient);
+  cursor: pointer;
+}
+
+.mini-navbar-entry:hover .navbar-chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown show / hide hover handling */
+/* Show dropdown & bridge when entry, bridge, or dropdown is hovered */
+.mini-navbar-entry:hover .mini-navbar-dropdown-content,
+.mini-navbar-entry:hover .mini-navbar-dropdown-container,
+.mini-navbar-dropdown-container:hover,
+.mini-navbar-dropdown-content:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* .navbar-entry:hover .navbar-dropdown-content,
+.navbar-entry:hover .navbar-dropdown-container,
+.navbar-entry:hover .mini-navbar-dropdown-content,
+.navbar-dropdown-container:hover,
+.navbar-dropdown-content:hover,
+.mini-navbar-dropdown-convent:hover { */
+
+/* Dropdown-specific extra transform for open animation */
+.mini-navbar-entry:hover .mini-navbar-dropdown-content,
+.mini-navbar-dropdown-content:hover {
+  transform: translateY(0);
+}
+
+.mini-navbar-dropdown-container {
+  background-color: transparent;
+  float: none;
+  position: absolute;
+  right: 1.5rem;
+  left: 1.5rem;
+  /* top: 3.75rem; */
+  height: 0.4rem; 
+  max-width: 83rem;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+
+.mini-navbar-dropdown-content {
+  background: var(--navbar-dropdown-gradient);
+  float: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: left;
+  position: absolute;
+  right: 0rem;
+  left: 0rem;
+  /* top: 100%; */
+  top: 0.4rem;
+  height: 15rem;
+  flex-flow: row;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 83rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
 }
 
 /* Dark/Light Mode Slider */

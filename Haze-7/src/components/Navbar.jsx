@@ -24,17 +24,13 @@ function Navbar({ mode, setMode }) {
       <>
         <div className="navbar-main font-protokoll">
           <div className="navbar-background-main"></div>
-          <div className="navbar-background" ></div>
+          <div className="navbar-background"></div>
             <div className="navbar-content-container">
               <Link to="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
               </Link>
               <div className={`navbar-menu hidden nav:flex`}>
                 {/* Navbar Menu Left */}
-                {/* Needs to hide below lg, toggled dropdown / visual on hamburger press */}
-                {/* <div className={` ${!menuOpen ? "hidden" : "flex"} nav:flex `}></div> 
-                The idea is to make all (navbar-menu) hidden below nav, show / handle menuOpne within mini-menu instead 
-                */}
                 <div className={`flex`}>
                   <div className="md:nav-entry-outside">
                     <div className="md:nav-entry-setup">
@@ -230,6 +226,7 @@ function Navbar({ mode, setMode }) {
                   </div>
 
             </div>
+
               {/* Mini Nav Menu / only visible below :nav, when toggled by  */}
               {/* Need to do custom dropdowns for this  */}
               {/* Content Changes not shared, styles are shared between (may need own classes) */}
@@ -240,68 +237,76 @@ function Navbar({ mode, setMode }) {
                   {/* <div className={` ${!menuOpen ? "hidden" : "flex"} nav:flex `}></div> 
                   The idea is to make all (navbar-menu) hidden below nav, show / handle menuOpne within mini-menu instead 
                   */}
-                  <div className={`flex flex-col items-center mx-auto gap-[.8rem] pt-[.5rem]`}>
+                  <div className={`flex flex-col items-center mx-auto w-full gap-[.8rem] pt-[.5rem]`}>
                         {/* About Me */}
-                        <div className="navbar-entry">
+                        <div className="mini-navbar-entry">
                           <Link to="/">
                             About Me 
                           </Link>   
                           <div className="navbar-chevron">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                           </div>
-                          {/* Dropdown Content */}
-                          <div className="navbar-dropdown-content">
-                            <div className="dropdown-content">
-                                <div className="dropdown-title">
-                                  About Me 2
-                                </div>
+                          {/*Mini Dropdown Content */}
+                          <div className="mini-navbar-dropdown-container top-[7.2rem]">
+                            <div className="mini-navbar-dropdown-content">
+                              <div className="dropdown-content">
+                                  <div className="dropdown-title">
+                                    About Me 2
+                                  </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                         {/* Experience */}
-                        <div className="navbar-entry">
+                        <div className="mini-navbar-entry">
                           <Link to="/">
                             Experience
                           </Link>
                           <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                           </div>
-                          {/* Dropdown Content */}
-                          <div className="navbar-dropdown-content">
-                            <div className="dropdown-title">
-                              Experience 2
+                          {/*Mini Dropdown Content */}
+                          <div className="mini-navbar-dropdown-container top-[11rem]">                          
+                            <div className="mini-navbar-dropdown-content">
+                              <div className="dropdown-title">
+                                Experience 2
+                              </div>
                             </div>
                           </div>
                         </div>
                         {/* Projects */}
-                        <div className="navbar-entry">
+                        <div className="mini-navbar-entry">
                           <Link to="/">
                             Projects
                           </Link>
                           <div className="navbar-chevron">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                           </div>
-                          {/* Dropdown Content */}
-                          <div className="navbar-dropdown-content">
-                            <div className="dropdown-title">
-                              Projects 22
+                          {/*Mini Dropdown Content */}
+                          <div className="mini-navbar-dropdown-container top-[14.9rem]">
+                            <div className="mini-navbar-dropdown-content">
+                              <div className="dropdown-title">
+                                Projects 22
+                              </div>
                             </div>
                           </div>
                         </div>
                         {/* Contact Me */}
-                        <div className="navbar-entry">
+                        <div className="mini-navbar-entry">
                           <Link to="/">
                             Contact Me
                           </Link>
                           <div className="navbar-chevron">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                           </div>
-                          {/* Dropdown Content */}
-                          <div className="navbar-dropdown-content">
-                            <div className="dropdown-title">
-                              Contact Me 2
-                            </div>
-                          </div>                   
+                          {/*Mini Dropdown Content */}
+                          <div className="mini-navbar-dropdown-container top-[18.6rem]">                          
+                            <div className="mini-navbar-dropdown-content">
+                              <div className="dropdown-title">
+                                Contact Me 2
+                              </div>
+                            </div>  
+                          </div>                 
                         </div>                                           
                   {/* Nav Menu Right */}
                     <div className={`flex`}>
@@ -319,7 +324,7 @@ function Navbar({ mode, setMode }) {
                         </Link>
                         </div>
                         {/* Day / Light Switch */}
-                        <div className={`flex navbar-dl-switch`}>
+                        <div className={`flex navbar-dl-switch z-0`}>
                             <DarkLightSwitch
                               isOn={mode}
                               onBgColor="var(--color-light-gradient)"
@@ -341,7 +346,7 @@ function Navbar({ mode, setMode }) {
                       </div>
                     </div>
                   </div>
-              </div>
+            </div>
         </div>
       </>
     )
