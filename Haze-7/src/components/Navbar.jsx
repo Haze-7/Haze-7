@@ -123,7 +123,7 @@ function Navbar({ mode, setMode }) {
                                 </div>
                               </div>
 
-                              {/* Column 3: Personal ? */}
+                              {/* Column 3: Personal ? or Skills? (tech stack, tech, etc) */}
                               <div className="dropdown-list">
                                 <div className="dropdown-list-header">
                                   Personal
@@ -188,7 +188,7 @@ function Navbar({ mode, setMode }) {
                                     <div className="dropdown-projects-display-entry-blur"></div> 
                                   </div>
                                   {/*Top Text Title*/}
-                                  <p className="text-lg absolute p-[1rem]">Deadman's Hand</p>                                     
+                                  <p className="text-lg absolute p-[1rem] text-akaroa">Deadman's Hand</p>                                     
                                   {/*Bottom Text Description  */}
                                   <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
                                     Online Gambling / Gatcha Game for Education
@@ -201,7 +201,7 @@ function Navbar({ mode, setMode }) {
                                     <div className="dropdown-projects-display-entry-blur"></div> 
                                   </div>
                                   {/*Top Text Title*/}
-                                  <p className="text-lg absolute p-[1rem]">CSS Style Guide</p>                                     
+                                  <p className="text-lg absolute p-[1rem] text-mineshaft">CSS Style Guide</p>                                     
                                   {/*Bottom Text Description  */}
                                   <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
                                     CSS Style Guide for storing Components
@@ -214,7 +214,7 @@ function Navbar({ mode, setMode }) {
                                     <div className="dropdown-projects-display-entry-blur"></div> 
                                   </div>
                                   {/*Top Text Title*/}
-                                  <p className="text-lg absolute p-[1rem]">Suni: The Travel Companion</p>                                     
+                                  <p className="text-lg absolute p-[1rem] text-akaroa">Suni: The Travel Companion</p>                                     
                                   {/*Bottom Text Description  */}
                                   <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
                                     Suni Algorithm for planning travel and iteneraries
