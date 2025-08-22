@@ -15,10 +15,21 @@ function Navbar({ mode, setMode }) {
     // const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
 
+    // Mini Menu Dropdown handle
+    const [openMiniDropdown, setOpenMiniDropdown] = useState(null);
+
+
     // Handles button (hamburger) toggling small menu in or out
     const toggleNavbarCollapse = () => {
       setMenuOpen((prev) => !prev);
     };
+
+    // 
+    const toggleMiniDropdown = (name) => {
+      setOpenMiniDropdown(openMiniDropdown === name ? null : name);
+    };
+
+
 
     return (
       <>
@@ -413,7 +424,7 @@ function Navbar({ mode, setMode }) {
                   */}
                   <div className={`flex flex-col items-center mx-auto w-full gap-[.8rem] pt-[.5rem]`}>
                         {/* About Me */}
-                        <div className="mini-navbar-entry">
+                        <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("about")}>
                           <Link to="/">
                             About Me 
                           </Link>   
@@ -422,8 +433,10 @@ function Navbar({ mode, setMode }) {
                           </div>
                           {/*Mini Dropdown Content */}
                           <div className="mini-navbar-dropdown-container top-[7.2rem]">
-                            <div className="mini-navbar-dropdown-content">
-                              <div className="dropdown-content">
+                            <div className={`mini-navbar-dropdown-content
+                            ${openMiniDropdown === "about" ? "block" : "group-hover:block hidden"}`}
+                            >
+                              <div className={`dropdown-content`}>
                                   <div className="dropdown-title">
                                     About Me 2
                                   </div>
@@ -432,7 +445,7 @@ function Navbar({ mode, setMode }) {
                           </div>
                         </div>
                         {/* Experience */}
-                        <div className="mini-navbar-entry">
+                        <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("experience")}>
                           <Link to="/">
                             Experience
                           </Link>
@@ -441,7 +454,9 @@ function Navbar({ mode, setMode }) {
                           </div>
                           {/*Mini Dropdown Content */}
                           <div className="mini-navbar-dropdown-container top-[11rem]">                          
-                            <div className="mini-navbar-dropdown-content">
+                            <div className={`mini-navbar-dropdown-content 
+                              ${openMiniDropdown === "experience" ? "block" : "group-hover:block hidden"}`}
+                            >
                               <div className="dropdown-title">
                                 Experience 2
                               </div>
@@ -449,7 +464,7 @@ function Navbar({ mode, setMode }) {
                           </div>
                         </div>
                         {/* Projects */}
-                        <div className="mini-navbar-entry">
+                        <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("projects")}>
                           <Link to="/">
                             Projects
                           </Link>
@@ -458,7 +473,9 @@ function Navbar({ mode, setMode }) {
                           </div>
                           {/*Mini Dropdown Content */}
                           <div className="mini-navbar-dropdown-container top-[14.9rem]">
-                            <div className="mini-navbar-dropdown-content">
+                            <div className={`mini-navbar-dropdown-content
+                              ${openMiniDropdown === "projects" ? "block" : "group-hover:block hidden"}`}
+                            >
                               <div className="dropdown-projects-content">
                                 {/* Left side Project Menu */}
                                 {/* w-[30%] lg:w-[50%] xl:[60%] */}
@@ -487,7 +504,7 @@ function Navbar({ mode, setMode }) {
                           </div>
                         </div>
                         {/* Contact Me */}
-                        <div className="mini-navbar-entry">
+                        <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("contact")}>
                           <Link to="/">
                             Contact Me
                           </Link>
@@ -496,7 +513,9 @@ function Navbar({ mode, setMode }) {
                           </div>
                           {/*Mini Dropdown Content */}
                           <div className="mini-navbar-dropdown-container top-[18.6rem]">                          
-                            <div className="mini-navbar-dropdown-content">
+                            <div className={`mini-navbar-dropdown-content
+                              ${openMiniDropdown === "contact" ? "block" : "group-hover:block hidden"}`}                            
+                            >
                               <div className="dropdown-title">
                                 Contact Me 2
                               </div>
