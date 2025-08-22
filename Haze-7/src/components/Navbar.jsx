@@ -57,9 +57,97 @@ function Navbar({ mode, setMode }) {
                         {/* Dropdown Content */}
                         <div className="navbar-dropdown-container">
                           <div className="navbar-dropdown-content">
-                              <div className="dropdown-title">
-                                About Me 2
+                           <div className="dropdown-about-display">
+
+                            {/* Handle individual column of dropdown (top image, below list) */}
+                             <div className="dropdown-about-section">
+                              <Link to="/" className="flex">
+                               <div className="dropdown-about-display-entry"> {/* wrapper */}
+                                <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img>
+                                  {/*Blur overlay */}
+                                  <div className="dropdown-projects-display-entry-blur"></div> 
+                               </div>
+                              </Link>
+                              {/* Dropdown-list */}
+                              <div className="dropdown-list-about-container">
+                                {/* Column 1: Work Related */}
+                                <div className="dropdown-list">
+                                  {/* Make mini version to fit size standard for about me */}
+                                  <div className="dropdown-about-list-header">
+                                    Where I'm From
+                                  </div>
+                                  <div className="dropdown-menu w-full ">
+                                    <div className="dropdown-about-menu-entry">
+                                      Thibodaux, LA
+                                    </div>
+                                    <div className="dropdown-about-menu-entry">
+                                      Baton Rouge, LA
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
+                             </div>  
+
+                            {/* Handle individual column of dropdown (top image, below list) */}
+                             <div className="dropdown-about-section">
+                              <Link to="/" className="flex">
+                               <div className="dropdown-about-display-entry"> {/* wrapper */}
+                                <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img>
+                                  {/*Blur overlay */}
+                                  {/* <div className="dropdown-projects-display-entry-blur"></div>  */}
+                               </div>
+                              </Link>
+
+                              {/* Dropdown-list */}
+                              <div className="dropdown-about-list-container">
+                                {/* Column 1: Work Related */}
+                                <div className="dropdown-list">
+                                  {/* Make mini version to fit size standard for about me */}
+                                  <div className="dropdown-about-list-header">
+                                    Career
+                                  </div>
+                                  <div className="dropdown-menu w-full">
+                                    <div className="dropdown-about-menu-entry">
+                                      Aspirations
+                                    </div>
+                                    <div className="dropdown-about-menu-entry">
+                                      Fields Of Interest
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                             </div>
+
+                            {/* Handle individual column of dropdown (top image, below list) */}
+                             <div className="dropdown-about-section">
+                              <Link to="/" className="flex">
+                               <div className="dropdown-about-display-entry"> {/* wrapper */}
+                                <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img>
+                                  {/*Blur overlay */}
+                                  {/* <div className="dropdown-projects-display-entry-blur"></div>  */}
+                               </div>
+                              </Link>
+
+                              {/* Dropdown-list */}
+                              <div className="dropdown-about-list-container">
+                                {/* Column 1: Work Related */}
+                                <div className="dropdown-list">
+                                  {/* Make mini version to fit size standard for about me */}
+                                  <div className="dropdown-about-list-header">
+                                    Interests / Hobbies
+                                  </div>
+                                  <div className="dropdown-menu w-full">
+                                    <div className="dropdown-about-menu-entry">
+                                      Interests
+                                    </div>
+                                    <div className="dropdown-about-menu-entry">
+                                      Hobbies
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                             </div>                                 
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -123,7 +211,7 @@ function Navbar({ mode, setMode }) {
                                 </div>
                               </div>
 
-                              {/* Column 3: Personal ? */}
+                              {/* Column 3: Personal ? or Skills? (tech stack, tech, etc) */}
                               <div className="dropdown-list">
                                 <div className="dropdown-list-header">
                                   Personal
@@ -135,6 +223,9 @@ function Navbar({ mode, setMode }) {
                                   <div className="dropdown-menu-entry ">
                                     Projects
                                   </div>
+                                 <div className="dropdown-menu-entry ">
+                                    Design
+                                  </div>                                  
                                   <div className="dropdown-menu-entry">
                                     Future Plans
                                   </div>
@@ -188,7 +279,7 @@ function Navbar({ mode, setMode }) {
                                     <div className="dropdown-projects-display-entry-blur"></div> 
                                   </div>
                                   {/*Top Text Title*/}
-                                  <p className="text-lg absolute p-[1rem]">Deadman's Hand</p>                                     
+                                  <p className="text-lg absolute p-[1rem] text-akaroa">Deadman's Hand</p>                                     
                                   {/*Bottom Text Description  */}
                                   <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
                                     Online Gambling / Gatcha Game for Education
@@ -201,7 +292,7 @@ function Navbar({ mode, setMode }) {
                                     <div className="dropdown-projects-display-entry-blur"></div> 
                                   </div>
                                   {/*Top Text Title*/}
-                                  <p className="text-lg absolute p-[1rem]">CSS Style Guide</p>                                     
+                                  <p className="text-lg absolute p-[1rem] text-mineshaft">CSS Style Guide</p>                                     
                                   {/*Bottom Text Description  */}
                                   <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
                                     CSS Style Guide for storing Components
@@ -214,7 +305,7 @@ function Navbar({ mode, setMode }) {
                                     <div className="dropdown-projects-display-entry-blur"></div> 
                                   </div>
                                   {/*Top Text Title*/}
-                                  <p className="text-lg absolute p-[1rem]">Suni: The Travel Companion</p>                                     
+                                  <p className="text-lg absolute p-[1rem] text-akaroa">Suni: The Travel Companion</p>                                     
                                   {/*Bottom Text Description  */}
                                   <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
                                     Suni Algorithm for planning travel and iteneraries
@@ -423,7 +514,7 @@ function Navbar({ mode, setMode }) {
                   The idea is to make all (navbar-menu) hidden below nav, show / handle menuOpne within mini-menu instead 
                   */}
                   <div className={`flex flex-col items-center mx-auto w-full gap-[.8rem] pt-[.5rem]`}>
-                        {/* About Me */}
+                        {/*Mini About Me */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("about")}>
                           <Link to="/">
                             About Me 
@@ -436,15 +527,32 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content
                             ${openMiniDropdown === "about" ? "block" : "group-hover:block hidden"}`}
                             >
-                              <div className={`dropdown-content`}>
-                                  <div className="dropdown-title">
-                                    About Me 2
+                             <div className="mini-dropdown-menu-content">
+                                <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
+                                  <div className="dropdown-menu-entry">
+                                    My
                                   </div>
+                                  <div className="dropdown-menu-entry ">
+                                    Name
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    is
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Hayes
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Chiasson
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Learn More
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        {/* Experience */}
+                        {/*Mini Experience */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("experience")}>
                           <Link to="/">
                             Experience
@@ -457,8 +565,24 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content 
                               ${openMiniDropdown === "experience" ? "block" : "group-hover:block hidden"}`}
                             >
-                              <div className="dropdown-title">
-                                Experience 2
+                              <div className="mini-dropdown-menu-content">
+                                <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
+                                  <div className="dropdown-menu-entry">
+                                    Previous Employment
+                                  </div>
+                                  <div className="dropdown-menu-entry ">
+                                    Current Employment
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Projects
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    School
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Personal
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -476,9 +600,8 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content
                               ${openMiniDropdown === "projects" ? "block" : "group-hover:block hidden"}`}
                             >
-                              <div className="dropdown-projects-content">
+                              <div className="mini-dropdown-menu-content">
                                 {/* Left side Project Menu */}
-                                {/* w-[30%] lg:w-[50%] xl:[60%] */}
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
                                   <div className="dropdown-menu-entry">
                                     Projects
@@ -516,8 +639,27 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content
                               ${openMiniDropdown === "contact" ? "block" : "group-hover:block hidden"}`}                            
                             >
-                              <div className="dropdown-title">
-                                Contact Me 2
+                              <div className="mini-dropdown-menu-content">
+                                <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
+                                  <div className="dropdown-menu-entry">
+                                    Email:
+                                  </div>
+                                  <div className="dropdown-menu-entry ">
+                                    Mobile?
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    LinkedIn
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    GitHub
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Instagram
+                                  </div>
+                                  <div className="dropdown-menu-entry">
+                                    Discord
+                                  </div>
+                                </div>
                               </div>
                             </div>  
                           </div>                 

@@ -28,18 +28,9 @@
   --color-barley: #A78763;
   --color-whiterock: #EAE0D2;
 
-  --color-dark-gradient: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.2)
-  ),
-  linear-gradient(
-    90.1deg,
-    rgba(45, 45, 45, 0.6) 9.34%,
-    rgba(45, 45, 45, 0.70) 95.96%
-  );
-
-  --color-light-gradient: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(165.99deg, rgba(215, 201, 174, 0.6) 9.89%, rgba(215, 201, 174, 0.1) 89.94%);
+  --color-dark-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.70) 95.96%);
+/* Opposite to background (light gradient (gold) applies to dark mode screen) */
+  --color-light-gradient: linear-gradient(0deg, rgba(234, 186, 140, 0.3), rgba(234, 186, 140, 0.3)), linear-gradient(165.99deg, rgba(215, 201, 174, 0.6) 9.89%, rgba(215, 201, 174, 0.1) 89.94%);
 
 }
 
@@ -107,8 +98,12 @@ background: var(--color-item-being-covered);
   --primary-text-color: var(--color-whiterock);
   --secondary-text-color: var(--color-barley);
   
-  --primary-alt-text-color: var(--color-black);
-  --secondary-alt-text-color: var(--color-mineshaft);
+  --primary-alt-text-color: #2D2D2D;
+  --secondary-alt-text-color: #1A1A1A;
+
+  /* increase text size to reduce minimizing effect of dark text */
+   text-shadow: 0 0 0.5px currentColor; /* subtle halo = thicker appearance */
+
 }
 
 [data-theme="light"] {
@@ -122,12 +117,13 @@ background: var(--color-item-being-covered);
   --primary-button-text-color: var(--color-whiterock);
   --secondary-button-color: var(--color-barley);
   --secondary-button-text-color: var(--color-mineshaft);
-  --primary-text-color: black;
+  --primary-text-color: black; 
   --secondary-text-color: var(--color-mineshaft);
 
   --primary-alt-text-color: var(--color-whiterock);
   --secondary-alt-text-color: var(--color-barley);
   /* --tertiary-text-color: var(hsl(0, 0%, 18%)); */
+
 }
 
 
@@ -164,13 +160,11 @@ background: var(--color-item-being-covered);
 }
 
 .navbar-background-main {
-    z-index: -1;
-    /* background-color: ; */
-    /* -webkit-backdrop-filter: blur(2rem); */
-    backdrop-filter: blur(2rem);
-    border-radius: 1.5rem;
-    position: absolute;
-    inset: 0%;
+  z-index: -1;
+  backdrop-filter: blur(2rem);
+  border-radius: 1.5rem;
+  position: absolute;
+  inset: 0%;
 }
 
 .navbar-background {
@@ -238,6 +232,8 @@ background: var(--color-item-being-covered);
   display: flex;
   float: left;
   overflow: hidden;
+    /* color: var(--primary-alt-text-color); */
+
 }
 
 .navbar-entry:hover {
@@ -303,6 +299,7 @@ background: var(--color-item-being-covered);
 
 .navbar-dropdown-content {
   background: var(--navbar-dropdown-gradient);
+  backdrop-filter: blur(2rem);
   float: none;
   border-radius: 1rem;
   text-decoration: none;
@@ -324,6 +321,7 @@ background: var(--color-item-being-covered);
   overflow: hidden;
   transform: translateY(-8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  color: var(--primary-alt-text-color);
 } 
 
 /* Dropdown show / hide hover handling */
@@ -386,7 +384,6 @@ background: var(--color-item-being-covered);
   flex: 1;
   gap: 2rem;
   grid-auto-columns: 1fr;
-  
 }
 /* ADD TO HTML! */
 
@@ -411,7 +408,6 @@ background: var(--color-item-being-covered);
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--secondary-alt-text-color);
-
 }
 /* No entries( uses dropdown menu entries instead) */
 
@@ -429,21 +425,63 @@ background: var(--color-item-being-covered);
   cursor: pointer;
   align-items: center;
   display: flex;
-  
 }
 
 .dropdown-menu-logo-entry:hover {
   background: var(--navbar-gradient);
 } 
 
-/* .dropdown-menu-entry {
+.dropdown-about-section {
+  width: 100%;
+}
+
+.dropdown-about-display {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height : 100%;
+  width: 100%;
+  /* justify-content: flex-start; */
+}
+
+.dropdown-about-display-entry {
+ position: relative;
+ border-radius: 1rem;
+ /* height: 100%; */
+ height: 10.5rem;
+ width: 100%;
+ /* margin-left: auto;
+ margin-right: auto; */
+ overflow: hidden;
+ background: var(--color-mineshaft);
+} 
+
+.dropdown-about-list-header {
+  border-bottom: 2px solid;
+  /* border-color: var(--navbar-gradient); */
+  /* color: var(--navbar-gradient); */
+  margin-left: .65rem;
+  margin-right: .65rem;
+  padding-bottom: .2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-top: .5rem;
+  color: var(--secondary-alt-text-color);
+}
+
+.dropdown-about-menu-entry {
   font-size: 1.1rem;
   border-radius: 0.7rem;
-  padding: 0.75rem;
+  padding: 0.5rem;
   padding-left: 0.7rem;
   cursor: pointer;
 }
-*/
+
+.dropdown-about-menu-entry:hover {
+  background: var(--navbar-gradient);
+}
+
+/* Projects Dropdown Handling */
 
 .dropdown-projects-display {
   display: flex;
@@ -576,13 +614,6 @@ background: var(--color-item-being-covered);
   pointer-events: auto;
 }
 
-/* .navbar-entry:hover .navbar-dropdown-content,
-.navbar-entry:hover .navbar-dropdown-container,
-.navbar-entry:hover .mini-navbar-dropdown-content,
-.navbar-dropdown-container:hover,
-.navbar-dropdown-content:hover,
-.mini-navbar-dropdown-convent:hover { */
-
 /* Dropdown-specific extra transform for open animation */
 .mini-navbar-entry:hover .mini-navbar-dropdown-content,
 .mini-navbar-dropdown-content:hover {
@@ -628,6 +659,14 @@ background: var(--color-item-being-covered);
   transform: translateY(-8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 1;
+}
+
+/* Same as dropdown-projects-content (made this way to be universla to mini dropdowns */
+.mini-dropdown-menu-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
 /* Dark/Light Mode Slider */
