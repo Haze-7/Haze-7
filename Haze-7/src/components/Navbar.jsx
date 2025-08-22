@@ -65,7 +65,7 @@ function Navbar({ mode, setMode }) {
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
                                 <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img>
                                   {/*Blur overlay */}
-                                  {/* <div className="dropdown-projects-display-entry-blur"></div>  */}
+                                  <div className="dropdown-projects-display-entry-blur"></div> 
                                </div>
                               </Link>
                               {/* Dropdown-list */}

@@ -16,7 +16,7 @@ function Home({ mode, setMode }) {
             {/* Hero Section */}
             <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}
-                <div className="pt-[4.5rem]">
+                <div className="pt-[4.5rem] order-2 lg:order-1">
                   <p className="text-[1.90rem] hero-secondary-text font-semibold">
                     Hello, I'm
                   </p>
@@ -36,7 +36,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>              
                 {/* Professional Photo */}
-                <div className="hero-picture pt-[2.5rem]">
+                <div className="hero-picture pt-[2.5rem] order-1 lg:order-2">
                   <img src={ProfilePic} alt="Haze Profile Picture" className=""></img>
                 </div>
             </div>
