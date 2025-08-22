@@ -384,7 +384,6 @@ background: var(--color-item-being-covered);
   flex: 1;
   gap: 2rem;
   grid-auto-columns: 1fr;
-  
 }
 /* ADD TO HTML! */
 
@@ -409,7 +408,6 @@ background: var(--color-item-being-covered);
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--secondary-alt-text-color);
-
 }
 /* No entries( uses dropdown menu entries instead) */
 
@@ -427,21 +425,63 @@ background: var(--color-item-being-covered);
   cursor: pointer;
   align-items: center;
   display: flex;
-  
 }
 
 .dropdown-menu-logo-entry:hover {
   background: var(--navbar-gradient);
 } 
 
-/* .dropdown-menu-entry {
+.dropdown-about-section {
+  width: 100%;
+}
+
+.dropdown-about-display {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height : 100%;
+  width: 100%;
+  /* justify-content: flex-start; */
+}
+
+.dropdown-about-display-entry {
+ position: relative;
+ border-radius: 1rem;
+ /* height: 100%; */
+ height: 10.5rem;
+ width: 100%;
+ /* margin-left: auto;
+ margin-right: auto; */
+ overflow: hidden;
+ background: var(--color-mineshaft);
+} 
+
+.dropdown-about-list-header {
+  border-bottom: 2px solid;
+  /* border-color: var(--navbar-gradient); */
+  /* color: var(--navbar-gradient); */
+  margin-left: .65rem;
+  margin-right: .65rem;
+  padding-bottom: .2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-top: .5rem;
+  color: var(--secondary-alt-text-color);
+}
+
+.dropdown-about-menu-entry {
   font-size: 1.1rem;
   border-radius: 0.7rem;
-  padding: 0.75rem;
+  padding: 0.5rem;
   padding-left: 0.7rem;
   cursor: pointer;
 }
-*/
+
+.dropdown-about-menu-entry:hover {
+  background: var(--navbar-gradient);
+}
+
+/* Projects Dropdown Handling */
 
 .dropdown-projects-display {
   display: flex;
@@ -574,13 +614,6 @@ background: var(--color-item-being-covered);
   pointer-events: auto;
 }
 
-/* .navbar-entry:hover .navbar-dropdown-content,
-.navbar-entry:hover .navbar-dropdown-container,
-.navbar-entry:hover .mini-navbar-dropdown-content,
-.navbar-dropdown-container:hover,
-.navbar-dropdown-content:hover,
-.mini-navbar-dropdown-convent:hover { */
-
 /* Dropdown-specific extra transform for open animation */
 .mini-navbar-entry:hover .mini-navbar-dropdown-content,
 .mini-navbar-dropdown-content:hover {
@@ -626,6 +659,14 @@ background: var(--color-item-being-covered);
   transform: translateY(-8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 1;
+}
+
+/* Same as dropdown-projects-content (made this way to be universla to mini dropdowns */
+.mini-dropdown-menu-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
 /* Dark/Light Mode Slider */
