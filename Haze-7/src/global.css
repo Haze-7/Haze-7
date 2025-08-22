@@ -39,24 +39,27 @@
     rgba(45, 45, 45, 0.70) 95.96%
   );
 
-  /* --color-light-gradient: linear-gradient(
-    0deg,
-    rgba(234, 186, 140, 0.2),
-    rgba(234, 186, 140, 0.2)
-  ),
-  linear-gradient(
-    90.1deg,
-    rgba(215, 201, 174, 0.6) 9.34%,
-    rgba(215, 201, 174, 0.1) 95.96%
-  ); */
-
   --color-light-gradient: linear-gradient(0deg, rgba(234, 186, 140, 0.2), rgba(234, 186, 140, 0.2)), linear-gradient(165.99deg, rgba(215, 201, 174, 0.6) 9.89%, rgba(215, 201, 174, 0.1) 89.94%);
 
 }
 
+/* Scrollbar hidden in elements utlity classes */
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+}
+
 @theme {
   /* --breakpoint-ex: 30rem; */
-  --breakpoint-nav: 850px;
+  /* --breakpoint-nav: 850px; */
+  --breakpoint-nav: 1020px;
 }
 
 @layer utilities {
@@ -103,6 +106,9 @@ background: var(--color-item-being-covered);
   --secondary-button-color: var(--color-mineshaft);
   --primary-text-color: var(--color-whiterock);
   --secondary-text-color: var(--color-barley);
+  
+  --primary-alt-text-color: var(--color-black);
+  --secondary-alt-text-color: var(--color-mineshaft);
 }
 
 [data-theme="light"] {
@@ -118,6 +124,9 @@ background: var(--color-item-being-covered);
   --secondary-button-text-color: var(--color-mineshaft);
   --primary-text-color: black;
   --secondary-text-color: var(--color-mineshaft);
+
+  --primary-alt-text-color: var(--color-whiterock);
+  --secondary-alt-text-color: var(--color-barley);
   /* --tertiary-text-color: var(hsl(0, 0%, 18%)); */
 }
 
@@ -130,6 +139,13 @@ background: var(--color-item-being-covered);
   background-attachment: fixed;
   z-index: -1;
 }
+
+/* @media (max-width: 380px) {
+  .bg-sand {
+    background-size: full full; 
+    background-position: center;  
+  }
+} */
 
 .navbar-main {
   z-index: 1000;
@@ -176,6 +192,7 @@ background: var(--color-item-being-covered);
   display: flex;
 }
 
+/* What is this doing? */
 .navbar-content-container::before {
   content: "";
   position: absolute;
@@ -213,58 +230,35 @@ background: var(--color-item-being-covered);
   /* display: flex; */
 }
 
-.mini-navbar-menu {
-  background: var(--navbar-dropdown-gradient);
-  float: none;
-  border-radius: 1rem;
-  text-decoration: none;
-  text-align: left;
-  position: absolute;
-  right: 0rem;
-  left: 0rem;
-  top: 5.9rem;
-  justify-content: center;
-  align-items: stretch;
-  max-width: 83rem;
-  padding: .75rem 1.5rem;
-  font-size: 1rem;
-  transform: translateY(-8px);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-/* 
-.navbar-dropdown:hover .navbar-dropdown-content {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  pointer-events: auto;
-} */
-
-
 .navbar-entry {
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
   padding: .75rem .5rem .75rem .75rem;
   display: flex;
+  float: left;
+  overflow: hidden;
 }
 
 .navbar-entry:hover {
   background: var(--navbar-gradient);
+  cursor: pointer;
 }
 
 .navbar-github-logo {
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
-  padding: .5rem .5rem .5rem .1rem;
+  /* padding: .5rem .5rem .5rem .1rem; */
+  padding: 0 .5rem 0 .5rem;
 }
 
 .navbar-linkedin-logo {
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
-  padding: .5rem .5rem .5rem .5rem;
+  /* padding: .5rem .5rem .5rem .5rem; */
+  padding: 0 .5rem 0 .5rem;
 }
 
 .navbar-hamburger-icon {
@@ -291,16 +285,22 @@ background: var(--color-item-being-covered);
   transform: rotate(180deg);
 }
 
-
 /* Navbar Dropdown handling */
 
-/* Dropdown container */
-.navbar-dropdown {
-  float: left;
-  overflow: hidden;
+/* NAME IS MISLEADING/ Actually acts as the hidden bridge between navbar entry and dropdown */
+.navbar-dropdown-container {
+  background-color: transparent;
+  float: none;
+  position: absolute;
+  right: 0rem;
+  left: 0rem;
+  top: 3.75rem;
+  height: 1.1rem;
+  max-width: 83rem;
+  opacity: 0;
+  visibility: hidden;
 }
 
-/* Style links inside dropdown */
 .navbar-dropdown-content {
   background: var(--navbar-dropdown-gradient);
   float: none;
@@ -310,32 +310,324 @@ background: var(--color-item-being-covered);
   position: absolute;
   right: 0rem;
   left: 0rem;
-  top: 5.9rem;
+  top: 1.1rem;
+  height: 22rem;
   flex-flow: row;
   justify-content: center;
   align-items: stretch;
   max-width: 83rem;
-  padding: .75rem 1.5rem;
+  /* padding: .75rem 1.5rem; */
+  padding: 1.5rem;
   font-size: 1rem;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
   transform: translateY(-8px);
-  pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
-}
+} 
 
-.navbar-dropdown:hover .navbar-dropdown-content {
+/* Dropdown show / hide hover handling */
+/* Show dropdown & bridge when entry, bridge, or dropdown is hovered */
+.navbar-entry:hover .navbar-dropdown-content,
+.navbar-entry:hover .navbar-dropdown-container,
+.navbar-entry:hover .mini-navbar-dropdown-content,
+.navbar-dropdown-container:hover,
+.navbar-dropdown-content:hover,
+.mini-navbar-dropdown-convent:hover {
   opacity: 1;
-  transform: translateY(0);
   visibility: visible;
   pointer-events: auto;
 }
 
+/* Dropdown-specific extra transform for open animation */
+.navbar-entry:hover .navbar-dropdown-content,
+.navbar-dropdown-content:hover {
+  transform: translateY(0);
+}
+
 .dropdown-title {
   font-size: 1.5rem;
-  border-bottom: 4px;
-  border-color: var(--color-mineshaft);
+}
+
+/* Projects Dropdown Handling */
+
+.dropdown-projects-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+/* Left side menu projects dropdown */
+
+.dropdown-menu {
+  padding-left: 0rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu-entry {
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
+  padding: 0.75rem;
+  padding-left: 0.7rem;
+  cursor: pointer;
+}
+
+.dropdown-menu-entry:hover {
+  background: var(--navbar-gradient);
+}
+
+/* Outer Grid to contain lists (columns) */
+.dropdown-list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  flex: 1;
+  gap: 2rem;
+  grid-auto-columns: 1fr;
+  
+}
+/* ADD TO HTML! */
+
+/* Inner lists (column) of ^^ */
+.dropdown-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: max-content;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  /* color: var(--logo-fill-color) */
+}
+
+.dropdown-list-header {
+  border-bottom: 2px solid;
+  /* border-color: var(--navbar-gradient); */
+  /* color: var(--navbar-gradient); */
+  margin-left: .75rem;
+  margin-right: .75rem;
+  padding-bottom: .5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--secondary-alt-text-color);
+
+}
+/* No entries( uses dropdown menu entries instead) */
+
+/* List Social Media Logos: */
+
+/* .dropdown-list-logo {
+  padding-right: 0.5rem;
+} */
+
+.dropdown-menu-logo-entry {
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
+  /* padding: 0.3rem;  Set manually for each logo in tailwind (logo sizes differ)*/
+  padding-left: 0.1rem;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  
+}
+
+.dropdown-menu-logo-entry:hover {
+  background: var(--navbar-gradient);
+} 
+
+/* .dropdown-menu-entry {
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
+  padding: 0.75rem;
+  padding-left: 0.7rem;
+  cursor: pointer;
+}
+*/
+
+.dropdown-projects-display {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+  padding-left: 1rem;
+  /* max-width: 50rem; */
+  /* width: 70%; */
+  min-width: 50rem;
+  justify-content: flex-end;
+
+}
+
+/* wrapper (update) */
+.dropdown-projects-display-entry {
+  position: relative;
+  border-radius: 1rem;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /* background: var(--navbar-gradient); */
+  overflow: hidden;
+}
+
+.dropdown-projects-display-entry-img {
+    z-index: -1;
+    filter: brightness(75%);
+    object-fit: cover;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    transition: transform .5s;
+    position: relative;
+    overflow: hidden;
+    transform: none;
+}
+
+.dropdown-projects-display-entry:hover .dropdown-projects-display-entry-img {
+  transform: scale(1.05);
+}
+
+.dropdown-projects-display-entry-blur {
+  z-index: -1;
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  background-color: var(--navbar-gradient);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: absolute;
+  inset: 0%;
+  /* -webkit-mask-image: linear-gradient(#0000 40%, #000 80%); */
+  mask-image: linear-gradient(#0000 50%, #000 90%);
+}
+
+.dropdown-projects-display-entry-bottom-text {
+  color: var(--color-whiterock);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: .825rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.dropdown-projects-display-entry-blur {
+  z-index: -1;
+  backdrop-filter: blur(1rem);
+  background-color: #0006;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  position: absolute;
+  inset: 0%;
+  /* -webkit-mask-image: linear-gradient(#0000 40%, #000 80%); */
+  mask-image: linear gradient(#000 40%, #000 80%);
+
+
+}
+
+/* Mini-Navbar (below 1020px) Handling */
+
+.mini-navbar-menu {
+  background: var(--navbar-dropdown-gradient);
+  float: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: left;
+  position: absolute;
+  right: 0rem;
+  left: 0rem;
+  top: 5.9rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 83rem;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mini-navbar-entry {
+  grid-column-gap: .25rem;
+  border-radius: 1rem;
+  align-items: center;
+  padding: .75rem .5rem .75rem .75rem;
+  display: flex;
+  /* float: left; */
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.mini-navbar-entry:hover {
+  background: var(--navbar-gradient);
+  cursor: pointer;
+}
+
+.mini-navbar-entry:hover .navbar-chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown show / hide hover handling */
+/* Show dropdown & bridge when entry, bridge, or dropdown is hovered */
+.mini-navbar-entry:hover .mini-navbar-dropdown-content,
+.mini-navbar-entry:hover .mini-navbar-dropdown-container,
+.mini-navbar-dropdown-container:hover,
+.mini-navbar-dropdown-content:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* .navbar-entry:hover .navbar-dropdown-content,
+.navbar-entry:hover .navbar-dropdown-container,
+.navbar-entry:hover .mini-navbar-dropdown-content,
+.navbar-dropdown-container:hover,
+.navbar-dropdown-content:hover,
+.mini-navbar-dropdown-convent:hover { */
+
+/* Dropdown-specific extra transform for open animation */
+.mini-navbar-entry:hover .mini-navbar-dropdown-content,
+.mini-navbar-dropdown-content:hover {
+  transform: translateY(0);
+}
+
+.mini-navbar-dropdown-container {
+  background-color: transparent;
+  float: none;
+  position: absolute;
+  right: 1.5rem;
+  left: 1.5rem;
+  /* top: 3.75rem; */
+  height: 0.4rem; 
+  max-width: 83rem;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+
+.mini-navbar-dropdown-content {
+  background: var(--navbar-dropdown-gradient);
+  float: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-align: left;
+  position: absolute;
+  right: 0rem;
+  left: 0rem;
+  /* top: 100%; */
+  top: 0.4rem;
+  height: 15rem;
+  flex-flow: row;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 83rem;
+  padding: 1.5rem;
+  font-size: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
 }
 
 /* Dark/Light Mode Slider */
@@ -344,7 +636,9 @@ background: var(--color-item-being-covered);
   grid-column-gap: .25rem;
   border-radius: 1rem;
   align-items: center;
-  padding: .75rem .5rem .75rem .1rem;
+  /* padding: .75rem .5rem .75rem .1rem; */
+  padding: 0 .5rem 0 .1rem;
+  /* padding: .75rem; */
 }
 
 .dl-switch-checkbox {
@@ -395,6 +689,21 @@ background: var(--color-item-being-covered);
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+@media (max-width: 1020px) {
+  .hero-picture {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-picture {
+    height: 46vw;
+    justify-content: center;
+  }
 }
 
 .hero-primary-text {
