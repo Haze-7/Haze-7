@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar.jsx"
 import {Link, useLocation} from "react-router-dom";
 
-import ProfilePic from "/haze-profile-pic.png" 
+import ProfilePic from "/images/haze-profile-pic.png" 
 
 import {onClick} from 'react';
 
@@ -10,9 +10,9 @@ function Home({ mode, setMode }) {
       <>
       {/* var(--primary- text-color) */}
 
-        <div className="w-full ">
+        <div className="w-full">
             {/* Primary  */}
-          <section className="bg-sand h-[80rem] flex justify-center gap-[5rem] ">
+          <section className="bg-sand h-[80rem] flex justify-center gap-[5rem]">
             {/* Hero Section */}
             <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}
@@ -36,7 +36,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>              
                 {/* Professional Photo */}
-                <div className="hero-picture">
+                <div className="hero-picture pt-[2.5rem]">
                   <img src={ProfilePic} alt="Haze Profile Picture" className=""></img>
                 </div>
             </div>
