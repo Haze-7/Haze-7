@@ -28,10 +28,14 @@
   --color-barley: #A78763;
   --color-whiterock: #EAE0D2;
 
-  --color-dark-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.70) 95.96%);
+
 /* Opposite to background (light gradient (gold) applies to dark mode screen) */
+  --color-dark-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.70) 95.96%);
   --color-light-gradient: linear-gradient(0deg, rgba(234, 186, 140, 0.3), rgba(234, 186, 140, 0.3)), linear-gradient(165.99deg, rgba(215, 201, 174, 0.6) 9.89%, rgba(215, 201, 174, 0.1) 89.94%);
 
+ /* Intermediate (on top of sand) background layers / gradients */
+  --color-gold-gradient: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%);
+  --color-mineshaft-gradient: linear-gradient(98.78deg, #2D2D2D 7.48%, #444444 92.38%);
 }
 
 /* Scrollbar hidden in elements utlity classes */
@@ -101,6 +105,8 @@ background: var(--color-item-being-covered);
   --primary-alt-text-color: #2D2D2D;
   --secondary-alt-text-color: #1A1A1A;
 
+  --gradient-bg: var(--color-gold-gradient);
+
   /* increase text size to reduce minimizing effect of dark text */
    text-shadow: 0 0 0.5px currentColor; /* subtle halo = thicker appearance */
 
@@ -122,7 +128,8 @@ background: var(--color-item-being-covered);
 
   --primary-alt-text-color: var(--color-whiterock);
   --secondary-alt-text-color: var(--color-barley);
-  /* --tertiary-text-color: var(hsl(0, 0%, 18%)); */
+
+  --gradient-bg: var(--color-mineshaft-gradient);
 
 }
 
@@ -782,8 +789,8 @@ background: var(--color-item-being-covered);
 
 }
 
-.about-bg {
-  background: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%);
+.gradient-bg {
+  background: var(--gradient-bg);
 }
 
 

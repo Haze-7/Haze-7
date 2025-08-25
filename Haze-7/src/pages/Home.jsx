@@ -11,9 +11,8 @@ function Home({ mode, setMode }) {
       {/* var(--primary- text-color) */}
 
         <div className="w-full">
-            {/* Primary  */}
+          {/* Hero Section */}
           <section className="bg-sand h-[80rem] flex justify-center gap-[5rem]">
-            {/* Hero Section */}
             <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}
                 <div className="pt-[4.5rem] order-2 lg:order-1">
@@ -41,11 +40,27 @@ function Home({ mode, setMode }) {
                 </div>
             </div>
           </section>
-          <section className="about-bg h-[40rem] shadow-lg/50 shadow-gray">
-            
+          {/* About Me Section */}
+          <section className="gradient-bg h-[50rem] shadow-lg/50 shadow-gray">
+            <div className="">
+
+            </div>
           </section>
+          {/* Projects Section */}
           <section className="bg-sand h-[80rem]">
-            
+            <div className="">
+
+            </div>
+          </section>
+          {/* Contact Me Section */}
+          <section className="gradient-bg h-[40rem] shadow-lg/50 shadow-gray">
+
+          </section>
+          {/* Etc Section */}
+          <section className="bg-sand h-[80rem]">
+            <div className="">
+
+            </div>
           </section>
         </div>
       </>
