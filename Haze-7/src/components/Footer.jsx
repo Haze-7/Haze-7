@@ -2,7 +2,7 @@
 function Footer() {
     return (
       <>
-        <div className="bg-gold">
+        <div className="gradient-bg">
             Footer
         </div>
       </>

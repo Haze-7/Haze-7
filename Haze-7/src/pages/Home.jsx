@@ -42,8 +42,14 @@ function Home({ mode, setMode }) {
           </section>
           {/* About Me Section */}
           <section className="gradient-bg h-[50rem] shadow-lg/50 shadow-gray">
-            <div className="">
+            <div className="flex justify-center ">
+              <div className="about-title font-bold">
+                About Me
+              </div>
+              {/* About Me content? */}
+              <div className="">
 
+              </div>
             </div>
           </section>
           {/* Projects Section */}

@@ -34,7 +34,9 @@
   --color-light-gradient: linear-gradient(0deg, rgba(234, 186, 140, 0.3), rgba(234, 186, 140, 0.3)), linear-gradient(165.99deg, rgba(215, 201, 174, 0.6) 9.89%, rgba(215, 201, 174, 0.1) 89.94%);
 
  /* Intermediate (on top of sand) background layers / gradients */
-  --color-gold-gradient: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%);
+ /* More light version of the gradient, use if make secret white sand page */
+  /* --color-light-gradient: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%); */
+  --color-gold-gradient: linear-gradient(98.78deg, #A58763 7.48%, #716A5B 92.38%);
   --color-mineshaft-gradient: linear-gradient(98.78deg, #2D2D2D 7.48%, #444444 92.38%);
 }
 
@@ -731,6 +733,12 @@ background: var(--color-item-being-covered);
 }
 
 /* Webpage Content */
+
+.gradient-bg {
+  background: var(--gradient-bg);
+}
+
+/* Hero Section */
 .hero-picture {
   height: 400px;
   width: 400px;
@@ -789,23 +797,10 @@ background: var(--color-item-being-covered);
 
 }
 
-.gradient-bg {
-  background: var(--gradient-bg);
+/* About Section */
+.about-title {
+  color: var(--primary-alt-text-color);
+  font-size: 4rem;
+  padding-top: 5rem;
 }
 
-
-
-/* F5ECD8
-   EDE2D0
- */
-/*
-
-Scroll snap implementatoin ( by section)
-
-html {
-    scroll-snap-type: y mandatory;
-}
-section {
-     scroll-snap-align: start;
- } 
-*/
