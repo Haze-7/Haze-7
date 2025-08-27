@@ -41,27 +41,27 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* About Me Section */}
-          <section className="gradient-bg h-[50rem] shadow-lg/50 shadow-gray">
+          <section className="gradient-bg h-[55rem] lg:h-[50rem] shadow-lg/50 shadow-gray">
             <div className="">
               {/* About Title Container */}
               <div className="flex justify-center">
-                <div className="about-title font-bold">
+                <div className="about-title font-bold pt-[4rem]">
                   About Me
                 </div>
               </div>
               {/* About Me content Container*/}
-              <div className="flex flex-col lg:flex-row w-full gap-[3rem] justify-center items-center pt-[3rem] px-[3rem]">
+              <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2rem] lg:pt-[3rem] px-[3rem]">
                 {/* About Me Image/ Box */}
-                <div className="bg-mineshaft flex rounded-xl w-[80%] lg:w-[45%] h-[17rem] lg:h-[25rem] ">
+                <div className="bg-mineshaft flex rounded-xl w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] ">
                   {/* <img src={} alt="About Me Image/Box"></img> */}
                   About Me Image/ Box
                 </div>
                   {/* About Me Text / Description */}
                   <div className="flex w-[100%] lg:w-[55%] flex-col"> {/*  Missing Height*/}
-                    <p className="about-description">
+                    <p className="about-description text-[1.3rem] sm:text-[1.5rem]">
                     I’m Hayes Chiasson, i’m 21 years old. I’m originally from Thibodaux, Louisiana. I attend Lousiana State University, and will be a senior in the coming year blah blah balh
                   </p>
-                    <div className="mt-[1.5rem] flex lg:flex-row flex-col gap-[2rem] lg:gap-[3rem] justify-center items-center font-semibold">
+                    <div className="mt-[1.5rem] flex flex-row gap-[2rem] lg:gap-[3rem] justify-center items-center font-semibold">
                       <button to="" className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         Images
                       </button>
