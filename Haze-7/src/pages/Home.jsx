@@ -16,7 +16,7 @@ function Home({ mode, setMode }) {
             <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}
                 <div className="pt-[4.5rem] order-2 lg:order-1">
-                  <p className="text-[1.90rem] hero-secondary-text font-semibold">
+                  <p className="pt-[2.7rem] sm:pt-0 text-[1.90rem] hero-secondary-text font-semibold">
                     Hello, I'm
                   </p>
                   <h1 className="text-[4rem] font-bold hero-primary-text mt-[-.5rem]">
