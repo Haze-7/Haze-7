@@ -52,7 +52,7 @@ function Home({ mode, setMode }) {
               {/* About Me content Container*/}
               <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2rem] lg:pt-[3rem] px-[3rem]">
                 {/* About Me Image/ Box */}
-                <div className="bg-mineshaft flex rounded-xl w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] ">
+                <div className="bg-mineshaft flex rounded-xl w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
                   {/* <img src={} alt="About Me Image/Box"></img> */}
                   About Me Image/ Box
                 </div>
@@ -74,9 +74,40 @@ function Home({ mode, setMode }) {
               </div>
           </section>
           {/* Projects Section */}
-          <section className="bg-sand h-[80rem]">
-            <div className="">
+          <section className="bg-sand h-[70rem]">
+            <div className=" text-[3rem]">
+              {/* Projects Title */}
+              <div className="flex justify-center">
+                <div className="projects-title font-bold pt-[4rem]">
+                 Projects
+               </div>
+              </div>
+            {/* Projects Display Grid */}
+              <div className="m-[3rem]">
+                <div className="projects-display">
+                  <div className="projects-entry">
+                    {/* Project Image */}
+                    <div className="flex bg-mineshaft h-[15rem] w-full rounded-xl">
+                      Avc
+                    </div>
 
+                  </div>
+                  <div className="projects-entry">
+                    {/* Project Image */}
+                    <div className="flex bg-mineshaft h-[15rem] w-full rounded-xl">
+                      Avc
+                    </div>
+
+                  </div>
+                  <div className="projects-entry">
+                    {/* Project Image */}
+                    <div className="flex bg-mineshaft h-[15rem] w-full rounded-xl">
+                      Avc
+                    </div>
+
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           {/* Contact Me Section */}

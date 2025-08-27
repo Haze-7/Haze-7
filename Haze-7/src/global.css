@@ -801,14 +801,13 @@ background: var(--color-item-being-covered);
 .about-title {
   color: var(--primary-alt-text-color);
   font-size: 4rem;
-  /* padding-top: 5rem; */
 }
 
 /* May become about carousel */
 /* .about-image {
 
 } */
- 
+
 /* Handle Text color / side */
 .about-description {
   /* font-size: 1.5rem; */
@@ -816,3 +815,52 @@ background: var(--color-item-being-covered);
   text-align: center;
 }
 
+/* Project Home Section */
+
+.projects-title {
+  color: var(--primary-text-color);
+  font-size: 4rem;
+}
+
+/* Project Grid Container */
+.projects-display {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+/* Project Entry Container */
+.projects-entry {
+  width: 100%;
+  height: 30rem;
+}
+
+/* .projects-display-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+} */
+
+/* Outer Grid to contain lists (columns) */
+/* .dropdown-list-container {
+  display: grid;x
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  flex: 1;
+  gap: 2rem;
+  grid-auto-columns: 1fr;
+}
+
+.dropdown-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: max-content;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+} */
