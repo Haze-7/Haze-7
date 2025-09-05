@@ -47,9 +47,11 @@ function Navbar({ mode, setMode }) {
                     <div className="md:nav-entry-setup">
                       {/* About Me */}
                       <div className="navbar-entry">
-                        <Link to="/">
+                        {/* <Link to="/"> 
+                            </Link>*/}
+                        <a href="#About-Me">
                           About Me  
-                        </Link>  
+                        </a>
                         <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
@@ -153,9 +155,11 @@ function Navbar({ mode, setMode }) {
                       </div>
                       {/* Experience */}
                       <div className="navbar-entry">
-                        <Link to="/">
+                        {/* <Link to="/"> 
+                            </Link>*/}                        
+                        <a href="#Experience">
                           Experience
-                        </Link>
+                        </a>
                         <div className="navbar-chevron">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
@@ -237,9 +241,11 @@ function Navbar({ mode, setMode }) {
                       </div>
                       {/* Projects */}
                       <div className="navbar-entry ">
-                      <Link to="/">
+                        {/* <Link to="/"> 
+                            </Link>*/}                        
+                      <a href="#Projects">
                           Projects
-                      </Link>
+                      </a>
                         <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
@@ -319,9 +325,11 @@ function Navbar({ mode, setMode }) {
                       </div>
                       {/* Contact Me */}
                       <div className="navbar-entry">
-                        <Link to="/">
+                        {/* <Link to="/"> 
+                            </Link>*/}                       
+                        <a href="#Contact-Me">
                           Contact Me
-                        </Link>
+                        </a>
                         <div className="navbar-chevron">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" width="100%" height="100%" strokeWidth="2"><path d="M6 9l6 6l6 -6"></path></svg>
                         </div>
@@ -351,9 +359,6 @@ function Navbar({ mode, setMode }) {
                                     </div>
                                     hchias2@lsu.edu
                                   </Link>
-                                  {/* <div className="dropdown-menu-entry ">
-                                    Mobile Phone: (985) 438-2437
-                                  </div> */}
                                   <Link to="https://www.linkedin.com/in/hayes-chiasson-413955249/" className="dropdown-menu-logo-entry">
                                     <div className={`p-[0.35rem] pr-[0.6rem]`}>
                                       <div className="w-[2.5rem] h-[2.5rem] ">

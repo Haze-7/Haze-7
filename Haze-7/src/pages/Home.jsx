@@ -12,7 +12,7 @@ function Home({ mode, setMode }) {
 
         <div className="w-full">
           {/* Hero Section */}
-          <section className="bg-sand h-[80rem] flex justify-center gap-[5rem]">
+          <section id="Hero" className="bg-sand h-[80rem] flex justify-center gap-[5rem]">
             <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}
                 <div className="pt-[4.5rem] order-2 lg:order-1">
@@ -25,7 +25,7 @@ function Home({ mode, setMode }) {
                   <p className="text-[2rem] font-semibold hero-secondary-text">
                     Fullstack Developer
                   </p>
-                  <div className="mt-[1.5rem] flex lg:flex-row flex-col gap-[2rem] lg:gap-[3rem] justify-center items-center font-semibold">
+                  <div className="mt-[1.5rem] flex flex-row gap-[2rem] lg:gap-[3rem] justify-center items-center font-semibold">
                     <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                       Download CV
                     </button>
@@ -41,16 +41,16 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* About Me Section */}
-          <section className="gradient-bg h-[55rem] lg:h-[50rem] shadow-lg/50 shadow-gray">
+          <section id="About-Me" className="gradient-bg h-[55rem] lg:h-[50rem] shadow-lg/50 shadow-gray">
             <div className="">
               {/* About Title Container */}
               <div className="flex justify-center">
-                <div className="about-title font-bold pt-[4rem]">
+                <div className="gradient-title font-bold pt-[3.5rem]">
                   About Me
                 </div>
               </div>
               {/* About Me content Container*/}
-              <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2rem] lg:pt-[3rem] px-[3rem]">
+              <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2.5rem] lg:pt-[3.5rem] px-[3rem]">
                 {/* About Me Image/ Box */}
                 <div className="bg-mineshaft flex rounded-xl w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
                   {/* <img src={} alt="About Me Image/Box"></img> */}
@@ -74,7 +74,7 @@ function Home({ mode, setMode }) {
               </div>
           </section>
           {/* Projects Section */}
-          <section className="bg-sand h-[70rem]">
+          <section id="Projects" className="bg-sand h-[70rem]">
             <div className=" text-[3rem]">
               {/* Projects Title */}
               <div className="flex justify-center">
@@ -167,12 +167,19 @@ function Home({ mode, setMode }) {
               </div>
             </div>
           </section>
-          {/* Contact Me Section */}
-          <section className="gradient-bg h-[40rem] shadow-lg/50 shadow-gray">
-
+          {/* Experience Section */}
+          <section id="Experience" className="gradient-bg h-[40rem] shadow-lg/50 shadow-gray">
+            <div className="">
+                {/* About Title Container */}
+                <div className="flex justify-center">
+                  <div className="gradient-title font-bold pt-[4rem]">
+                    Experience
+                  </div>
+                </div>
+            </div>
           </section>
-          {/* Etc Section */}
-          <section className="bg-sand h-[80rem]">
+          {/* Contact Me Section */}
+          <section id="Contact-Me" className="bg-sand h-[80rem]">
             <div className="">
 
             </div>
