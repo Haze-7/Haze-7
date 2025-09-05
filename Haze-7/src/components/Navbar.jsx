@@ -37,9 +37,13 @@ function Navbar({ mode, setMode }) {
           <div className="navbar-background-main"></div>
           <div className="navbar-background"></div>
             <div className="navbar-content-container">
+              {/*               
               <Link to="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
-              </Link>
+              </Link> */}
+              <a href="#Hero" className=" h-[3rem] w-[3rem]">
+                <img src={HLogo} className=""></img>
+              </a>
               <div className={`navbar-menu hidden nav:flex`}>
                 {/* Navbar Menu Left */}
                 <div className={`flex`}>

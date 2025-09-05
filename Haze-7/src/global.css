@@ -798,12 +798,14 @@ background: var(--color-item-being-covered);
 }
 
 /* About Section */
+
+/* More gradient general, may move location to top */
 .gradient-title {
   color: var(--primary-alt-text-color);
   font-size: 4rem;
 }
 
-#About-Me {
+.gradient-link-offset {
   scroll-margin-top: 5.5rem; /*Offset anchor link start (leave gap at top ) */
 }
 
@@ -882,7 +884,3 @@ background: var(--color-item-being-covered);
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
 } */
-
-#Experience {
-  scroll-margin-top: 5.5rem; /*Offset anchor link start (leave gap at top ) (use for all gold / graident bg spots */
-}

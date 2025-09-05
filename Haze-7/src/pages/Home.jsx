@@ -41,7 +41,7 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* About Me Section */}
-          <section id="About-Me" className="gradient-bg h-[55rem] lg:h-[50rem] shadow-lg/50 shadow-gray">
+          <section id="About-Me" className="gradient-bg h-[55rem] lg:h-[50rem] shadow-lg/50 shadow-gray gradient-link-offset">
             <div className="">
               {/* About Title Container */}
               <div className="flex justify-center">
@@ -168,7 +168,7 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* Experience Section */}
-          <section id="Experience" className="gradient-bg h-[40rem] shadow-lg/50 shadow-gray">
+          <section id="Experience" className="gradient-bg h-[40rem] shadow-lg/50 shadow-gray gradient-link-offset">
             <div className="">
                 {/* About Title Container */}
                 <div className="flex justify-center">
