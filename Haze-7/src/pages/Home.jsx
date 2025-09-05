@@ -78,33 +78,90 @@ function Home({ mode, setMode }) {
             <div className=" text-[3rem]">
               {/* Projects Title */}
               <div className="flex justify-center">
-                <div className="projects-title font-bold pt-[4rem]">
+                <div className="projects-title font-bold pt-[5rem]">
                  Projects
                </div>
               </div>
             {/* Projects Display Grid */}
               <div className="m-[3rem]">
-                <div className="projects-display">
-                  <div className="projects-entry">
-                    {/* Project Image */}
-                    <div className="flex bg-mineshaft h-[15rem] w-full rounded-xl">
-                      Avc
+                <div className="projects-display flex-col xl:flex-row pt-[3rem]">
+                  {/* Project Entry 1 */}
+                  <div className="projects-entry rounded-xl gradient-bg">
+                    {/* Project Title */}
+                    <div className="flex text-4xl justify-center mt-[1rem]">
+                      Deadman's Hand
                     </div>
-
+                    {/* Project Image */}
+                    <div className="flex m-[1.5rem] mt-[1rem] h-[14rem] bg-gold rounded-xl items-center justify-center">
+                        Project Image
+                    </div>
+                    {/* Project Description */}
+                    <div className="projects-entry-description rounded-xl">
+                     Deadman's Hand is a web application designed to create x y z thing
+                     this is good for teaching and blah blah blah balh blah
+                     blah blahb blah
+                    </div>
+                    {/* Buttons */}
+                    <div className="flex flex-row gap-[2rem] m-[1.5rem] justify-center items-center font-semibold">
+                      <button to="/" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                        GitHub
+                      </button>
+                      <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                        Live Demo
+                      </button>
+                    </div>
                   </div>
-                  <div className="projects-entry">
-                    {/* Project Image */}
-                    <div className="flex bg-mineshaft h-[15rem] w-full rounded-xl">
-                      Avc
+                  {/* Project Entry 2 */}
+                  <div className="projects-entry rounded-xl gradient-bg">
+                    {/* Project Title */}
+                    <div className="flex text-4xl justify-center mt-[1rem]">
+                      Deadman's Hand
                     </div>
-
+                    {/* Project Image */}
+                    <div className="flex m-[1.5rem] mt-[1rem] h-[14rem] bg-gold rounded-xl items-center justify-center">
+                        Project Image
+                    </div>
+                    {/* Project Description */}
+                    <div className="projects-entry-description rounded-xl">
+                     Deadman's Hand is a web application designed to create x y z thing
+                     this is good for teaching and blah blah blah balh blah
+                     blah blahb blah
+                    </div>
+                    {/* Buttons */}
+                    <div className="flex flex-row gap-[2rem] m-[1.5rem] justify-center items-center font-semibold">
+                      <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                        Download CV
+                      </button>
+                      <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                        Contact Info
+                      </button>
+                    </div>
                   </div>
-                  <div className="projects-entry">
-                    {/* Project Image */}
-                    <div className="flex bg-mineshaft h-[15rem] w-full rounded-xl">
-                      Avc
+                  {/* Project Entry 3 */}
+                  <div className="projects-entry rounded-xl gradient-bg">
+                    {/* Project Title */}
+                    <div className="flex text-4xl justify-center mt-[1rem]">
+                      Deadman's Hand
                     </div>
-
+                    {/* Project Image */}
+                    <div className="flex m-[1.5rem] mt-[1rem] h-[14rem] bg-gold rounded-xl items-center justify-center">
+                        Project Image
+                    </div>
+                    {/* Project Description */}
+                    <div className="projects-entry-description rounded-xl">
+                     Deadman's Hand is a web application designed to create x y z thing
+                     this is good for teaching and blah blah blah balh blah
+                     blah blahb blah
+                    </div>
+                    {/* Buttons */}
+                    <div className="flex flex-row gap-[2rem] m-[1.5rem] justify-center items-center font-semibold">
+                      <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                        Download CV
+                      </button>
+                      <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                        Contact Info
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
