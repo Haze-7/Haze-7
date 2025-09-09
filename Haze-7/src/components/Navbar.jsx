@@ -69,7 +69,8 @@ function Navbar({ mode, setMode }) {
                              <div className="dropdown-about-section">
                               <Link to="/" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
-                                <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img>
+                                {/* fill w/ about image */}
+                                {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
                                   {/*Blur overlay */}
                                   <div className="dropdown-projects-display-entry-blur"></div> 
                                </div>
@@ -98,7 +99,8 @@ function Navbar({ mode, setMode }) {
                              <div className="dropdown-about-section">
                               <Link to="/" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
-                                <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img>
+                                {/* Fill w/ about image */}
+                                {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
                                   {/*Blur overlay */}
                                   {/* <div className="dropdown-projects-display-entry-blur"></div>  */}
                                </div>
@@ -128,7 +130,8 @@ function Navbar({ mode, setMode }) {
                              <div className="dropdown-about-section">
                               <Link to="/" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
-                                <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img>
+                                {/* fill w/ about image */}
+                                {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
                                   {/*Blur overlay */}
                                   {/* <div className="dropdown-projects-display-entry-blur"></div>  */}
                                </div>

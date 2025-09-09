@@ -5,6 +5,13 @@ import ProfilePic from "/images/haze-profile-pic.png"
 
 import {onClick} from 'react';
 
+import HLogo from "/H-logo.svg";
+
+import DeadmanPreview from "/images/deadman-preview.svg" 
+import CSGPreview from "/images/csg-preview.svg"
+import SuniPreview from "/images/suni-preview.svg" 
+
+
 function Home({ mode, setMode }) {
     return (
       <>
@@ -74,8 +81,8 @@ function Home({ mode, setMode }) {
               </div>
           </section>
           {/* Projects Section */}
-          <section id="Projects" className="bg-sand h-[70rem]">
-            <div className=" text-[3rem]">
+          <section id="Projects" className="bg-sand min-h-[70rem]">
+            <div className="text-[3rem]">
               {/* Projects Title */}
               <div className="flex justify-center">
                 <div className="projects-title font-bold pt-[5rem]">
@@ -83,20 +90,20 @@ function Home({ mode, setMode }) {
                </div>
               </div>
             {/* Projects Display Grid */}
-              <div className="m-[3rem]">
-                <div className="projects-display flex-col xl:flex-row pt-[3rem]">
+              <div className="m-[1.5rem] md:m-[2rem] lg:m-[3rem]">
+                <div className="projects-display grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
                   {/* Project Entry 1 */}
                   <div className="projects-entry rounded-xl gradient-bg">
                     {/* Project Title */}
-                    <div className="flex text-4xl justify-center mt-[1rem]">
+                    <div className="text-4xl projects-entry-title font-bold">
                       Deadman's Hand
                     </div>
                     {/* Project Image */}
-                    <div className="flex m-[1.5rem] mt-[1rem] h-[14rem] bg-gold rounded-xl items-center justify-center">
-                        Project Image
+                    <div className="projects-entry-image">
+                        <img src={DeadmanPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description rounded-xl">
+                    <div className="projects-entry-description gradient-bg rounded-xl">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
@@ -114,12 +121,12 @@ function Home({ mode, setMode }) {
                   {/* Project Entry 2 */}
                   <div className="projects-entry rounded-xl gradient-bg">
                     {/* Project Title */}
-                    <div className="flex text-4xl justify-center mt-[1rem]">
+                    <div className="text-4xl projects-entry-title">
                       Deadman's Hand
                     </div>
                     {/* Project Image */}
-                    <div className="flex m-[1.5rem] mt-[1rem] h-[14rem] bg-gold rounded-xl items-center justify-center">
-                        Project Image
+                    <div className="projects-entry-image">
+                        <img src={CSGPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
                     <div className="projects-entry-description rounded-xl">
@@ -138,14 +145,14 @@ function Home({ mode, setMode }) {
                     </div>
                   </div>
                   {/* Project Entry 3 */}
-                  <div className="projects-entry rounded-xl gradient-bg">
+                  <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg">
                     {/* Project Title */}
-                    <div className="flex text-4xl justify-center mt-[1rem]">
+                    <div className="text-4xl projects-entry-title">
                       Deadman's Hand
                     </div>
                     {/* Project Image */}
-                    <div className="flex m-[1.5rem] mt-[1rem] h-[14rem] bg-gold rounded-xl items-center justify-center">
-                        Project Image
+                    <div className="projects-entry-image">
+                        <img src={SuniPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
                     <div className="projects-entry-description rounded-xl">
@@ -164,6 +171,18 @@ function Home({ mode, setMode }) {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Buttons (View More, access General Github) */}
+              <div className="flex flex-row gap-[2rem] m-[1.5rem] py-[3rem] justify-center items-center font-semibold">
+                {/* Link to projects page */}
+                <button to="/" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                  View Projects
+                </button>
+                  {/* Link to github home*/}
+                <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                  Github Home
+               </button>
               </div>
             </div>
           </section>
