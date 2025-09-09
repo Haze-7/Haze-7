@@ -103,7 +103,7 @@ function Home({ mode, setMode }) {
                         <img src={DeadmanPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description gradient-bg rounded-xl">
+                    <div className="projects-entry-description overflow-auto gradient-bg rounded-xl">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
@@ -121,15 +121,15 @@ function Home({ mode, setMode }) {
                   {/* Project Entry 2 */}
                   <div className="projects-entry rounded-xl gradient-bg">
                     {/* Project Title */}
-                    <div className="text-4xl projects-entry-title">
-                      Deadman's Hand
+                    <div className="text-4xl projects-entry-title font-bold">
+                      CSS Style Guide
                     </div>
                     {/* Project Image */}
                     <div className="projects-entry-image">
                         <img src={CSGPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description rounded-xl">
+                    <div className="projects-entry-description overflow-auto rounded-xl">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
@@ -147,15 +147,15 @@ function Home({ mode, setMode }) {
                   {/* Project Entry 3 */}
                   <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg">
                     {/* Project Title */}
-                    <div className="text-4xl projects-entry-title">
-                      Deadman's Hand
+                    <div className="text-4xl projects-entry-title font-bold">
+                      Suni
                     </div>
                     {/* Project Image */}
                     <div className="projects-entry-image">
                         <img src={SuniPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description rounded-xl">
+                    <div className="projects-entry-description overflow-auto rounded-xl">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
