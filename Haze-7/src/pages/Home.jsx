@@ -91,11 +91,11 @@ function Home({ mode, setMode }) {
               </div>
             {/* Projects Display Grid */}
               <div className="m-[1.5rem] md:m-[2rem] lg:m-[3rem]">
-                <div className="projects-display grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
+                <div className="projects-display grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[85%] md:w-[97%] xl:w-[90%] mx-auto">
                   {/* Project Entry 1 */}
-                  <div className="projects-entry rounded-xl gradient-bg">
+                  <div className="projects-entry rounded-xl gradient-bg ">
                     {/* Project Title */}
-                    <div className="text-4xl projects-entry-title font-bold">
+                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
                       Deadman's Hand
                     </div>
                     {/* Project Image */}
@@ -121,11 +121,11 @@ function Home({ mode, setMode }) {
                   {/* Project Entry 2 */}
                   <div className="projects-entry rounded-xl gradient-bg">
                     {/* Project Title */}
-                    <div className="text-4xl projects-entry-title font-bold">
+                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
                       CSS Style Guide
                     </div>
                     {/* Project Image */}
-                    <div className="projects-entry-image">
+                    <div className="projects-entry-image h-[12rem]xl:h-[14rem]">
                         <img src={CSGPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
@@ -147,7 +147,7 @@ function Home({ mode, setMode }) {
                   {/* Project Entry 3 */}
                   <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg">
                     {/* Project Title */}
-                    <div className="text-4xl projects-entry-title font-bold">
+                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
                       Suni
                     </div>
                     {/* Project Image */}

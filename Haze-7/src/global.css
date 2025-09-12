@@ -850,7 +850,7 @@ background: var(--color-item-being-covered);
   display: flex;
   margin: 1.5rem;
   margin-top: 1rem; /* overrides the top margin */
-  height: 14rem;
+  /* height: 12rem; */
   background-color: var(--color-gold);
   border-radius: 0.75rem;
   align-items: center;
