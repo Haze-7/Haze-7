@@ -91,11 +91,13 @@ function Home({ mode, setMode }) {
               </div>
             {/* Projects Display Grid */}
               <div className="m-[1.5rem] md:m-[2rem] lg:m-[3rem]">
-                <div className="projects-display grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[85%] md:w-[97%] xl:w-[90%] mx-auto">
+                {/* w-[85%] md:w-[97%] xl:w-[90%] mx-auto */}
+                <div className="projects-display items-stretch w-[95%] sm:w-[90%] lg:w-[90%] xl:max-w-[1280px] mx-auto gap-[1.5rem] md:gap-[1.25rem] lg:gap-[1.5rem] xl:gap-[2rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
                   {/* Project Entry 1 */}
-                  <div className="projects-entry rounded-xl gradient-bg ">
+                  <div className="projects-entry rounded-xl gradient-bg">
                     {/* Project Title */}
-                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
+                    {/* text-[clamp(1.5rem,2vw,2.5rem)] */}
+                    <div className="text-3xl xl:text-4xl  projects-entry-title font-bold "> 
                       Deadman's Hand
                     </div>
                     {/* Project Image */}
@@ -103,13 +105,13 @@ function Home({ mode, setMode }) {
                         <img src={DeadmanPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description overflow-auto gradient-bg rounded-xl">
+                    <div className="projects-entry-description overflow-auto scrollbar-hidden gradient-bg rounded-xl">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
                     </div>
                     {/* Buttons */}
-                    <div className="flex flex-row gap-[2rem] m-[1.5rem] justify-center items-center font-semibold">
+                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.5rem] justify-center items-center font-semibold">
                       <button to="/" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         GitHub
                       </button>
@@ -119,54 +121,54 @@ function Home({ mode, setMode }) {
                     </div>
                   </div>
                   {/* Project Entry 2 */}
-                  <div className="projects-entry rounded-xl gradient-bg">
+                  <div className="projects-entry rounded-xl gradient-bg ">
                     {/* Project Title */}
                     <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
                       CSS Style Guide
                     </div>
                     {/* Project Image */}
-                    <div className="projects-entry-image h-[12rem]xl:h-[14rem]">
+                    <div className="projects-entry-image">
                         <img src={CSGPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description overflow-auto rounded-xl">
+                    <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl lg:max-h-[100%]">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
                     </div>
                     {/* Buttons */}
-                    <div className="flex flex-row gap-[2rem] m-[1.5rem] justify-center items-center font-semibold">
-                      <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
-                        Download CV
+                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.5rem] justify-center items-center font-semibold">
+                      <button className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center">
+                        Github
                       </button>
                       <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
-                        Contact Info
+                        Live Demo
                       </button>
                     </div>
                   </div>
                   {/* Project Entry 3 */}
-                  <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg">
+                  <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg max-h-[100%] md:max-h-[70%] lg:max-h-[100%]">
                     {/* Project Title */}
                     <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
                       Suni
                     </div>
                     {/* Project Image */}
-                    <div className="projects-entry-image">
+                    <div className="projects-entry-image max-h-[100%] md:max-h-[40%] lg:max-h-[50%]">
                         <img src={SuniPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description overflow-auto rounded-xl">
+                    <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[100%] md:max-h-[4%] lg:max-h-[100%]">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
                     </div>
                     {/* Buttons */}
-                    <div className="flex flex-row gap-[2rem] m-[1.5rem] justify-center items-center font-semibold">
-                      <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
-                        Download CV
+                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.5rem] justify-center items-center font-semibold">
+                      <button className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                        Github
                       </button>
                       <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
-                        Contact Info
+                        Live Demo
                       </button>
                     </div>
                   </div>
