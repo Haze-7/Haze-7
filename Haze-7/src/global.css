@@ -842,6 +842,8 @@ background: var(--color-item-being-covered);
   color: var(--primary-alt-text-color);
 }
 
+
+
 /* Project Entry Container */
 .projects-entry {
   display: flex;
@@ -853,11 +855,11 @@ background: var(--color-item-being-covered);
   margin: 1.5rem;
   margin-top: 1rem; /* overrides the top margin */
   /* height: 12rem; */
-  background-color: var(--color-gold);
-  border-radius: 0.75rem;
+  /* background-color: var(--color-gold); */
+  border-radius: 1rem;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24);
+  /* box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24); */
 }
 
 .projects-entry-description {
@@ -870,9 +872,9 @@ background: var(--color-item-being-covered);
   margin-top: 0rem;
   margin-bottom: 0rem;
   padding: 1rem;
-  height: 10rem;
+  /* height: 10rem; */
   color: var(--primary-alt-text-color);
-  max-height: 8rem;
+
   box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24);
 }
 

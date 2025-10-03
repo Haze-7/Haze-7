@@ -80,32 +80,33 @@ function Home({ mode, setMode }) {
                 </div>
               </div>
           </section>
-          {/* Projects Section */}
+
+          
+          {/* Old projects section */}
           <section id="Projects" className="bg-sand min-h-[70rem]">
             <div className="text-[3rem]">
               {/* Projects Title */}
               <div className="flex justify-center">
-                <div className="projects-title font-bold pt-[5rem]">
+                <div className="projects-title font-bold pt-[7rem]">
                  Projects
                </div>
               </div>
-            {/* Projects Display Grid */}
-              <div className="m-[1.5rem] md:m-[2rem] lg:m-[3rem]">
-                {/* w-[85%] md:w-[97%] xl:w-[90%] mx-auto */}
-                <div className="projects-display items-stretch w-[95%] sm:w-[90%] lg:w-[90%] xl:max-w-[1280px] mx-auto gap-[1.5rem] md:gap-[1.25rem] lg:gap-[1.5rem] xl:gap-[2rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
+            {/* Projects Display Grid*/}
+              <div className="mx-[1.2rem] md:mx-0 mt-[3%]">
+                {/* gap-[1.5rem] md:gap-[1.25rem] lg:gap-[1.5rem] xl:gap-[2rem] // gap-[2%]*/} 
+                <div className="projects-display items-stretch w-[95%] sm:w-[90%] lg:w-[90%] xl:max-w-[1280px] mx-auto gap-[2rem] md:gap-[3%] lg:gap-[2.5%] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
                   {/* Project Entry 1 */}
                   <div className="projects-entry rounded-xl gradient-bg">
                     {/* Project Title */}
-                    {/* text-[clamp(1.5rem,2vw,2.5rem)] */}
-                    <div className="text-3xl xl:text-4xl  projects-entry-title font-bold "> 
+                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold "> 
                       Deadman's Hand
                     </div>
                     {/* Project Image */}
                     <div className="projects-entry-image">
-                        <img src={DeadmanPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
+                        <img src={DeadmanPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl max-h-[5rem] min-h-[11rem] lg:min-h-[11rem] xl:min-h-[13rem]"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description overflow-auto scrollbar-hidden gradient-bg rounded-xl">
+                    <div className="projects-entry-description overflow-auto scrollbar-hidden gradient-bg rounded-xl max-h-[8rem] lg:max-h-[7rem] xl:max-h-[9rem]">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
@@ -128,10 +129,10 @@ function Home({ mode, setMode }) {
                     </div>
                     {/* Project Image */}
                     <div className="projects-entry-image">
-                        <img src={CSGPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
+                        <img src={CSGPreview} alt="CSG Project Image" className="w-full h-full object-cover rounded-xl max-h-[5rem] min-h-[11rem] lg:min-h-[11rem] xl:min-h-[13rem]"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl lg:max-h-[100%]">
+                    <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[8rem] lg:max-h-[7rem] xl:max-h-[9rem] ">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
@@ -147,17 +148,17 @@ function Home({ mode, setMode }) {
                     </div>
                   </div>
                   {/* Project Entry 3 */}
-                  <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg max-h-[100%] md:max-h-[70%] lg:max-h-[100%]">
+                  <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg max-h-[100%] md:max-h-[35rem] lg:max-h-[100%]">
                     {/* Project Title */}
                     <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
                       Suni
                     </div>
                     {/* Project Image */}
                     <div className="projects-entry-image max-h-[100%] md:max-h-[40%] lg:max-h-[50%]">
-                        <img src={SuniPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl"/>
+                        <img src={SuniPreview} alt="Suni Project Image" className="w-full md:w-[90%] lg:w-full h-full object-cover rounded-xl max-h-[5rem] min-h-[13rem] md:max-h-none md:min-h-0 lg:max-h-[5rem] lg:min-h-[11rem] xl:min-h-[13rem]"/>
                     </div>
                     {/* Project Description */}
-                    <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[100%] md:max-h-[4%] lg:max-h-[100%]">
+                    <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[9rem] md:max-h-[4%] lg:max-h-[7rem] xl:max-h-[9rem] md:min-h-[24%] lg:min-h-0 ">
                      Deadman's Hand is a web application designed to create x y z thing
                      this is good for teaching and blah blah blah balh blah
                      blah blahb blah
