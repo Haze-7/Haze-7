@@ -97,13 +97,14 @@ function Home({ mode, setMode }) {
                 <div className="projects-display items-stretch w-[95%] sm:w-[90%] lg:w-[90%] xl:max-w-[1280px] mx-auto gap-[2rem] md:gap-[3%] lg:gap-[2.5%] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
                   {/* Project Entry 1 */}
                   <div className="projects-entry rounded-xl gradient-bg">
-                    {/* Project Title */}
-                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold "> 
-                      Deadman's Hand
-                    </div>
+
                     {/* Project Image */}
                     <div className="projects-entry-image">
                         <img src={DeadmanPreview} alt="Deadman's Project Image" className="w-full h-full object-cover rounded-xl max-h-[5rem] min-h-[11rem] lg:min-h-[11rem] xl:min-h-[13rem]"/>
+                    </div>
+                    {/* Project Title */}
+                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold "> 
+                      Deadman's Hand
                     </div>
                     {/* Project Description */}
                     <div className="projects-entry-description overflow-auto scrollbar-hidden gradient-bg rounded-xl max-h-[8rem] lg:max-h-[7rem] xl:max-h-[9rem]">
@@ -123,13 +124,13 @@ function Home({ mode, setMode }) {
                   </div>
                   {/* Project Entry 2 */}
                   <div className="projects-entry rounded-xl gradient-bg ">
-                    {/* Project Title */}
-                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
-                      CSS Style Guide
-                    </div>
                     {/* Project Image */}
                     <div className="projects-entry-image">
                         <img src={CSGPreview} alt="CSG Project Image" className="w-full h-full object-cover rounded-xl max-h-[5rem] min-h-[11rem] lg:min-h-[11rem] xl:min-h-[13rem]"/>
+                    </div>
+                    {/* Project Title */}
+                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
+                      CSS Style Guide
                     </div>
                     {/* Project Description */}
                     <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[8rem] lg:max-h-[7rem] xl:max-h-[9rem] ">
@@ -149,13 +150,13 @@ function Home({ mode, setMode }) {
                   </div>
                   {/* Project Entry 3 */}
                   <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg max-h-[100%] md:max-h-[35rem] lg:max-h-[100%]">
-                    {/* Project Title */}
-                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
-                      Suni
-                    </div>
                     {/* Project Image */}
                     <div className="projects-entry-image max-h-[100%] md:max-h-[40%] lg:max-h-[50%]">
                         <img src={SuniPreview} alt="Suni Project Image" className="w-full md:w-[90%] lg:w-full h-full object-cover rounded-xl max-h-[5rem] min-h-[13rem] md:max-h-none md:min-h-0 lg:max-h-[5rem] lg:min-h-[11rem] xl:min-h-[13rem]"/>
+                    </div>
+                    {/* Project Title */}
+                    <div className="text-3xl xl:text-4xl projects-entry-title font-bold">
+                      Suni
                     </div>
                     {/* Project Description */}
                     <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[9rem] md:max-h-[4%] lg:max-h-[7rem] xl:max-h-[9rem] md:min-h-[24%] lg:min-h-0 ">

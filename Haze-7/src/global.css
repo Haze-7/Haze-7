@@ -838,11 +838,11 @@ background: var(--color-item-being-covered);
 .projects-entry-title {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   color: var(--primary-alt-text-color);
 }
-
-
 
 /* Project Entry Container */
 .projects-entry {
@@ -853,7 +853,7 @@ background: var(--color-item-being-covered);
 .projects-entry-image {
   display: flex;
   margin: 1.5rem;
-  margin-top: 1rem; /* overrides the top margin */
+  margin-bottom: 0rem; /* overrides the top margin */
   /* height: 12rem; */
   /* background-color: var(--color-gold); */
   border-radius: 1rem;
