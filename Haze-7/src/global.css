@@ -872,9 +872,12 @@ background: var(--color-item-being-covered);
   margin-top: 0rem;
   margin-bottom: 0rem;
   padding: 1rem;
-  /* height: 10rem; */
   color: var(--primary-alt-text-color);
+  
+  box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24);
+}
 
+.project-buttons {
   box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24);
 }
 

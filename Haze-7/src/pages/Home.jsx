@@ -112,7 +112,7 @@ function Home({ mode, setMode }) {
                      blah blahb blah
                     </div>
                     {/* Buttons */}
-                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.5rem] justify-center items-center font-semibold">
+                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.1rem] justify-center items-center font-semibold">
                       <button to="/" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         GitHub
                       </button>
@@ -138,7 +138,7 @@ function Home({ mode, setMode }) {
                      blah blahb blah
                     </div>
                     {/* Buttons */}
-                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.5rem] justify-center items-center font-semibold">
+                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.1rem] justify-center items-center font-semibold">
                       <button className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center">
                         Github
                       </button>
@@ -164,7 +164,7 @@ function Home({ mode, setMode }) {
                      blah blahb blah
                     </div>
                     {/* Buttons */}
-                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.5rem] justify-center items-center font-semibold">
+                    <div className="flex flex-row gap-[1rem] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[2rem] mx-[1rem] m-[1.1rem] justify-center items-center font-semibold">
                       <button className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         Github
                       </button>
