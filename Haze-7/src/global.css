@@ -795,7 +795,6 @@ background: var(--color-item-being-covered);
   font-size: 1.1rem;
   color: var(--secondary-button-text-color);
   cursor: pointer;
-
 }
 
 /* About Section */
@@ -842,6 +841,11 @@ background: var(--color-item-being-covered);
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   color: var(--primary-alt-text-color);
+  /* font-size: 2.0625rem;
+  line-height: 2.375rem; */
+  
+  font-size: clamp(1.7rem, 2vw + 1rem, 2.0625rem);
+  line-height: 1.2;
 }
 
 /* Project Entry Container */
@@ -852,7 +856,7 @@ background: var(--color-item-being-covered);
 
 .projects-entry-image {
   display: flex;
-  margin: 1.5rem;
+  margin: 1.6rem;
   margin-bottom: 0rem; /* overrides the top margin */
   /* height: 12rem; */
   /* background-color: var(--color-gold); */
@@ -868,17 +872,32 @@ background: var(--color-item-being-covered);
   text-align: center;
   text-wrap: none;
   font-size: 1.2rem;
-  margin: 1.5rem;
+  margin: 1.6rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
-  padding: 1rem;
+  padding: 0.76rem;
   color: var(--primary-alt-text-color);
   
   box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24);
 }
 
-.project-buttons {
-  box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24);
+.projects-primary-button {
+  background: var(--primary-button-color);
+  height: 3.7rem;
+  width: 10rem;
+  color: var(--primary-button-text-color);
+  font-size: 1.1rem;
+  /* font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem); */
+  cursor: pointer;
+}
+
+.projects-secondary-button {
+  background: var(--secondary-button-color);
+  height: 3.7rem;
+  width: 10rem;
+  font-size: 1.1rem;
+  color: var(--secondary-button-text-color);
+  cursor: pointer;
 }
 
 /* .projects-entry-buttons {
