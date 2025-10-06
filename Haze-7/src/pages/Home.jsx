@@ -36,9 +36,9 @@ function Home({ mode, setMode }) {
                     <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                       Download CV
                     </button>
-                    <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                    <Link to="#Contact-Me" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
                       Contact Info
-                    </button>
+                    </Link>
                   </div>
                 </div>              
                 {/* Professional Photo */}
@@ -64,17 +64,18 @@ function Home({ mode, setMode }) {
                   About Me Image/ Box
                 </div>
                   {/* About Me Text / Description */}
-                  <div className="flex w-[100%] lg:w-[55%] flex-col"> {/*  Missing Height*/}
+                  <div className="flex w-[100%] lg:w-[55%] flex-col pt-[2%]"> {/*  Missing Height*/}
                     <p className="about-description text-[1.3rem] sm:text-[1.5rem]">
-                    I’m Hayes Chiasson, i’m 21 years old. I’m originally from Thibodaux, Louisiana. I attend Lousiana State University, and will be a senior in the coming year blah blah balh
+                    I'm a Senior at Louisiana State University pursuing a Bachelors Degree in Software Engineering with a Minor in Digital Media Arts & Engineering. 
+                    I thrive on taking innovative ideas from concept to execution through software development, and see myself working on hobby projects well into my career.
                   </p>
                     <div className="mt-[1.5rem] flex flex-row gap-[2rem] lg:gap-[3rem] justify-center items-center font-semibold">
-                      <button to="" className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                      <Link to="" className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         Images
-                      </button>
-                      <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                      </Link>
+                      <Link to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
                         Learn More
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -87,12 +88,12 @@ function Home({ mode, setMode }) {
             <div className="text-[3rem]">
               {/* Projects Title */}
               <div className="flex justify-center">
-                <div className="projects-title font-bold pt-[6rem]">
+                <div className="projects-title font-bold pt-[5rem] sm:pt-[6rem]">
                  Projects
                </div>
               </div>
             {/* Projects Display Grid*/}
-              <div className="mx-[1.2rem] md:mx-0 mt-[3%]">
+              <div className="mx-[1.2rem] md:mx-0 mt-[7%] sm:mt-[3%]">
                 {/* gap-[1.5rem] md:gap-[1.25rem] lg:gap-[1.5rem] xl:gap-[2rem] // gap-[2%]*/} 
                 <div className="projects-display items-stretch w-[95%] sm:w-[85%] lg:w-[90%] xl:max-w-[1280px] mx-auto gap-[2rem] md:gap-[3%] lg:gap-[2.3%] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
                   {/* Project Entry 1 */}
@@ -107,18 +108,23 @@ function Home({ mode, setMode }) {
                     </div>
                     {/* Project Description */}
                     <div className="projects-entry-description overflow-auto scrollbar-hidden gradient-bg rounded-xl max-h-[8rem] lg:max-h-[8rem] xl:max-h-[8rem]">
-                     Deadman's Hand is a web application designed to create thing
-                     this is good for teaching and blah blah blah balh blah
-                     blah blahb blah
+                     Deadman's Hand is a simulation game that seeks to educate players on the manipulative, gambling, like tactics used by game companies. 
+                     Players engage with a modern card battler that implements gacha tactics, currency manipulation, shop limitations, leaderboard pressure, 
+                     and artificial scarcity to entice the player to spend real world currency. Players then receive a T.A.S.K (Tactics Awareness Score Keeper) 
+                     assessment at the end of their experience that details their habits, spending levels, and the tactics they fell for which are combined to give them an overall score. 
+                     This element also serves as an educational tool, giving in depth analysis, tips, and backgrounds on the various tactics used by these companies. 
+                     This project was part of a Capstone course for my Digital Media & Engineering Minor, and was featured by Louisiana State University for its creativity and functionality. 
+                     The tech stack includes React w/ Next.js, Node.js, Firebase, and Figma (for design work).The game is hosted online for anyone to experience, 
+                     so feel free to check it out yourself!
                     </div>
                     {/* Buttons */}
                     <div className="flex flex-row gap-[7%] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[10%] mx-[1.6rem] my-[1rem] justify-center items-center font-semibold">
-                      <button to="/" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center ">
+                      <Link to="https://github.com/CatherineRodriquez04/BRIDGE" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center ">
                         GitHub
-                      </button>
-                      <button to="/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
+                      </Link>
+                      <Link to="https://bridge-lac.vercel.app/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
                         Live Demo
-                      </button>
+                      </Link>
                     </div>
                   </div>
                   {/* Project Entry 2 */}
@@ -133,18 +139,24 @@ function Home({ mode, setMode }) {
                     </div>
                     {/* Project Description */}
                     <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[8rem] lg:max-h-[8rem] xl:max-h-[8rem] ">
-                     Deadman's Hand is a web application designed to create x y z thing
-                     this is good for teaching and blah blah blah balh blah
-                     blah blahb blah
+                     The CSG (CSS Style Guide) is my place to store my own custom component library, notes resources, and development techniques. 
+                     The goal of the site has shifted over time, expanding to encompass any and all needs of a front end developer. 
+                     As a repository of information, it has the capability to store and categorize my components and study notes for future study and reusability. 
+                     This also extends into its teaching capability, as it is my aim to make these notes accessible to others, along with the interactive component creation game. 
+                     The goal of this game is to present the user with a component ( a box, modal, grid, etc) and have them recreate it within a given time frame. 
+                     This method of study (though not in a dedicated game experience) was a major contributor to my progression with essential CSS frameworks like tailwindCSS and Bootstrap. 
+                     The site also includes useful developer tools, such as measuring screens comprised of the various web development unit types (px, REM, vw/vh, etc). 
+                     This allows for efficient size calculations among various screen sizes and easy measuring of reference images for inspiration. 
+                    I hope to see this page become a place for others to learn, grow, and practice the art of web design, just as I did in making it!
                     </div>
                     {/* Buttons */}
                     <div className="flex flex-row gap-[7%] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[10%] mx-[1.6rem] my-[1rem] justify-center items-center font-semibold">
-                      <button className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center">
+                      <Link to="https://github.com/Haze-7/css-style-guide" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center">
                         Github
-                      </button>
-                      <button to="/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
+                      </Link>
+                      <Link to="https://css-style-guide.vercel.app/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
                         Live Demo
-                      </button>
+                      </Link>
                     </div>
                   </div>
                   {/* Project Entry 3 */}
@@ -159,18 +171,19 @@ function Home({ mode, setMode }) {
                     </div>
                     {/* Project Description */}
                     <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[9rem] md:max-h-[4%] lg:max-h-[8rem] xl:max-h-[8rem] md:min-h-[24%] lg:min-h-0 ">
-                     Deadman's Hand is a web application designed to create x y z thing
-                     this is good for teaching and blah blah blah balh blah
-                     blah blahb blah
+                     Suni is a responsive, full stack web application that enables users to share their vacation preferences with our Suni Algorithm 
+                     to automatically schedule their itinerary based on budget, weather conditions, and practical time constraints. 
+                     This data is represented on an interactive calendar and budget wheel, which dynamically displays weather conditions, 
+                     provides access to relavent businesses, and creates a dynamic budget wheel for tracking spending by category.
                     </div>
                     {/* Buttons */}
                     <div className="flex flex-row gap-[7%] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[10%] mx-[1.6rem] my-[1rem] justify-center items-center font-semibold">
-                      <button className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center ">
+                      <Link to="https://github.com/CSC-3380-Fall-2024/Team-19" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center ">
                         Github
-                      </button>
-                      <button to="/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
+                      </Link>
+                      <Link to="/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
                         Live Demo
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -179,13 +192,13 @@ function Home({ mode, setMode }) {
               {/* Buttons (View More, access General Github) */}
               <div className="flex flex-row gap-[2rem] m-[1.5rem] py-[3rem] justify-center items-center font-semibold">
                 {/* Link to projects page */}
-                <button to="/" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
-                  View Projects
-                </button>
+                <Link to="/projects" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                  View More
+                </Link>
                   {/* Link to github home*/}
-                <button to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                <Link to="https://github.com/Haze-7" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
                   Github Home
-               </button>
+               </Link>
               </div>
             </div>
           </section>
