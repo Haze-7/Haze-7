@@ -10,6 +10,7 @@ import HLogo from "/H-logo.svg";
 import DeadmanPreview from "/images/deadman-preview.svg" 
 import CSGPreview from "/images/csg-preview.svg"
 import SuniPreview from "/images/suni-preview.svg" 
+import AboutMeImage from "/images/haze-about-me-pic.jpg"
 
 
 function Home({ mode, setMode }) {
@@ -48,7 +49,7 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* About Me Section */}
-          <section id="About-Me" className="gradient-bg h-[55rem] lg:h-[50rem] shadow-lg/50 shadow-gray gradient-link-offset">
+          <section id="About-Me" className="gradient-bg h-[] lg:h-[50rem] shadow-lg/50 shadow-gray gradient-link-offset">
             <div className="">
               {/* About Title Container */}
               <div className="flex justify-center">
@@ -59,9 +60,9 @@ function Home({ mode, setMode }) {
               {/* About Me content Container*/}
               <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2.5rem] lg:pt-[3.5rem] px-[3rem]">
                 {/* About Me Image/ Box */}
-                <div className="bg-mineshaft flex rounded-xl w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
-                  {/* <img src={} alt="About Me Image/Box"></img> */}
-                  About Me Image/ Box
+                {/* Temp remove background for image fit, future image stretch properly at wide view widths (rectangle):  bg-mineshaft (is reason for lack of rounded edges at large*/}
+                <div className="flex rounded-xl overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
+                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl w-full h-full object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
                 </div>
                   {/* About Me Text / Description */}
                   <div className="flex w-[100%] lg:w-[55%] flex-col pt-[2%]"> {/*  Missing Height*/}
@@ -69,11 +70,11 @@ function Home({ mode, setMode }) {
                     I'm a Senior at Louisiana State University pursuing a Bachelors Degree in Software Engineering with a Minor in Digital Media Arts & Engineering. 
                     I thrive on taking innovative ideas from concept to execution through software development, and see myself working on hobby projects well into my career.
                   </p>
-                    <div className="mt-[1.5rem] flex flex-row gap-[2rem] lg:gap-[3rem] justify-center items-center font-semibold">
+                    <div className="mt-[1.5rem] flex flex-row gap-[7%] lg:gap-[3rem] mb-[3rem] lg:mb-0 justify-center items-center font-semibold">
                       <Link to="" className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         Images
                       </Link>
-                      <Link to="/" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                      <Link to="/about-me" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
                         Learn More
                       </Link>
                     </div>
