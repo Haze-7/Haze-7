@@ -28,10 +28,16 @@
   --color-barley: #A78763;
   --color-whiterock: #EAE0D2;
 
-  --color-dark-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.70) 95.96%);
+
 /* Opposite to background (light gradient (gold) applies to dark mode screen) */
+  --color-dark-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), linear-gradient(90.1deg, rgba(45, 45, 45, 0.6) 9.34%, rgba(45, 45, 45, 0.70) 95.96%);
   --color-light-gradient: linear-gradient(0deg, rgba(234, 186, 140, 0.3), rgba(234, 186, 140, 0.3)), linear-gradient(165.99deg, rgba(215, 201, 174, 0.6) 9.89%, rgba(215, 201, 174, 0.1) 89.94%);
 
+ /* Intermediate (on top of sand) background layers / gradients */
+ /* More light version of the gradient, use if make secret white sand page */
+  /* --color-light-gradient: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%); */
+  --color-gold-gradient: linear-gradient(98.78deg, #A58763 7.48%, #716A5B 92.38%);
+  --color-mineshaft-gradient: linear-gradient(98.78deg, #2D2D2D 7.48%, #444444 92.38%);
 }
 
 /* Scrollbar hidden in elements utlity classes */
@@ -101,6 +107,8 @@ background: var(--color-item-being-covered);
   --primary-alt-text-color: #2D2D2D;
   --secondary-alt-text-color: #1A1A1A;
 
+  --gradient-bg: var(--color-gold-gradient);
+
   /* increase text size to reduce minimizing effect of dark text */
    text-shadow: 0 0 0.5px currentColor; /* subtle halo = thicker appearance */
 
@@ -122,7 +130,8 @@ background: var(--color-item-being-covered);
 
   --primary-alt-text-color: var(--color-whiterock);
   --secondary-alt-text-color: var(--color-barley);
-  /* --tertiary-text-color: var(hsl(0, 0%, 18%)); */
+
+  --gradient-bg: var(--color-mineshaft-gradient);
 
 }
 
@@ -724,6 +733,12 @@ background: var(--color-item-being-covered);
 }
 
 /* Webpage Content */
+
+.gradient-bg {
+  background: var(--gradient-bg);
+}
+
+/* Hero Section */
 .hero-picture {
   height: 400px;
   width: 400px;
@@ -769,6 +784,7 @@ background: var(--color-item-being-covered);
   width: 10rem;
   color: var(--primary-button-text-color);
   font-size: 1.1rem;
+  /* font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem); */
   cursor: pointer;
 }
 
@@ -779,26 +795,141 @@ background: var(--color-item-being-covered);
   font-size: 1.1rem;
   color: var(--secondary-button-text-color);
   cursor: pointer;
-
 }
 
-.about-bg {
-  background: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%);
+/* About Section */
+
+/* More gradient general, may move location to top */
+.gradient-title {
+  color: var(--primary-alt-text-color);
+  font-size: 4rem;
 }
 
-
-
-/* F5ECD8
-   EDE2D0
- */
-/*
-
-Scroll snap implementatoin ( by section)
-
-html {
-    scroll-snap-type: y mandatory;
+.gradient-link-offset {
+  scroll-margin-top: 5.5rem; /*Offset anchor link start (leave gap at top ) */
 }
-section {
-     scroll-snap-align: start;
- } 
-*/
+
+/* May become about carousel */
+/* .about-image {
+
+} */
+
+/* Handle Text color / side */
+.about-description {
+  /* font-size: 1.5rem; */
+  /* line-height: 2.7rem; */
+  line-height: clamp(2rem, 1vw + 2rem, 2.7rem);
+
+  text-align: center;
+}
+
+/* Project Home Section */
+
+.projects-title {
+  color: var(--primary-text-color);
+  font-size: 4rem;
+}
+
+/* Project Grid Container */
+.projects-display {
+  display: grid;
+  /* gap: 2rem; */
+}
+
+.projects-entry-title {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 1rem; */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-alt-text-color);
+  /* font-size: 2.0625rem;
+  line-height: 2.375rem; */
+  
+  font-size: clamp(1.7rem, 2vw + 1rem, 2.0625rem);
+  line-height: 1.2;
+}
+
+/* Project Entry Container */
+.projects-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-entry-image {
+  display: flex;
+  margin: 1.6rem;
+  margin-bottom: 0rem; /* overrides the top margin */
+  /* height: 12rem; */
+  /* background-color: var(--color-gold); */
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24); */
+}
+
+.projects-entry-description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-wrap: none;
+  font-size: 1.2rem;
+  margin: 1.6rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding: 0.76rem;
+  color: var(--primary-alt-text-color);
+  
+  box-shadow: inset 2px 8px 5px 5px rgba(0, 0, 0, 0.24);
+}
+
+.projects-primary-button {
+  background: var(--primary-button-color);
+  height: 3.7rem;
+  width: 10rem;
+  color: var(--primary-button-text-color);
+  font-size: 1.1rem;
+  /* font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem); */
+  cursor: pointer;
+}
+
+.projects-secondary-button {
+  background: var(--secondary-button-color);
+  height: 3.7rem;
+  width: 10rem;
+  font-size: 1.1rem;
+  color: var(--secondary-button-text-color);
+  cursor: pointer;
+}
+
+/* .projects-entry-buttons {
+
+} */
+
+/* .projects-display-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+} */
+
+/* Outer Grid to contain lists (columns) */
+/* .dropdown-list-container {
+  display: grid;x
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  flex: 1;
+  gap: 2rem;
+  grid-auto-columns: 1fr;
+}
+
+.dropdown-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: max-content;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+} */
