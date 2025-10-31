@@ -3,7 +3,9 @@ import {Link, useLocation} from "react-router-dom";
 
 import ProfilePic from "/images/haze-profile-pic.png" 
 
-import {onClick} from 'react';
+import {onClick, useRef, useEffect, useState} from 'react';
+import {useInView} from "react-intersection-observer";
+
 
 import HLogo from "/H-logo.svg";
 
@@ -14,6 +16,24 @@ import AboutMeImage from "/images/haze-about-me-pic.jpg"
 
 
 function Home({ mode, setMode }) {
+
+    // Handle Experience section slide in / out (track page)
+    const { ref: expOneRef, inView: expOneIsVisible } = useInView({
+        threshold: 0.5, // Triggers when 50% of the element is visible
+      });
+
+      const { ref: expTwoRef, inView: expTwoIsVisible } = useInView({
+        threshold: 0.5, // Triggers when 50% of the element is visible
+      });
+
+      const { ref: expThreeRef, inView: expThreeIsVisible } = useInView({
+        threshold: 0.5, // Triggers when 50% of the element is visible
+      });
+
+      const { ref: epFourRef, inView: expFourIsVisible } = useInView({
+        threshold: 0.5, // Triggers when 50% of the element is visible
+      });
+
     return (
       <>
       {/* var(--primary- text-color) */}
@@ -204,13 +224,56 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* Experience Section */}
-          <section id="Experience" className="gradient-bg h-[40rem] shadow-lg/50 shadow-gray gradient-link-offset">
+          <section id="Experience" className="gradient-bg h-[80rem] shadow-lg/50 shadow-gray gradient-link-offset">
             <div className="">
                 {/* About Title Container */}
                 <div className="flex justify-center">
                   <div className="gradient-title font-bold pt-[4rem]">
                     Experience
                   </div>
+                  {/* Experience Explanations */}
+                </div>
+                <div className="flex h-auto w-full">
+                  {/* Right side px bar */}
+                  <div ref={expOneRef} className={`shadow-lg absolute bg-[#232323] w-[45%] h-auto max-h-[30rem] mt-[5rem] right-[3rem] rounded-2xl border-10 border-akaroa slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
+                    <div className="py-[1.5rem] px-[2rem]">
+                      <Link to="/experienceOne" className="absolute mt-[0.5rem] font-tungsten text-caramel text-4xl font-bold hover:text-[#EABA8C] cursor-pointer ">Our Lady of the Lake</Link>
+                      {/* Experience Description */}
+                      <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
+                        Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders
+                        Created integrated GUI for adding new vendors, making project scalable for future acquisitions / partners
+                        Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Left side Experience bar */}
+                  <div ref={expTwoRef} className={`shadow-lg bg-[#232323] absolute w-[45%] h-auto max-h-[30rem] mt-[27rem] left-[3rem] rounded-2xl border-10 border-akaroa slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
+                    <div className="py-[1.5rem] px-[2rem]">
+                      <Link to="/experienceTwo" className="absolute mt-[0.5rem] font-tungsten text-caramel text-4xl font-bold hover:text-[#EABA8C] cursor-pointer"> LSU ITS Student Developer</Link>
+                      {/* Experience Description */}
+                      <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
+                        Maintain and modernize critical LSU web programs utilized by over 40k staff, students, and licensed contractors
+                        Facilitated the migration of LSU database systems from localized mainframe to the Workday platform
+                        Spearheaded UI redesign of 3 prominent web applications in active use by students & departmental staff
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Right side Experience bar */}
+                  <div ref={expThreeRef} className={`shadow-lg bg-[#232323] absolute w-[45%] h-auto mt-[47rem] right-[3rem] rounded-2xl border-10 border-akaroa slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
+                    <div className="py-[1.5rem] px-[2rem]">                    
+                      <Link to="/experienceThree" className="absolute mt-[0.5rem] font-tungsten text-caramel text-4xl font-bold hover:text-[#EABA8C] cursor-pointer ">Our Lady of the Lake</Link>
+                      {/* Experience Description */}
+                      <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
+                        Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders
+                        Created integrated GUI for adding new vendors, making project scalable for future acquisitions / partners
+                        Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing
+                      </p>
+                    </div>
+                  </div>
+
+
                 </div>
             </div>
           </section>
