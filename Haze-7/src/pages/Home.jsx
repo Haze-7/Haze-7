@@ -224,7 +224,7 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* Experience Section */}
-          <section id="Experience" className="gradient-bg h-[80rem] shadow-lg/50 shadow-gray gradient-link-offset">
+          <section id="Experience" className="gradient-bg h-[85rem] shadow-lg/50 shadow-gray gradient-link-offset">
             <div className="">
                 {/* About Title Container */}
                 <div className="flex justify-center">
@@ -235,9 +235,9 @@ function Home({ mode, setMode }) {
                 </div>
                 <div className="flex h-auto w-full">
                   {/* Right side px bar */}
-                  <div ref={expOneRef} className={`shadow-lg absolute bg-[#232323] w-[45%] h-auto max-h-[30rem] mt-[5rem] right-[3rem] rounded-2xl border-10 border-akaroa slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
+                  <div ref={expOneRef} className={`shadow-lg absolute gradient-bg w-[45%] h-auto max-h-[30rem] mt-[5rem] right-[3rem] rounded-2xl border-5 slide-entry-border slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
                     <div className="py-[1.5rem] px-[2rem]">
-                      <Link to="/experienceOne" className="absolute mt-[0.5rem] font-tungsten text-caramel text-4xl font-bold hover:text-[#EABA8C] cursor-pointer ">Our Lady of the Lake</Link>
+                      <Link to="/experienceOne" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer ">Our Lady of the Lake</Link>
                       {/* Experience Description */}
                       <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
                         Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders
@@ -248,9 +248,9 @@ function Home({ mode, setMode }) {
                   </div>
 
                   {/* Left side Experience bar */}
-                  <div ref={expTwoRef} className={`shadow-lg bg-[#232323] absolute w-[45%] h-auto max-h-[30rem] mt-[27rem] left-[3rem] rounded-2xl border-10 border-akaroa slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
+                  <div ref={expTwoRef} className={`shadow-lg gradient-bg absolute w-[45%] h-auto max-h-[30rem] mt-[27rem] left-[3rem] rounded-2xl border-5 slide-entry-border slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
                     <div className="py-[1.5rem] px-[2rem]">
-                      <Link to="/experienceTwo" className="absolute mt-[0.5rem] font-tungsten text-caramel text-4xl font-bold hover:text-[#EABA8C] cursor-pointer"> LSU ITS Student Developer</Link>
+                      <Link to="/experienceTwo" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer"> LSU ITS Student Developer</Link>
                       {/* Experience Description */}
                       <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
                         Maintain and modernize critical LSU web programs utilized by over 40k staff, students, and licensed contractors
@@ -261,9 +261,9 @@ function Home({ mode, setMode }) {
                   </div>
 
                   {/* Right side Experience bar */}
-                  <div ref={expThreeRef} className={`shadow-lg bg-[#232323] absolute w-[45%] h-auto mt-[47rem] right-[3rem] rounded-2xl border-10 border-akaroa slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
+                    <div ref={expThreeRef} className={`shadow-lg gradient-bg absolute w-[45%] h-auto mt-[47rem] right-[3rem] rounded-2xl border-5 slide-entry-border slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
                     <div className="py-[1.5rem] px-[2rem]">                    
-                      <Link to="/experienceThree" className="absolute mt-[0.5rem] font-tungsten text-caramel text-4xl font-bold hover:text-[#EABA8C] cursor-pointer ">Our Lady of the Lake</Link>
+                      <Link to="/experienceThree" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer ">Our Lady of the Lake</Link>
                       {/* Experience Description */}
                       <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
                         Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders

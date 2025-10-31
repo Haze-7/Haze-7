@@ -23,7 +23,6 @@
   --color-slate:  #2B2E35;
   --color-carbon: #272727;
   --color-mineshaft: #2D2D2D;
-  /* --color-mineshaft: hsl(0, 0%, 18%); */
   --color-akaroa: #D7C9AE;
   --color-barley: #A78763;
   --color-whiterock: #EAE0D2;
@@ -104,8 +103,11 @@ background: var(--color-item-being-covered);
   --primary-text-color: var(--color-whiterock);
   --secondary-text-color: var(--color-barley);
   
-  --primary-alt-text-color: #2D2D2D;
+  --primary-alt-text-color: var(--color-mineshaft);
   --secondary-alt-text-color: #1A1A1A;
+  --tertiary-alt-text-color: var(--color-mineshaft);
+
+  --border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-gold-gradient);
 
@@ -130,6 +132,9 @@ background: var(--color-item-being-covered);
 
   --primary-alt-text-color: var(--color-whiterock);
   --secondary-alt-text-color: var(--color-barley);
+  --tertiary-alt-text-color: var(--color-barley);
+
+  --border-color: var(--color-akaroa);
 
   --gradient-bg: var(--color-mineshaft-gradient);
 
@@ -935,6 +940,19 @@ background: var(--color-item-being-covered);
 } */
 
 /* Experience Section */
+
+/* Entry Title */
+.slide-entry-title {
+  color: var(--tertiary-alt-text-color);
+}
+
+.slide-entry-title:hover {
+  color: var(--border-color);
+}
+
+.slide-entry-border {
+  border-color: var(--border-color);
+}
 
 /* Slide in / out animation Handling */
 .slide-animate-right {
