@@ -9,10 +9,12 @@ import {useInView} from "react-intersection-observer";
 
 import HLogo from "/H-logo.svg";
 
-import DeadmanPreview from "/images/deadman-preview.svg" 
-import CSGPreview from "/images/csg-preview.svg"
-import SuniPreview from "/images/suni-preview.svg" 
-import AboutMeImage from "/images/haze-about-me-pic.jpg"
+import DeadmanPreview from "/images/deadman-preview.svg";
+import CSGPreview from "/images/csg-preview.svg";
+import SuniPreview from "/images/suni-preview.svg"; 
+import AboutMeImage from "/images/haze-about-me-pic.jpg";
+
+import OlolImage from "/images/olol.svg";
 
 
 function Home({ mode, setMode }) {
@@ -231,45 +233,53 @@ function Home({ mode, setMode }) {
                   <div className="gradient-title font-bold pt-[4rem]">
                     Experience
                   </div>
-                  {/* Experience Explanations */}
+                  {/* Experience Entries */}
                 </div>
-                <div className="flex h-auto w-full">
+                {/* Experience Entries container */}
+                <div className="relative h-auto">
                   {/* Right side px bar */}
-                  <div ref={expOneRef} className={`shadow-lg absolute gradient-bg w-[45%] h-auto max-h-[30rem] mt-[5rem] right-[3rem] rounded-2xl border-5 slide-entry-border slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
-                    <div className="py-[1.5rem] px-[2rem]">
+                  <div ref={expOneRef} className={`absolute w-[76%] flex items-center justify-end gap-[2rem] right-[3rem] pt-[5rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
+                    <div className=" h-[16rem] w-[17.5rem] rounded-2xl bg-gold  flex-shrink-0"> 
+                      <img className="object-cover rounded-2xl w-full h-full" src={OlolImage} alt="OLOL Image" /> 
+                    </div>
+                    <div className=" py-[1.5rem] px-[2rem] w-[67%] gradient-bg rounded-2xl border-5 slide-entry-border shadow-lg">
                       <Link to="/experienceOne" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer ">Our Lady of the Lake</Link>
-                      {/* Experience Description */}
-                      <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
-                        Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders
-                        Created integrated GUI for adding new vendors, making project scalable for future acquisitions / partners
-                        Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing
-                      </p>
+                        <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
+                          Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders
+                          Created integrated GUI for adding new vendors, making project scalable for future acquisitions / partners
+                          Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing
+                        </p>
                     </div>
                   </div>
 
                   {/* Left side Experience bar */}
-                  <div ref={expTwoRef} className={`shadow-lg gradient-bg absolute w-[45%] h-auto max-h-[30rem] mt-[27rem] left-[3rem] rounded-2xl border-5 slide-entry-border slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
-                    <div className="py-[1.5rem] px-[2rem]">
+                  {/* Main Container */}
+                  <div ref={expTwoRef} className={`absolute w-[76%] flex items-center justify-start gap-[2rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
+                    <div className={`py-[1.5rem] px-[2rem] w-[67%] shadow-lg gradient-bg h-auto max-h-[30rem] mt-[27rem] left-[3rem] rounded-2xl border-5 slide-entry-border`}>
                       <Link to="/experienceTwo" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer"> LSU ITS Student Developer</Link>
-                      {/* Experience Description */}
                       <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
                         Maintain and modernize critical LSU web programs utilized by over 40k staff, students, and licensed contractors
                         Facilitated the migration of LSU database systems from localized mainframe to the Workday platform
                         Spearheaded UI redesign of 3 prominent web applications in active use by students & departmental staff
                       </p>
                     </div>
+                    <div className=" h-[16rem] w-[17.5rem] rounded-2xl bg-gold mt-[27rem] flex-shrink-0"> 
+                      <img className="object-cover rounded-2xl w-full h-full" src={OlolImage} alt="OLOL Image" /> 
+                    </div>
                   </div>
 
-                  {/* Right side Experience bar */}
-                    <div ref={expThreeRef} className={`shadow-lg gradient-bg absolute w-[45%] h-auto mt-[47rem] right-[3rem] rounded-2xl border-5 slide-entry-border slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
-                    <div className="py-[1.5rem] px-[2rem]">                    
-                      <Link to="/experienceThree" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer ">Our Lady of the Lake</Link>
-                      {/* Experience Description */}
-                      <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
-                        Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders
-                        Created integrated GUI for adding new vendors, making project scalable for future acquisitions / partners
-                        Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing
-                      </p>
+                  {/* Experience 3 */}
+                  <div ref={expThreeRef} className={`absolute w-[76%] flex items-center justify-end gap-[2rem] right-[3rem] pt-[51rem] slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
+                    <div className=" h-[16rem] w-[17.5rem] rounded-2xl bg-gold  flex-shrink-0"> 
+                      <img className="object-cover rounded-2xl w-full h-full" src={OlolImage} alt="OLOL Image" /> 
+                    </div>
+                    <div className=" py-[1.5rem] px-[2rem] w-[67%] gradient-bg rounded-2xl border-5 slide-entry-border shadow-lg">
+                      <Link to="/experienceOne" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer ">Our Lady of the Lake</Link>
+                        <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
+                          Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders
+                          Created integrated GUI for adding new vendors, making project scalable for future acquisitions / partners
+                          Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing
+                        </p>
                     </div>
                   </div>
 
