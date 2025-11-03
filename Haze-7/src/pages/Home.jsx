@@ -233,17 +233,17 @@ function Home({ mode, setMode }) {
           </section>
           {/* Experience Section */}
         <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
-          <div className="flex flex-col w-full items-center py-[4rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[4rem]">
+          <div className="flex flex-col w-full items-center py-[4rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
             {/* Section Title */}
             <div className="gradient-title font-bold text-[3rem] text-center">Experience</div>
             {/* Right-aligned Entry */}
-            <div ref={expOneRef} className={`experience-entry justify-end gap-[2rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
-              <div className="h-[16rem] w-[17.5rem] rounded-2xl bg-gold flex-shrink-0">
-                <img className="object-cover rounded-2xl w-full h-full" src={OlolImage} alt="OLOL Image" />
+            <div ref={expOneRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
+              <div className="experience-entry-image">
+                <img src={OlolImage} alt="OLOL Image" />
               </div>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
                 <Link to="https://www.fmolhs.org/locations/greater-baton-rouge" className="experience-entry-title font-tungsten text-[2.5rem] ">
-                  Our Lady of the Lake
+                  Our Lady of the Lake Health
                 </Link>
                 <p className="experience-card-description">
                   Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to vendors. 
@@ -254,7 +254,7 @@ function Home({ mode, setMode }) {
             </div>
 
             {/* Left-aligned Entry */}
-            <div ref={expTwoRef} className={`experience-entry justify-start slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
+            <div ref={expTwoRef} className={`experience-entry justify-start gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
                 <Link to="https://www.lsu.edu/its/index.php" className="experience-entry-title font-tungsten text-[2.5rem] ">
                   LSU ITS Student Developer
@@ -265,15 +265,15 @@ function Home({ mode, setMode }) {
                   Spearheaded UI redesign of 3 prominent web applications in active use by students & departmental staff.
                 </p>
               </div>
-              <div className="h-[16rem] w-[17.5rem] rounded-2xl bg-gold flex-shrink-0">
-                <img className="object-cover rounded-2xl w-full h-full" src={LsuIts} alt="OLOL Image" />
+              <div className="experience-entry-image">
+                <img src={LsuIts} alt="OLOL Image" />
               </div>
             </div>
 
             {/* Right-aligned Entry */}
-            <div ref={expThreeRef} className={`experience-entry justify-end slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
-              <div className="h-[16rem] w-[17.5rem] rounded-2xl bg-gold flex-shrink-0">
-                <img className="object-cover rounded-2xl w-full h-full" src={OlolImage} alt="OLOL Image" />
+            <div ref={expThreeRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
+              <div className="experience-entry-image">
+                <img src={OlolImage} alt="OLOL Image" />
               </div>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
                 <Link to="/experienceThree" className="experience-entry-title font-tungsten text-[2.5rem] ">
