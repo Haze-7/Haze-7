@@ -21,20 +21,26 @@ function Home({ mode, setMode }) {
 
     // Handle Experience section slide in / out (track page)
     const { ref: expOneRef, inView: expOneIsVisible } = useInView({
-        threshold: 0.5, // Triggers when 50% of the element is visible
-      });
+      threshold: 0.35,
+      triggerOnce: false,
+      rootMargin: '-5% 0px -25% 0px',
+    });
 
-      const { ref: expTwoRef, inView: expTwoIsVisible } = useInView({
-        threshold: 0.5, // Triggers when 50% of the element is visible
-      });
+    const { ref: expTwoRef, inView: expTwoIsVisible } = useInView({
+      threshold: 0.2,              // lower threshold = triggers sooner
+      triggerOnce: false,
+      rootMargin: '-20% 0px -20% 0px', // top margin negative = triggers even earlier
+    });
 
-      const { ref: expThreeRef, inView: expThreeIsVisible } = useInView({
-        threshold: 0.5, // Triggers when 50% of the element is visible
-      });
+    const { ref: expThreeRef, inView: expThreeIsVisible } = useInView({
+      threshold: 0.35,             // lower threshold = triggers sooner
+      triggerOnce: false,
+      rootMargin: '-20% 0px -20% 0px', // negative top margin = triggers earlier
+    });
 
-      const { ref: epFourRef, inView: expFourIsVisible } = useInView({
-        threshold: 0.5, // Triggers when 50% of the element is visible
-      });
+      // const { ref: epFourRef, inView: expFourIsVisible } = useInView({
+      //   threshold: 0.5, // Triggers when 50% of the element is visible
+      // });
 
     return (
       <>
@@ -117,7 +123,6 @@ function Home({ mode, setMode }) {
               </div>
             {/* Projects Display Grid*/}
               <div className="mx-[1.2rem] md:mx-0 mt-[7%] sm:mt-[3%]">
-                {/* gap-[1.5rem] md:gap-[1.25rem] lg:gap-[1.5rem] xl:gap-[2rem] // gap-[2%]*/} 
                 <div className="projects-display items-stretch w-[95%] sm:w-[85%] lg:w-[90%] xl:max-w-[1280px] mx-auto gap-[2rem] md:gap-[3%] lg:gap-[2.3%] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
                   {/* Project Entry 1 */}
                   <div className="projects-entry rounded-xl gradient-bg">
@@ -226,7 +231,7 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* Experience Section */}
-          <section id="Experience" className="gradient-bg h-[85rem] shadow-lg/50 shadow-gray gradient-link-offset">
+          <section id="Experience" className="gradient-bg h-[90rem] shadow-lg/50 shadow-gray gradient-link-offset">
             <div className="">
                 {/* About Title Container */}
                 <div className="flex justify-center">
@@ -236,14 +241,14 @@ function Home({ mode, setMode }) {
                   {/* Experience Entries */}
                 </div>
                 {/* Experience Entries container */}
-                <div className="relative h-auto">
+                <div className="relative h-auto w-screen">
                   {/* Right side px bar */}
-                  <div ref={expOneRef} className={`absolute w-[76%] flex items-center justify-end gap-[2rem] right-[3rem] pt-[5rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
-                    <div className=" h-[16rem] w-[17.5rem] rounded-2xl bg-gold  flex-shrink-0"> 
+                  <div ref={expOneRef} className={`absolute w-[76%] flex items-center justify-end gap-[2rem] right-[3rem] mt-[5rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
+                    <div className=" h-[16rem] w-[17.5rem] rounded-2xl bg-gold flex-shrink-0"> 
                       <img className="object-cover rounded-2xl w-full h-full" src={OlolImage} alt="OLOL Image" /> 
                     </div>
-                    <div className=" py-[1.5rem] px-[2rem] w-[67%] gradient-bg rounded-2xl border-5 slide-entry-border shadow-lg">
-                      <Link to="/experienceOne" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer ">Our Lady of the Lake</Link>
+                    <div className="relative py-[1.5rem] px-[2rem] w-[67%] gradient-bg rounded-2xl border-5 slide-entry-border shadow-lg">
+                      <Link to="/experienceOne" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer">Our Lady of the Lake</Link>
                         <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
                           Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to venders
                           Created integrated GUI for adding new vendors, making project scalable for future acquisitions / partners
@@ -254,8 +259,8 @@ function Home({ mode, setMode }) {
 
                   {/* Left side Experience bar */}
                   {/* Main Container */}
-                  <div ref={expTwoRef} className={`absolute w-[76%] flex items-center justify-start gap-[2rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
-                    <div className={`py-[1.5rem] px-[2rem] w-[67%] shadow-lg gradient-bg h-auto max-h-[30rem] mt-[27rem] left-[3rem] rounded-2xl border-5 slide-entry-border`}>
+                  <div ref={expTwoRef} className={`absolute w-[76%] flex items-center justify-start gap-[2rem] left-[3rem] mt-[27rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
+                    <div className={`py-[1.5rem] px-[2rem] w-[67%] shadow-lg gradient-bg max-h-[30rem] left-[3rem] rounded-2xl border-5 slide-entry-border`}>
                       <Link to="/experienceTwo" className="absolute mt-[0.5rem] font-tungsten slide-entry-title text-4xl font-bold cursor-pointer"> LSU ITS Student Developer</Link>
                       <p className="pt-[4.5rem] p-[1rem] text-lg md:text-xl lg:text-2xl">
                         Maintain and modernize critical LSU web programs utilized by over 40k staff, students, and licensed contractors
@@ -263,13 +268,13 @@ function Home({ mode, setMode }) {
                         Spearheaded UI redesign of 3 prominent web applications in active use by students & departmental staff
                       </p>
                     </div>
-                    <div className=" h-[16rem] w-[17.5rem] rounded-2xl bg-gold mt-[27rem] flex-shrink-0"> 
+                    <div className=" h-[16rem] w-[17.5rem] rounded-2xl bg-gold flex-shrink-0"> 
                       <img className="object-cover rounded-2xl w-full h-full" src={OlolImage} alt="OLOL Image" /> 
                     </div>
                   </div>
 
                   {/* Experience 3 */}
-                  <div ref={expThreeRef} className={`absolute w-[76%] flex items-center justify-end gap-[2rem] right-[3rem] pt-[51rem] slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
+                  <div ref={expThreeRef} className={`absolute w-[76%] flex items-center justify-end gap-[2rem] right-[3rem] mt-[51rem] slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
                     <div className=" h-[16rem] w-[17.5rem] rounded-2xl bg-gold  flex-shrink-0"> 
                       <img className="object-cover rounded-2xl w-full h-full" src={OlolImage} alt="OLOL Image" /> 
                     </div>
@@ -282,8 +287,6 @@ function Home({ mode, setMode }) {
                         </p>
                     </div>
                   </div>
-
-
                 </div>
             </div>
           </section>
