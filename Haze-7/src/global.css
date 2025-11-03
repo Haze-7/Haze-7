@@ -941,17 +941,46 @@ background: var(--color-item-being-covered);
 
 /* Experience Section */
 
-/* Entry Title */
-.slide-entry-title {
+/*Experience Entries  */
+.experience-entry {
+  display: flex;
+  /* justify-content: end; */
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.experience-entry-title {
+  position: absolute;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: clamp(2rem, 2.5vw + 0.5rem, 2.5rem);
+  letter-spacing: 0.02em;
+  transition: color 0.25s ease, transform 0.25s ease;
   color: var(--tertiary-alt-text-color);
 }
 
-.slide-entry-title:hover {
+.experience-entry-title:hover {
   color: var(--border-color);
 }
 
-.slide-entry-border {
+.experience-card {
+  max-width: 50vw;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  background-color: var(--gradient-bg);
+  border-width: 5px;
+  display: relative;
   border-color: var(--border-color);
+
+}
+.experience-card-description {
+  padding: 1rem;
+  padding-top: 4.5rem;
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  line-height: clamp(1.6rem, 2vw, 2.4rem);
 }
 
 /* Slide in / out animation Handling */
