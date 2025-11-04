@@ -15,8 +15,8 @@ import SuniPreview from "/images/suni-preview.svg";
 import AboutMeImage from "/images/haze-about-me-pic.jpg";
 
 import OlolImage from "/images/olol.svg";
-import LsuIts from "/images/lsu-its.svg"
-
+import LsuIts from "/images/lsu-its.svg";
+import BarberImage from "/images/barber.svg";
 
 function Home({ mode, setMode }) {
 
@@ -233,10 +233,10 @@ function Home({ mode, setMode }) {
           </section>
           {/* Experience Section */}
         <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
-          <div className="flex flex-col w-full items-center py-[4rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
+          <div className="flex flex-col w-full items-center py-[4rem] pb-[6rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
             {/* Section Title */}
-            <div className="gradient-title font-bold text-[3rem] text-center">Experience</div>
-            {/* Right-aligned Entry */}
+            <div className="gradient-title font-bold text-[3rem] text-center pb-[2rem]">Experience</div>
+            {/* Our Lady of the Lake (Right) */}
             <div ref={expOneRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
               <div className="experience-entry-image">
                 <img src={OlolImage} alt="OLOL Image" />
@@ -253,7 +253,7 @@ function Home({ mode, setMode }) {
               </div>
             </div>
 
-            {/* Left-aligned Entry */}
+            {/* LSU ITS Student Developer (Left) */}
             <div ref={expTwoRef} className={`experience-entry justify-start gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
                 <Link to="https://www.lsu.edu/its/index.php" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
@@ -266,23 +266,23 @@ function Home({ mode, setMode }) {
                 </p>
               </div>
               <div className="experience-entry-image">
-                <img src={LsuIts} alt="OLOL Image" />
+                <img src={LsuIts} alt="LSU ITS Image" />
               </div>
             </div>
 
-            {/* Right-aligned Entry */}
+            {/* Barber (Temp) (Right)*/}
             <div ref={expThreeRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
               <div className="experience-entry-image">
-                <img src={OlolImage} alt="OLOL Image" />
+                <img src={BarberImage} alt="Barber Image" />
               </div>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
                 <Link to="/experienceThree" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
-                  Our Lady of the Lake
+                  BARBER
                 </Link>
                 <p className="experience-card-description">
-                  Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to vendors.
-                  Created integrated GUI for adding new vendors, making project scalable for future acquisitions/partners.
-                  Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing.
+                  Barber is the all-in-one place for barbers, shop owners, and customers to interact, schedule, and build their business.
+                  Barbers can register their profile and create a custom page to attract customers and directly handle scheduling / payment infastructure. Shop owners can also find barbers
+                  through this system, hiring and handling rent or % dues directly within the application.
                 </p>
               </div>
             </div>
