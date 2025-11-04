@@ -3,17 +3,46 @@ import {Link, useLocation} from "react-router-dom";
 
 import ProfilePic from "/images/haze-profile-pic.png" 
 
-import {onClick} from 'react';
+import {onClick, useRef, useEffect, useState} from 'react';
+import {useInView} from "react-intersection-observer";
+
 
 import HLogo from "/H-logo.svg";
 
-import DeadmanPreview from "/images/deadman-preview.svg" 
-import CSGPreview from "/images/csg-preview.svg"
-import SuniPreview from "/images/suni-preview.svg" 
-import AboutMeImage from "/images/haze-about-me-pic.jpg"
+import DeadmanPreview from "/images/deadman-preview.svg";
+import CSGPreview from "/images/csg-preview.svg";
+import SuniPreview from "/images/suni-preview.svg"; 
+import AboutMeImage from "/images/haze-about-me-pic.jpg";
 
+import OlolImage from "/images/olol.svg";
+import LsuIts from "/images/lsu-its.svg";
+import BarberImage from "/images/barber.svg";
 
 function Home({ mode, setMode }) {
+
+    // Handle Experience section slide in / out (track page)
+    const { ref: expOneRef, inView: expOneIsVisible } = useInView({
+      threshold: 0.35,
+      triggerOnce: false,
+      rootMargin: '-5% 0px -25% 0px',
+    });
+
+    const { ref: expTwoRef, inView: expTwoIsVisible } = useInView({
+      threshold: 0.2,              // lower threshold = triggers sooner
+      triggerOnce: false,
+      rootMargin: '-20% 0px -20% 0px', // top margin negative = triggers even earlier
+    });
+
+    const { ref: expThreeRef, inView: expThreeIsVisible } = useInView({
+      threshold: 0.35,             // lower threshold = triggers sooner
+      triggerOnce: false,
+      rootMargin: '-20% 0px -20% 0px', // negative top margin = triggers earlier
+    });
+
+      // const { ref: epFourRef, inView: expFourIsVisible } = useInView({
+      //   threshold: 0.5, // Triggers when 50% of the element is visible
+      // });
+
     return (
       <>
       {/* var(--primary- text-color) */}
@@ -95,7 +124,6 @@ function Home({ mode, setMode }) {
               </div>
             {/* Projects Display Grid*/}
               <div className="mx-[1.2rem] md:mx-0 mt-[7%] sm:mt-[3%]">
-                {/* gap-[1.5rem] md:gap-[1.25rem] lg:gap-[1.5rem] xl:gap-[2rem] // gap-[2%]*/} 
                 <div className="projects-display items-stretch w-[95%] sm:w-[85%] lg:w-[90%] xl:max-w-[1280px] mx-auto gap-[2rem] md:gap-[3%] lg:gap-[2.3%] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center">
                   {/* Project Entry 1 */}
                   <div className="projects-entry rounded-xl gradient-bg">
@@ -204,16 +232,64 @@ function Home({ mode, setMode }) {
             </div>
           </section>
           {/* Experience Section */}
-          <section id="Experience" className="gradient-bg h-[40rem] shadow-lg/50 shadow-gray gradient-link-offset">
-            <div className="">
-                {/* About Title Container */}
-                <div className="flex justify-center">
-                  <div className="gradient-title font-bold pt-[4rem]">
-                    Experience
-                  </div>
-                </div>
+        <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
+          <div className="flex flex-col w-full items-center py-[4rem] pb-[6rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
+            {/* Section Title */}
+            <div className="gradient-title font-bold text-[3rem] text-center pb-[2rem]">Experience</div>
+            {/* Our Lady of the Lake (Right) */}
+            <div ref={expOneRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
+              <div className="experience-entry-image">
+                <img src={OlolImage} alt="OLOL Image" />
+              </div>
+              <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
+                <Link to="https://www.fmolhs.org/locations/greater-baton-rouge" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
+                  Our Lady of the Lake Health
+                </Link>
+                <p className="experience-card-description">
+                  Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to vendors. 
+                  Created integrated GUI for adding new vendors, making project scalable for future acquisitions/partners. 
+                  Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing.
+                </p>
+              </div>
             </div>
-          </section>
+
+            {/* LSU ITS Student Developer (Left) */}
+            <div ref={expTwoRef} className={`experience-entry justify-start gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
+              <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
+                <Link to="https://www.lsu.edu/its/index.php" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
+                  LSU ITS Student Developer
+                </Link>
+                <p className="experience-card-description">
+                  Maintain and modernize critical LSU web programs utilized by over 40k staff, students, and licensed contractors.
+                  Facilitated migration of LSU database systems from localized mainframe to the Workday platform.
+                  Spearheaded UI redesign of 3 prominent web applications in active use by students & departmental staff.
+                </p>
+              </div>
+              <div className="experience-entry-image">
+                <img src={LsuIts} alt="LSU ITS Image" />
+              </div>
+            </div>
+
+            {/* Barber (Temp) (Right)*/}
+            <div ref={expThreeRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
+              <div className="experience-entry-image">
+                <img src={BarberImage} alt="Barber Image" />
+              </div>
+              <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
+                <Link to="/experienceThree" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
+                  BARBER
+                </Link>
+                <p className="experience-card-description">
+                  Barber is the all-in-one place for barbers, shop owners, and customers to interact, schedule, and build their business.
+                  Barbers can register their profile and create a custom page to attract customers and directly handle scheduling / payment infastructure. Shop owners can also find barbers
+                  through this system, hiring and handling rent or % dues directly within the application.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
           {/* Contact Me Section */}
           <section id="Contact-Me" className="bg-sand h-[80rem]">
             <div className="">
