@@ -242,7 +242,7 @@ function Home({ mode, setMode }) {
                 <img src={OlolImage} alt="OLOL Image" />
               </div>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
-                <Link to="https://www.fmolhs.org/locations/greater-baton-rouge" className="experience-entry-title font-tungsten text-[2.5rem] ">
+                <Link to="https://www.fmolhs.org/locations/greater-baton-rouge" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
                   Our Lady of the Lake Health
                 </Link>
                 <p className="experience-card-description">
@@ -256,7 +256,7 @@ function Home({ mode, setMode }) {
             {/* Left-aligned Entry */}
             <div ref={expTwoRef} className={`experience-entry justify-start gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
-                <Link to="https://www.lsu.edu/its/index.php" className="experience-entry-title font-tungsten text-[2.5rem] ">
+                <Link to="https://www.lsu.edu/its/index.php" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
                   LSU ITS Student Developer
                 </Link>
                 <p className="experience-card-description">
@@ -276,7 +276,7 @@ function Home({ mode, setMode }) {
                 <img src={OlolImage} alt="OLOL Image" />
               </div>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
-                <Link to="/experienceThree" className="experience-entry-title font-tungsten text-[2.5rem] ">
+                <Link to="/experienceThree" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
                   Our Lady of the Lake
                 </Link>
                 <p className="experience-card-description">
