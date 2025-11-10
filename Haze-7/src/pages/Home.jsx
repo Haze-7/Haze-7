@@ -292,8 +292,46 @@ function Home({ mode, setMode }) {
 
           {/* Contact Me Section */}
           <section id="Contact-Me" className="bg-sand h-[80rem]">
-            <div className="">
-
+            <div className="text-3rem">
+              {/* Projects Title */}
+              <div className="flex justify-center">
+                <div className="projects-title font-bold pt-[5rem] sm:pt-[6rem]">
+                 Contact Me
+               </div>
+              </div>
+              <form className="relative h-[100vh] lg:h-[100vh] w-[100vw] flex flex-col p-4 text-ivory">
+                {/* Flex Wrapper */}
+                <div className="grid grid-cols-2 lg:grid-cols-3 mx-[5vw] gap-4 lg:gap-[5rem] pt-[7vh] justify-center">
+                  {/* Input forms */}
+                  {/* Name input form */}
+                  <div className="">
+                    <h1 className="text-2xl text-gold font-bold pl-[1rem] pb-1">Name</h1>
+                      <input
+                      type="text"
+                      name="name"
+                      className="bg-ivory h-[4.5vh] lg:h-[6vh] w-full text-xl text-slate rounded-2xl px-2.5"
+                      />
+                  </div>
+                  <div>
+                    <h1 className="text-2xl text-gold font-bold pl-[1rem] pb-1">Email</h1>
+                      <input
+                      type="text"
+                      name="email"
+                      className="bg-ivory h-[4.5vh] lg:h-[6vh] w-full text-xl text-slate rounded-2xl px-2.5"
+                      />
+                  </div>
+                  <div>
+                    <h1 className="text-2xl font-bold text-gold pl-[0.5rem] pb-1">Message</h1>
+                    <textarea
+                      name="message"
+                      // value={formData.html_code}
+                      // onChange={handleChange}
+                      className="bg-ivory w-full h-40 lg:h-48 text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y"
+                      placeholder="Type your request here"
+                    />
+                  </div>
+                </div>
+              </form>
             </div>
           </section>
         </div>
