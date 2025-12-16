@@ -300,8 +300,8 @@ function Home({ mode, setMode }) {
                </div>
               </div>
               <form className="relative h-[100vh] lg:h-[100vh] w-[100vw] flex flex-col p-4 text-ivory">
-                {/* Flex Wrapper */}
-                <div className="grid grid-cols-2 lg:grid-cols-3 mx-[5vw] gap-4 lg:gap-[5rem] pt-[7vh] justify-center">
+                {/* Flex Wrapper grid-cols-2 lg:grid-cols-3*/}
+                <div className="grid mx-[5vw] gap-4 lg:gap-[3rem] pt-[7vh] justify-center">
                   {/* Input forms */}
                   {/* Name input form */}
                   <div className="">
@@ -309,7 +309,7 @@ function Home({ mode, setMode }) {
                       <input
                       type="text"
                       name="name"
-                      className="bg-ivory h-[4.5vh] lg:h-[6vh] w-full text-xl text-slate rounded-2xl px-2.5"
+                      className="bg-ivory h-[4.5vh] lg:h-[6vh] w-[50vw] text-xl text-slate rounded-2xl px-2.5" //set width of inputs
                       />
                   </div>
                   <div>
