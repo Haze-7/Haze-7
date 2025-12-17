@@ -111,6 +111,8 @@ background: var(--color-item-being-covered);
 
   --gradient-bg: var(--color-gold-gradient);
 
+   --input-bg: var(--color-mineshaft-gradient);
+
   /* increase text size to reduce minimizing effect of dark text */
    text-shadow: 0 0 0.5px currentColor; /* subtle halo = thicker appearance */
 
@@ -138,6 +140,7 @@ background: var(--color-item-being-covered);
 
   --gradient-bg: var(--color-mineshaft-gradient);
 
+   --input-bg: var(--color-ivory);
 }
 
 
@@ -1076,9 +1079,43 @@ background: var(--color-item-being-covered);
 /* Contact Me Section */
 
 .contact-input-label {
-  color: var(--secondary-text-color);
+  color: var(--secondary-alt-text-color);
   padding-bottom: 0.5rem;
   padding-left: 1rem;
   display: block;
   font-size: 1.7rem;
+}
+
+.contact-me-input {
+  background: var(--input-bg);
+  color: var(--secondary-button-text-color);
+  display: flex;
+  height: 80%;
+  width: 100%;
+}
+
+.contact-me-textarea {
+  background: var(--input-bg);
+  color: var(--secondary-button-text-color);
+  display: flex;
+  width: 100%
+}
+
+.contact-me-submit-button {
+  background: var(--secondary-button-color);
+  height: 3.7rem;
+  width: 100%;
+  font-size: 1.1rem;
+  color: var(--secondary-button-text-color);
+  cursor: pointer;
+}
+
+.contact-me-submit-button:hover {
+  background: var(--primary-button-color);
+  color: var(--primary-button-text-color);
+}
+
+.contact-me-submit-button:active {
+  background: var(--secondary-button-color);
+  color: var(--primary-button-text-color);
 }

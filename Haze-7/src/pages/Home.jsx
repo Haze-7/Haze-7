@@ -299,49 +299,59 @@ function Home({ mode, setMode }) {
                  Contact Me
                </div>
               </div>
-              <form className="relative h-[67vh] w-[100vw] flex flex-col p-4 text-ivory pb-0">
-                {/* Flex Wrapper grid-cols-2 lg:grid-cols-3*/}
-                <div className="grid mx-[5vw] gap-[3.3rem] pt-[4.5vh] lg:pt-[6vh] justify-center">
-                  {/* Input forms */}
-                  {/* Name input  */}
-                  <div className="">
-                    <label className="text-2xl font-bold contact-input-label" for="name">Name</label>
-                      <input
-                      type="text"
-                      name="name"
-                      className="bg-ivory h-[80%] lg:h-[80%] w-[70vw] lg:w-[70vw] text-xl text-slate rounded-2xl px-2.5" //set width of inputs
-                      />
-                  </div>
-                  {/* Email input */}
-                  <div>
-                    <label className="text-2xl font-bold contact-input-label" for="email">Email</label>
-                      <input
-                      type="text"
-                      name="email"
-                      className="bg-ivory h-[80%] lg:h-[80%] w-full text-xl text-slate rounded-2xl px-2.5"
-                      />
-                  </div>
-                  {/* Message Input */}
-                  <div>
-                    <label className="text-2xl font-bold contact-input-label" for="message">Message</label>
-                    <textarea
-                      name="message"
-                      // value={formData.html_code}
-                      // onChange={handleChange}
-                      className="bg-ivory w-full h-40 lg:h-[20vh] text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y"
-                      placeholder="Type your request here"
-                    />
-                  </div>
+              {/* Content Container (incl email input / list) */}
+              {/* make giant grid (med, sm, lg box) */}
+              <div className="pt-[5vh] flex flex-col  lg:flex-row">
+                {/* Scrolling Contact Sources Box */}
+                <div className="">
+                
                 </div>
-              </form>
-              {/* Buttons */}
-              <div className="flex flex-row gap-[7%] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[5%] mx-[1.6rem] my-[1rem] justify-center items-center font-semibold">
-                <Link to="/" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center">
-                  More Info
-                </Link>
-                <Link to="/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center "> 
-                  Send
-                </Link>
+                {/* Or Box */}
+                <div className="">
+                  
+                </div>
+                <form className="relative h-[40.5rem] w-[40vw] flex flex-col text-ivory gradient-bg rounded-2xl left-[57%] px-[3rem]">
+                  {/* Flex Wrapper grid-cols-2 lg:grid-cols-3*/}
+                  <div className="flex flex-col gap-[3.3rem] pt-[6vh] justify-center">
+                    {/* Input forms */}
+                    {/* Name input  */}
+                    <div className="">
+                      <label className="text-2xl font-bold contact-input-label" for="name">Name</label>
+                        <input
+                        type="text"
+                        name="name"
+                        className="text-xl text-slate rounded-2xl px-2.5 contact-me-input" //set width of inputs
+                        />
+                    </div>
+                    {/* Email input */}
+                    <div>
+                      <label className="text-2xl font-bold contact-input-label" for="email">Email</label>
+                        <input
+                        type="text"
+                        name="email"
+                        className="text-xl text-slate rounded-2xl px-2.5 contact-me-input"
+                        />
+                    </div>
+                    {/* Message Input */}
+                    <div>
+                      <label className="text-2xl font-bold contact-input-label" for="message">Message</label>
+                      <textarea
+                        name="message"
+                        // value={formData.html_code}
+                        // onChange={handleChange}
+                        className="contact-me-textarea h-40 lg:h-[20vh] text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y max-h-[20vh]"
+                        placeholder="Type your request here"
+                      />
+                    </div>
+
+                  </div>
+                    <div className="flex flex-row mx-[1.6rem] justify-center items-center font-semibold my-[1.5rem]">
+                      <Link to="/" className="contact-me-submit-button secondary-text-color rounded-2xl flex items-center justify-center w-[10rem]"> 
+                        Send
+                      </Link>
+                    </div>
+                </form>
+              {/* Submit Button */}
               </div>
             </div>
           </section>
