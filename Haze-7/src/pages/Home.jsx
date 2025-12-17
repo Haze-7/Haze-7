@@ -291,7 +291,7 @@ function Home({ mode, setMode }) {
 
 
           {/* Contact Me Section */}
-          <section id="Contact-Me" className="bg-sand h-[70rem]">
+          <section id="Contact-Me" className="bg-sand h-[80rem] lg:h-[65rem]">
             <div className="text-3rem">
               {/* Projects Title */}
               <div className="flex justify-center">
@@ -301,18 +301,23 @@ function Home({ mode, setMode }) {
               </div>
               {/* Content Container (incl email input / list) */}
               {/* make giant grid (med, sm, lg box) */}
-              <div className="pt-[5vh] flex flex-col  lg:flex-row">
+              <div className="pt-[5vh] flex flex-col  lg:flex-row gap-[2rem] lg:gap-[4rem] px-[3rem]">
                 {/* Scrolling Contact Sources Box */}
-                <div className="">
-                
+                <div className="flex h-[10rem] lg:h-[42rem] lg:w-[30%] gradient-bg rounded-4xl items-center justify-center">
+                  {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
+                  Scroll Box
                 </div>
                 {/* Or Box */}
-                <div className="">
-                  
+                <div className="flex h-[5rem] lg:h-[38rem] mt-[2rem] lg:w-[5%] bg-white rounded-xl">
+                  OR
                 </div>
-                <form className="relative h-[40.5rem] w-[40vw] flex flex-col text-ivory gradient-bg rounded-2xl left-[57%] px-[3rem]">
+                <form className="relative h-[40.2rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-2xl px-[3rem]">
+                  {/* Direct Message Title */}
+                  <div className="contact-me-form-title">
+                    Leave a Message
+                  </div>
                   {/* Flex Wrapper grid-cols-2 lg:grid-cols-3*/}
-                  <div className="flex flex-col gap-[3.3rem] pt-[6vh] justify-center">
+                  <div className="flex flex-col gap-[3.3rem] justify-center">
                     {/* Input forms */}
                     {/* Name input  */}
                     <div className="">
