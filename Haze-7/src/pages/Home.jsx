@@ -291,7 +291,7 @@ function Home({ mode, setMode }) {
 
 
           {/* Contact Me Section */}
-          <section id="Contact-Me" className="bg-sand h-[80rem]">
+          <section id="Contact-Me" className="bg-sand h-[70rem]">
             <div className="text-3rem">
               {/* Projects Title */}
               <div className="flex justify-center">
@@ -299,39 +299,50 @@ function Home({ mode, setMode }) {
                  Contact Me
                </div>
               </div>
-              <form className="relative h-[100vh] lg:h-[100vh] w-[100vw] flex flex-col p-4 text-ivory">
+              <form className="relative h-[67vh] w-[100vw] flex flex-col p-4 text-ivory pb-0">
                 {/* Flex Wrapper grid-cols-2 lg:grid-cols-3*/}
-                <div className="grid mx-[5vw] gap-4 lg:gap-[3rem] pt-[7vh] justify-center">
+                <div className="grid mx-[5vw] gap-[3.3rem] pt-[4.5vh] lg:pt-[6vh] justify-center">
                   {/* Input forms */}
-                  {/* Name input form */}
+                  {/* Name input  */}
                   <div className="">
-                    <h1 className="text-2xl text-gold font-bold pl-[1rem] pb-1">Name</h1>
+                    <label className="text-2xl font-bold contact-input-label" for="name">Name</label>
                       <input
                       type="text"
                       name="name"
-                      className="bg-ivory h-[4.5vh] lg:h-[6vh] w-[50vw] text-xl text-slate rounded-2xl px-2.5" //set width of inputs
+                      className="bg-ivory h-[80%] lg:h-[80%] w-[70vw] lg:w-[70vw] text-xl text-slate rounded-2xl px-2.5" //set width of inputs
                       />
                   </div>
+                  {/* Email input */}
                   <div>
-                    <h1 className="text-2xl text-gold font-bold pl-[1rem] pb-1">Email</h1>
+                    <label className="text-2xl font-bold contact-input-label" for="email">Email</label>
                       <input
                       type="text"
                       name="email"
-                      className="bg-ivory h-[4.5vh] lg:h-[6vh] w-full text-xl text-slate rounded-2xl px-2.5"
+                      className="bg-ivory h-[80%] lg:h-[80%] w-full text-xl text-slate rounded-2xl px-2.5"
                       />
                   </div>
+                  {/* Message Input */}
                   <div>
-                    <h1 className="text-2xl font-bold text-gold pl-[0.5rem] pb-1">Message</h1>
+                    <label className="text-2xl font-bold contact-input-label" for="message">Message</label>
                     <textarea
                       name="message"
                       // value={formData.html_code}
                       // onChange={handleChange}
-                      className="bg-ivory w-full h-40 lg:h-48 text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y"
+                      className="bg-ivory w-full h-40 lg:h-[20vh] text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y"
                       placeholder="Type your request here"
                     />
                   </div>
                 </div>
               </form>
+              {/* Buttons */}
+              <div className="flex flex-row gap-[7%] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[5%] mx-[1.6rem] my-[1rem] justify-center items-center font-semibold">
+                <Link to="/" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center">
+                  More Info
+                </Link>
+                <Link to="/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center "> 
+                  Send
+                </Link>
+              </div>
             </div>
           </section>
         </div>

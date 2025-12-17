@@ -1072,3 +1072,13 @@ background: var(--color-item-being-covered);
   opacity: 1;
   transform: translateX(0);
 }
+
+/* Contact Me Section */
+
+.contact-input-label {
+  color: var(--secondary-text-color);
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  display: block;
+  font-size: 1.7rem;
+}
