@@ -301,23 +301,23 @@ function Home({ mode, setMode }) {
               </div>
               {/* Content Container (incl email input / list) */}
               {/* make giant grid (med, sm, lg box) */}
-              <div className="pt-[5vh] flex flex-col  lg:flex-row gap-[2rem] lg:gap-[4rem] px-[3rem]">
+              <div className="pt-[5vh] flex flex-col lg:flex-row gap-[1.5rem] lg:gap-[4rem] px-[3rem]">
                 {/* Scrolling Contact Sources Box */}
                 <div className="flex h-[10rem] lg:h-[42rem] lg:w-[30%] gradient-bg rounded-4xl items-center justify-center">
                   {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
                   Scroll Box
                 </div>
                 {/* Or Box */}
-                <div className="flex h-[5rem] lg:h-[38rem] mt-[2rem] lg:w-[5%] bg-white rounded-xl">
+                <div className="flex h-[3rem] lg:h-[38rem] lg:mt-[2rem] lg:w-[5%] bg-white rounded-xl">
                   OR
                 </div>
-                <form className="relative h-[40.2rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-2xl px-[3rem]">
+                <form className="relative h-[38rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-2xl ">
                   {/* Direct Message Title */}
-                  <div className="contact-me-form-title">
+                  <div className="contact-me-form-title text-[2rem] lg:text-[2.5rem]">
                     Leave a Message
                   </div>
                   {/* Flex Wrapper grid-cols-2 lg:grid-cols-3*/}
-                  <div className="flex flex-col gap-[3.3rem] justify-center">
+                  <div className="flex flex-col gap-[2.5rem] lg:gap-[3.3rem] justify-center px-[3rem]">
                     {/* Input forms */}
                     {/* Name input  */}
                     <div className="">
@@ -344,7 +344,7 @@ function Home({ mode, setMode }) {
                         name="message"
                         // value={formData.html_code}
                         // onChange={handleChange}
-                        className="contact-me-textarea h-40 lg:h-[20vh] text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y max-h-[20vh]"
+                        className="contact-me-textarea h-[17vh] lg:h-[20vh] text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y max-h-[20vh]"
                         placeholder="Type your request here"
                       />
                     </div>
