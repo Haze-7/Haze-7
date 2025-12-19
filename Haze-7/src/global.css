@@ -1078,18 +1078,25 @@ background: var(--color-item-being-covered);
 
 /* Contact Me Section */
 
+.contact-me-text {
+  color: var(--secondary-text-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  min-width: 2rem;
+}
+
 .contact-me-form-title {
   color: var(--primary-alt-text-color);
   /* font-size: 2.5rem; */
   display: flex;
   justify-content: center;
-  padding-top: 2.7vh;
+  /* padding-top: 2.7vh; */
   font-weight: bold;
 }
 
 .contact-input-label {
   color: var(--secondary-alt-text-color);
-  padding-bottom: 0.5rem;
+  /* padding-bottom: 0.5rem; */
   padding-left: 1rem;
   display: block;
   font-size: 1.7rem;
@@ -1099,7 +1106,7 @@ background: var(--color-item-being-covered);
   background: var(--input-bg);
   color: var(--secondary-button-text-color);
   display: flex;
-  height: 80%;
+  /* height: 80%; */
   width: 100%;
 }
 

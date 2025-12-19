@@ -303,43 +303,53 @@ function Home({ mode, setMode }) {
               {/* make giant grid (med, sm, lg box) */}
               <div className="pt-[5vh] flex flex-col lg:flex-row gap-[1.5rem] lg:gap-[4rem] px-[3rem]">
                 {/* Scrolling Contact Sources Box */}
-                <div className="flex h-[10rem] lg:h-[42rem] lg:w-[30%] gradient-bg rounded-4xl items-center justify-center">
+                <div className="flex h-[7rem] lg:h-[42rem] lg:w-[30%] gradient-bg rounded-4xl items-center justify-center">
                   {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
                   Scroll Box
                 </div>
                 {/* Or Box */}
-                <div className="flex h-[3rem] lg:h-[38rem] lg:mt-[2rem] lg:w-[5%] bg-white rounded-xl">
-                  OR
+                <div className="flex h-[3rem] lg:h-[38rem] lg:mt-[2rem] lg:w-[5%] p-[0.5rem] items-center justify-center">
+                  {/* Right Box */}
+                  <div className="gradient-bg h-[1rem] w-[40%] rounded-md pl-[0.2rem]">
+
+                  </div>
+                  <div className="w-[10%] flex justify-center contact-me-text">
+                    OR
+                  </div>
+                  {/* Left Box */}
+                  <div className="gradient-bg h-[1rem] w-[40%] rounded-md pr-[0.2rem]">
+
+                  </div>
                 </div>
-                <form className="relative h-[38rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-2xl ">
+                <form className="relative h-[35.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-2xl ">
                   {/* Direct Message Title */}
-                  <div className="contact-me-form-title text-[2rem] lg:text-[2.5rem]">
+                  <div className="contact-me-form-title pt-[1rem] lg:pt-[2.7vh] text-[2rem] lg:text-[2.5rem]">
                     Leave a Message
                   </div>
                   {/* Flex Wrapper grid-cols-2 lg:grid-cols-3*/}
-                  <div className="flex flex-col gap-[2.5rem] lg:gap-[3.3rem] justify-center px-[3rem]">
+                  <div className="flex flex-row flex-wrap lg:flex-col gap-[2rem] lg:gap-[3.3rem] justify-center px-[3rem]">
                     {/* Input forms */}
                     {/* Name input  */}
-                    <div className="">
-                      <label className="text-2xl font-bold contact-input-label" for="name">Name</label>
+                    <div className="w-[47%] lg:w-full">
+                      <label className="text-2xl font-bold contact-input-label pb-[0.25rem] lg:pb-[0.5rem]" for="name">Name</label>
                         <input
                         type="text"
                         name="name"
-                        className="text-xl text-slate rounded-2xl px-2.5 contact-me-input" //set width of inputs
+                        className="text-xl text-slate rounded-2xl px-2.5 contact-me-input h-[70%] lg:h-[80%]" //set width of inputs
                         />
                     </div>
                     {/* Email input */}
-                    <div>
-                      <label className="text-2xl font-bold contact-input-label" for="email">Email</label>
+                    <div className="w-[47%] lg:w-full">
+                      <label className="text-2xl font-bold contact-input-label pb-[0.25rem] lg:pb-[0.5rem]" for="email">Email</label>
                         <input
                         type="text"
                         name="email"
-                        className="text-xl text-slate rounded-2xl px-2.5 contact-me-input"
+                        className="text-xl text-slate rounded-2xl px-2.5 contact-me-input h-[70%] lg:h-[80%]"
                         />
                     </div>
                     {/* Message Input */}
-                    <div>
-                      <label className="text-2xl font-bold contact-input-label" for="message">Message</label>
+                    <div className="w-full">
+                      <label className="text-2xl font-bold contact-input-label pb-[0.25rem] lg:pb-[0.5rem]" for="message">Message</label>
                       <textarea
                         name="message"
                         // value={formData.html_code}
