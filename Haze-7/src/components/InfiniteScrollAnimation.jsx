@@ -9,7 +9,7 @@ const socialItems = [
             ),
             label: "hchias2@lsu.edu",
             padding: "p-[0.3rem] pr-[0.6rem] pl-[0.35rem]",
-            size: "w-[5rem] h-[5rem]"
+            size: "w-[4rem] h-[4rem]"
         },
         {
             icon: (
@@ -19,7 +19,7 @@ const socialItems = [
             ),
             label: "Hayes_Chiasson",
             padding: "p-[0.35rem] pr-[0.6rem]",
-            size: "w-[2.5rem] h-[2.5rem]"
+            size: "w-[4rem] h-[4rem]"
         },
         {
             icon: (
@@ -29,7 +29,7 @@ const socialItems = [
             ),
             label: "Haze-7",
             padding: "p-[0.3rem] pr-[0.6rem]",
-            size: "w-[2.5rem] h-[2.5rem]"
+            size: "w-[4rem] h-[4rem]"
         },
         {
             icon: (
@@ -39,7 +39,7 @@ const socialItems = [
             ),
             label: "Hayes_Chiasson",
             padding: "p-[0.35rem] pr-[0.6rem]",
-            size: "w-[2.5rem] h-[2.5rem]"
+            size: "w-[4rem] h-[4rem]"
         },
         {
             icon: (
@@ -49,7 +49,7 @@ const socialItems = [
             ),
             label: "Haze7_",
             padding: "p-[0.5rem] pr-[0.9rem]",
-            size: "w-[2.1rem] h-[2.1rem]"
+            size: "w-[4rem] h-[4rem]"
         }
     ];
 
@@ -67,7 +67,7 @@ function InfiniteScrollAnimation() {
                         {/* Socials Containers */}
                         {/* Original items */}
                         {socialItems.map((item, index) => (
-                            <div key={index} className="scroll-item contact-me-scroll-entry">
+                            <div key={index} className=" contact-me-scroll-entry">
                                 <div className={item.padding}>
                                     <div className={`${item.size} rounded-full`}>
                                         {item.icon}
@@ -85,7 +85,7 @@ function InfiniteScrollAnimation() {
                         {/* Duplicate List for scroll wrap illusion */}
                          {/* Duplicate items for seamless scroll */}
                         {socialItems.map((item, index) => (
-                            <div key={`dup-${index}`} className="scroll-item contact-me-scroll-entry" aria-hidden="true">
+                            <div key={`dup-${index}`} className="contact-me-scroll-entry" aria-hidden="true">
                                 <div className={item.padding}>
                                     <div className={`${item.size} rounded-full`}>
                                         {item.icon}
