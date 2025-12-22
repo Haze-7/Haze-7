@@ -1202,7 +1202,7 @@ background: var(--color-item-being-covered);
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-433.33%);
   }
 } 
 
@@ -1211,17 +1211,16 @@ background: var(--color-item-being-covered);
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translateY(-33.33%);
   }
 }
 
 
-/* Default (below lg) */
+/* Default (below lg) / horizontal Scroll*/
 
 .scroll-container {
   mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 200px), transparent 100%);
 }                    
-
 
 .scroll-content {
   flex-direction: row;
@@ -1234,20 +1233,29 @@ background: var(--color-item-being-covered);
   flex-shrink: 0;
 }
 
-.contact-me-scroll-entry {
-  font-size: 1.75rem;
+.scroll-entry {
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
   padding-left: 0.1rem;
   cursor: pointer;
   align-items: center;
   display: flex;
   width: 100%;
-  height: 7rem;
+  height: 5rem;
   background-color: white;
-  border-radius: 2rem;
+  border-radius: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.scroll-entry-label {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.scroll-entry-icon {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 /* vertical scroll handling (above lg breakpoint) */
@@ -1256,32 +1264,40 @@ background: var(--color-item-being-covered);
   .scroll-container {
     /* height: 600px; */
     mask-image: linear-gradient(to bottom, transparent 0, black 64px, black calc(100% - 64px), transparent 100%);
+    justify-content: center;
+    align-items: center;
+
   }
 
 
   .scroll-content {
     flex-direction: column;
-    animation: infinite-scroll-vertical 20s linear infinite;
+    animation: infinite-scroll-vertical 10s linear infinite;
     gap: 1rem;
+    
   }
 
  .scroll-item {
   margin: 1rem 0;
  }
 
- .contact-me-scroll-entry {
-    font-size: 1.75rem;
+ .scroll-entry {
     padding-left: 0.1rem;
     cursor: pointer;
     align-items: center;
     display: flex;
     width: 100%;
     height: 7rem;
-    background-color: white;
-    border-radius: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* background-color: white; */
   }
+
+  .scroll-entry-label {
+    font-size: 1.5rem;
+  }
+
+  .scroll-entry-icon {
+    height: 5rem;
+    width: 5rem;
+  }
+
 }
