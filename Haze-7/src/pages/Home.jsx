@@ -302,7 +302,7 @@ function Home({ mode, setMode }) {
               {/* Content Container (incl email input / list) */}
               <div className="pt-[5vh] flex flex-col lg:flex-row gap-[1rem] lg:gap-[4rem] px-[3rem] contact-me-content-container">
                 {/* Scrolling Contact Sources Box */}
-                <div className="flex h-[7rem] lg:h-[42rem] lg:w-[30%] rounded-4xl">
+                <div className="flex h-[7rem] lg:h-[42rem] lg:w-[30%] rounded-4xl ">
                   {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
                   <InfiniteScrollAnimation />
                 </div>
