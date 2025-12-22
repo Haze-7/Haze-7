@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar.jsx"
+import InfiniteScrollAnimation from "../components/InfiniteScrollAnimation.jsx"
 import {Link, useLocation} from "react-router-dom";
 
 import ProfilePic from "/images/haze-profile-pic.png" 
@@ -300,8 +300,7 @@ function Home({ mode, setMode }) {
                </div>
               </div>
               {/* Content Container (incl email input / list) */}
-              {/* make giant grid (med, sm, lg box) */}
-              <div className="pt-[5vh] flex flex-col lg:flex-row gap-[1rem] lg:gap-[4rem] px-[3rem]">
+              <div className="pt-[5vh] flex flex-col lg:flex-row gap-[1rem] lg:gap-[4rem] px-[3rem] contact-me-content-container">
                 {/* Scrolling Contact Sources Box */}
                 <div className="flex h-[7rem] lg:h-[42rem] lg:w-[30%] gradient-bg rounded-4xl items-center justify-center">
                   {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
@@ -314,7 +313,7 @@ function Home({ mode, setMode }) {
 
                   </div>
                   {/* Or Text */}
-                  <div className=" lg:h-[4rem] contact-me-text flex-1">
+                  <div className="lg:h-[5rem] contact-me-text flex-1">
                     OR
                   </div>
                   {/* Left Box */}
@@ -334,7 +333,7 @@ function Home({ mode, setMode }) {
                     {/* Name input  */}
                     <div className="contact-me-input-container flex-row lg:flex-col gap-[5%] lg:gap-[3.3rem]">
                       <div className="w-full">
-                        <label className="text-2xl font-bold contact-input-label" for="name">Name</label>
+                        <label className="text-2xl font-bold contact-input-label" htmlFor="name">Name</label>
                           <input
                           type="text"
                           name="name"
@@ -343,7 +342,7 @@ function Home({ mode, setMode }) {
                       </div>
                       {/* Email input */}
                       <div className="w-full">
-                        <label className="text-2xl font-bold contact-input-label" for="email">Email</label>
+                        <label className="text-2xl font-bold contact-input-label" htmlFor="email">Email</label>
                           <input
                           type="text"
                           name="email"
@@ -353,7 +352,7 @@ function Home({ mode, setMode }) {
                     </div>
                     {/* Message Input */}
                     <div className="w-full">
-                      <label className="text-2xl font-bold contact-input-label pb-[0.25rem] lg:pb-[0.5rem]" for="message">Message</label>
+                      <label className="text-2xl font-bold contact-input-label pb-[0.25rem] lg:pb-[0.5rem]" htmlFor="message">Message</label>
                       <textarea
                         name="message"
                         // value={formData.html_code}
