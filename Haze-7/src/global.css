@@ -96,6 +96,7 @@ background: var(--color-item-being-covered);
   --navbar-dropdown-gradient: var(--color-light-gradient);
   --bg-image: url("/backgrounds/dark-sand.svg");
   --logo-fill-color: var(--color-black);
+  --secondary-logo-fill-color: var(--color-mineshaft);
   --primary-button-color: var(--color-barley);
   --primary-button-text-color: var(--color-mineshaft);
   --secondary-button-color: var(--color-whiterock);
@@ -125,6 +126,7 @@ background: var(--color-item-being-covered);
 
   --bg-image: url("/backgrounds/light-sand.svg");
   --logo-fill-color: var(--color-whiterock);
+  --secondary-logo-fill-color: var(--color-barley);
   --primary-button-color: var(--color-mineshaft);
   --primary-button-text-color: var(--color-whiterock);
   --secondary-button-color: var(--color-barley);
@@ -1083,10 +1085,11 @@ background: var(--color-item-being-covered);
   display: flex;
   flex-direction: row;
   padding-top: 5vh;
-  gap: 4rem;
+  gap: clamp(2.5rem, 1.5vw, 4rem);
   padding-right: 3rem;
   padding-left: 3rem;
   transition: all 0.5s ease;
+  
 }
 
 @media (max-width: 1023px) {
@@ -1202,7 +1205,7 @@ background: var(--color-item-being-covered);
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-433.33%);
+    transform: translateX(-66.66%);
   }
 } 
 
@@ -1217,66 +1220,80 @@ background: var(--color-item-being-covered);
 
 /* vertical scroll handling (above lg breakpoint) */
 
-  .scroll-container {
-    /* height: 600px; */
-    mask-image: linear-gradient(to bottom, transparent 0, black 64px, black calc(100% - 64px), transparent 100%);
-    justify-content: center;
-    align-items: center;
-    width: 45rem;
-  }
+.scroll-container {
+  mask-image: linear-gradient(to bottom, transparent 0, black 64px, black calc(100% - 64px), transparent 100%);
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+}
 
-  .scroll-content {
-    flex-direction: column;
-    animation: infinite-scroll-vertical 10s linear infinite;
-    gap: 1rem;
-    
-  }
+.scroll-content {
+  flex-direction: column;
+  animation: infinite-scroll-vertical 10s linear infinite;
+  gap: 1rem;
+  width: 85%;
+}
 
- .scroll-item {
-  margin: 1rem 0;
- }
+.scroll-item {
+margin: 1rem 0;
+}
 
- .scroll-entry {
-    padding-left: 0.1rem;
-    cursor: pointer;
-    align-items: center;
-    display: flex;
-    width: 100%;
-    height: 7rem;
-    padding: 0.5rem;
-    background-color: white;
-    border-radius: 1rem;
-  }
+.scroll-entry {
+  padding-left: 0.1rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  padding: 0.5rem;
+  color: var(--tertiary-alt-text-color);
+  /* font-weight: bold; */
+  background-color: var(--gradient-bg);
+  border-radius: 1rem;
+  background: var(--gradient-bg);
+  border-width: 5px;
+  border-color: var(--border-color);
+  border-radius: 1rem;
+}
 
-  .scroll-entry-label {
-    font-size: 1.5rem;
-    width: 75%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+/*   */
 
-  .scroll-entry-icon {
-    height: 3.5rem;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-  }
+.scroll-entry-label {
+  font-size: 1.5rem;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.scroll-entry-label:hover {
+  color: var(--border-color);
+}
+
+.scroll-entry-icon {
+  height: 3.5rem;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  /* color: var(--secondary-logo-fill-color); */
+}
 
 
 /* (below lg) / horizontal Scroll*/
 @media (max-width: 1023px) {
 
   .scroll-container {
-    mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 200px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 64px, black calc(100% - 150px), transparent 100%);
+    width: 100%;
   }                    
 
   .scroll-content {
     flex-direction: row;
-    animation: infinite-scroll 20s linear infinite;
+    animation: infinite-scroll 35s linear infinite;
     gap: 1rem;
-
+    
   }
 
   .scroll-item {
@@ -1291,8 +1308,7 @@ background: var(--color-item-being-covered);
     display: flex;
     width: 100%;
     height: 5rem;
-    background-color: blue;
-    border-radius: 1rem;
+    border-width: 4px;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding-top: 1rem;

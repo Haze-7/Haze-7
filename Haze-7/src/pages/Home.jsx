@@ -300,9 +300,9 @@ function Home({ mode, setMode }) {
                </div>
               </div>
               {/* Content Container (incl email input / list) */}
-              <div className="pt-[5vh] flex flex-col lg:flex-row gap-[1rem] lg:gap-[4rem] px-[3rem] contact-me-content-container">
+              <div className="px-[3rem] contact-me-content-container">
                 {/* Scrolling Contact Sources Box */}
-                <div className="flex h-[7rem] lg:h-[42rem] lg:w-[30%] rounded-4xl ">
+                <div className="flex h-[7rem] lg:h-[42rem] lg:w-[35%] rounded-4xl ">
                   {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
                   <InfiniteScrollAnimation />
                 </div>
@@ -310,7 +310,6 @@ function Home({ mode, setMode }) {
                 <div className="flex flex-row lg:flex-col h-[3rem] lg:h-[38rem] lg:mt-[2rem] lg:w-[5%] p-[0.5rem] items-center justify-center">
                   {/* Right Box */}
                   <div className="gradient-bg h-[1rem] lg:h-[15rem] w-[45%] lg:w-[17px] rounded-md ">
-
                   </div>
                   {/* Or Text */}
                   <div className="lg:h-[5rem] contact-me-text flex-1">
@@ -318,11 +317,10 @@ function Home({ mode, setMode }) {
                   </div>
                   {/* Left Box */}
                   <div className="gradient-bg h-[1rem] lg:h-[15rem] w-[45%] lg:w-[17px] rounded-md ">
-
                   </div>
                 </div>
                 {/*Leave a Message Form */}
-                <form className="relative h-[25.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-2xl ">
+                <form className="relative h-[25.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
                   {/* Direct Message Title */}
                   <div className="contact-me-form-title pt-[1rem] lg:pt-[1.8vh] text-[2rem] lg:text-[2.5rem]">
                     Leave a Message
