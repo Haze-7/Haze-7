@@ -2,12 +2,13 @@
 function InfiniteScrollAnimation() {
     return (
       <>
-      {/* Container */}
-        <div className="gradient-bg flex h-[7rem] lg:h-[42rem] w-full rounded-4xl">
+      {/* Container removed gradient-bg*/}
+        <div className="flex h-[7rem] lg:h-[42rem] overflow-hidden rounded-4xl">
             {/* List of items*/}
-            <div className="scroll-container flex h-full w-full overflow-hidden">
-                <div className="scroll-content w-[15rem] flex">
+            <div className="scroll-container overflow-hidden">
+                <div className="scroll-content">
                     {/* List 1 */}
+                  <div className="scroll-item">
                     {/* Email */}
                     <div className="scroll-entry">
                         <div className="scroll-entry-icon">
@@ -63,7 +64,9 @@ function InfiniteScrollAnimation() {
                             Haze7_
                         </div>
                     </div>
-                    {/* Dupe List */}
+                  </div>
+                  {/* Dupe List */}
+                  <div className="scroll-item">
                     {/* Email */}
                     <div className="scroll-entry">
                         <div className="scroll-entry-icon">
@@ -119,7 +122,9 @@ function InfiniteScrollAnimation() {
                             Haze7_
                         </div>
                     </div>
-                    {/* Dupe List 2 */}
+                  </div>
+                {/* Dupe List 2 */}
+                  <div className="scroll-item">
                     {/* Email */}
                     <div className="scroll-entry">
                         <div className="scroll-entry-icon">
@@ -175,6 +180,7 @@ function InfiniteScrollAnimation() {
                             Haze7_
                         </div>
                     </div>
+                  </div>
                 </div>                
             </div>
         </div>

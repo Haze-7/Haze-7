@@ -1205,7 +1205,7 @@ background: var(--color-item-being-covered);
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-66.66%);
+    transform: translateX(-27%);
   }
 } 
 
@@ -1225,17 +1225,24 @@ background: var(--color-item-being-covered);
   justify-content: center;
   align-items: center;
   width: 45rem;
+  display: flex;
+  overflow: hidden;
 }
 
 .scroll-content {
+  display: flex;
   flex-direction: column;
   animation: infinite-scroll-vertical 10s linear infinite;
-  gap: 1rem;
+  gap: 2rem;
   width: 85%;
 }
 
 .scroll-item {
-margin: 1rem 0;
+  /* margin: 1rem 0; */
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .scroll-entry {
@@ -1245,7 +1252,7 @@ margin: 1rem 0;
   justify-content: center;
   display: flex;
   width: 100%;
-  height: 10rem;
+  height: 7rem;
   padding: 0.5rem;
   color: var(--tertiary-alt-text-color);
   /* font-weight: bold; */
@@ -1286,37 +1293,48 @@ margin: 1rem 0;
 
   .scroll-container {
     mask-image: linear-gradient(to right, transparent 0, black 64px, black calc(100% - 150px), transparent 100%);
-    width: 100%;
+    width: 80rem;
+    display: flex;
+    overflow: hidden;
+    gap: 1rem;
   }                    
 
   .scroll-content {
+    display: flex;
     flex-direction: row;
-    animation: infinite-scroll 35s linear infinite;
+    animation: infinite-scroll 5s linear infinite;
     gap: 1rem;
+    width: max-content;
+    will-change: transform;
     
   }
 
   .scroll-item {
     flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    /* width: 33.33%; */
   }
 
   .scroll-entry {
-    font-size: clamp(1.3rem, 2vw, 1.5rem);
-    padding-left: 0.1rem;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     cursor: pointer;
     align-items: center;
     display: flex;
-    width: 100%;
+    width: 7rem;
     height: 5rem;
     border-width: 4px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
+    background-color: var(--gradient-bg);
+    border-width: 4px;
+    border-color: var(--border-color);
+    border-radius: 1rem; 
   }
 
   .scroll-entry-label {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
+    display: none;
   }
 
   .scroll-entry-icon {
