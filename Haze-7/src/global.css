@@ -109,6 +109,7 @@ background: var(--color-item-being-covered);
   --tertiary-alt-text-color: var(--color-mineshaft);
 
   --border-color: var(--color-whiterock);
+  --alt-border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-gold-gradient);
 
@@ -139,6 +140,7 @@ background: var(--color-item-being-covered);
   --tertiary-alt-text-color: var(--color-barley);
 
   --border-color: var(--color-akaroa);
+  --alt-border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-mineshaft-gradient);
 
@@ -1234,11 +1236,11 @@ background: var(--color-item-being-covered);
   flex-direction: column;
   animation: infinite-scroll-vertical 10s linear infinite;
   gap: 2rem;
-  width: 85%;
+  /* width: 85%; */
+  width: 29vw;
 }
 
 .scroll-item {
-  /* margin: 1rem 0; */
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -1255,16 +1257,32 @@ background: var(--color-item-being-covered);
   height: 7rem;
   padding: 0.5rem;
   color: var(--tertiary-alt-text-color);
-  /* font-weight: bold; */
   background-color: var(--gradient-bg);
   border-radius: 1rem;
   background: var(--gradient-bg);
   border-width: 5px;
-  border-color: var(--border-color);
+  border-color: var(--alt-border-color);
   border-radius: 1rem;
+  /* padding-left: 20%; */
+
 }
 
-/*   */
+.scroll-entry-content {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 20rem;
+  height: 7rem;
+  padding: 0.5rem;
+  color: var(--tertiary-alt-text-color);
+  gap: 1rem;
+}
+
+.scroll-entry-content:hover {
+  color: var(--border-color);
+}
+
 
 .scroll-entry-label {
   font-size: 1.5rem;
@@ -1275,16 +1293,12 @@ background: var(--color-item-being-covered);
   align-items: center;
 }
 
-.scroll-entry-label:hover {
-  color: var(--border-color);
-}
-
 .scroll-entry-icon {
-  height: 3.5rem;
-  width: 25%;
-  display: flex;
+  height: 4rem;
+  width: 4rem;
+  display: inline-block;
   flex-direction: column;
-  /* color: var(--secondary-logo-fill-color); */
+  /* color: var(--tertiary-alt-text-color); */
 }
 
 
@@ -1328,7 +1342,7 @@ background: var(--color-item-being-covered);
     padding: 1rem;
     background-color: var(--gradient-bg);
     border-width: 4px;
-    border-color: var(--border-color);
+    border-color: var(--alt-border-color);
     border-radius: 1rem; 
   }
 
