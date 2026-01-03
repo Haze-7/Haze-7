@@ -98,6 +98,10 @@ function Home({ mode, setMode }) {
         )
         .then(() => {
           alert("Message sent!");
+            // Clear inputs
+            document.getElementById("name-input").value = "";
+            document.getElementById("email-input").value = "";
+            document.getElementById("message-input").value = "";
         })
         .catch((error) => {
           console.error("EmailJS error:", error);
