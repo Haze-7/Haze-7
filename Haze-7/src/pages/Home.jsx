@@ -389,9 +389,9 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>
                 {/*Leave a Message Form */}
-                <form onSubmit={handleSubmit} className="relative h-[25.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
+                <form onSubmit={handleSubmit} className="relative h-[24.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
                   {/* Direct Message Title */}
-                  <div className="contact-me-form-title pt-[1rem] lg:pt-[1.8vh] text-[2rem] lg:text-[2.5rem]">
+                  <div className="contact-me-form-title pt-[1rem] lg:pt-[1.8vh]">
                     Leave a Message
                   </div>
                   {/* Flex Wrapper*/}
@@ -433,7 +433,7 @@ function Home({ mode, setMode }) {
                     </div>
 
                   </div>
-                    <div className="flex flex-row mx-[1.6rem] justify-center items-center font-semibold my-[1.5rem]">
+                    <div className="contact-me-submit-button-container font-semibold my-[1.5rem]">
                       <button
                        type="submit"
                        disabled={sending}
