@@ -10,7 +10,7 @@ function InfiniteScrollAnimation() {
                     {/* List 1 */}
                   <div className="scroll-item">
                     {/* Email */}
-                    <div className="scroll-entry">
+                    <div className="scroll-entry flex">
                         <div className="scroll-entry-content">
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -23,7 +23,7 @@ function InfiniteScrollAnimation() {
                         </div>
                     </div>
                     {/* LinkedIn */}
-                    <div className="scroll-entry">
+                    <a href="https://www.linkedin.com/in/hayes-chiasson-413955249/" className="scroll-entry">
                         <div className="scroll-entry-content">                        
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -34,9 +34,9 @@ function InfiniteScrollAnimation() {
                                 Hayes_chiasson
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*GitHub*/}
-                    <div className="scroll-entry">
+                    <a href="https://github.com/Haze-7" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -47,9 +47,9 @@ function InfiniteScrollAnimation() {
                                 Haze_7
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*Instagram*/}
-                    <div className="scroll-entry">
+                    <a href="https://www.instagram.com/hayes_chiasson/" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -60,9 +60,9 @@ function InfiniteScrollAnimation() {
                                 Hayes_chiasson
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*Discord*/}
-                    <div className="scroll-entry">
+                    <a href="https://discord.com/" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -73,7 +73,7 @@ function InfiniteScrollAnimation() {
                                 Haze7_
                             </div>
                         </div>
-                    </div>
+                    </a>
                   </div>
                   {/* Dupe List */}
                   <div className="scroll-item">
@@ -91,7 +91,7 @@ function InfiniteScrollAnimation() {
                         </div>
                     </div>
                     {/* LinkedIn */}
-                    <div className="scroll-entry">
+                    <a href="https://www.linkedin.com/in/hayes-chiasson-413955249/" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -102,9 +102,9 @@ function InfiniteScrollAnimation() {
                                 Hayes_chiasson
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*GitHub*/}
-                    <div className="scroll-entry">
+                    <a href="https://github.com/Haze-7" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -115,9 +115,9 @@ function InfiniteScrollAnimation() {
                                 Haze_7
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*Instagram*/}
-                    <div className="scroll-entry">
+                    <a href="https://www.instagram.com/hayes_chiasson/" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -128,9 +128,9 @@ function InfiniteScrollAnimation() {
                                 Hayes_chiasson
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*Discord*/}
-                    <div className="scroll-entry">
+                    <a href="https://discord.com/" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -141,7 +141,7 @@ function InfiniteScrollAnimation() {
                                 Haze7_
                             </div>
                         </div>
-                    </div>
+                    </a>
                   </div>
                 {/* Dupe List 2 */}
                   <div className="scroll-item">
@@ -159,7 +159,7 @@ function InfiniteScrollAnimation() {
                         </div>
                     </div>
                     {/* LinkedIn */}
-                    <div className="scroll-entry">
+                    <a href="https://www.linkedin.com/in/hayes-chiasson-413955249/" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -170,9 +170,9 @@ function InfiniteScrollAnimation() {
                                 Hayes_chiasson
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*GitHub*/}
-                    <div className="scroll-entry">
+                    <a href="https://github.com/Haze-7" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -183,9 +183,9 @@ function InfiniteScrollAnimation() {
                                 Haze_7
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*Instagram*/}
-                    <div className="scroll-entry">
+                    <a href="https://www.instagram.com/hayes_chiasson/" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon ">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -196,9 +196,9 @@ function InfiniteScrollAnimation() {
                                 Hayes_chiasson
                             </div>
                         </div>
-                    </div>
+                    </a>
                     {/*Discord*/}
-                    <div className="scroll-entry">
+                    <a href="https://discord.com/" className="scroll-entry">
                         <div className="scroll-entry-content"> 
                             <div className="scroll-entry-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -209,7 +209,7 @@ function InfiniteScrollAnimation() {
                                 Haze7_
                             </div>
                         </div>
-                    </div>
+                    </a>
                   </div>
                 </div>                
             </div>

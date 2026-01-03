@@ -65,7 +65,7 @@
 }
 
 section {
-    scroll-snap-align: start;
+    scroll-snap-align: none;
     /* height: 80rem; */
     width: 100vw;
     display: flex;
@@ -1156,7 +1156,7 @@ background: var(--color-item-being-covered);
 
 .contact-me-input {
   background: var(--input-bg);
-  color: var(--secondary-button-text-color);
+  /* color: var(--secondary-button-text-color); */
   display: flex;
   width: 100%;
 }
@@ -1175,7 +1175,7 @@ background: var(--color-item-being-covered);
 
 .contact-me-textarea {
   background: var(--input-bg);
-  color: var(--secondary-button-text-color);
+  /* color: var(--secondary-button-text-color); */
   display: flex;
   width: 100%
 }
@@ -1236,8 +1236,12 @@ background: var(--color-item-being-covered);
   flex-direction: column;
   animation: infinite-scroll-vertical 10s linear infinite;
   gap: 2rem;
-  /* width: 85%; */
   width: 29vw;
+}
+
+/* Pause animation on hover (makes easier to click, may reduce to only small screens) */
+.scroll-content:hover {
+  animation-play-state: paused;
 }
 
 .scroll-item {
@@ -1263,8 +1267,8 @@ background: var(--color-item-being-covered);
   border-width: 5px;
   border-color: var(--alt-border-color);
   border-radius: 1rem;
-  /* padding-left: 20%; */
-
+  pointer-events: auto;
+  z-index: 1000;
 }
 
 .scroll-entry-content {

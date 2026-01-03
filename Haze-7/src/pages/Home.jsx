@@ -3,9 +3,10 @@ import {Link, useLocation} from "react-router-dom";
 
 import ProfilePic from "/images/haze-profile-pic.png" 
 
-import {onClick, useRef, useEffect, useState} from 'react';
+import {onClick, useRef, useEffect, useState,} from 'react';
 import {useInView} from "react-intersection-observer";
 
+import emailjs from "@emailjs/browser";
 
 import HLogo from "/H-logo.svg";
 
@@ -43,6 +44,70 @@ function Home({ mode, setMode }) {
       //   threshold: 0.5, // Triggers when 50% of the element is visible
       // });
 
+    // Sending state to prevent double submit
+    const [sending, setSending] = useState(false);
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      if (sending) return;
+
+      // Grab values from Inputs
+      // Name Input
+      const name = document.getElementById("name-input").value.trim();
+
+      // Email Input
+      const email = document.getElementById("email-input").value.trim();
+      // Message Input
+      const message = document.getElementById("message-input").value.trim();
+
+      //Name Validation
+      if (name === "" || name.length < 2) {
+        alert("Please enter a valid name to send a message.")
+        return;
+      }
+      // Email Validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailPattern.test(email)) {
+        alert("Please enter valid email address.");
+        return;
+      }
+
+      // Message Validation
+      if (message === "" || message.length < 2) {
+        alert("Please enter a message to send.");
+        return;
+      }
+
+      // setSending(true);
+
+      // Data sent to EmailJS template
+      const templateParams = {
+        name: name,
+        email: email,
+        message: message,
+      };
+
+      emailjs
+        .send(
+          "service_7vg832e",
+          "template_eu7mez7",
+          templateParams,
+          "YOUR_PUBLIC_KEY"
+        )
+        .then(() => {
+          alert("Message sent!");
+        })
+        .catch((error) => {
+          console.error("EmailJS error:", error);
+          alert("Failed to send message.");
+        })
+        .finally(() => {
+          setSending(false);
+        });
+    };
+
     return (
       <>
       {/* var(--primary- text-color) */}
@@ -77,6 +142,7 @@ function Home({ mode, setMode }) {
                 </div>
             </div>
           </section>
+
           {/* About Me Section */}
           <section id="About-Me" className="gradient-bg h-[] lg:h-[50rem] shadow-lg/50 shadow-gray gradient-link-offset">
             <div className="">
@@ -90,8 +156,8 @@ function Home({ mode, setMode }) {
               <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2.5rem] lg:pt-[3.5rem] px-[3rem]">
                 {/* About Me Image/ Box */}
                 {/* Temp remove background for image fit, future image stretch properly at wide view widths (rectangle):  bg-mineshaft (is reason for lack of rounded edges at large*/}
-                <div className="flex rounded-xl overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
-                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl w-full h-full object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
+                <div className="flex rounded-xl bg-white overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
+                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl  object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
                 </div>
                   {/* About Me Text / Description */}
                   <div className="flex w-[100%] lg:w-[55%] flex-col pt-[2%]"> {/*  Missing Height*/}
@@ -112,7 +178,6 @@ function Home({ mode, setMode }) {
               </div>
           </section>
 
-          
           {/* Projects section */}
           <section id="Projects" className="bg-sand min-h-[70rem]">
             <div className="text-[3rem]">
@@ -231,6 +296,7 @@ function Home({ mode, setMode }) {
               </div>
             </div>
           </section>
+
           {/* Experience Section */}
         <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
           <div className="flex flex-col w-full items-center py-[4rem] pb-[6rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
@@ -289,7 +355,6 @@ function Home({ mode, setMode }) {
           </div>
         </section>
 
-
           {/* Contact Me Section */}
           <section id="Contact-Me" className="bg-sand h-[80rem] lg:h-[65rem]">
             <div className="text-3rem">
@@ -320,7 +385,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>
                 {/*Leave a Message Form */}
-                <form className="relative h-[25.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
+                <form onSubmit={handleSubmit} className="relative h-[25.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
                   {/* Direct Message Title */}
                   <div className="contact-me-form-title pt-[1rem] lg:pt-[1.8vh] text-[2rem] lg:text-[2.5rem]">
                     Leave a Message
@@ -335,6 +400,7 @@ function Home({ mode, setMode }) {
                           <input
                           type="text"
                           name="name"
+                          id="name-input"
                           className="text-xl text-slate rounded-2xl px-2.5 contact-me-input h-[70%] lg:h-[80%]" //set width of inputs
                           />
                       </div>
@@ -344,6 +410,7 @@ function Home({ mode, setMode }) {
                           <input
                           type="text"
                           name="email"
+                          id="email-input"
                           className="text-xl text-slate rounded-2xl px-2.5 contact-me-input h-[70%] lg:h-[80%]"
                           />
                       </div>
@@ -353,6 +420,7 @@ function Home({ mode, setMode }) {
                       <label className="text-2xl font-bold contact-input-label pb-[0.25rem] lg:pb-[0.5rem]" htmlFor="message">Message</label>
                       <textarea
                         name="message"
+                        id="message-input"
                         // value={formData.html_code}
                         // onChange={handleChange}
                         className="contact-me-textarea h-[12vh] lg:h-[20vh] text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y max-h-[20vh]"
@@ -362,9 +430,13 @@ function Home({ mode, setMode }) {
 
                   </div>
                     <div className="flex flex-row mx-[1.6rem] justify-center items-center font-semibold my-[1.5rem]">
-                      <Link to="/" className="contact-me-submit-button secondary-text-color rounded-2xl flex items-center justify-center w-[10rem]"> 
-                        Send
-                      </Link>
+                      <button
+                       type="submit"
+                       disabled={sending}
+                       className="contact-me-submit-button secondary-text-color rounded-2xl flex items-center justify-center w-[10rem]"
+                      > 
+                        {sending ? "Sending..." : "Send"}
+                      </button>
                     </div>
                 </form>
               {/* Submit Button */}
