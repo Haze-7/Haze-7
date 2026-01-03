@@ -428,7 +428,7 @@ function Home({ mode, setMode }) {
                         // value={formData.html_code}
                         // onChange={handleChange}
                         className="contact-me-textarea h-[12vh] lg:h-[20vh] text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y max-h-[20vh]"
-                        placeholder="Type your request here"
+                        placeholder="Type your message here"
                       />
                     </div>
 
