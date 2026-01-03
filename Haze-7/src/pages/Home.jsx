@@ -91,10 +91,10 @@ function Home({ mode, setMode }) {
 
       emailjs
         .send(
-          "service_7vg832e",
-          "template_eu7mez7",
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
           templateParams,
-          "YOUR_PUBLIC_KEY"
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         )
         .then(() => {
           alert("Message sent!");
