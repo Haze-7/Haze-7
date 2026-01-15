@@ -65,7 +65,7 @@
 }
 
 section {
-    scroll-snap-align: none;
+    scroll-snap-align: start;
     /* height: 80rem; */
     width: 100vw;
     display: flex;
@@ -96,7 +96,6 @@ background: var(--color-item-being-covered);
   --navbar-dropdown-gradient: var(--color-light-gradient);
   --bg-image: url("/backgrounds/dark-sand.svg");
   --logo-fill-color: var(--color-black);
-  --secondary-logo-fill-color: var(--color-mineshaft);
   --primary-button-color: var(--color-barley);
   --primary-button-text-color: var(--color-mineshaft);
   --secondary-button-color: var(--color-whiterock);
@@ -109,11 +108,8 @@ background: var(--color-item-being-covered);
   --tertiary-alt-text-color: var(--color-mineshaft);
 
   --border-color: var(--color-whiterock);
-  --alt-border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-gold-gradient);
-
-   --input-bg: var(--color-ivory);
 
   /* increase text size to reduce minimizing effect of dark text */
    text-shadow: 0 0 0.5px currentColor; /* subtle halo = thicker appearance */
@@ -127,7 +123,6 @@ background: var(--color-item-being-covered);
 
   --bg-image: url("/backgrounds/light-sand.svg");
   --logo-fill-color: var(--color-whiterock);
-  --secondary-logo-fill-color: var(--color-barley);
   --primary-button-color: var(--color-mineshaft);
   --primary-button-text-color: var(--color-whiterock);
   --secondary-button-color: var(--color-barley);
@@ -140,11 +135,9 @@ background: var(--color-item-being-covered);
   --tertiary-alt-text-color: var(--color-barley);
 
   --border-color: var(--color-akaroa);
-  --alt-border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-mineshaft-gradient);
 
-   --input-bg: var(--color-whiterock);
 }
 
 [data-theme="light"][data-bg="secret"] {
@@ -849,7 +842,6 @@ background: var(--color-item-being-covered);
 /* Project Grid Container */
 .projects-display {
   display: grid;
-  transition: all 0.5s ease;
   /* gap: 2rem; */
 }
 
