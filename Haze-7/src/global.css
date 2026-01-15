@@ -65,7 +65,7 @@
 }
 
 section {
-    scroll-snap-align: start;
+    scroll-snap-align: none;
     /* height: 80rem; */
     width: 100vw;
     display: flex;
@@ -96,6 +96,7 @@ background: var(--color-item-being-covered);
   --navbar-dropdown-gradient: var(--color-light-gradient);
   --bg-image: url("/backgrounds/dark-sand.svg");
   --logo-fill-color: var(--color-black);
+  --secondary-logo-fill-color: var(--color-mineshaft);
   --primary-button-color: var(--color-barley);
   --primary-button-text-color: var(--color-mineshaft);
   --secondary-button-color: var(--color-whiterock);
@@ -108,8 +109,11 @@ background: var(--color-item-being-covered);
   --tertiary-alt-text-color: var(--color-mineshaft);
 
   --border-color: var(--color-whiterock);
+  --alt-border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-gold-gradient);
+
+   --input-bg: var(--color-ivory);
 
   /* increase text size to reduce minimizing effect of dark text */
    text-shadow: 0 0 0.5px currentColor; /* subtle halo = thicker appearance */
@@ -123,6 +127,7 @@ background: var(--color-item-being-covered);
 
   --bg-image: url("/backgrounds/light-sand.svg");
   --logo-fill-color: var(--color-whiterock);
+  --secondary-logo-fill-color: var(--color-barley);
   --primary-button-color: var(--color-mineshaft);
   --primary-button-text-color: var(--color-whiterock);
   --secondary-button-color: var(--color-barley);
@@ -135,9 +140,11 @@ background: var(--color-item-being-covered);
   --tertiary-alt-text-color: var(--color-barley);
 
   --border-color: var(--color-akaroa);
+  --alt-border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-mineshaft-gradient);
 
+   --input-bg: var(--color-whiterock);
 }
 
 
@@ -838,6 +845,7 @@ background: var(--color-item-being-covered);
 /* Project Grid Container */
 .projects-display {
   display: grid;
+  transition: all 0.5s ease;
   /* gap: 2rem; */
 }
 
@@ -1071,4 +1079,339 @@ background: var(--color-item-being-covered);
 .slide-animate-left.show {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Contact Me Section */
+
+.contact-me-content-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 5vh;
+  gap: clamp(2.5rem, 1.5vw, 4rem);
+  padding-right: 3rem;
+  padding-left: 3rem;
+  transition: all 0.5s ease;
+  
+}
+
+@media (max-width: 1023px) {
+  .contact-me-content-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1vh;
+  }
+}
+
+.contact-me-text {
+  color: var(--secondary-text-color);
+  font-weight: bold;
+  font-size: 1.4rem;
+  min-width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  max-height: 5.5rem;
+}
+
+.contact-me-form-title {
+  color: var(--primary-alt-text-color);
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+@media (max-width: 1023px) {
+  .contact-me-form-title {
+    color: var(--primary-alt-text-color);
+    /* font-size: ; */
+    font-size: clamp(1.75rem, 0.5vw, 2rem);
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+}
+
+.contact-me-form-flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.3rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+@media (max-width: 1023px) {
+  .contact-me-form-flex-wrapper {
+    gap: clamp(1.5rem, 2vw, 3rem);
+    padding-right: clamp(1.5rem, 2vw, 3rem);
+    padding-left: clamp(1.5rem, 2vw, 3rem);
+  }
+}
+
+.contact-input-label {
+  color: var(--secondary-alt-text-color);
+  padding-left: 1rem;
+  display: block;
+  font-size: 1.7rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 1023px) {
+  .contact-input-label {
+    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    padding-left: clamp(.5rem, 2vw, 1rem);
+    padding-bottom: clamp(0.1rem, 0.58vw, 0.5rem);
+  }
+}
+
+.contact-me-input {
+  background: var(--input-bg);
+  /* color: var(--secondary-button-text-color); */
+  display: flex;
+  width: 100%;
+}
+
+.contact-me-input-container {
+  gap: 3.3rem;
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .contact-me-input-container {
+    gap: clamp(0.75rem, 3vw, 3.3rem);
+  }
+}
+
+.contact-me-textarea {
+  background: var(--input-bg);
+  /* color: var(--secondary-button-text-color); */
+  display: flex;
+  width: 100%
+}
+
+.contact-me-submit-button-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1.6rem;
+  margin-left: 1.6rem;
+  justify-content: center;
+  align-items: center;
+
+   /* my-[1.5rem] */
+}
+
+@media (max-width: 1023px) {
+  .contact-me-submit-button-container {
+    display: flex;
+    flex-direction: row;
+    margin-right: 1.6rem;
+    margin-left: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    /* gap: clamp(0.75rem, 3vw, 3.3rem); */
+  }
+}
+
+.contact-me-submit-button {
+  background: var(--secondary-button-color);
+  height: 3.7rem;
+  width: 100%;
+  font-size: 1.1rem;
+  color: var(--secondary-button-text-color);
+  cursor: pointer;
+}
+
+.contact-me-submit-button:hover {
+  background: var(--primary-button-color);
+  color: var(--primary-button-text-color);
+}
+
+.contact-me-submit-button:active {
+  background: var(--secondary-button-color);
+  color: var(--primary-button-text-color);
+}
+
+/* Infinite Scroll Animation Handling */
+
+/* Define the keyframes normally */
+ @keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-27%);
+  }
+} 
+
+@keyframes infinite-scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-33.33%);
+  }
+}
+
+/* vertical scroll handling (above lg breakpoint) */
+
+.scroll-container {
+  mask-image: linear-gradient(to bottom, transparent 0, black 64px, black calc(100% - 64px), transparent 100%);
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+  animation: infinite-scroll-vertical 10s linear infinite;
+  gap: 2rem;
+  width: 29vw;
+}
+
+/* Pause animation on hover (makes easier to click, may reduce to only small screens) */
+.scroll-content:hover {
+  animation-play-state: paused;
+}
+
+.scroll-item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.scroll-entry {
+  padding-left: 0.1rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 7rem;
+  padding: 0.5rem;
+  color: var(--tertiary-alt-text-color);
+  background-color: var(--gradient-bg);
+  border-radius: 1rem;
+  background: var(--gradient-bg);
+  border-width: 5px;
+  border-color: var(--alt-border-color);
+  border-radius: 1rem;
+  pointer-events: auto;
+  z-index: 1000;
+}
+
+.scroll-entry-content {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 20rem;
+  height: 7rem;
+  padding: 0.5rem;
+  color: var(--tertiary-alt-text-color);
+  gap: 1rem;
+}
+
+.scroll-entry-content:hover {
+  color: var(--border-color);
+}
+
+.scroll-entry-label {
+  font-size: 1.5rem;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.scroll-entry-icon {
+  height: 4rem;
+  width: 4rem;
+  display: inline-block;
+  flex-direction: column;
+  /* color: var(--tertiary-alt-text-color); */
+}
+
+
+/* (below lg) / horizontal Scroll*/
+@media (max-width: 1023px) {
+
+  .scroll-container {
+    mask-image: linear-gradient(to right, transparent 0, black 64px, black calc(100% - 150px), transparent 100%);
+    width: 80rem;
+    display: flex;
+    overflow: hidden;
+    gap: 1rem;
+  }                    
+
+  .scroll-content {
+    display: flex;
+    flex-direction: row;
+    animation: infinite-scroll 5s linear infinite;
+    gap: 1rem;
+    width: max-content;
+    will-change: transform;
+    
+  }
+
+  .scroll-item {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    /* width: 33.33%; */
+  }
+
+  .scroll-entry {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    width: 7rem;
+    height: 5rem;
+    border-width: 4px;
+    padding: 1rem;
+    background-color: var(--gradient-bg);
+    border-width: 4px;
+    border-color: var(--alt-border-color);
+    border-radius: 1rem; 
+  }
+
+  .scroll-entry-label {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    display: none;
+  }
+
+  .scroll-entry-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+/* Footer Handling */
+
+.footer-heading {
+  font-size: clamp(0.875rem, 0.8vw + 0.5rem, 1rem); /* like Tailwind text-md */
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  /* margin-left: 2vw;
+  margin-right: 2vw; */
+}
+
+.footer-link {
+  font-size: clamp(0.8rem, 0.6vw + 0.5rem, 0.95rem); /* scales subtly */
+  line-height: 1.4rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+
 }
