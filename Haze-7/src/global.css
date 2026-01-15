@@ -144,6 +144,10 @@ background: var(--color-item-being-covered);
   --bg-image: url("/backgrounds/white-sand.svg");
 }
 
+[data-theme="light"][data-bg="secret"] {
+  --bg-image: url("/backgrounds/white-sand.svg");
+}
+
 
 .bg-sand {
   background-image: var(--bg-image);
