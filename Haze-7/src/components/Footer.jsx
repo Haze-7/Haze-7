@@ -4,7 +4,7 @@ import HLogo from "/H-logo-full.svg";
 function Footer() {
     return (
       <>
-        <div className="gradient-bg sm:h-[50vh] h-[70vh]">
+        <div className="gradient-bg md:h-[50vh] h-[70vh]">
           {/*Content Container*/}
           <div className="flex flex-col mx-[9rem]">
             {/* Logo Row Container */}
@@ -21,7 +21,7 @@ function Footer() {
             {/* Middle Content Container */}
             <div className="sm:h-[20vh] w-full"> 
               {/* Middle Content (Links) Grid */}
-              <div className="flex flex-col sm:flex-row">
+              <div className="flex flex-col md:flex-row">
                 {/*Column 1 */}
                 <div className="flex flex-col">
                   <a href="/" className="footer-info font-semibold">
@@ -35,7 +35,7 @@ function Footer() {
                   </a>
                 </div>
                 {/* Column 2 */}
-                <div className="flex flex-col ml-[10vw] md:ml-[25vw]">
+                <div className="flex flex-col ml-auto">
                   <a href="/" className="footer-info font-semibold">
                     CSG Guide
                   </a>
@@ -55,6 +55,18 @@ function Footer() {
                     Suni: The Travel Companion
                   </a>
                 </div>
+                {/* "Column 4" H Logo (only show at above sm) */}
+                <div className="hidden sm:flex ml-auto">
+                  <a href="#Hero" className="flex h-[6rem] w-[6rem]">
+                    <img src={HLogo} className=""></img>
+                  </a>
+                </div>
+              </div>
+              {/*Contact Me List */}
+              <div className="flex flex-col sm:flex-row mt-auto">
+                <div className="flex ">
+                  LinkedIn
+                </div>
               </div>
             </div>
             {/* Footer Bar Top */}
@@ -67,6 +79,6 @@ function Footer() {
 
 export default Footer;
 
-              // <a href="#Hero" className=" h-[3rem] w-[3rem]">
-              //   <img src={HLogo} className=""></img>
-              // </a>
+// Contact Me Garage
+
+              
