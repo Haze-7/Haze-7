@@ -147,6 +147,10 @@ background: var(--color-item-being-covered);
    --input-bg: var(--color-whiterock);
 }
 
+[data-theme="light"][data-bg="secret"] {
+  --bg-image: url("/backgrounds/white-sand.svg");
+}
+
 
 .bg-sand {
   background-image: var(--bg-image);
@@ -1416,7 +1420,10 @@ background: var(--color-item-being-covered);
 .footer-info {
   color: var(--primary-alt-text-color);
   font-size: 1.2rem;
-  /* font-weight: 750; */
+}
+
+.footer-info:hover {
+  color: var(--border-color);
 }
 
 .footer-contact-entry {

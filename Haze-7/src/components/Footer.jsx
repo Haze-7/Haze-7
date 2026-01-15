@@ -1,7 +1,7 @@
 import {Link, useLocation} from "react-router-dom";
 import HLogo from "/H-logo-full.svg";
 
-function Footer() {
+function Footer({toggleSecretBg}) {
     return (
       <>
         <div className="gradient-bg h-auto ">
@@ -30,7 +30,7 @@ function Footer() {
                   <a href="/" className="footer-info font-semibold">
                   United States
                   </a>
-                  <a href="/" className="footer-info font-semibold mt-[1rem]">
+                  <a href="#Contact-Me" className="footer-info font-semibold mt-[1rem]">
                   hchias2@lsu.edu
                   </a>
                 </div>
@@ -65,7 +65,7 @@ function Footer() {
               {/*Contact Me List (Row 2)*/}
               <div className="flex flex-col md:flex-row flex-wrap mt-auto">
                 {/* Email Contact Entry */}
-                <div className="footer-contact-entry">
+                <a href="#Contact-Me" className="footer-contact-entry">
                     <div className="footer-contact-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                             <path fill="currentColor" d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
@@ -74,7 +74,7 @@ function Footer() {
                     <div className="footer-contact-label font-semibold">
                         hchias2@lsu.edu
                     </div>
-                </div>
+                </a>
                 {/* LinkedIn Contact Entry*/}
                 <a href="https://www.linkedin.com/in/hayes-chiasson-413955249/" className="footer-contact-entry">
                   <div className="footer-contact-icon">
@@ -131,17 +131,21 @@ function Footer() {
                 <div>
                   @2026 Haze-7.dev All rights reserved.
                 </div>
-                <div>
-                  Bottom Text
-                </div>
+                <button
+                  onClick={toggleSecretBg}
+                  className="cursor-pointer"
+                  aria-label="Secret background toggle"
+                >
+                  Secret! Click Me
+                </button>
               </div>
               {/* Right Text */}
               <div className="hidden md:flex ml-auto gap-4">
-                <div>
+                <a href="#Contact-Me">
                   Contact Me
-                </div>
+                </a>
                 <div>
-                  Text 2
+                  Haze-7
                 </div>
               </div>
             </div>
