@@ -4,20 +4,20 @@ import HLogo from "/H-logo-full.svg";
 function Footer() {
     return (
       <>
-        <div className="gradient-bg md:h-[60vh] h-[100vh]">
+        <div className="gradient-bg h-auto ">
           {/*Content Container*/}
-          <div className="flex flex-col mx-[9rem]">
+          <div className="footer-content-container">
             {/* Logo/ Top Row Container */}
             <div className="">
             {/* Logo */}
-              <div className="h-[18vh] w-[30vw] pt-8">
+              <div className="h-[20vh] w-[30vw] pt-8">
                 <a href="#Hero" className="flex h-[7rem] w-[7rem]">
                   <img src={HLogo} className=""></img>
                 </a>
               </div>
             </div>
             {/* Middle Content Container */}
-            <div className="sm:h-[20vh] w-full"> 
+            <div className="sm:min-h-[20vh] w-full"> 
               {/* Footer Bar Top */}
               <div className="flex footer-bar text-4xl w-full mt-[1rem] mb-[2rem]"> </div>
               {/* Middle Content (Links) Grid (Row 1)*/}
@@ -125,12 +125,24 @@ function Footer() {
             </div>
             {/* Stuck in middle of middle container, need to drop below */}
             {/* Bottom Content Container */}
-            <div className="flex flex-col">
+            <div className="footer-legal-line footer-info">
+              {/* Left side content */}
               <div>
-                @2026 Haze-7.dev All rights reserved.
+                <div>
+                  @2026 Haze-7.dev All rights reserved.
+                </div>
+                <div>
+                  Bottom Text
+                </div>
               </div>
-              <div>
-                Bottom Text
+              {/* Right Text */}
+              <div className="hidden md:flex ml-auto gap-4">
+                <div>
+                  Contact Me
+                </div>
+                <div>
+                  Text 2
+                </div>
               </div>
             </div>
           </div>

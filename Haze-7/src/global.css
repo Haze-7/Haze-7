@@ -1398,11 +1398,12 @@ background: var(--color-item-being-covered);
 
 /* Footer Handling */
 
-/* Footer Bars */
-/* 
-.footer-logo {
-
-} */
+.footer-content-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: clamp(1.5rem, 6vw, 9rem);
+  margin-left: clamp(1.5rem, 6vw, 9rem);
+}
 
 .footer-bar {
   color: var(--primary-alt-text-color);
@@ -1434,7 +1435,6 @@ background: var(--color-item-being-covered);
   color: var(--border-color);
 }
 
-
 .footer-contact-icon {
   height: 3rem;
   width: 3rem;
@@ -1449,5 +1449,11 @@ background: var(--color-item-being-covered);
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.footer-legal-line {
+  display: flex;
+  height: auto;
+  width: 100%;
 }
 
