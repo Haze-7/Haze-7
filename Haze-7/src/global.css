@@ -1417,3 +1417,37 @@ background: var(--color-item-being-covered);
   font-size: 1.2rem;
   /* font-weight: 750; */
 }
+
+.footer-contact-entry {
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 1rem;
+  margin-top: 3rem;
+  padding: 0.5rem;
+  color: var(--tertiary-alt-text-color);
+  gap: 0.5rem;
+}
+
+.footer-contact-entry:hover {
+  color: var(--border-color);
+}
+
+
+.footer-contact-icon {
+  height: 3rem;
+  width: 3rem;
+  display: inline-block;
+  flex-direction: column;
+}
+
+.footer-contact-label {
+  font-size: 1.1rem;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
