@@ -36,10 +36,10 @@ function Footer() {
                 </div>
                 {/* Column 2 */}
                 <div className="hidden md:flex flex-col ml-auto">
-                  <a href="/" className="footer-info font-semibold">
+                  <a href="https://css-style-guide.vercel.app/" className="footer-info font-semibold">
                     CSG Guide
                   </a>
-                  <a href="/" className="footer-info font-semibold">
+                  <a href="https://bridge-lac.vercel.app/" className="footer-info font-semibold">
                     Deadman's Hand
                   </a>
                   <a href="/" className="footer-info font-semibold">
@@ -121,7 +121,7 @@ function Footer() {
                 </a>                        
               </div>
               {/* Footer Bar Bottom */}
-              <div className="flex footer-bar w-full my-[1rem]"> </div>
+              <div className="flex footer-bar w-full my-[1rem] mt-[2rem]"> </div>
             </div>
             {/* Stuck in middle of middle container, need to drop below */}
             {/* Bottom Content Container */}
