@@ -1407,7 +1407,7 @@ background: var(--color-item-being-covered);
 .footer-bar {
   color: var(--primary-alt-text-color);
   width: 100%;
-  height: 0.075rem;
+  height: 0.15rem;
   border-radius: 1rem;
   background-color: var(--primary-alt-text-color);
 }

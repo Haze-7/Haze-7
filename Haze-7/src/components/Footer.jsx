@@ -4,10 +4,10 @@ import HLogo from "/H-logo-full.svg";
 function Footer() {
     return (
       <>
-        <div className="gradient-bg md:h-[55vh] h-[100vh]">
+        <div className="gradient-bg md:h-[60vh] h-[100vh]">
           {/*Content Container*/}
           <div className="flex flex-col mx-[9rem]">
-            {/* Logo Row Container */}
+            {/* Logo/ Top Row Container */}
             <div className="">
             {/* Logo */}
               <div className="h-[18vh] w-[30vw] pt-8">
@@ -16,10 +16,10 @@ function Footer() {
                 </a>
               </div>
             </div>
-            {/* Footer Bar Top */}
-            <div className="flex footer-bar text-4xl w-full mt-[1rem] mb-[2rem]"> </div>
             {/* Middle Content Container */}
             <div className="sm:h-[20vh] w-full"> 
+              {/* Footer Bar Top */}
+              <div className="flex footer-bar text-4xl w-full mt-[1rem] mb-[2rem]"> </div>
               {/* Middle Content (Links) Grid (Row 1)*/}
               <div className="flex flex-col md:flex-row md:flex-nowrap">
                 {/*Column 1 */}
@@ -120,12 +120,19 @@ function Footer() {
                   </div>
                 </a>                        
               </div>
-              <div className="flex lg:hidden footer-bar w-full my-[1rem]"> </div>
-
+              {/* Footer Bar Bottom */}
+              <div className="flex footer-bar w-full my-[1rem]"> </div>
             </div>
-            {/* Footer Bar Bottom */}
-            {/* Need to fix width at small views */}
-            <div className="hidden lg:flex footer-bar w-full my-[1rem]"> </div>
+            {/* Stuck in middle of middle container, need to drop below */}
+            {/* Bottom Content Container */}
+            <div className="flex flex-col">
+              <div>
+                @2026 Haze-7.dev All rights reserved.
+              </div>
+              <div>
+                Bottom Text
+              </div>
+            </div>
           </div>
         </div>
       </>
