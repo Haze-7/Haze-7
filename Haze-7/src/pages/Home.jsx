@@ -1,4 +1,4 @@
-import InfiniteScrollAnimation from "../components/InfiniteScrollAnimation.jsx"
+  import InfiniteScrollAnimation from "../components/InfiniteScrollAnimation.jsx"
 import {Link, useLocation} from "react-router-dom";
 
 import ProfilePic from "/images/haze-profile-pic.png" 
@@ -118,7 +118,7 @@ function Home({ mode, setMode }) {
 
         <div className="w-full">
           {/* Hero Section */}
-          <section id="Hero" className="bg-sand h-[80rem] flex justify-center gap-[5rem]">
+          <section id="Hero" className="bg-sand h-[65rem] flex justify-center gap-[5rem]">
             <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
               {/* Hero Name / Intro */}
                 <div className="pt-[4.5rem] order-2 lg:order-1">
@@ -360,7 +360,7 @@ function Home({ mode, setMode }) {
         </section>
 
           {/* Contact Me Section */}
-          <section id="Contact-Me" className="bg-sand h-[80rem] lg:h-[65rem]">
+          <section id="Contact-Me" className="bg-sand h-[65rem] lg:h-[65rem]">
             <div className="text-3rem">
               {/* Projects Title */}
               <div className="flex justify-center">
@@ -369,7 +369,7 @@ function Home({ mode, setMode }) {
                </div>
               </div>
               {/* Content Container (incl email input / list) */}
-              <div className="px-[3rem] contact-me-content-container">
+              <div className="contact-me-content-container">
                 {/* Scrolling Contact Sources Box */}
                 <div className="flex h-[7rem] lg:h-[42rem] lg:w-[35%] rounded-4xl ">
                   {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
@@ -389,7 +389,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>
                 {/*Leave a Message Form */}
-                <form onSubmit={handleSubmit} className="relative h-[24.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
+                <form onSubmit={handleSubmit} className="relative h-auto lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
                   {/* Direct Message Title */}
                   <div className="contact-me-form-title pt-[1rem] lg:pt-[1.8vh]">
                     Leave a Message
@@ -398,7 +398,7 @@ function Home({ mode, setMode }) {
                   <div className="flex-row lg:flex-col pt-[0.75rem] lg:pt-[0.5rem] contact-me-form-flex-wrapper">
                     {/* Input forms */}
                     {/* Name input  */}
-                    <div className="contact-me-input-container flex-row lg:flex-col gap-[5%] lg:gap-[3.3rem]">
+                    <div className="contact-me-input-container flex-col sm:flex-row lg:flex-col gap-[5%] lg:gap-[3.3rem]">
                       <div className="w-full">
                         <label className="text-2xl font-bold contact-input-label" htmlFor="name">Name</label>
                           <input
@@ -410,7 +410,7 @@ function Home({ mode, setMode }) {
                       </div>
                       {/* Email input */}
                       <div className="w-full">
-                        <label className="text-2xl font-bold contact-input-label" htmlFor="email">Email</label>
+                        <label className="text-2xl font-bold contact-input-label pt-[1vh] sm:pt-0" htmlFor="email">Email</label>
                           <input
                           type="text"
                           name="email"
