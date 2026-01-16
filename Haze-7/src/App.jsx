@@ -18,17 +18,22 @@ import Home from './pages/Home'
 function App() {
 
   const [mode, setMode] = useState(false);
+  const [secretBg, setSecretBg] = useState(false); // secret background toggle
 
+  const toggleSecretBg = () => {
+    setMode(true); // force light
+    setSecretBg(prev => !prev);
+  };
 
   return (
     <>
-    <div data-theme={mode ? "light" : "dark"}>
+    <div data-theme={mode ? "light" : "dark"} data-bg={secretBg ? "secret" : "default"}>
       <BrowserRouter>
         <Navbar mode={mode} setMode={setMode} />
         <Routes>
           <Route path="/" element={<Home mode={mode} setMode={setMode} />} />
         </Routes>
-        <Footer />
+        <Footer toggleSecretBg={toggleSecretBg} />
       </BrowserRouter>
     </div>
     </>
