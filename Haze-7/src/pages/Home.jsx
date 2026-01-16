@@ -1,11 +1,12 @@
-import Navbar from "../components/Navbar.jsx"
+import InfiniteScrollAnimation from "../components/InfiniteScrollAnimation.jsx"
 import {Link, useLocation} from "react-router-dom";
 
 import ProfilePic from "/images/haze-profile-pic.png" 
 
-import {onClick, useRef, useEffect, useState} from 'react';
+import {onClick, useRef, useEffect, useState,} from 'react';
 import {useInView} from "react-intersection-observer";
 
+import emailjs from "@emailjs/browser";
 
 import HLogo from "/H-logo.svg";
 
@@ -43,6 +44,74 @@ function Home({ mode, setMode }) {
       //   threshold: 0.5, // Triggers when 50% of the element is visible
       // });
 
+    // Sending state to prevent double submit
+    const [sending, setSending] = useState(false);
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      if (sending) return;
+
+      // Grab values from Inputs
+      // Name Input
+      const name = document.getElementById("name-input").value.trim();
+
+      // Email Input
+      const email = document.getElementById("email-input").value.trim();
+      // Message Input
+      const message = document.getElementById("message-input").value.trim();
+
+      //Name Validation
+      if (name === "" || name.length < 2) {
+        alert("Please enter a valid name to send a message.")
+        return;
+      }
+      // Email Validation
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailPattern.test(email)) {
+        alert("Please enter valid email address.");
+        return;
+      }
+
+      // Message Validation
+      if (message === "" || message.length < 2) {
+        alert("Please enter a message to send.");
+        return;
+      }
+
+      // setSending(true);
+
+      // Data sent to EmailJS template
+      const templateParams = {
+        name: name,
+        email: email,
+        message: message,
+      };
+
+      emailjs
+        .send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          templateParams,
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        .then(() => {
+          alert("Message sent!");
+            // Clear inputs
+            document.getElementById("name-input").value = "";
+            document.getElementById("email-input").value = "";
+            document.getElementById("message-input").value = "";
+        })
+        .catch((error) => {
+          console.error("EmailJS error:", error);
+          alert("Failed to send message.");
+        })
+        .finally(() => {
+          setSending(false);
+        });
+    };
+
     return (
       <>
       {/* var(--primary- text-color) */}
@@ -77,6 +146,7 @@ function Home({ mode, setMode }) {
                 </div>
             </div>
           </section>
+
           {/* About Me Section */}
           <section id="About-Me" className="gradient-bg h-[] lg:h-[50rem] shadow-lg/50 shadow-gray gradient-link-offset">
             <div className="">
@@ -90,8 +160,8 @@ function Home({ mode, setMode }) {
               <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2.5rem] lg:pt-[3.5rem] px-[3rem]">
                 {/* About Me Image/ Box */}
                 {/* Temp remove background for image fit, future image stretch properly at wide view widths (rectangle):  bg-mineshaft (is reason for lack of rounded edges at large*/}
-                <div className="flex rounded-xl overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
-                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl w-full h-full object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
+                <div className="flex rounded-xl bg-white overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
+                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl  object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
                 </div>
                   {/* About Me Text / Description */}
                   <div className="flex w-[100%] lg:w-[55%] flex-col pt-[2%]"> {/*  Missing Height*/}
@@ -112,7 +182,6 @@ function Home({ mode, setMode }) {
               </div>
           </section>
 
-          
           {/* Projects section */}
           <section id="Projects" className="bg-sand min-h-[70rem]">
             <div className="text-[3rem]">
@@ -231,6 +300,7 @@ function Home({ mode, setMode }) {
               </div>
             </div>
           </section>
+
           {/* Experience Section */}
         <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
           <div className="flex flex-col w-full items-center py-[4rem] pb-[6rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
@@ -288,7 +358,6 @@ function Home({ mode, setMode }) {
             </div>
           </div>
         </section>
-
 
           {/* Contact Me Section */}
           <section id="Contact-Me" className="bg-sand h-[80rem] lg:h-[65rem]">

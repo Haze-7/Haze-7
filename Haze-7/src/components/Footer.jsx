@@ -24,12 +24,12 @@ function Footer({toggleSecretBg}) {
               <div className="flex flex-col md:flex-row md:flex-nowrap">
                 {/*Column 1 */}
                 <div className="flex flex-col">
-                  <div className="footer-info font-semibold">
+                  <a href="/" className="footer-info font-semibold">
                   Baton Rouge, La 70808
-                  </div>
-                  <div className="footer-info font-semibold">
+                  </a>
+                  <a href="/" className="footer-info font-semibold">
                   United States
-                  </div>
+                  </a>
                   <a href="#Contact-Me" className="footer-info font-semibold mt-[1rem]">
                   hchias2@lsu.edu
                   </a>
@@ -42,18 +42,18 @@ function Footer({toggleSecretBg}) {
                   <a href="https://bridge-lac.vercel.app/" className="footer-info font-semibold">
                     Deadman's Hand
                   </a>
-                  <div className="footer-info font-semibold">
+                  <a href="/" className="footer-info font-semibold">
                     OrchestrAI
-                  </div>
+                  </a>
                 </div>
                 {/* Column 3 */}
                 <div className="hidden lg:flex flex-col pl-[1vw]">
-                  <div className="footer-info font-semibold">
+                  <a href="/" className="footer-info font-semibold">
                     BARBER
-                  </div>
-                  <div className="footer-info font-semibold">
+                  </a>
+                  <a href="/" className="footer-info font-semibold">
                     Suni: The Travel Companion
-                  </div>
+                  </a>
                 </div>
                 {/* "Column 4" H Logo (only show at above sm) */}
                 <div className="hidden md:flex ml-auto">
