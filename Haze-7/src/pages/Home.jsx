@@ -291,9 +291,91 @@ function Home({ mode, setMode }) {
 
 
           {/* Contact Me Section */}
-          <section id="Contact-Me" className="bg-sand h-[80rem]">
-            <div className="">
+          <section id="Contact-Me" className="bg-sand h-[80rem] lg:h-[65rem]">
+            <div className="text-3rem">
+              {/* Projects Title */}
+              <div className="flex justify-center">
+                <div className="projects-title font-bold pt-[5rem] sm:pt-[6rem]">
+                 Contact Me
+               </div>
+              </div>
+              {/* Content Container (incl email input / list) */}
+              <div className="px-[3rem] contact-me-content-container">
+                {/* Scrolling Contact Sources Box */}
+                <div className="flex h-[7rem] lg:h-[42rem] lg:w-[35%] rounded-4xl ">
+                  {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
+                  <InfiniteScrollAnimation />
+                </div>
+                {/* Or Container*/}
+                <div className="flex flex-row lg:flex-col h-[3rem] lg:h-[38rem] lg:mt-[2rem] lg:w-[5%] p-[0.5rem] items-center justify-center">
+                  {/* Right Box */}
+                  <div className="gradient-bg h-[1rem] lg:h-[15rem] w-[45%] lg:w-[17px] rounded-md ">
+                  </div>
+                  {/* Or Text */}
+                  <div className="lg:h-[5rem] contact-me-text flex-1">
+                    OR
+                  </div>
+                  {/* Left Box */}
+                  <div className="gradient-bg h-[1rem] lg:h-[15rem] w-[45%] lg:w-[17px] rounded-md ">
+                  </div>
+                </div>
+                {/*Leave a Message Form */}
+                <form onSubmit={handleSubmit} className="relative h-[24.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
+                  {/* Direct Message Title */}
+                  <div className="contact-me-form-title pt-[1rem] lg:pt-[1.8vh]">
+                    Leave a Message
+                  </div>
+                  {/* Flex Wrapper*/}
+                  <div className="flex-row lg:flex-col pt-[0.75rem] lg:pt-[0.5rem] contact-me-form-flex-wrapper">
+                    {/* Input forms */}
+                    {/* Name input  */}
+                    <div className="contact-me-input-container flex-row lg:flex-col gap-[5%] lg:gap-[3.3rem]">
+                      <div className="w-full">
+                        <label className="text-2xl font-bold contact-input-label" htmlFor="name">Name</label>
+                          <input
+                          type="text"
+                          name="name"
+                          id="name-input"
+                          className="text-xl text-slate rounded-2xl px-2.5 contact-me-input h-[70%] lg:h-[80%]" //set width of inputs
+                          />
+                      </div>
+                      {/* Email input */}
+                      <div className="w-full">
+                        <label className="text-2xl font-bold contact-input-label" htmlFor="email">Email</label>
+                          <input
+                          type="text"
+                          name="email"
+                          id="email-input"
+                          className="text-xl text-slate rounded-2xl px-2.5 contact-me-input h-[70%] lg:h-[80%]"
+                          />
+                      </div>
+                    </div>
+                    {/* Message Input */}
+                    <div className="w-full">
+                      <label className="text-2xl font-bold contact-input-label pb-[0.25rem] lg:pb-[0.5rem]" htmlFor="message">Message</label>
+                      <textarea
+                        name="message"
+                        id="message-input"
+                        // value={formData.html_code}
+                        // onChange={handleChange}
+                        className="contact-me-textarea h-[12vh] lg:h-[20vh] text-md font-mono text-slate rounded-2xl p-[0.7rem] resize-y max-h-[20vh]"
+                        placeholder="Type your message here"
+                      />
+                    </div>
 
+                  </div>
+                    <div className="contact-me-submit-button-container font-semibold my-[1.5rem]">
+                      <button
+                       type="submit"
+                       disabled={sending}
+                       className="contact-me-submit-button secondary-text-color rounded-2xl flex items-center justify-center w-[10rem]"
+                      > 
+                        {sending ? "Sending..." : "Send"}
+                      </button>
+                    </div>
+                </form>
+              {/* Submit Button */}
+              </div>
             </div>
           </section>
         </div>
