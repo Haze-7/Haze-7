@@ -149,7 +149,7 @@ function Home({ mode, setMode }) {
 
           {/* About Me Section */}
           <section id="About-Me" className="gradient-bg h-[] lg:h-[50rem] shadow-lg/50 shadow-gray gradient-link-offset">
-            <div className="">
+            <div className="about-me-content-container">
               {/* About Title Container */}
               <div className="flex justify-center">
                 <div className="gradient-title font-bold pt-[3.5rem]">

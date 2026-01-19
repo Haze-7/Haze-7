@@ -815,6 +815,19 @@ background: var(--color-item-being-covered);
 
 /* About Section */
 
+/* .about-me-content-container {
+  No uses for now, may fill later
+} */
+
+/* Ultrawide Screen Handling */
+@media (min-width: 2560px) {
+    .about-me-content-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60vw
+  }
+}
+
 /* More gradient general, may move location to top */
 .gradient-title {
   color: var(--primary-alt-text-color);
@@ -1105,6 +1118,15 @@ background: var(--color-item-being-covered);
     flex-direction: column;
     gap: 1rem;
     padding-top: 1vh;
+  }
+}
+
+/* Ultrawide Screen Handling */
+@media (min-width: 2560px) {
+    .contact-me-content-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60vw
   }
 }
 
