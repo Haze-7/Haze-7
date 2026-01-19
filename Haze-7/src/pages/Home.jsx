@@ -118,20 +118,20 @@ function Home({ mode, setMode }) {
 
         <div className="w-full">
           {/* Hero Section */}
-          <section id="Hero" className="bg-sand h-[65rem] flex justify-center gap-[5rem]">
-            <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
+          <section id="Hero" className="bg-sand h-[65rem] flex justify-center">
+            <div className="hero-content-container">
               {/* Hero Name / Intro */}
-                <div className="pt-[4.5rem] order-2 lg:order-1">
-                  <p className="pt-[2.7rem] sm:pt-0 text-[1.90rem] hero-secondary-text font-semibold">
+                <div className=" order-2 lg:order-1 ">
+                  <p className="lgl::pt-[2.7rem] sm:pt-0 text-[1.90rem] hero-secondary-text font-semibold">
                     Hello, I'm
                   </p>
-                  <h1 className="text-[4rem] font-bold hero-primary-text mt-[-.5rem]">
+                  <h1 className="text-[4rem] font-bold hero-primary-text leading-tight lg:leading-normal">
                     Hayes Chiasson
                   </h1>
                   <p className="text-[2rem] font-semibold hero-secondary-text">
                     Fullstack Developer
                   </p>
-                  <div className="mt-[1.5rem] flex flex-row gap-[2rem] lg:gap-[3rem] justify-center items-center font-semibold">
+                  <div className="mt-[1.5rem] flex flex-row gap-[clamp(2rem,4vw,3rem)] justify-center items-center font-semibold">
                     <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                       Download CV
                     </button>
@@ -141,7 +141,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>              
                 {/* Professional Photo */}
-                <div className="hero-picture pt-[2.5rem] order-1 lg:order-2">
+                <div className="hero-picture order-1 lg:order-2 ">
                   <img src={ProfilePic} alt="Haze Profile Picture" className=""></img>
                 </div>
             </div>
@@ -160,7 +160,7 @@ function Home({ mode, setMode }) {
               <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2.5rem] lg:pt-[3.5rem] px-[3rem]">
                 {/* About Me Image/ Box */}
                 {/* Temp remove background for image fit, future image stretch properly at wide view widths (rectangle):  bg-mineshaft (is reason for lack of rounded edges at large*/}
-                <div className="flex rounded-xl bg-white overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
+                <div className="flex rounded-xl overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
                   <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl  object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
                 </div>
                   {/* About Me Text / Description */}
