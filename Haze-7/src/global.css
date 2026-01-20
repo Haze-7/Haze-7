@@ -1048,9 +1048,19 @@ background: var(--color-item-being-covered);
 
 /* Experience Section */
 
-/* .experience-title {
+.experience-title {
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
 
-} */
+@media (max-width: 300px) {
+  .experience-title {
+    font-size: clamp(3rem, 5.33vw, 4rem);
+    padding-bottom: clamp(0.5rem, 2.5vw, 1rem);
+  }
+}
+ 
 
 /*Experience Entries  */
 .experience-entry {

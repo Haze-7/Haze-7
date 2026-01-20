@@ -305,7 +305,7 @@ function Home({ mode, setMode }) {
         <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
           <div className="flex flex-col w-full items-center py-[4rem] pb-[6rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
             {/* Section Title */}
-            <div className="gradient-title font-bold text-[3rem] text-center pb-[2rem]">Experience</div>
+            <div className="gradient-title font-bold experience-title">Experience</div>
             {/* Our Lady of the Lake (Right) */}
             <div ref={expOneRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
               <div className="experience-entry-image">
@@ -364,7 +364,7 @@ function Home({ mode, setMode }) {
             <div className="text-3rem">
               {/* Projects Title */}
               <div className="flex justify-center">
-                <div className="projects-title font-bold pt-[5rem] sm:pt-[6rem]">
+                <div className="projects-title font-bold">
                  Contact Me
                </div>
               </div>
