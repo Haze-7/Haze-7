@@ -1530,6 +1530,61 @@ background: var(--color-item-being-covered);
   }
 }
 
+/* Home Page End */
+
+/* Under Construction Page Handling */
+
+.construction-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 35vh;
+  align-items: center;
+  background: var(--gradient-bg);
+  height: 60rem;
+  width: 100%;
+}
+
+.construction-instruction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  background: var(--gradient-bg);
+  border-width: 5px;
+  border-color: var(--border-color);
+  border-radius: 1rem;
+  padding: clamp(1rem, 4vw, 5rem);
+  overflow: hidden;
+}
+
+#construction-title {
+  font-size: clamp(2rem, 5vh, 7rem);
+  text-align: center;
+  color: var(--primary-alt-text-color);
+}
+
+@media (min-width: 640px) {
+  #construction-title {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}
+
+#construction-message {
+  padding-top: 3rem;
+  font-size: clamp(1rem, 6vw, 4rem);
+  text-align: center;
+  color: var(--secondary-alt-text-color);
+}
+
+@media (min-width: 640px) {
+  #construction-message {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+/* pt-[3rem] text-clamp[(1rem, 6vw, 4rem)] sm:text-4xl */
 /* Footer Handling */
 
 .footer-content-container {
