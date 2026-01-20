@@ -360,7 +360,7 @@ function Home({ mode, setMode }) {
         </section>
 
           {/* Contact Me Section */}
-          <section id="Contact-Me" className="bg-sand h-[65rem] lg:h-[65rem]">
+          <section id="Contact-Me" className="bg-sand h-[65rem] lg:h-[70rem]">
             <div className="text-3rem">
               {/* Projects Title */}
               <div className="flex justify-center">
