@@ -173,7 +173,7 @@ function Home({ mode, setMode }) {
                       <Link to="/UnderConstruction" className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         Images
                       </Link>
-                      <Link to="/about-me" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                      <Link to="/UnderConstruction" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
                         Learn More
                       </Link>
                     </div>
@@ -279,7 +279,7 @@ function Home({ mode, setMode }) {
                       <Link to="https://github.com/CSC-3380-Fall-2024/Team-19" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center ">
                         Github
                       </Link>
-                      <Link to="/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
+                      <Link to="/UnderConstruction" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
                         Live Demo
                       </Link>
                     </div>
@@ -290,7 +290,7 @@ function Home({ mode, setMode }) {
               {/* Buttons (View More, access General Github) */}
               <div className="flex flex-row gap-[2rem] m-[1.5rem] py-[3rem] justify-center items-center font-semibold">
                 {/* Link to projects page */}
-                <Link to="/projects" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                <Link to="/UnderConstruction" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                   View More
                 </Link>
                   {/* Link to github home*/}
@@ -346,7 +346,7 @@ function Home({ mode, setMode }) {
                 <img src={BarberImage} alt="Barber Image" />
               </div>
               <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
-                <Link to="/experienceThree" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
+                <Link to="/UnderConstruction" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
                   BARBER
                 </Link>
                 <p className="experience-card-description">

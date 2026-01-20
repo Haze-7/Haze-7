@@ -41,7 +41,7 @@ function Navbar({ mode, setMode }) {
               <Link to="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
               </Link> */}
-              <a href="#Hero" className=" h-[3rem] w-[3rem]">
+              <a href="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
               </a>
               <div className={`navbar-menu hidden nav:flex`}>
@@ -67,7 +67,7 @@ function Navbar({ mode, setMode }) {
 
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
-                              <Link to="/" className="flex">
+                              <Link to="/UnderConstruction" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
                                 {/* fill w/ about image */}
                                 {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
@@ -97,7 +97,7 @@ function Navbar({ mode, setMode }) {
 
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
-                              <Link to="/" className="flex">
+                              <Link to="/UnderConstruction" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
                                 {/* Fill w/ about image */}
                                 {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
@@ -128,7 +128,7 @@ function Navbar({ mode, setMode }) {
 
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
-                              <Link to="/" className="flex">
+                              <Link to="/UnderConstruction" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
                                 {/* fill w/ about image */}
                                 {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
@@ -285,7 +285,7 @@ function Navbar({ mode, setMode }) {
                               {/* Right Side Project Images */}
                               {/* Should I add the option to navigate left to right to add more options */}
                               <div className="dropdown-projects-display">
-                                <Link to="/" className="flex">
+                                <Link to="/UnderConstruction" className="flex">
                                   <div className="dropdown-projects-display-entry"> {/* wrapper */}
                                     <img src={DeadmanProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img> {/* Img  inset-0 w-full h-full object-cover rounded-xl*/}
                                       {/*Blur overlay */}
@@ -299,7 +299,7 @@ function Navbar({ mode, setMode }) {
                                     Online Gambling / Gatcha Game for Education
                                   </p>                               
                                 </Link>
-                                <Link to="/" className="flex">                         
+                                <Link to="/UnderConstruction" className="flex">                         
                                   <div className="dropdown-projects-display-entry">
                                     <img src={CSGProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img>
                                     <div className="dropdown-projects-display-entry-blur"></div> 
@@ -312,7 +312,7 @@ function Navbar({ mode, setMode }) {
                                     Measurement Rulers for scaling elements
                                   </p> 
                                 </Link> 
-                                <Link to="/" className="flex"> 
+                                <Link to="/UnderConstruction" className="flex"> 
                                   <div className="dropdown-projects-display-entry">
                                     <img src={SuniProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img>
                                     <div className="dropdown-projects-display-entry-blur"></div> 
@@ -528,7 +528,7 @@ function Navbar({ mode, setMode }) {
                   <div className={`flex flex-col items-center mx-auto w-full gap-[.8rem] pt-[.5rem]`}>
                         {/*Mini About Me */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("about")}>
-                          <Link to="/">
+                          <Link to="/UnderConstruction">
                             About Me 
                           </Link>   
                           <div className="navbar-chevron">
@@ -566,7 +566,7 @@ function Navbar({ mode, setMode }) {
                         </div>
                         {/*Mini Experience */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("experience")}>
-                          <Link to="/">
+                          <Link to="/UnderConstruction">
                             Experience
                           </Link>
                           <div className="navbar-chevron">
@@ -601,7 +601,7 @@ function Navbar({ mode, setMode }) {
                         </div>
                         {/* Projects */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("projects")}>
-                          <Link to="/">
+                          <Link to="/UnderConstruction">
                             Projects
                           </Link>
                           <div className="navbar-chevron">
@@ -640,7 +640,7 @@ function Navbar({ mode, setMode }) {
                         </div>
                         {/* Contact Me */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("contact")}>
-                          <Link to="/">
+                          <Link to="/UnderConstruction">
                             Contact Me
                           </Link>
                           <div className="navbar-chevron">
