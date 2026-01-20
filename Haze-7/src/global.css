@@ -168,6 +168,16 @@ background: var(--color-item-being-covered);
   }
 } */
 
+/* More gradient general, may move location to top */
+.gradient-title {
+  color: var(--primary-alt-text-color);
+  font-size: 4rem;
+}
+
+.gradient-link-offset {
+  scroll-margin-top: 5.5rem; /*Offset anchor link start (leave gap at top ) */
+}
+
 .navbar-main {
   z-index: 1000;
   left: 1rem;
@@ -839,45 +849,96 @@ background: var(--color-item-being-covered);
 
 /* About Section */
 
-/* .about-me-content-container {
+/* .about-me-container {
   No uses for now, may fill later
 } */
 
 /* Ultrawide Screen Handling */
 @media (min-width: 2560px) {
-    .about-me-content-container {
+    .about-me-container {
     margin-right: auto;
     margin-left: auto;
     max-width: 60vw
   }
 }
 
-/* More gradient general, may move location to top */
-.gradient-title {
-  color: var(--primary-alt-text-color);
-  font-size: 4rem;
+.about-me-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-right: clamp(1rem, 4vw, 3rem);
+  padding-left: clamp(1rem, 4vw, 3rem);
 }
 
-.gradient-link-offset {
-  scroll-margin-top: 5.5rem; /*Offset anchor link start (leave gap at top ) */
+@media (min-width: 1024px) {
+  .about-me-content-container {
+    flex-direction: row;
+    gap: 3rem;
+    padding-top: 3.5rem;
+
+  }
 }
 
-/* May become about carousel */
-/* .about-image {
+.about-me-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 17rem;
+  height: 17rem;
+}
 
-} */
+@media (min-width: 1024px) {
+  .about-me-img-container {
+    max-width: 45%;
+    height: 25rem;
+  }
+}
+
+.about-me-description-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 2%;
+  max-height: 60rem;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .about-me-description-container {
+    width: 55%;
+  }
+}
 
 /* Handle Text color / side */
-.about-description {
+.about-me-description {
   line-height: clamp(2rem, 1vw + 2rem, 2.7rem);
   text-align: center;
+  font-size: clamp(1.1rem, 0.6rem + 1.6vw, 1.5rem);
+  max-height: 300px;
+  overflow: hidden;
 }
+
+/* text-[1.3rem] sm:text-[1.5rem] */
 
 /* Project Home Section */
 
 .projects-title {
   color: var(--primary-text-color);
   font-size: 4rem;
+  padding-top: clamp(5rem, calc(6rem - 2vw), 6rem);
+}
+
+@media (max-width: 300px) {
+  .projects-title {
+    font-size: clamp(3rem, 5.33vw, 4rem);
+  }
 }
 
 /* Project Grid Container */
@@ -986,6 +1047,10 @@ background: var(--color-item-being-covered);
 } */
 
 /* Experience Section */
+
+/* .experience-title {
+
+} */
 
 /*Experience Entries  */
 .experience-entry {

@@ -149,23 +149,23 @@ function Home({ mode, setMode }) {
 
           {/* About Me Section */}
           <section id="About-Me" className="gradient-bg h-[] lg:h-[50rem] shadow-lg/50 shadow-gray gradient-link-offset">
-            <div className="about-me-content-container">
+            <div className="about-me-container">
               {/* About Title Container */}
               <div className="flex justify-center">
                 <div className="gradient-title font-bold pt-[3.5rem]">
                   About Me
                 </div>
               </div>
-              {/* About Me content Container*/}
-              <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2.5rem] lg:pt-[3.5rem] px-[3rem]">
+              {/* About Me Content Container*/}
+              <div className="about-me-content-container">
                 {/* About Me Image/ Box */}
                 {/* Temp remove background for image fit, future image stretch properly at wide view widths (rectangle):  bg-mineshaft (is reason for lack of rounded edges at large*/}
-                <div className="flex rounded-xl overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
-                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl  object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
+                <div className="about-me-img-container font-semibold">
+                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
                 </div>
                   {/* About Me Text / Description */}
-                  <div className="flex w-[100%] lg:w-[55%] flex-col pt-[2%]"> {/*  Missing Height*/}
-                    <p className="about-description text-[1.3rem] sm:text-[1.5rem]">
+                  <div className="about-me-description-container"> {/*  Missing Height*/}
+                    <p className="about-me-description">
                     I'm a Senior at Louisiana State University pursuing a Bachelors Degree in Software Engineering with a Minor in Digital Media Arts & Engineering. 
                     I thrive on taking innovative ideas from concept to execution through software development, and see myself working on hobby projects well into my career.
                   </p>
@@ -187,7 +187,7 @@ function Home({ mode, setMode }) {
             <div className="text-[3rem]">
               {/* Projects Title */}
               <div className="flex justify-center">
-                <div className="projects-title font-bold pt-[5rem] sm:pt-[6rem]">
+                <div className="projects-title font-bold">
                  Projects
                </div>
               </div>
