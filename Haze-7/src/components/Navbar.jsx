@@ -4,7 +4,7 @@ import {Link, useLocation} from "react-router-dom";
 
 import DarkLightSwitch from "./DarkLightSwitch.jsx";
 
-import HLogo from "/H-logo.svg";
+import HLogo from "/H-logo-full.svg";
 import SuniProject from "/images/suni.svg" 
 import DeadmanProject from "/images/deadman.svg" 
 import CSGProject from "/images/csg.svg" 
