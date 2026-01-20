@@ -135,9 +135,9 @@ function Home({ mode, setMode }) {
                     <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                       Download CV
                     </button>
-                    <Link to="#Contact-Me" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                    <a href="#Contact-Me" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
                       Contact Info
-                    </Link>
+                    </a>
                   </div>
                 </div>              
                 {/* Professional Photo */}
@@ -170,7 +170,7 @@ function Home({ mode, setMode }) {
                     I thrive on taking innovative ideas from concept to execution through software development, and see myself working on hobby projects well into my career.
                   </p>
                     <div className="mt-[1.5rem] flex flex-row gap-[7%] lg:gap-[3rem] mb-[3rem] lg:mb-0 justify-center items-center font-semibold">
-                      <Link to="" className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                      <Link to="/UnderConstruction" className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         Images
                       </Link>
                       <Link to="/about-me" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
