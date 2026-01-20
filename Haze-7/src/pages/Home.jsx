@@ -165,7 +165,7 @@ function Home({ mode, setMode }) {
                 </div>
                   {/* About Me Text / Description */}
                   <div className="about-me-description-container"> {/*  Missing Height*/}
-                    <p className="about-me-description">
+                    <p className="about-me-description scrollbar-hidden">
                     I'm a Senior at Louisiana State University pursuing a Bachelors Degree in Software Engineering with a Minor in Digital Media Arts & Engineering. 
                     I thrive on taking innovative ideas from concept to execution through software development, and see myself working on hobby projects well into my career.
                   </p>
