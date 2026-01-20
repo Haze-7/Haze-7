@@ -119,7 +119,7 @@ function Home({ mode, setMode }) {
         <div className="w-full">
           {/* Hero Section */}
           <section id="Hero" className="bg-sand h-[65rem] flex justify-center">
-            <div className="hero-content-container">
+            <div className="hero-content-container layout-smooth">
               {/* Hero Name / Intro */}
                 <div className=" order-2 lg:order-1 ">
                   <p className="lgl::pt-[2.7rem] sm:pt-0 text-[1.90rem] hero-secondary-text font-semibold">

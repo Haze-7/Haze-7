@@ -178,6 +178,17 @@ background: var(--color-item-being-covered);
   scroll-margin-top: 5.5rem; /*Offset anchor link start (leave gap at top ) */
 }
 
+/* layout / responsiveness smoothing */
+.layout-smooth {
+  /* transition: all 0.5s ease; */
+  transition:
+    padding 0.5s ease,
+    margin 0.5s ease,
+    gap 0.5s ease,
+    width 0.5s ease,
+    max-width 0.5s ease;
+}
+
 .navbar-main {
   z-index: 1000;
   left: 1rem;
@@ -831,7 +842,7 @@ background: var(--color-item-being-covered);
 .hero-primary-button {
   background: var(--primary-button-color);
   height: clamp(3.2rem, 8vw, 3.8rem);
-  width: clamp(7.5rem, 22vw, 10rem);
+  width: clamp(7.5rem, 24vw, 10rem);
   color: var(--primary-button-text-color);
   font-size: clamp(0.95rem, 0.85rem + 0.35vw, 1.1rem);
   /* font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem); */
@@ -841,7 +852,7 @@ background: var(--color-item-being-covered);
 .hero-secondary-button {
   background: var(--secondary-button-color);
   height: clamp(3.2rem, 8vw, 3.8rem);
-  width: clamp(7.5rem, 22vw, 10rem);
+  width: clamp(7.5rem, 24vw, 10rem);
   font-size: clamp(0.95rem, 0.85rem + 0.35vw, 1.1rem);
   color: var(--secondary-button-text-color);
   cursor: pointer;
@@ -1206,7 +1217,6 @@ background: var(--color-item-being-covered);
   /* padding-left: 3rem;
   padding-right: 3rem; */
   transition: all 0.5s ease;
-  
 }
 
 @media (max-width: 1023px) {
