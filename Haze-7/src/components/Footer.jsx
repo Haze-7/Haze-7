@@ -131,22 +131,22 @@ function Footer({toggleSecretBg}) {
                 <div>
                   @2026 Haze-7.dev All rights reserved.
                 </div>
-                <button
-                  onClick={toggleSecretBg}
-                  className="cursor-pointer"
-                  aria-label="Secret background toggle"
-                >
-                  Secret! Click Me
-                </button>
+                <div>
+                  Last Updated: 1/20/2026
+                </div>
               </div>
               {/* Right Text */}
               <div className="hidden md:flex ml-auto gap-4">
                 <a href="#Contact-Me">
                   Contact Me
                 </a>
-                <div>
-                  Haze-7
-                </div>
+                <button
+                  onClick={toggleSecretBg}
+                  className="cursor-pointer flex"
+                  aria-label="Secret background toggle"
+                >
+                  Secret Color Mode
+                </button>
               </div>
             </div>
           </div>

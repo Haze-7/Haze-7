@@ -1,4 +1,4 @@
-import InfiniteScrollAnimation from "../components/InfiniteScrollAnimation.jsx"
+  import InfiniteScrollAnimation from "../components/InfiniteScrollAnimation.jsx"
 import {Link, useLocation} from "react-router-dom";
 
 import ProfilePic from "/images/haze-profile-pic.png" 
@@ -118,20 +118,20 @@ function Home({ mode, setMode }) {
 
         <div className="w-full">
           {/* Hero Section */}
-          <section id="Hero" className="bg-sand h-[80rem] flex justify-center gap-[5rem]">
-            <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-28 h-auto lg:h-[95vh] pt-[10rem] lg:pt-0">
+          <section id="Hero" className="bg-sand h-[65rem] flex justify-center">
+            <div className="hero-content-container layout-smooth">
               {/* Hero Name / Intro */}
-                <div className="pt-[4.5rem] order-2 lg:order-1">
-                  <p className="pt-[2.7rem] sm:pt-0 text-[1.90rem] hero-secondary-text font-semibold">
+                <div className=" order-2 lg:order-1 ">
+                  <p className="lgl::pt-[2.7rem] sm:pt-0 text-[1.90rem] hero-secondary-text font-semibold">
                     Hello, I'm
                   </p>
-                  <h1 className="text-[4rem] font-bold hero-primary-text mt-[-.5rem]">
+                  <h1 className="text-[4rem] font-bold hero-primary-text leading-tight lg:leading-normal">
                     Hayes Chiasson
                   </h1>
                   <p className="text-[2rem] font-semibold hero-secondary-text">
                     Fullstack Developer
                   </p>
-                  <div className="mt-[1.5rem] flex flex-row gap-[2rem] lg:gap-[3rem] justify-center items-center font-semibold">
+                  <div className="mt-[1.5rem] flex flex-row gap-[clamp(2rem,4vw,3rem)] justify-center items-center font-semibold">
                     <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                       Download CV
                     </button>
@@ -141,7 +141,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>              
                 {/* Professional Photo */}
-                <div className="hero-picture pt-[2.5rem] order-1 lg:order-2">
+                <div className="hero-picture order-1 lg:order-2 ">
                   <img src={ProfilePic} alt="Haze Profile Picture" className=""></img>
                 </div>
             </div>
@@ -149,23 +149,23 @@ function Home({ mode, setMode }) {
 
           {/* About Me Section */}
           <section id="About-Me" className="gradient-bg h-[] lg:h-[50rem] shadow-lg/50 shadow-gray gradient-link-offset">
-            <div className="">
+            <div className="about-me-container">
               {/* About Title Container */}
               <div className="flex justify-center">
                 <div className="gradient-title font-bold pt-[3.5rem]">
                   About Me
                 </div>
               </div>
-              {/* About Me content Container*/}
-              <div className="flex flex-col lg:flex-row w-full gap-[1.5rem] lg:gap-[3rem] justify-center items-center pt-[2.5rem] lg:pt-[3.5rem] px-[3rem]">
+              {/* About Me Content Container*/}
+              <div className="about-me-content-container">
                 {/* About Me Image/ Box */}
                 {/* Temp remove background for image fit, future image stretch properly at wide view widths (rectangle):  bg-mineshaft (is reason for lack of rounded edges at large*/}
-                <div className="flex rounded-xl bg-white overflow-hidden w-[17rem] lg:w-[45%] h-[17rem] lg:h-[25rem] justify-center items-center font-semibold text-[1.5rem] lg:text-[2rem]">
-                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl  object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
+                <div className="about-me-img-container font-semibold">
+                  <img src={AboutMeImage} alt="About Me Image/Box" className="rounded-xl object-contain"></img>  {/* Will need to replace with more responsive image/ better scale */}
                 </div>
                   {/* About Me Text / Description */}
-                  <div className="flex w-[100%] lg:w-[55%] flex-col pt-[2%]"> {/*  Missing Height*/}
-                    <p className="about-description text-[1.3rem] sm:text-[1.5rem]">
+                  <div className="about-me-description-container"> {/*  Missing Height*/}
+                    <p className="about-me-description">
                     I'm a Senior at Louisiana State University pursuing a Bachelors Degree in Software Engineering with a Minor in Digital Media Arts & Engineering. 
                     I thrive on taking innovative ideas from concept to execution through software development, and see myself working on hobby projects well into my career.
                   </p>
@@ -187,7 +187,7 @@ function Home({ mode, setMode }) {
             <div className="text-[3rem]">
               {/* Projects Title */}
               <div className="flex justify-center">
-                <div className="projects-title font-bold pt-[5rem] sm:pt-[6rem]">
+                <div className="projects-title font-bold">
                  Projects
                </div>
               </div>
@@ -305,7 +305,7 @@ function Home({ mode, setMode }) {
         <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
           <div className="flex flex-col w-full items-center py-[4rem] pb-[6rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
             {/* Section Title */}
-            <div className="gradient-title font-bold text-[3rem] text-center pb-[2rem]">Experience</div>
+            <div className="gradient-title font-bold experience-title">Experience</div>
             {/* Our Lady of the Lake (Right) */}
             <div ref={expOneRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
               <div className="experience-entry-image">
@@ -360,16 +360,16 @@ function Home({ mode, setMode }) {
         </section>
 
           {/* Contact Me Section */}
-          <section id="Contact-Me" className="bg-sand h-[80rem] lg:h-[65rem]">
+          <section id="Contact-Me" className="bg-sand h-[65rem] lg:h-[65rem]">
             <div className="text-3rem">
               {/* Projects Title */}
               <div className="flex justify-center">
-                <div className="projects-title font-bold pt-[5rem] sm:pt-[6rem]">
+                <div className="projects-title font-bold">
                  Contact Me
                </div>
               </div>
               {/* Content Container (incl email input / list) */}
-              <div className="px-[3rem] contact-me-content-container">
+              <div className="contact-me-content-container">
                 {/* Scrolling Contact Sources Box */}
                 <div className="flex h-[7rem] lg:h-[42rem] lg:w-[35%] rounded-4xl ">
                   {/*Create grid / flexbox for each to scroll (vert in full, horiz in small) */}
@@ -389,7 +389,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>
                 {/*Leave a Message Form */}
-                <form onSubmit={handleSubmit} className="relative h-[24.5rem] lg:h-[42rem] lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
+                <form onSubmit={handleSubmit} className="relative h-auto lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
                   {/* Direct Message Title */}
                   <div className="contact-me-form-title pt-[1rem] lg:pt-[1.8vh]">
                     Leave a Message
@@ -398,7 +398,7 @@ function Home({ mode, setMode }) {
                   <div className="flex-row lg:flex-col pt-[0.75rem] lg:pt-[0.5rem] contact-me-form-flex-wrapper">
                     {/* Input forms */}
                     {/* Name input  */}
-                    <div className="contact-me-input-container flex-row lg:flex-col gap-[5%] lg:gap-[3.3rem]">
+                    <div className="contact-me-input-container flex-col sm:flex-row lg:flex-col gap-[5%] lg:gap-[3.3rem]">
                       <div className="w-full">
                         <label className="text-2xl font-bold contact-input-label" htmlFor="name">Name</label>
                           <input
@@ -410,7 +410,7 @@ function Home({ mode, setMode }) {
                       </div>
                       {/* Email input */}
                       <div className="w-full">
-                        <label className="text-2xl font-bold contact-input-label" htmlFor="email">Email</label>
+                        <label className="text-2xl font-bold contact-input-label pt-[1vh] sm:pt-0" htmlFor="email">Email</label>
                           <input
                           type="text"
                           name="email"
