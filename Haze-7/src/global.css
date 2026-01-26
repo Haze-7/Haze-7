@@ -112,6 +112,7 @@ background: var(--color-item-being-covered);
   --alt-border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-gold-gradient);
+  --alt-gradient-bg: var(--color-mineshaft-gradient);
 
    --input-bg: var(--color-ivory);
 
@@ -143,6 +144,8 @@ background: var(--color-item-being-covered);
   --alt-border-color: var(--color-whiterock);
 
   --gradient-bg: var(--color-mineshaft-gradient);
+  --alt-gradient-bg: var(--color-gold-gradient);
+
 
    --input-bg: var(--color-whiterock);
 }
@@ -773,6 +776,10 @@ background: var(--color-item-being-covered);
 
 .gradient-bg {
   background: var(--gradient-bg);
+}
+
+.alt-gradient-bg {
+  background: var(--alt-gradient-bg);
 }
 
 /* Hero Section */
@@ -1540,7 +1547,8 @@ background: var(--color-item-being-covered);
   flex-direction: column;
   padding-top: 35vh;
   align-items: center;
-  background: var(--gradient-bg);
+  /* background: var(--gradient-bg); */
+  background: var(--alt-gradient-bg);
   height: 60rem;
   width: 100%;
 }
