@@ -126,7 +126,6 @@ background: var(--color-item-being-covered);
   /* Need to be backwords ( navbar opposite of page bg) */
   --navbar-gradient: var(--color-dark-gradient); 
   --navbar-dropdown-gradient: var(--color-dark-gradient);
-  --mini-navbar-dropdown-gradient: var(--color-mineshaft-gradient);
   --bg-image: url("/backgrounds/light-sand.svg");
   --logo-fill-color: var(--color-whiterock);
   --secondary-logo-fill-color: var(--color-barley);
@@ -669,22 +668,6 @@ background: var(--color-item-being-covered);
 .mini-navbar-dropdown-content:hover {
   transform: translateY(0);
 }
-/* .navbar-background-main {
-  z-index: -1;
-  backdrop-filter: blur(2rem);
-  border-radius: 1.5rem;
-  position: absolute;
-  inset: 0%;
-}
-
-.navbar-background {
-  z-index: -1;
-  backdrop-filter: blur(2rem);
-  border-radius: 1.5rem;
-  inset: 0%;
-  background: var(--navbar-gradient);
-  position: absolute;
-} */
 
 .mini-navbar-dropdown-container {
   background-color: transparent;
