@@ -34,7 +34,7 @@ function Navbar({ mode, setMode }) {
     return (
       <>
         <div className="navbar-main font-protokoll">
-          <div className="navbar-background-main"></div>
+         <div className="navbar-background-main"></div>
           <div className="navbar-background"></div>
             <div className="navbar-content-container">
               {/*               
@@ -536,9 +536,13 @@ function Navbar({ mode, setMode }) {
                           </div>
                           {/*Mini Dropdown Content */}
                           <div className="mini-navbar-dropdown-container top-[7.2rem]">
-                            <div className={`mini-navbar-dropdown-content
+                            <div className={`mini-navbar-dropdown-content relative
                             ${openMiniDropdown === "about" ? "block" : "group-hover:block hidden"}`}
                             >
+
+                            {/* Background layers */}
+                            <div className="navbar-background-main absolute inset-0 -z-10"></div>
+                            
                              <div className="mini-dropdown-menu-content">
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
                                   <div className="dropdown-menu-entry">
@@ -560,7 +564,7 @@ function Navbar({ mode, setMode }) {
                                     Learn More
                                   </div>
                                 </div>
-                              </div>
+                             </div>
                             </div>
                           </div>
                         </div>
@@ -577,6 +581,9 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content 
                               ${openMiniDropdown === "experience" ? "block" : "group-hover:block hidden"}`}
                             >
+                            {/* Background layers */}
+                            <div className="navbar-background-main absolute inset-0 -z-10"></div>
+                              
                               <div className="mini-dropdown-menu-content">
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
                                   <div className="dropdown-menu-entry">
@@ -612,6 +619,9 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content
                               ${openMiniDropdown === "projects" ? "block" : "group-hover:block hidden"}`}
                             >
+                            {/* Background layers */}
+                            <div className="navbar-background-main absolute inset-0 -z-10"></div>
+
                               <div className="mini-dropdown-menu-content">
                                 {/* Left side Project Menu */}
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
@@ -651,6 +661,10 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content
                               ${openMiniDropdown === "contact" ? "block" : "group-hover:block hidden"}`}                            
                             >
+
+                            {/* Background layers */}
+                            <div className="navbar-background-main absolute inset-0 -z-10"></div>
+                                                          
                               <div className="mini-dropdown-menu-content">
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
                                   <div className="dropdown-menu-entry">
@@ -712,9 +726,9 @@ function Navbar({ mode, setMode }) {
                           </Link>
                         </div>
                       </div>
-                    </div>
                   </div>
-            </div>
+                </div>
+          </div>
         </div>
       </>
     )

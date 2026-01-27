@@ -37,6 +37,7 @@
   /* --color-light-gradient: linear-gradient(98.78deg, #D7C9AE 7.48%, #716A5B 92.38%); */
   --color-gold-gradient: linear-gradient(98.78deg, #A58763 7.48%, #716A5B 92.38%);
   --color-mineshaft-gradient: linear-gradient(98.78deg, #2D2D2D 7.48%, #444444 92.38%);
+
 }
 
 /* Scrollbar hidden in elements utlity classes */
@@ -125,7 +126,7 @@ background: var(--color-item-being-covered);
   /* Need to be backwords ( navbar opposite of page bg) */
   --navbar-gradient: var(--color-dark-gradient); 
   --navbar-dropdown-gradient: var(--color-dark-gradient);
-
+  --mini-navbar-dropdown-gradient: var(--color-mineshaft-gradient);
   --bg-image: url("/backgrounds/light-sand.svg");
   --logo-fill-color: var(--color-whiterock);
   --secondary-logo-fill-color: var(--color-barley);
@@ -668,6 +669,22 @@ background: var(--color-item-being-covered);
 .mini-navbar-dropdown-content:hover {
   transform: translateY(0);
 }
+/* .navbar-background-main {
+  z-index: -1;
+  backdrop-filter: blur(2rem);
+  border-radius: 1.5rem;
+  position: absolute;
+  inset: 0%;
+}
+
+.navbar-background {
+  z-index: -1;
+  backdrop-filter: blur(2rem);
+  border-radius: 1.5rem;
+  inset: 0%;
+  background: var(--navbar-gradient);
+  position: absolute;
+} */
 
 .mini-navbar-dropdown-container {
   background-color: transparent;
@@ -675,14 +692,12 @@ background: var(--color-item-being-covered);
   position: absolute;
   right: 1.5rem;
   left: 1.5rem;
-  /* top: 3.75rem; */
   height: 0.4rem; 
   max-width: 83rem;
   opacity: 0;
   visibility: hidden;
   padding: 0 1.5rem 0 1.5rem;
 }
-
 
 .mini-navbar-dropdown-content {
   background: var(--navbar-dropdown-gradient);
