@@ -285,7 +285,7 @@ function Navbar({ mode, setMode }) {
                               {/* Right Side Project Images */}
                               {/* Should I add the option to navigate left to right to add more options */}
                               <div className="dropdown-projects-display">
-                                <Link to="/UnderConstruction" className="flex">
+                                <Link to="https://bridge-lac.vercel.app/" className="flex">
                                   <div className="dropdown-projects-display-entry"> {/* wrapper */}
                                     <img src={DeadmanProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img> {/* Img  inset-0 w-full h-full object-cover rounded-xl*/}
                                       {/*Blur overlay */}
@@ -295,11 +295,12 @@ function Navbar({ mode, setMode }) {
                                   <p className="text-lg absolute p-[1rem] text-akaroa">Deadman's Hand</p>                                     
                                   {/*Bottom Text Description  */}
                                   <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
-                                    Online Gambling / Gatcha Game for Education
-                                    Online Gambling / Gatcha Game for Education
+                                    Educational Online Gambling / Gatcha Simulation Game
+
+                                    
                                   </p>                               
                                 </Link>
-                                <Link to="/UnderConstruction" className="flex">                         
+                                <Link to="https://css-style-guide-hchias2lsu-gmailcoms-projects.vercel.app/" className="flex">                         
                                   <div className="dropdown-projects-display-entry">
                                     <img src={CSGProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img>
                                     <div className="dropdown-projects-display-entry-blur"></div> 
@@ -312,7 +313,7 @@ function Navbar({ mode, setMode }) {
                                     Measurement Rulers for scaling elements
                                   </p> 
                                 </Link> 
-                                <Link to="/UnderConstruction" className="flex"> 
+                                <Link to="https://www.suni-travel.com/" className="flex"> 
                                   <div className="dropdown-projects-display-entry">
                                     <img src={SuniProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img>
                                     <div className="dropdown-projects-display-entry-blur"></div> 
