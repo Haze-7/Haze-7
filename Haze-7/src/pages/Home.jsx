@@ -279,7 +279,7 @@ function Home({ mode, setMode }) {
                       <Link to="https://github.com/CSC-3380-Fall-2024/Team-19" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center ">
                         Github
                       </Link>
-                      <Link to="/UnderConstruction" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
+                      <Link to="https://www.suni-travel.com/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
                         Live Demo
                       </Link>
                     </div>
