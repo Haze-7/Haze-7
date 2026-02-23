@@ -15,6 +15,10 @@ import CSGPreview from "/images/csg-preview.svg";
 import SuniPreview from "/images/suni-preview.svg"; 
 import AboutMeImage from "/images/haze-about-me-pic.jpg";
 
+import SuniProject from "/images/suni.svg" 
+import DeadmanProject from "/images/deadman.svg" 
+import CSGProject from "/images/csg.svg" 
+
 import OlolImage from "/images/olol.svg";
 import LsuIts from "/images/lsu-its.svg";
 import BarberImage from "/images/barber.svg";
@@ -258,30 +262,67 @@ function Home({ mode, setMode }) {
                     </div>
                   </div>
                   {/* Project Entry 3 */}
-                  <div className="projects-entry col-span-full lg:col-span-1 rounded-xl gradient-bg max-h-[100%] md:max-h-[39rem] lg:max-h-[100%]">
-                    {/* Project Image */}
-                    <div className="projects-entry-image max-h-[100%] md:max-h-[48%] lg:max-h-[50%]">
-                        <img src={SuniPreview} alt="Suni Project Image" className="w-full md:w-[98%] lg:w-full h-full md:h-[97%] lg:h-full object-cover rounded-xl max-h-[5rem] min-h-[12rem] md:max-h-none md:min-h-0 lg:max-h-[5rem] lg:min-h-[12rem] "/>
-                    </div>
-                    {/* Project Title */}
-                    <div className="projects-entry-title font-bold">
-                      Suni
-                    </div>
-                    {/* Project Description */}
-                    <div className="projects-entry-description overflow-auto scrollbar-hidden rounded-xl max-h-[9rem] md:max-h-[4%] lg:max-h-[8rem] xl:max-h-[8rem] md:min-h-[24%] lg:min-h-0 ">
-                     Suni is a responsive, full stack web application that enables users to share their vacation preferences with our Suni Algorithm 
-                     to automatically schedule their itinerary based on budget, weather conditions, and practical time constraints. 
-                     This data is represented on an interactive calendar and budget wheel, which dynamically displays weather conditions, 
-                     provides access to relavent businesses, and creates a dynamic budget wheel for tracking spending by category.
-                    </div>
-                    {/* Buttons */}
-                    <div className="flex flex-row gap-[7%] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[10%] mx-[1.6rem] my-[1rem] justify-center items-center font-semibold">
-                      <Link to="https://github.com/CSC-3380-Fall-2024/Team-19" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center ">
-                        Github
+                  <div className=" relative z-10">
+                  <img src={DeadmanProject} alt="BG Img" className="absolute inset-0 w-full h-full object-cover -z-10 rounded-4xl"></img>
+                  <div className="dropdown-projects-display-entry-blur"></div> 
+                      <Link to="/Deadman" className="projects-gradient-entry-title font-tungsten transition-none absolute mt-[5%] mx-[7%] text-center">
+                        Deadman's Hand
                       </Link>
-                      <Link to="https://www.suni-travel.com/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
-                        Live Demo
-                      </Link>
+                      {/* <img src={DeadmanProject} alt="BG Img" className="inset-0 mt-[10%] -z-10 rounded-4xl"></img> */}
+                      {/*Blur overlay */}
+                      {/* <div className="dropdown-projects-display-entry-blur"></div>  */}
+                      <div className="text-white text-2xl mt-[50%] w-[70%]">
+                        Deadman's Hand Project Description Short\
+                        Deadman's hnad Projects
+                      </div>
+                      <div className="flex flex-row w-full mt-[10%] gap-[10%] justify-center text-2xl">
+                          <button className="flex bg-[var(--secondary-button-color)] text-[var(--secondary-button-text-color)] w-[40%] h-auto p-[1rem] rounded-3xl justify-center cursor-pointer hover:bg-[var(--primary-button-color)] hover:text-[var(--primary-button-text-color)]">
+                              Calendar
+                          </button>
+                          <button className="flex bg-[var(--secondary-button-color)] text-[var(--secondary-button-text-color)] w-[40%] h-auto p-[1rem] rounded-3xl justify-center cursor-pointer hover:bg-[var(--primary-button-color)] hover:text-[var(--primary-button-text-color)]">
+                              Budget
+                          </button>
+                      </div>
+                  </div>
+                  {/*  */}
+                  <div className="w-full h-[30rem] rounded-4xl text-2xl relative z-10 border-4 border-gold">
+                    <img src={DeadmanProject} alt="BG Img" className="absolute inset-0 w-full h-full object-cover -z-10 rounded-3xl"></img>
+                    
+                    <div className="text-4xl mt-[7%] flex justify-center font-bold">
+                      Deadman's Hand 
+                    </div>
+                    <div className="mt-[53%] ml-[5%]">
+                      Test Paragraph for explanation
+                      Test Paragraph for explanation
+                      Test Paragraph for explanation
+                    </div>
+                    <div className="flex flex-row w-full mt-[5%] gap-[10%] justify-center text-2xl">
+                        <button className="flex bg-[var(--secondary-button-color)] text-[var(--secondary-button-text-color)] w-[40%] h-auto p-[1rem] rounded-3xl justify-center cursor-pointer hover:bg-[var(--primary-button-color)] hover:text-[var(--primary-button-text-color)]">
+                            Calendar
+                        </button>
+                        <button className="flex bg-[var(--secondary-button-color)] text-[var(--secondary-button-text-color)] w-[40%] h-auto p-[1rem] rounded-3xl justify-center cursor-pointer hover:bg-[var(--primary-button-color)] hover:text-[var(--primary-button-text-color)]">
+                            Budget
+                        </button>
+                    </div>                        
+                  </div>
+                  <div className="w-full h-[30rem] gradient-bg rounded-4xl shadow-lg projects-gradient-entry">
+                    <Link to="/Deadman" className="projects-gradient-entry-title font-tungsten transition-none absolute mt-[1%] ">
+                      Deadman's Hand
+                    </Link>
+                    {/* <img src={DeadmanProject} alt="BG Img" className="inset-0 rounded-t-xl w-full h-[50%] object-cover"></img> */}
+                    <img src={DeadmanPreview} alt="Deadman's Project Image" className="w-full h-[50%] object-cover rounded-t-xl max-h-[20rem] min-h-[12rem] "/>
+                    <div className="text-xl flex mx-[5%]">
+                      The CSG (CSS Style Guide) is my place to store my own custom component library, notes resources, and development techniques.
+                    </div>
+                    <div className="rounded-b-xl h-[20%] w-full text-xl">
+                      <div className="flex flex-row gap-[7%] md:gap-[1.25rem] lg:gap-[1rem] xl:gap-[10%] mx-[1.6rem] my-[1rem] justify-center items-center font-semibold">
+                        <Link to="https://github.com/CatherineRodriquez04/BRIDGE" className="projects-primary-button primary-text-color rounded-2xl flex items-center justify-center ">
+                          GitHub
+                        </Link>
+                        <Link to="https://bridge-lac.vercel.app/" className="projects-secondary-button secondary-text-color rounded-2xl flex items-center justify-center ">
+                          Live Demo
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
