@@ -23,23 +23,23 @@ const projects = [
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "Real-time weather dashboard with 7-day forecasts, interactive radar maps, and historical temperature graphs.",
-    tags: ["React", "D3.js", "OpenWeather API"],
+    title: "Suni: The Travel Companion",
+    description: "Suni Algorithm for planning travel and iteneraries. Plan your next vacation today!",
+    tags: ["React", "Django", "OpenWeather API"],
     image: "/images/suni-preview.svg",
-    year: "2024",
+    year: "2026",
     category: "Web App",
     githubUrl: "https://github.com/Haze-7",
     liveUrl: "https://github.com/Haze-7",
   },
   {
     id: 4,
-    title: "TaskFlow",
-    description: "Kanban-style project management with drag-and-drop columns, real-time collaboration, and priority tagging.",
+    title: "OrchestrAI",
+    description: "AI Orchestrator model that organizes, interacts with, and automatically connects users to vendors. Integrated GUI for adding new vendors, making project scalable for future acquisitions/partners. Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing.",
     tags: ["React", "Firebase", "DnD Kit"],
-    image: "/images/project-4.jpg",
-    year: "2024",
-    category: "Productivity",
+    image: "/images/orchestrai.svg",
+    year: "2025",
+    category: "AI Connectivity",
     githubUrl: "https://github.com/Haze-7",
     liveUrl: "https://github.com/Haze-7",
   },
@@ -53,33 +53,12 @@ const projects = [
     category: "Creative",
     githubUrl: "https://github.com/Haze-7",
     liveUrl: "https://github.com/Haze-7",
-  },
-  {
-    id: 6,
-    title: "Sojsld",
-    description: "Music discovery platform that generates personalized playlists based on listening habits and mood analysis.",
-    tags: ["React", "Spotify API", "Tailwind CSS"],
-    image: "/images/project-6.jpg",
-    year: "2024",
-    category: "Creative",
-    githubUrl: "https://github.com/Haze-7",
-    liveUrl: "https://github.com/Haze-7",
-  },
+  }
 ];
-
-/*
-  Grid layout (3 cols, 2 rows × 420px):
-
-  col →   1              2              3
-  row 1  [ Deadman's Hand (col 1-2) ][ CSS Style Guide ]
-  row 2  [ TaskFlow ][ SoundSpace ]  [ Weather         ]
-
-  Col 3 stacks naturally — one card per row, each gets full 420px.
-*/
 
 function Card({ project }) {
   return (
-    <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+    <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <div className="relative min-h-0 flex-1 overflow-hidden">
         <img
           src={project.image}
@@ -129,14 +108,14 @@ export function BentoMasonry() {
     <section id="Projects" className="md:py-24">
       <div className="mx-auto max-w-6xl px-6">
 
-        {/* Desktop grid — edit gridColumn/gridRow to rearrange cards */}
-        <div className="hidden md:grid grid-cols-3 gap-5" style={{ gridTemplateRows: "420px 420px 420px" }}>
+        {/* Desktop grid — edit gridColumn/gridRow to rearrange cards */}          
+        <div className="hidden md:grid grid-cols-3 gap-5" style={{ gridTemplateRows: "420px 420px" }}> {/* Add another 420px after to add 3rd row */} 
           <div style={{ gridColumn: "1 / 3", gridRow: "1" }}><Card project={p1} /></div>
           <div style={{ gridColumn: "3",     gridRow: "1" }}><Card project={p2} /></div>
           <div style={{ gridColumn: "1",     gridRow: "2" }}><Card project={p4} /></div>
-          <div style={{ gridColumn: "2",     gridRow: "2" }}><Card project={p5} /></div>
-          <div style={{ gridColumn: "3",     gridRow: "2" }}><Card project={p3} /></div>
-          <div style={{ gridColumn: "1 / 4", gridRow: "3" }}><Card project={p6} /></div>
+          {/* <div style={{ gridColumn: "2 ",     gridRow: "2" }}><Card project={p5} /></div> */}
+          <div style={{ gridColumn: "2 / 4",     gridRow: "2" }}><Card project={p3} /></div>
+          {/* <div style={{ gridColumn: "1 / 4", gridRow: "3" }}><Card project={p6} /></div> */}
 
         </div>
 
