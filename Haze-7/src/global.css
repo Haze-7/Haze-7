@@ -118,7 +118,7 @@ background: var(--color-item-being-covered);
    --input-bg: var(--color-ivory);
 
   /* increase text size to reduce minimizing effect of dark text */
-   text-shadow: 0 0 0.5px currentColor; /* subtle halo = thicker appearance */
+   text-shadow: 0 0 0.5px currentColor;
 
 }
 
@@ -945,6 +945,10 @@ background: var(--color-item-being-covered);
 /* text-[1.3rem] sm:text-[1.5rem] */
 
 /* Project Home Section */
+[data-theme="dark"] #Projects {
+  text-shadow: none;
+  -webkit-text-stroke: 0.15px currentColor;
+}
 
 .projects-title {
   color: var(--primary-text-color);
@@ -959,28 +963,121 @@ background: var(--color-item-being-covered);
 }
 
 /* Project Grid Container */
+.projects-card-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--border-color);
+  border-radius: 1rem;
+  transition-property: all;
+  transition-duration: 300ms;
+  background: var(--gradient-bg);
+  cursor: pointer;
+}
 
+.projects-card-container:hover {
+  transform: translateY(-0.25rem);
+}
 
-.projects-primary-button {
-  background: var(--primary-button-color);
-  height: 3.7rem;
-  width: 10rem;
+.projects-card-image-container {
+  position: relative;
+  min-height: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.projects-card-image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.projects-card-image-overlay-badge {
+  transition: 
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    backdrop-filter 200ms ease,
+    background-color 200ms ease;
+
+  will-change: transform;
+}
+
+.projects-card-image-overlay-badge:hover {
+  transform: translateY(-1.5px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+}
+
+.projects-card-content-container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 0.75rem;
+  padding: 1.25rem;
   color: var(--primary-button-text-color);
-  font-size: 1.1rem;
-  /* font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem); */
-  cursor: pointer;
 }
 
-.projects-secondary-button {
-  background: var(--secondary-button-color);
-  height: 3.7rem;
-  width: 10rem;
-  font-size: 1.1rem;
-  color: var(--secondary-button-text-color);
-  cursor: pointer;
+.projects-card-task {
+  /* background: var(--alt-gradient-bg); */
+  background-color: var(--secondary-button-text-color);
+  border-radius: 9999px;
+  border: 1.5px solid var(--primary-button-text-color);
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+  will-change: transform;
 }
 
-/* Experience Section */
+.projects-card-task:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+}
+
+.projects-card-button {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+   transition: 
+    opacity 0.2s ease-in-out, 
+    transform 0.2s ease, 
+    box-shadow 0.2s ease, 
+    background-color 0.2s ease;
+  will-change: transform, box-shadow; 
+}
+
+.projects-card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+  opacity: 0.9; /* optional, if you want subtle fade */
+}
+
+#projects-primary-button {
+  background-color: var(--secondary-button-color);
+  color: var(--primary-button-color);
+}
+
+#projects-secondary-button {
+  /* background-color: var(--secondary-button-color); */
+  color: var(--primary-button-text-color);
+}
+
+#projects-secondary-button:hover {
+  background: var(--secondary-button-text-color);
+  /* border-color: var(--border-color); */
+}
+
 
 .experience-title {
   font-size: 4rem;

@@ -58,41 +58,46 @@ const projects = [
 
 function Card({ project }) {
   return (
-    <div className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <div className="relative min-h-0 flex-1 overflow-hidden">
+    <div className="projects-card-container hover:shadow-xl group">
+      {/* Image Container */}
+      <div className="projects-card-image-container">
         <img
           src={project.image}
           alt={project.title}
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="projects-card-image transition-transform duration-700 group-hover:scale-105"
           loading="lazy"
         />
+        {/* Image overlay */}
         <div className="absolute top-3 left-3 right-3 flex justify-between">
-          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-neutral-900 backdrop-blur-sm">
+          <span className="projects-card-image-overlay-badge rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-neutral-900 backdrop-blur-sm">
             {project.category}
           </span>
-          <span className="rounded-full bg-black/50 px-3 py-1 text-xs text-white backdrop-blur-sm">
+          <span className="projects-card-image-overlay-badge rounded-full bg-black/50 px-3 py-1 text-xs text-white backdrop-blur-sm">
             {project.year}
           </span>
         </div>
       </div>
-
-      <div className="flex shrink-0 flex-col gap-3 p-5 gradient-bg">
-        <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
+      {/* Card Content Container */}
+      <div className="projects-card-content-container gradient-bg">
+        <h3 className="text-lg font-semibold text-foreground ">{project.title}</h3>
         <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
         <div className="flex flex-wrap gap-1.5">
           {project.tags.map((tag) => (
-            <span key={tag} className="rounded-full border border-border bg-secondary px-2.5 py-0.5 text-xs text-secondary-foreground">
+            <span key={tag} className="projects-card-task">
               {tag}
             </span>
           ))}
         </div>
+        {/* Button Section */}
         <div className="flex gap-3">
           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-foreground px-4 py-2.5 text-sm font-medium text-background hover:opacity-90">
+            id="projects-primary-button"
+            className="projects-card-button text-sm font-medium hover:opacity-90">
             <GithubIcon /> GitHub
           </a>
           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground hover:bg-secondary">
+            id="projects-secondary-button"
+            className="projects-card-button border text-sm font-medium hover:opacity-90">
             <ExternalLinkIcon /> Live Demo
           </a>
         </div>
@@ -101,7 +106,7 @@ function Card({ project }) {
   );
 }
 
-export function BentoMasonry() {
+export function BentoProjects() {
   const [p1, p2, p3, p4, p5, p6] = projects;
 
   return (
@@ -159,4 +164,4 @@ function ExternalLinkIcon() {
   );
 }
 
-export default BentoMasonry;
+export default BentoProjects;

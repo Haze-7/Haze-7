@@ -1,5 +1,5 @@
 import InfiniteScrollAnimation from "../components/InfiniteScrollAnimation.jsx"
-import BentoMasonry from "../components/BentoMasonry.jsx"
+import BentoProjects from "../components/BentoProjects.jsx"
 import {Link, useLocation} from "react-router-dom";
 
 import ProfilePic from "/images/haze-profile-pic.png" 
@@ -197,7 +197,7 @@ function Home({ mode, setMode }) {
                </div>
               </div>
             {/* Projects Display Grid*/}
-            <BentoMasonry></BentoMasonry>
+            <BentoProjects></BentoProjects>
 
               {/* Buttons (View More, access General Github) */}
               <div className="flex flex-row gap-[2rem] m-[1.5rem] py-[3rem] justify-center items-center font-semibold">
