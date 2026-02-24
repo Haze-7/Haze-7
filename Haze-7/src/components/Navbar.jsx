@@ -9,6 +9,13 @@ import SuniProject from "/images/suni.svg"
 import DeadmanProject from "/images/deadman.svg" 
 import CSGProject from "/images/csg.svg" 
 
+// import ThibodauxMainStreetImage from "/images/thibodaux-mainstreet.svg";
+import ThibodauxDowntownImage from "/images/thibodaux-downtown.svg";
+
+import CareerImg from "/images/career-img.svg";
+import DeathValley from "/images/death-valley.svg";
+
+
 
 function Navbar({ mode, setMode }) {
 
@@ -67,10 +74,10 @@ function Navbar({ mode, setMode }) {
 
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
-                              <Link to="/UnderConstruction" className="flex">
-                               <div className="dropdown-about-display-entry"> {/* wrapper */}
+                              <Link to="https://www.ci.thibodaux.la.us/" className="flex">
+                               <div className="dropdown-about-display-entry zoom-container"> {/* wrapper */}
                                 {/* fill w/ about image */}
-                                {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
+                                <img src={ThibodauxDowntownImage} className="dropdown-about-menu-img rounded-2xl object-cover zoom-target" alt="Image 1"></img>
                                   {/*Blur overlay */}
                                   <div className="dropdown-projects-display-entry-blur"></div> 
                                </div>
@@ -84,12 +91,12 @@ function Navbar({ mode, setMode }) {
                                     Where I'm From
                                   </div>
                                   <div className="dropdown-menu w-full ">
-                                    <div className="dropdown-about-menu-entry">
+                                    <Link to="https://www.ci.thibodaux.la.us/" className="dropdown-about-menu-entry">
                                       Thibodaux, LA
-                                    </div>
-                                    <div className="dropdown-about-menu-entry">
+                                    </Link>
+                                    <Link to="https://www.brla.gov/" className="dropdown-about-menu-entry">
                                       Baton Rouge, LA
-                                    </div>
+                                    </Link>
                                   </div>
                                 </div>
                               </div>
@@ -97,10 +104,10 @@ function Navbar({ mode, setMode }) {
 
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
-                              <Link to="/UnderConstruction" className="flex">
-                               <div className="dropdown-about-display-entry"> {/* wrapper */}
+                              <Link to="https://www.linkedin.com/in/hayes-chiasson-413955249/" className="flex">
+                               <div className="dropdown-about-display-entry zoom-container"> {/* wrapper */}
                                 {/* Fill w/ about image */}
-                                {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
+                                <img src={CareerImg} className="dropdown-about-menu-img rounded-2xl object-cover zoom-target" alt="Career Image"></img>
                                   {/*Blur overlay */}
                                   {/* <div className="dropdown-projects-display-entry-blur"></div>  */}
                                </div>
@@ -115,12 +122,12 @@ function Navbar({ mode, setMode }) {
                                     Career
                                   </div>
                                   <div className="dropdown-menu w-full">
-                                    <div className="dropdown-about-menu-entry">
+                                    <Link to="/UnderConstruction" className="dropdown-about-menu-entry">
                                       Aspirations
-                                    </div>
-                                    <div className="dropdown-about-menu-entry">
+                                    </Link>
+                                    <Link to="/UnderConstruction" className="dropdown-about-menu-entry">
                                       Fields Of Interest
-                                    </div>
+                                    </Link>
                                   </div>
                                 </div>
                               </div>
@@ -129,9 +136,9 @@ function Navbar({ mode, setMode }) {
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
                               <Link to="/UnderConstruction" className="flex">
-                               <div className="dropdown-about-display-entry"> {/* wrapper */}
+                               <div className="dropdown-about-display-entry zoom-container"> {/* wrapper */}
                                 {/* fill w/ about image */}
-                                {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
+                                <img src={DeathValley} className="dropdown-about-menu-img rounded-2xl object-cover zoom-target" alt="Interest Image"></img>
                                   {/*Blur overlay */}
                                   {/* <div className="dropdown-projects-display-entry-blur"></div>  */}
                                </div>
@@ -146,12 +153,12 @@ function Navbar({ mode, setMode }) {
                                     Interests / Hobbies
                                   </div>
                                   <div className="dropdown-menu w-full">
-                                    <div className="dropdown-about-menu-entry">
+                                    <Link to="/UnderConstruction" className="dropdown-about-menu-entry">
                                       Interests
-                                    </div>
-                                    <div className="dropdown-about-menu-entry">
+                                    </Link>
+                                    <Link to="/UnderConstruction" className="dropdown-about-menu-entry">
                                       Hobbies
-                                    </div>
+                                    </Link>
                                   </div>
                                 </div>
                               </div>
