@@ -198,18 +198,6 @@ function Home({ mode, setMode }) {
               </div>
             {/* Projects Display Grid*/}
             <BentoProjects></BentoProjects>
-
-              {/* Buttons (View More, access General Github) */}
-              <div className="flex flex-row gap-[2rem] m-[1.5rem] py-[3rem] justify-center items-center font-semibold">
-                {/* Link to projects page */}
-                <Link to="/UnderConstruction" className="hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
-                  View More
-                </Link>
-                  {/* Link to github home*/}
-                <Link to="https://github.com/Haze-7" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
-                  Github Home
-               </Link>
-              </div>
             </div>
           </section>
 

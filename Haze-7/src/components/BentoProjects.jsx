@@ -92,12 +92,12 @@ function Card({ project }) {
         <div className="flex gap-3">
           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
             id="projects-primary-button"
-            className="projects-card-button text-sm font-medium hover:opacity-90">
+            className="projects-card-button bump-effect text-sm font-medium hover:opacity-90">
             <GithubIcon /> GitHub
           </a>
           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
             id="projects-secondary-button"
-            className="projects-card-button border text-sm font-medium hover:opacity-90">
+            className="projects-card-button bump-effect border text-sm font-medium hover:opacity-90">
             <ExternalLinkIcon /> Live Demo
           </a>
         </div>
@@ -133,11 +133,11 @@ export function BentoProjects() {
 
         <div className="mt-14 flex flex-wrap justify-center gap-4">
           <a href="/UnderConstruction"
-            className="flex items-center gap-2 rounded-full bg-foreground px-7 py-3 text-sm font-semibold text-background hover:opacity-90">
+            className="bump-effect flex items-center gap-2 rounded-full bg-[var(--primary-button-color)] px-10 py-4 text-sm font-semibold text-background hover:opacity-90">
             View More <ExternalLinkIcon />
           </a>
           <a href="https://github.com/Haze-7" target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full border border-border bg-background px-7 py-3 text-sm font-semibold text-foreground hover:bg-secondary">
+            className="bump-effect flex items-center gap-2 rounded-full border-2 border-[var(--secondary-button-text-color)] px-9 py-4 text-sm font-semibold text-[var(--secondary-button-text-color)] hover:bg-[var(--secondary-text-color)] hover:text-[var(--primary-button-text-color)] hover:border-[var(--primary-button-text-color)]">
             <GithubIcon /> GitHub Home
           </a>
         </div>

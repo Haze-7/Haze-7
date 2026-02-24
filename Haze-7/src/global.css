@@ -963,6 +963,23 @@ background: var(--color-item-being-covered);
 }
 
 /* Project Grid Container */
+
+.bump-effect {
+  cursor: pointer;
+   transition: 
+    opacity 0.2s ease-in-out, 
+    transform 0.2s ease, 
+    box-shadow 0.2s ease, 
+    background-color 0.2s ease;
+  will-change: transform, box-shadow; 
+}
+
+.bump-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+  opacity: 0.9; /* optional, if you want subtle fade */
+}
+
 .projects-card-container {
   display: flex;
   flex-direction: column;
@@ -1049,18 +1066,6 @@ background: var(--color-item-being-covered);
   border-radius: 0.75rem;
   padding: 0.625rem 1rem;
   cursor: pointer;
-   transition: 
-    opacity 0.2s ease-in-out, 
-    transform 0.2s ease, 
-    box-shadow 0.2s ease, 
-    background-color 0.2s ease;
-  will-change: transform, box-shadow; 
-}
-
-.projects-card-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
-  opacity: 0.9; /* optional, if you want subtle fade */
 }
 
 #projects-primary-button {
@@ -1077,6 +1082,7 @@ background: var(--color-item-being-covered);
   background: var(--secondary-button-text-color);
   /* border-color: var(--border-color); */
 }
+
 
 
 .experience-title {
