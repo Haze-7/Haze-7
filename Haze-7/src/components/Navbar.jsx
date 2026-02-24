@@ -34,14 +34,14 @@ function Navbar({ mode, setMode }) {
     return (
       <>
         <div className="navbar-main font-protokoll">
-          <div className="navbar-background-main"></div>
+         <div className="navbar-background-main"></div>
           <div className="navbar-background"></div>
             <div className="navbar-content-container">
               {/*               
               <Link to="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
               </Link> */}
-              <a href="#Hero" className=" h-[3rem] w-[3rem]">
+              <a href="/" className=" h-[3rem] w-[3rem]">
                 <img src={HLogo} className=""></img>
               </a>
               <div className={`navbar-menu hidden nav:flex`}>
@@ -67,7 +67,7 @@ function Navbar({ mode, setMode }) {
 
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
-                              <Link to="/" className="flex">
+                              <Link to="/UnderConstruction" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
                                 {/* fill w/ about image */}
                                 {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
@@ -97,7 +97,7 @@ function Navbar({ mode, setMode }) {
 
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
-                              <Link to="/" className="flex">
+                              <Link to="/UnderConstruction" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
                                 {/* Fill w/ about image */}
                                 {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
@@ -128,7 +128,7 @@ function Navbar({ mode, setMode }) {
 
                             {/* Handle individual column of dropdown (top image, below list) */}
                              <div className="dropdown-about-section">
-                              <Link to="/" className="flex">
+                              <Link to="/UnderConstruction" className="flex">
                                <div className="dropdown-about-display-entry"> {/* wrapper */}
                                 {/* fill w/ about image */}
                                 {/* <img src="" className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt="Image 1"></img> */}
@@ -285,7 +285,7 @@ function Navbar({ mode, setMode }) {
                               {/* Right Side Project Images */}
                               {/* Should I add the option to navigate left to right to add more options */}
                               <div className="dropdown-projects-display">
-                                <Link to="/" className="flex">
+                                <Link to="https://bridge-lac.vercel.app/" className="flex">
                                   <div className="dropdown-projects-display-entry"> {/* wrapper */}
                                     <img src={DeadmanProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img> {/* Img  inset-0 w-full h-full object-cover rounded-xl*/}
                                       {/*Blur overlay */}
@@ -295,11 +295,12 @@ function Navbar({ mode, setMode }) {
                                   <p className="text-lg absolute p-[1rem] text-akaroa">Deadman's Hand</p>                                     
                                   {/*Bottom Text Description  */}
                                   <p className="dropdown-projects-display-entry-bottom-text absolute top-[15.2rem] pl-[1rem] w-[15rem]">
-                                    Online Gambling / Gatcha Game for Education
-                                    Online Gambling / Gatcha Game for Education
+                                    Educational Online Gambling / Gatcha Simulation Game
+
+                                    
                                   </p>                               
                                 </Link>
-                                <Link to="/" className="flex">                         
+                                <Link to="https://css-style-guide-hchias2lsu-gmailcoms-projects.vercel.app/" className="flex">                         
                                   <div className="dropdown-projects-display-entry">
                                     <img src={CSGProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img>
                                     <div className="dropdown-projects-display-entry-blur"></div> 
@@ -312,7 +313,7 @@ function Navbar({ mode, setMode }) {
                                     Measurement Rulers for scaling elements
                                   </p> 
                                 </Link> 
-                                <Link to="/" className="flex"> 
+                                <Link to="https://www.suni-travel.com/" className="flex"> 
                                   <div className="dropdown-projects-display-entry">
                                     <img src={SuniProject} className="dropdown-projects-display-entry-img rounded-2xl object-cover" alt=""></img>
                                     <div className="dropdown-projects-display-entry-blur"></div> 
@@ -528,7 +529,7 @@ function Navbar({ mode, setMode }) {
                   <div className={`flex flex-col items-center mx-auto w-full gap-[.8rem] pt-[.5rem]`}>
                         {/*Mini About Me */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("about")}>
-                          <Link to="/">
+                          <Link to="/UnderConstruction">
                             About Me 
                           </Link>   
                           <div className="navbar-chevron">
@@ -536,9 +537,13 @@ function Navbar({ mode, setMode }) {
                           </div>
                           {/*Mini Dropdown Content */}
                           <div className="mini-navbar-dropdown-container top-[7.2rem]">
-                            <div className={`mini-navbar-dropdown-content
+                            <div className={`mini-navbar-dropdown-content relative
                             ${openMiniDropdown === "about" ? "block" : "group-hover:block hidden"}`}
                             >
+
+                            {/* Background layers */}
+                            <div className="navbar-background-main absolute inset-0 -z-10"></div>
+                            
                              <div className="mini-dropdown-menu-content">
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
                                   <div className="dropdown-menu-entry">
@@ -560,13 +565,13 @@ function Navbar({ mode, setMode }) {
                                     Learn More
                                   </div>
                                 </div>
-                              </div>
+                             </div>
                             </div>
                           </div>
                         </div>
                         {/*Mini Experience */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("experience")}>
-                          <Link to="/">
+                          <Link to="/UnderConstruction">
                             Experience
                           </Link>
                           <div className="navbar-chevron">
@@ -577,6 +582,9 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content 
                               ${openMiniDropdown === "experience" ? "block" : "group-hover:block hidden"}`}
                             >
+                            {/* Background layers */}
+                            <div className="navbar-background-main absolute inset-0 -z-10"></div>
+                              
                               <div className="mini-dropdown-menu-content">
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
                                   <div className="dropdown-menu-entry">
@@ -601,7 +609,7 @@ function Navbar({ mode, setMode }) {
                         </div>
                         {/* Projects */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("projects")}>
-                          <Link to="/">
+                          <Link to="/UnderConstruction">
                             Projects
                           </Link>
                           <div className="navbar-chevron">
@@ -612,6 +620,9 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content
                               ${openMiniDropdown === "projects" ? "block" : "group-hover:block hidden"}`}
                             >
+                            {/* Background layers */}
+                            <div className="navbar-background-main absolute inset-0 -z-10"></div>
+
                               <div className="mini-dropdown-menu-content">
                                 {/* Left side Project Menu */}
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
@@ -640,7 +651,7 @@ function Navbar({ mode, setMode }) {
                         </div>
                         {/* Contact Me */}
                         <div className="mini-navbar-entry" onClick={() => toggleMiniDropdown("contact")}>
-                          <Link to="/">
+                          <Link to="/UnderConstruction">
                             Contact Me
                           </Link>
                           <div className="navbar-chevron">
@@ -651,6 +662,10 @@ function Navbar({ mode, setMode }) {
                             <div className={`mini-navbar-dropdown-content
                               ${openMiniDropdown === "contact" ? "block" : "group-hover:block hidden"}`}                            
                             >
+
+                            {/* Background layers */}
+                            <div className="navbar-background-main absolute inset-0 -z-10"></div>
+                                                          
                               <div className="mini-dropdown-menu-content">
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
                                   <div className="dropdown-menu-entry">
@@ -712,9 +727,9 @@ function Navbar({ mode, setMode }) {
                           </Link>
                         </div>
                       </div>
-                    </div>
                   </div>
-            </div>
+                </div>
+          </div>
         </div>
       </>
     )
