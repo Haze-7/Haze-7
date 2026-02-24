@@ -14,6 +14,7 @@ import Footer from './components/Footer';
 
 //Pages
 import Home from './pages/Home'
+import UnderConstruction from './pages/UnderConstruction';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Navbar mode={mode} setMode={setMode} />
         <Routes>
           <Route path="/" element={<Home mode={mode} setMode={setMode} />} />
+          <Route path="/UnderConstruction" element={<UnderConstruction />} />
         </Routes>
         <Footer toggleSecretBg={toggleSecretBg} />
       </BrowserRouter>

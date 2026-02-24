@@ -24,10 +24,10 @@ function Footer({toggleSecretBg}) {
               <div className="flex flex-col md:flex-row md:flex-nowrap">
                 {/*Column 1 */}
                 <div className="flex flex-col">
-                  <a href="/" className="footer-info font-semibold">
+                  <a href="/UnderConstruction" className="footer-info font-semibold">
                   Baton Rouge, La 70808
                   </a>
-                  <a href="/" className="footer-info font-semibold">
+                  <a href="/UnderConstruction" className="footer-info font-semibold">
                   United States
                   </a>
                   <a href="#Contact-Me" className="footer-info font-semibold mt-[1rem]">
@@ -42,16 +42,16 @@ function Footer({toggleSecretBg}) {
                   <a href="https://bridge-lac.vercel.app/" className="footer-info font-semibold">
                     Deadman's Hand
                   </a>
-                  <a href="/" className="footer-info font-semibold">
+                  <a href="/UnderConstruction" className="footer-info font-semibold">
                     OrchestrAI
                   </a>
                 </div>
                 {/* Column 3 */}
                 <div className="hidden lg:flex flex-col pl-[1vw]">
-                  <a href="/" className="footer-info font-semibold">
+                  <a href="/UnderConstruction" className="footer-info font-semibold">
                     BARBER
                   </a>
-                  <a href="/" className="footer-info font-semibold">
+                  <a href="/UnderConstruction" className="footer-info font-semibold">
                     Suni: The Travel Companion
                   </a>
                 </div>
