@@ -122,7 +122,7 @@ export function BentoProjects() {
       <div className="mx-auto max-w-6xl px-6">
 
         {/* Desktop grid — edit gridColumn/gridRow to rearrange cards */}          
-        <div className="hidden md:grid grid-cols-3 gap-5" style={{ gridTemplateRows: "420px 420px" }}> {/* Add another 420px after to add 3rd row */} 
+        <div className="hidden md:grid grid-cols-3 gap-5" style={{ gridTemplateRows: "420px 500px" }}> {/* Add another 420px after to add 3rd row */} 
           <div style={{ gridColumn: "1 / 3", gridRow: "1" }}><Card project={p1} /></div>
           <div style={{ gridColumn: "3",     gridRow: "1" }}><Card project={p2} /></div>
           <div style={{ gridColumn: "1",     gridRow: "2" }}><Card project={p4} /></div>
