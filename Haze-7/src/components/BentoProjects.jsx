@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const projects = [
   {
     id: 1,
@@ -30,7 +32,7 @@ const projects = [
     year: "2026",
     category: "Web App",
     githubUrl: "https://github.com/Haze-7",
-    liveUrl: "https://github.com/Haze-7",
+    liveUrl: "https://www.suni-travel.com/",
   },
   {
     id: 4,
@@ -43,18 +45,24 @@ const projects = [
     githubUrl: "https://github.com/Haze-7",
     liveUrl: "https://github.com/Haze-7",
   },
-  {
-    id: 5,
-    title: "SoundSpace",
-    description: "Music discovery platform that generates personalized playlists based on listening habits and mood analysis.",
-    tags: ["React", "Spotify API", "Tailwind CSS"],
-    image: "/images/project-5.jpg",
-    year: "2024",
-    category: "Creative",
-    githubUrl: "https://github.com/Haze-7",
-    liveUrl: "https://github.com/Haze-7",
-  }
+  // Use as template / idea for adding future projects (1)
+  // {
+  //   id: 5,
+  //   title: "SoundSpace",
+  //   description: "Music discovery platform that generates personalized playlists based on listening habits and mood analysis.",
+  //   tags: ["React", "Spotify API", "Tailwind CSS"],
+  //   image: "/images/project-5.jpg",
+  //   year: "2024",
+  //   category: "Creative",
+  //   githubUrl: "https://github.com/Haze-7",
+  //   liveUrl: "https://github.com/Haze-7",
+  // }
 ];
+
+// Add new project Step:
+// 1. Add project details to the `projects` array above (id, title, description, tags, image path, year, category, githubUrl, liveUrl).
+// 2. Add a new <Card project={pX} /> in the Desktop grid section below (replace pX with the new project variable, e.g., p5).
+//3. (Optional) Adjust grid layout by modifying gridColumn/gridRow values for existing and new cards in the Desktop grid section to achieve desired arrangement.
 
 function Card({ project }) {
   return (
@@ -107,7 +115,7 @@ function Card({ project }) {
 }
 
 export function BentoProjects() {
-  const [p1, p2, p3, p4, p5, p6] = projects;
+  const [p1, p2, p3, p4] = projects; //. add new p# project here
 
   return (
     <section id="Projects" className="md:py-24">
@@ -120,7 +128,7 @@ export function BentoProjects() {
           <div style={{ gridColumn: "1",     gridRow: "2" }}><Card project={p4} /></div>
           {/* <div style={{ gridColumn: "2 ",     gridRow: "2" }}><Card project={p5} /></div> */}
           <div style={{ gridColumn: "2 / 4",     gridRow: "2" }}><Card project={p3} /></div>
-          {/* <div style={{ gridColumn: "1 / 4", gridRow: "3" }}><Card project={p6} /></div> */}
+          {/* <div style={{ gridColumn: "1 / 4", gridRow: "3" }}><Card project={p6} /></div>  3. Create and place new card object of new project */}
 
         </div>
 
@@ -132,10 +140,10 @@ export function BentoProjects() {
         </div>
 
         <div className="mt-14 flex flex-wrap justify-center gap-4">
-          <a href="/UnderConstruction"
+          <Link to="/UnderConstruction"
             className="bump-effect flex items-center gap-2 rounded-full bg-[var(--primary-button-color)] px-10 py-4 text-sm font-semibold text-background hover:opacity-90">
             View More <ExternalLinkIcon />
-          </a>
+          </Link>
           <a href="https://github.com/Haze-7" target="_blank" rel="noopener noreferrer"
             className="bump-effect flex items-center gap-2 rounded-full border-2 border-[var(--secondary-button-text-color)] px-9 py-4 text-sm font-semibold text-[var(--secondary-button-text-color)] hover:bg-[var(--secondary-text-color)] hover:text-[var(--primary-button-text-color)] hover:border-[var(--primary-button-text-color)]">
             <GithubIcon /> GitHub Home

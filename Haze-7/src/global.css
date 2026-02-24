@@ -1055,6 +1055,8 @@ background: var(--color-item-being-covered);
 .projects-card-task:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+  background-color:var(--primary-button-text-color);
+  color: var(--primary-button-color);
 }
 
 .projects-card-button {
