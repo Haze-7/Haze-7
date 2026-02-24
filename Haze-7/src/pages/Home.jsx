@@ -262,7 +262,7 @@ function Home({ mode, setMode }) {
           {/* Contact Me Section */}
           <section id="Contact-Me" className="bg-sand h-[65rem] lg:h-[70rem]">
             <div className="text-3rem">
-              {/* Projects Title */}
+              {/* Contact Me Title */}
               <div className="flex justify-center">
                 <div className="projects-title font-bold">
                  Contact Me
