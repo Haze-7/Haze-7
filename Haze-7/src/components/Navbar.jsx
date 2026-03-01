@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import {Link, useLocation} from "react-router-dom";
+import {Link, Links, useLocation} from "react-router-dom";
 
 import DarkLightSwitch from "./DarkLightSwitch.jsx";
 
@@ -58,8 +58,6 @@ function Navbar({ mode, setMode }) {
                     <div className="md:nav-entry-setup">
                       {/* About Me */}
                       <div className="navbar-entry">
-                        {/* <Link to="/"> 
-                            </Link>*/}
                         <a href="#About-Me">
                           About Me  
                         </a>
@@ -168,9 +166,7 @@ function Navbar({ mode, setMode }) {
                         </div>
                       </div>
                       {/* Experience */}
-                      <div className="navbar-entry">
-                        {/* <Link to="/"> 
-                            </Link>*/}                        
+                      <div className="navbar-entry">                       
                         <a href="#Experience">
                           Experience
                         </a>
@@ -188,15 +184,15 @@ function Navbar({ mode, setMode }) {
                                   Work
                                 </div>
                                 <div className="dropdown-menu w-full">
-                                  <div className="dropdown-menu-entry">
+                                  <Link to="/#Experience" className="dropdown-menu-entry">
                                     Current Employment
-                                  </div>
-                                  <div className="dropdown-menu-entry ">
+                                  </Link>
+                                  <Link to="/#Experience" className="dropdown-menu-entry ">
                                     Previous Employment
-                                  </div>
-                                  <div className="dropdown-menu-entry">
+                                  </Link>
+                                  <Link to="/#Experience" className="dropdown-menu-entry">
                                     Relevant Skills
-                                  </div>
+                                  </Link>
                                   {/* <div className="dropdown-menu-entry">
                                     Backend
                                   </div>
@@ -211,21 +207,21 @@ function Navbar({ mode, setMode }) {
                                   Education
                                 </div>
                                 <div className="dropdown-menu w-full">
-                                  <div className="dropdown-menu-entry">
+                                  <Link to="/UnderConstruction" className="dropdown-menu-entry">
                                     My Major
-                                  </div>
-                                  <div className="dropdown-menu-entry ">
+                                  </Link>
+                                  <Link to="/UnderConstruction" className="dropdown-menu-entry ">
                                     My Minor
-                                  </div>
-                                  <div className="dropdown-menu-entry">
+                                  </Link>
+                                  <Link to="/UnderConstruction" className="dropdown-menu-entry">
                                     Unofficial Transcript
-                                  </div>
-                                  <div className="dropdown-menu-entry">
+                                  </Link>
+                                  {/* <div className="dropdown-menu-entry">
                                     Relevant Coursework
                                   </div>
                                   <div className="dropdown-menu-entry">
                                     LSU
-                                  </div>
+                                  </div> */}
                                 </div>
                               </div>
 
@@ -235,18 +231,18 @@ function Navbar({ mode, setMode }) {
                                   Personal
                                 </div>
                                 <div className="dropdown-menu w-full">
-                                  <div className="dropdown-menu-entry">
+                                  <Link to="/UnderConstruction" className="dropdown-menu-entry">
                                     Interests
-                                  </div>
-                                  <div className="dropdown-menu-entry ">
+                                  </Link>
+                                  <Link to="/UnderConstruction" className="dropdown-menu-entry ">
                                     Projects
-                                  </div>
-                                 <div className="dropdown-menu-entry ">
+                                  </Link>
+                                 <Link to="/UnderConstruction" className="dropdown-menu-entry ">
                                     Design
-                                  </div>                                  
-                                  <div className="dropdown-menu-entry">
+                                  </Link>                                  
+                                  <Link to="/UnderConstruction" className="dropdown-menu-entry">
                                     Future Plans
-                                  </div>
+                                  </Link>
                                 </div>
                               </div>
                             </div>
@@ -254,9 +250,7 @@ function Navbar({ mode, setMode }) {
                         </div>
                       </div>
                       {/* Projects */}
-                      <div className="navbar-entry ">
-                        {/* <Link to="/"> 
-                            </Link>*/}                        
+                      <div className="navbar-entry ">                      
                       <a href="#Projects">
                           Projects
                       </a>
@@ -269,24 +263,24 @@ function Navbar({ mode, setMode }) {
                             <div className="dropdown-projects-content">
                               {/* Left side Project Menu */}
                               <div className="dropdown-menu w-[50%]">
-                                <div className="dropdown-menu-entry">
-                                  Projects
-                                </div>
-                                <div className="dropdown-menu-entry ">
-                                  School
-                                </div>
-                                <div className="dropdown-menu-entry">
-                                  Frontend
-                                </div>
-                                <div className="dropdown-menu-entry">
-                                  Backend
-                                </div>
-                                <div className="dropdown-menu-entry">
-                                  Projects 2
-                                </div>
-                                <div className="dropdown-menu-entry">
-                                  Projects 3
-                                </div>
+                                <a href="#Projects" className="dropdown-menu-entry">
+                                  Featured Projects
+                                </a>
+                                <Link to="/UnderConstruction" className="dropdown-menu-entry ">
+                                  Web Applications
+                                </Link>
+                                <Link to="/UnderConstruction" className="dropdown-menu-entry">
+                                  UI / UX Design
+                                </Link>
+                                <Link to="/UnderConstruction" className="dropdown-menu-entry">
+                                  Full-Stack Systems
+                                </Link>
+                                <Link to="/UnderConstruction" className="dropdown-menu-entry">
+                                  UI Components
+                                </Link>
+                                <Link to="/UnderConstruction" className="dropdown-menu-entry">
+                                  In Progress
+                                </Link>
                               </div>
                             
                               {/* Right Side Project Images */}
@@ -361,7 +355,7 @@ function Navbar({ mode, setMode }) {
                                   Work Related
                                 </div>
                                 <div className="dropdown-menu w-full">
-                                  <Link to="https://github.com/Haze-7" className="dropdown-menu-logo-entry">
+                                  <Link to="/#Contact-Me" className="dropdown-menu-logo-entry">
                                     <div className={`p-[0.3rem] pr-[0.6rem] pl-[0.35rem]`}>
                                       <div className="w-[2.5rem] h-[2.5rem] rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -423,8 +417,7 @@ function Navbar({ mode, setMode }) {
                                   Social Media
                                 </div>
                                 <div className="dropdown-menu w-full">
-                                  {/* replacde w/ instagram link */}
-                                  <Link to="/" className="dropdown-menu-logo-entry">
+                                  <Link to="https://www.instagram.com/hayes_chiasson/" className="dropdown-menu-logo-entry">
                                     <div className={`p-[0.35rem] pr-[0.6rem]`}>
                                       <div className="w-[2.5rem] h-[2.5rem] ">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -436,8 +429,7 @@ function Navbar({ mode, setMode }) {
                                     </div>
                                     Hayes_Chiasson
                                   </Link>
-                                  {/* replace w/ Discord link */}
-                                  <Link to="/" className="dropdown-menu-logo-entry">
+                                  <Link to="https://discord.com/" className="dropdown-menu-logo-entry">
                                     <div className={`p-[0.5rem] pr-[0.9rem]`}>
                                       <div className="w-[2.1rem] h-[2.1rem] ">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -594,21 +586,21 @@ function Navbar({ mode, setMode }) {
                               
                               <div className="mini-dropdown-menu-content">
                                 <div className="dropdown-menu w-[100%] min-w-[7rem] transition-all duration-700 ease-in-out overflow-y-scroll scrollbar-hidden">
-                                  <div className="dropdown-menu-entry">
+                                  <a href="#Experience" className="dropdown-menu-entry">
                                     Previous Employment
-                                  </div>
-                                  <div className="dropdown-menu-entry ">
+                                  </a>
+                                  <a href="#Experience" className="dropdown-menu-entry ">
                                     Current Employment
-                                  </div>
-                                  <div className="dropdown-menu-entry">
+                                  </a>
+                                  <a href="#Experience" className="dropdown-menu-entry">
                                     Projects
-                                  </div>
-                                  <div className="dropdown-menu-entry">
+                                  </a>
+                                  <a href="#Experience" className="dropdown-menu-entry">
                                     School
-                                  </div>
-                                  <div className="dropdown-menu-entry">
+                                  </a>
+                                  <a href="#Experience" className="dropdown-menu-entry">
                                     Personal
-                                  </div>
+                                  </a>
                                 </div>
                               </div>
                             </div>
