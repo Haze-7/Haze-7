@@ -157,7 +157,7 @@ function Home({ mode, setMode }) {
             <div className="about-me-container">
               {/* About Title Container */}
               <div className="flex justify-center">
-                <div className="gradient-title font-bold pt-[3.5rem]">
+                <div className="gradient-title text-center font-bold pt-[3.5rem]">
                   About Me
                 </div>
               </div>

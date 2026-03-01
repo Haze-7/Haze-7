@@ -119,7 +119,7 @@ export function BentoProjects() {
 
   return (
     <section id="Projects" className="md:my-24 my-[3rem]">
-      <div className="mx-auto max-w-6xl px-6 ">
+      <div className="mx-auto max-w-6xl px-[clamp(1rem,4vw,1.5rem)]">
 
         {/* Desktop grid — edit gridColumn/gridRow to rearrange cards */}          
         <div className="hidden md:grid grid-cols-3 gap-5" style={{ gridTemplateRows: "420px 500px" }}> {/* Add another 420px after to add 3rd row */} 
