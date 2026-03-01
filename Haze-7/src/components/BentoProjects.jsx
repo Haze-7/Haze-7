@@ -118,8 +118,8 @@ export function BentoProjects() {
   const [p1, p2, p3, p4] = projects; //. add new p# project here
 
   return (
-    <section id="Projects" className="md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="Projects" className="md:my-24 my-[3rem]">
+      <div className="mx-auto max-w-6xl px-6 ">
 
         {/* Desktop grid — edit gridColumn/gridRow to rearrange cards */}          
         <div className="hidden md:grid grid-cols-3 gap-5" style={{ gridTemplateRows: "420px 500px" }}> {/* Add another 420px after to add 3rd row */} 

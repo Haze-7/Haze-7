@@ -518,6 +518,20 @@ background: var(--color-item-being-covered);
   color: var(--secondary-alt-text-color);
 }
 
+.dropdown-about-menu-img {
+  z-index: 1;
+  filter: brightness(75%);
+  object-fit: cover;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  transition: transform .5s;
+  position: relative;
+  overflow: hidden;
+  transform: none;
+  cursor: pointer;
+}
+
 .dropdown-about-menu-entry {
   font-size: 1.1rem;
   border-radius: 0.7rem;
@@ -568,6 +582,7 @@ background: var(--color-item-being-covered);
     position: relative;
     overflow: hidden;
     transform: none;
+    cursor: pointer;
 }
 
 .dropdown-projects-display-entry:hover .dropdown-projects-display-entry-img {
@@ -795,7 +810,7 @@ background: var(--color-item-being-covered);
     display: flex;
     flex-direction: row;
     gap: clamp(2rem, 2vw, 7rem);
-    padding-top: 25vh;
+    padding-top: clamp(8rem, 25vh, 18rem);
     /* padding-top: 17rem; */
     justify-content: center;
     align-items: center;
@@ -846,22 +861,31 @@ background: var(--color-item-being-covered);
 }
 
 .hero-primary-button {
-  background: var(--primary-button-color);
+  background-color: var(--primary-button-color);
   height: clamp(3.2rem, 8vw, 3.8rem);
   width: clamp(7.5rem, 24vw, 10rem);
   color: var(--primary-button-text-color);
   font-size: clamp(0.95rem, 0.85rem + 0.35vw, 1.1rem);
-  /* font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem); */
   cursor: pointer;
 }
 
+.hero-primary-button:hover {
+  background-color: var(--secondary-button-color);
+  color: var(--secondary-button-text-color);
+}
+
 .hero-secondary-button {
-  background: var(--secondary-button-color);
+  background-color: var(--secondary-button-color);
   height: clamp(3.2rem, 8vw, 3.8rem);
   width: clamp(7.5rem, 24vw, 10rem);
   font-size: clamp(0.95rem, 0.85rem + 0.35vw, 1.1rem);
   color: var(--secondary-button-text-color);
   cursor: pointer;
+}
+
+.hero-secondary-button:hover {
+  background-color: var(--primary-button-color);
+  color: var(--primary-button-text-color);
 }
 
 /* About Section */
@@ -978,6 +1002,25 @@ background: var(--color-item-being-covered);
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
   opacity: 0.9; /* optional, if you want subtle fade */
+}
+
+.zoom-container {
+  overflow: hidden;
+}
+
+/* Apply to the image (or any image to zoom) */
+.zoom-target {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 300ms ease;
+  will-change: transform;
+}
+
+/* Trigger zoom when the container is hovered */
+.zoom-container:hover .zoom-target {
+  transform: scale(1.08);
 }
 
 .projects-card-container {
@@ -1385,13 +1428,13 @@ background: var(--color-item-being-covered);
 }
 
 .contact-me-submit-button:hover {
-  background: var(--primary-button-color);
-  color: var(--primary-button-text-color);
+  background: var(--primary-button-text-color);
+  color: var(--primary-button-color);
 }
 
 .contact-me-submit-button:active {
   background: var(--secondary-button-color);
-  color: var(--primary-button-text-color);
+  color: var(--primary-button-color);
 }
 
 /* Infinite Scroll Animation Handling */
