@@ -30,9 +30,9 @@ function Footer({toggleSecretBg}) {
                   <a href="/UnderConstruction" className="footer-info font-semibold">
                   United States
                   </a>
-                  <a href="#Contact-Me" className="footer-info font-semibold mt-[1rem]">
+                  <Link to="/#Contact-Me" className="footer-info font-semibold mt-[1rem]">
                   hchias2@lsu.edu
-                  </a>
+                  </Link>
                 </div>
                 {/* Column 2 */}
                 <div className="hidden md:flex flex-col ml-auto">
@@ -51,9 +51,9 @@ function Footer({toggleSecretBg}) {
                   <a href="/UnderConstruction" className="footer-info font-semibold">
                     BARBER
                   </a>
-                  <a href="/UnderConstruction" className="footer-info font-semibold">
+                  <Link to="https://www.suni-travel.com/" className="footer-info font-semibold">
                     Suni: The Travel Companion
-                  </a>
+                  </Link>
                 </div>
                 {/* "Column 4" H Logo (only show at above sm) */}
                 <div className="hidden md:flex ml-auto">

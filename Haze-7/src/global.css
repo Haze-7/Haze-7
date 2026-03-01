@@ -1419,13 +1419,13 @@ background: var(--color-item-being-covered);
 }
 
 .contact-me-submit-button:hover {
-  background: var(--primary-button-color);
-  color: var(--primary-button-text-color);
+  background: var(--primary-button-text-color);
+  color: var(--primary-button-color);
 }
 
 .contact-me-submit-button:active {
   background: var(--secondary-button-color);
-  color: var(--primary-button-text-color);
+  color: var(--primary-button-color);
 }
 
 /* Infinite Scroll Animation Handling */

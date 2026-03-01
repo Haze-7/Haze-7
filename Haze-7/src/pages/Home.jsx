@@ -337,7 +337,7 @@ function Home({ mode, setMode }) {
                       <button
                        type="submit"
                        disabled={sending}
-                       className="contact-me-submit-button secondary-text-color rounded-2xl flex items-center justify-center w-[10rem]"
+                       className="contact-me-submit-button secondary-text-color bump-effect rounded-2xl flex items-center justify-center w-[10rem]"
                       > 
                         {sending ? "Sending..." : "Send"}
                       </button>
