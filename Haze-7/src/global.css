@@ -810,7 +810,7 @@ background: var(--color-item-being-covered);
     display: flex;
     flex-direction: row;
     gap: clamp(2rem, 2vw, 7rem);
-    padding-top: 25vh;
+    padding-top: clamp(8rem, 25vh, 18rem);
     /* padding-top: 17rem; */
     justify-content: center;
     align-items: center;
@@ -861,22 +861,31 @@ background: var(--color-item-being-covered);
 }
 
 .hero-primary-button {
-  background: var(--primary-button-color);
+  background-color: var(--primary-button-color);
   height: clamp(3.2rem, 8vw, 3.8rem);
   width: clamp(7.5rem, 24vw, 10rem);
   color: var(--primary-button-text-color);
   font-size: clamp(0.95rem, 0.85rem + 0.35vw, 1.1rem);
-  /* font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem); */
   cursor: pointer;
 }
 
+.hero-primary-button:hover {
+  background-color: var(--secondary-button-color);
+  color: var(--secondary-button-text-color);
+}
+
 .hero-secondary-button {
-  background: var(--secondary-button-color);
+  background-color: var(--secondary-button-color);
   height: clamp(3.2rem, 8vw, 3.8rem);
   width: clamp(7.5rem, 24vw, 10rem);
   font-size: clamp(0.95rem, 0.85rem + 0.35vw, 1.1rem);
   color: var(--secondary-button-text-color);
   cursor: pointer;
+}
+
+.hero-secondary-button:hover {
+  background-color: var(--primary-button-color);
+  color: var(--primary-button-text-color);
 }
 
 /* About Section */
