@@ -132,7 +132,7 @@ function Footer({toggleSecretBg}) {
                   @2026 Haze-7.dev All rights reserved.
                 </div>
                 <div>
-                  Last Updated: 1/20/2026
+                  Last Updated: 2/28/2026
                 </div>
               </div>
               {/* Right Text */}

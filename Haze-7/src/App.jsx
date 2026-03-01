@@ -11,6 +11,7 @@ import Hlogo from '/H-logo.svg';
 //Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 //Pages
 import Home from './pages/Home'
@@ -31,6 +32,7 @@ function App() {
     <div data-theme={mode ? "light" : "dark"} data-bg={secretBg ? "secret" : "default"}>
       <BrowserRouter>
         <Navbar mode={mode} setMode={setMode} />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home mode={mode} setMode={setMode} />} />
           <Route path="/UnderConstruction" element={<UnderConstruction />} />
