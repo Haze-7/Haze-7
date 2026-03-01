@@ -126,21 +126,21 @@ function Home({ mode, setMode }) {
           <section id="Hero" className="bg-sand h-[65rem] flex justify-center">
             <div className="hero-content-container layout-smooth">
               {/* Hero Name / Intro */}
-                <div className=" order-2 lg:order-1 ">
-                  <p className="lgl::pt-[2.7rem] sm:pt-0 text-[1.90rem] hero-secondary-text font-semibold">
+                <div className=" order-2 lg:order-1">
+                  <p className="bump-effect sm:pt-0 text-[1.90rem] hero-secondary-text font-semibold">
                     Hello, I'm
                   </p>
-                  <h1 className="text-[4rem] font-bold hero-primary-text leading-tight lg:leading-normal">
+                  <h1 className="bump-effect text-[4rem] font-bold hero-primary-text leading-tight lg:leading-normal">
                     Hayes Chiasson
                   </h1>
-                  <p className="text-[2rem] font-semibold hero-secondary-text">
+                  <p className="bump-effect text-[2rem] font-semibold hero-secondary-text mt-[0.5vw]">
                     Fullstack Developer
                   </p>
                   <div className="mt-[1.5rem] flex flex-row gap-[clamp(2rem,4vw,3rem)] justify-center items-center font-semibold">
-                    <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                    <button onClick={() => window.open('/hayes-resume.pdf', '_blank')} className=" hero-primary-button bump-effect rounded-3xl flex items-center justify-center ">
                       Download CV
                     </button>
-                    <a href="#Contact-Me" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                    <a href="#Contact-Me" className="hero-secondary-button bump-effect rounded-3xl flex items-center justify-center ">
                       Contact Info
                     </a>
                   </div>
@@ -157,7 +157,7 @@ function Home({ mode, setMode }) {
             <div className="about-me-container">
               {/* About Title Container */}
               <div className="flex justify-center">
-                <div className="gradient-title font-bold pt-[3.5rem]">
+                <div className="gradient-title text-center font-bold pt-[3.5rem]">
                   About Me
                 </div>
               </div>
@@ -175,10 +175,10 @@ function Home({ mode, setMode }) {
                     I thrive on taking innovative ideas from concept to execution through software development, and see myself working on hobby projects well into my career.
                   </p>
                     <div className="mt-[1.5rem] flex flex-row gap-[7%] lg:gap-[3rem] mb-[3rem] lg:mb-0 justify-center items-center font-semibold">
-                      <Link to="/UnderConstruction" className=" hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
+                      <Link to="/UnderConstruction" className="bump-effect hero-primary-button primary-text-color rounded-3xl flex items-center justify-center ">
                         Images
                       </Link>
-                      <Link to="/UnderConstruction" className="hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
+                      <Link to="/UnderConstruction" className="bump-effect hero-secondary-button secondary-text-color rounded-3xl flex items-center justify-center ">
                         Learn More
                       </Link>
                     </div>
@@ -202,67 +202,67 @@ function Home({ mode, setMode }) {
           </section>
 
           {/* Experience Section */}
-        <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
-          <div className="flex flex-col w-full items-center py-[4rem] pb-[6rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
-            {/* Section Title */}
-            <div className="gradient-title font-bold experience-title">Experience</div>
-            {/* Our Lady of the Lake (Right) */}
-            <div ref={expOneRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
-              <div className="experience-entry-image">
-                <img src={OlolImage} alt="OLOL Image" />
+          <section id="Experience" className="gradient-bg h-auto shadow-lg/50 shadow-gray gradient-link-offset overflow-x-hidden">
+            <div className="flex flex-col w-full items-center py-[4rem] pb-[6rem] px-[1.5rem] md:px-[2rem] lg:px-[3rem] gap-[2rem] md:gap-[3rem] lg:gap-[3.5rem] xl:gap-[4rem]">
+              {/* Section Title */}
+              <div className="gradient-title font-bold experience-title">Experience</div>
+              {/* Our Lady of the Lake (Right) */}
+              <div ref={expOneRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expOneIsVisible ? 'show' : ''}`}>
+                <div className="experience-entry-image">
+                  <img src={OlolImage} alt="OLOL Image" />
+                </div>
+                <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
+                  <Link to="https://www.fmolhs.org/locations/greater-baton-rouge" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
+                    Our Lady of the Lake Health
+                  </Link>
+                  <p className="experience-card-description">
+                    Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to vendors. 
+                    Created integrated GUI for adding new vendors, making project scalable for future acquisitions/partners. 
+                    Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing.
+                  </p>
+                </div>
               </div>
-              <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
-                <Link to="https://www.fmolhs.org/locations/greater-baton-rouge" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
-                  Our Lady of the Lake Health
-                </Link>
-                <p className="experience-card-description">
-                  Developed AI Orchestrator model that organizes, interacts with, and automatically connects users to vendors. 
-                  Created integrated GUI for adding new vendors, making project scalable for future acquisitions/partners. 
-                  Integrated seamlessly into Microsoft Teams application with adaptive cards & API routing.
-                </p>
-              </div>
-            </div>
 
-            {/* LSU ITS Student Developer (Left) */}
-            <div ref={expTwoRef} className={`experience-entry justify-start gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
-              <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
-                <Link to="https://www.lsu.edu/its/index.php" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
-                  LSU ITS Student Developer
-                </Link>
-                <p className="experience-card-description">
-                  Maintain and modernize critical LSU web programs utilized by over 40k staff, students, and licensed contractors.
-                  Facilitated migration of LSU database systems from localized mainframe to the Workday platform.
-                  Spearheaded UI redesign of 3 prominent web applications in active use by students & departmental staff.
-                </p>
+              {/* LSU ITS Student Developer (Left) */}
+              <div ref={expTwoRef} className={`experience-entry justify-start gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-left ${expTwoIsVisible ? 'show' : ''}`}>
+                <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
+                  <Link to="https://www.lsu.edu/its/index.php" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
+                    LSU ITS Student Developer
+                  </Link>
+                  <p className="experience-card-description">
+                    Maintain and modernize critical LSU web programs utilized by over 40k staff, students, and licensed contractors.
+                    Facilitated migration of LSU database systems from localized mainframe to the Workday platform.
+                    Spearheaded UI redesign of 3 prominent web applications in active use by students & departmental staff.
+                  </p>
+                </div>
+                <div className="experience-entry-image">
+                  <img src={LsuIts} alt="LSU ITS Image" />
+                </div>
               </div>
-              <div className="experience-entry-image">
-                <img src={LsuIts} alt="LSU ITS Image" />
-              </div>
-            </div>
 
-            {/* Barber (Temp) (Right)*/}
-            <div ref={expThreeRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
-              <div className="experience-entry-image">
-                <img src={BarberImage} alt="Barber Image" />
-              </div>
-              <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
-                <Link to="/UnderConstruction" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
-                  BARBER
-                </Link>
-                <p className="experience-card-description">
-                  Barber is the all-in-one place for barbers, shop owners, and customers to interact, schedule, and build their business.
-                  Barbers can register their profile and create a custom page to attract customers and directly handle scheduling / payment infastructure. Shop owners can also find barbers
-                  through this system, hiring and handling rent or % dues directly within the application.
-                </p>
+              {/* Barber (Temp) (Right)*/}
+              <div ref={expThreeRef} className={`experience-entry justify-end gap-[1.5rem] sm:gap-[2rem] lg:gap-[2.5rem] xl:gap-[3rem] slide-animate-right ${expThreeIsVisible ? 'show' : ''}`}>
+                <div className="experience-entry-image">
+                  <img src={BarberImage} alt="Barber Image" />
+                </div>
+                <div className="experience-card flex-1 shadow-lg gradient-bg rounded-2xl">
+                  <Link to="/UnderConstruction" className="experience-entry-title font-tungsten text-[2.5rem] text-center xl:text-left">
+                    BARBER
+                  </Link>
+                  <p className="experience-card-description">
+                    Barber is the all-in-one place for barbers, shop owners, and customers to interact, schedule, and build their business.
+                    Barbers can register their profile and create a custom page to attract customers and directly handle scheduling / payment infastructure. Shop owners can also find barbers
+                    through this system, hiring and handling rent or % dues directly within the application.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
           {/* Contact Me Section */}
           <section id="Contact-Me" className="bg-sand h-[65rem] lg:h-[70rem]">
             <div className="text-3rem">
-              {/* Projects Title */}
+              {/* Contact Me Title */}
               <div className="flex justify-center">
                 <div className="projects-title font-bold">
                  Contact Me
@@ -289,7 +289,7 @@ function Home({ mode, setMode }) {
                   </div>
                 </div>
                 {/*Leave a Message Form */}
-                <form onSubmit={handleSubmit} className="relative h-auto lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl ">
+                <form onSubmit={handleSubmit} className="relative h-auto lg:w-[55%] flex flex-col text-ivory gradient-bg rounded-4xl">
                   {/* Direct Message Title */}
                   <div className="contact-me-form-title pt-[1rem] lg:pt-[1.8vh]">
                     Leave a Message
@@ -337,7 +337,7 @@ function Home({ mode, setMode }) {
                       <button
                        type="submit"
                        disabled={sending}
-                       className="contact-me-submit-button secondary-text-color rounded-2xl flex items-center justify-center w-[10rem]"
+                       className="contact-me-submit-button secondary-text-color bump-effect rounded-2xl flex items-center justify-center w-[10rem]"
                       > 
                         {sending ? "Sending..." : "Send"}
                       </button>
